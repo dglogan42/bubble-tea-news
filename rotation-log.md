@@ -24,9 +24,10 @@ tea origin) · joke of the week (tapioca pun)
 - The Stickybeak — `tabloid-gossip-voice`
 - Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
 - Lewis Hamilton — `grand-prix-showroom-ads`
+- Dana Foley — `epic-forecast-anchor`
 
 **Not used this issue** (available first for Issue 2): Sebastian, Luke
 Skywalker, Shaggy & Scooby, Alan Grant, Daffy Duck, Wren, legal-affairs
 investigator (`code-theft-dossier`), Seeker-eyed shopper
 (`seekers-eye-shopper`), ex-lifeguard sportswriter
-(`lifeguards-eye-sportswriter`), Dana Foley, Rebecca Black.
+(`lifeguards-eye-sportswriter`), Rebecca Black.
