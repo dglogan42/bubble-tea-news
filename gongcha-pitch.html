@@ -1,0 +1,291 @@
+<title>Bubble Tea News — Partnership Proposal</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --taro: #6B4E80;
+    --sugar: #A5672E;
+    --matcha: #6C7F52;
+    --ink: #201C17;
+    --ink-soft: #6B5D52;
+    --rule: #D9CFC0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    justify-content: center;
+    padding: 20px 14px 60px;
+    font-family: Charter, Georgia, Cambria, serif;
+  }
+
+  .no-print {
+    width: min(210mm, 100%);
+    margin-bottom: 18px;
+  }
+  .instructions {
+    background: rgba(255,255,255,0.5);
+    border: 1px dashed var(--ink-soft);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    max-width: 100%;
+    background: #FFFDF8;
+    color: var(--ink);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    padding: 16mm 16mm 14mm;
+  }
+  @media print { .sheet { box-shadow: none; width: 210mm; min-height: 297mm; } }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2.5px solid var(--ink);
+    padding-bottom: 5mm;
+    margin-bottom: 6mm;
+  }
+  .wordmark {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 800;
+    font-size: 26pt;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .wordmark .bubble { color: var(--taro); }
+  .wordmark .tea { color: var(--sugar); }
+  .doc-meta {
+    text-align: right;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 8pt;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  h1.title {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 15pt;
+    margin: 0 0 8mm;
+    text-wrap: balance;
+  }
+
+  h2.section {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 8.5pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--taro);
+    margin: 7mm 0 2.5mm;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2.section::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  p, li { font-size: 9.5pt; line-height: 1.55; margin: 0 0 2mm; }
+
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4mm 8mm;
+    margin-top: 2mm;
+  }
+  .value-item b { display: block; font-size: 9.5pt; margin-bottom: 0.5mm; }
+  .value-item p { font-size: 8.8pt; color: var(--ink-soft); margin: 0; }
+
+  .sample-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4mm;
+    margin-top: 2mm;
+  }
+  .sample-card {
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent, var(--taro));
+    padding: 3mm;
+  }
+  .sample-card .kicker {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 6.6pt; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent, var(--taro));
+    margin: 0 0 1mm;
+  }
+  .sample-card h3 { font-size: 9pt; margin: 0 0 1mm; font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  .sample-card p { font-size: 7.6pt; color: var(--ink-soft); margin: 0; }
+
+  .ask-box {
+    background: #F3EFE4;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 4mm 5mm;
+    margin-top: 2mm;
+  }
+  .ask-box p { margin: 0 0 1.5mm; }
+  .ask-box ul { margin: 1mm 0 0; padding-left: 4mm; }
+
+  .content-note {
+    margin-top: 2mm;
+    font-size: 8pt;
+    color: var(--ink-soft);
+    font-style: italic;
+    border-left: 2px solid var(--rule);
+    padding-left: 3mm;
+  }
+
+  .contact-row {
+    margin-top: 8mm;
+    padding-top: 4mm;
+    border-top: 2.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-row .cta {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: 11pt;
+  }
+  .contact-row .details {
+    text-align: right;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 8pt;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>How to use this</b><br>
+    This is a draft one-page proposal for your own review before reaching out via
+    Gong&nbsp;Cha's collaboration/marketing enquiry page. Fill in the bracketed
+    contact details, adjust anything that doesn't sound like you, and send it as
+    an attachment or paste the text into their enquiry form yourself &mdash; nothing
+    here has been sent anywhere.
+  </div>
+</div>
+
+<div class="sheet">
+
+  <div class="header-row">
+    <p class="wordmark"><span class="bubble">Bubble</span> <span class="tea">Tea</span> News</p>
+    <div class="doc-meta">
+      Partnership Proposal<br>
+      Prepared for: Gong Cha New Zealand<br>
+      [Month Year]
+    </div>
+  </div>
+
+  <h1 class="title">A weekly in-store read for Auckland's bubble tea customers &mdash; proposing Gong Cha as founding retail partner</h1>
+
+  <h2 class="section">What Is Bubble Tea News</h2>
+  <p>Bubble Tea News is a free weekly single-sheet publication (double-sided A4), written
+  in the spirit of hospitality-trade freesheets like Coffee News: a short, characterful
+  read &mdash; local trivia, short humour columns, a puzzle, small classifieds &mdash; sized to be
+  read in the few minutes a customer waits for their order. It's placed at the counter or
+  on tables, complimentary to customers, and funded by small local advertising placements
+  rather than a cover price.</p>
+
+  <h2 class="section">Why Partner With Us</h2>
+  <div class="value-grid">
+    <div class="value-item">
+      <b>Free customer engagement</b>
+      <p>Gives waiting customers something to read at no cost to the store &mdash; no setup, no staff training, no ongoing effort.</p>
+    </div>
+    <div class="value-item">
+      <b>Fresh content, every week</b>
+      <p>New puzzle, new columns, new jokes each issue &mdash; customers have a reason to pick up the next one.</p>
+    </div>
+    <div class="value-item">
+      <b>A branded panel that's actually yours</b>
+      <p>A dedicated promotional panel each issue for Gong Cha news, seasonal drinks, or loyalty offers &mdash; not a generic ad slot.</p>
+    </div>
+    <div class="value-item">
+      <b>Local, independent, low-risk</b>
+      <p>No subscription, no exclusivity lock-in to start &mdash; a trial run across a small number of Auckland stores is all we're asking for.</p>
+    </div>
+  </div>
+
+  <h2 class="section">Sample Content</h2>
+  <div class="sample-grid">
+    <div class="sample-card" style="--accent: var(--taro)">
+      <p class="kicker">Puzzles</p>
+      <h3>The Four Puzzlers</h3>
+      <p>A verified logic puzzle each week, by puzzlesmith Ken Endo.</p>
+    </div>
+    <div class="sample-card" style="--accent: var(--sugar)">
+      <p class="kicker">Rural Notes</p>
+      <h3>Higgins Edges Doyle</h3>
+      <p>A small-town shearing rivalry column, warm and specific.</p>
+    </div>
+    <div class="sample-card" style="--accent: var(--matcha)">
+      <p class="kicker">Character Column</p>
+      <h3>On the Age of the Leak</h3>
+      <p>A satirical political-commentary column voiced as Richard Nixon.</p>
+    </div>
+    <div class="sample-card" style="--accent: var(--taro)">
+      <p class="kicker">Character Column</p>
+      <h3>The Delacroix-Byrne Estate</h3>
+      <p>A luxury-lifestyle spoof voiced as Robin Leach.</p>
+    </div>
+    <div class="sample-card" style="--accent: var(--sugar)">
+      <p class="kicker">Gossip</p>
+      <h3>Book Club Spoiler Scandal</h3>
+      <p>A low-stakes, affectionate gossip column, "The Stickybeak."</p>
+    </div>
+    <div class="sample-card" style="--accent: var(--matcha)">
+      <p class="kicker">Character Column</p>
+      <h3>One More Thing</h3>
+      <p>A tech-hype spoof voiced as Steve Jobs.</p>
+    </div>
+  </div>
+
+  <p class="content-note">A note on content: several columns are satirical character-voice
+  pieces written in the style of real public figures (e.g. Nixon, Jobs, Robin Leach, Lewis
+  Hamilton, Rebecca Black). These are clearly-labelled parody/satire, not affiliated with,
+  endorsed by, or written by the people named, and none represent real quotes, real
+  products, or real endorsements. We're flagging this openly so there are no surprises
+  about what's being distributed in-store &mdash; happy to adjust the lineup per issue if
+  Gong Cha would prefer a different content mix.</p>
+
+  <h2 class="section">The Proposal</h2>
+  <div class="ask-box">
+    <p>We're looking for a founding retail partner to trial Bubble Tea News across a small
+    number of Gong Cha Auckland locations. Specifically, we'd propose:</p>
+    <ul>
+      <li>Weekly complimentary supply of printed copies to participating stores</li>
+      <li>A dedicated Gong Cha promotional panel in every issue, at no cost during the trial</li>
+      <li>"Proudly served at Gong Cha" masthead credit for the trial period</li>
+      <li>A short review after 4&ndash;6 issues to decide on continuing or expanding</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Format &amp; Distribution</h2>
+  <p>Double-sided A4, printed weekly, complimentary to customers. Initial distribution:
+  Auckland retailers, starting with a small pilot group of stores before any wider rollout.</p>
+
+  <div class="contact-row">
+    <p class="cta">We'd welcome fifteen minutes to talk this through.</p>
+    <div class="details">
+      David Logan<br>
+      david_logan_nz@outlook.com<br>
+      [Phone number]
+    </div>
+  </div>
+
+</div>
