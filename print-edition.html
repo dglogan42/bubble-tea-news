@@ -4,221 +4,227 @@
 
   :root {
     --screen-bg: #E9E3D6;
-    --screen-ink: #211C18;
-    --taro: #6B4E80;
-    --sugar: #A5672E;
-    --matcha: #6C7F52;
-    --breaking: #A13C2E;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
   }
-  @media (prefers-color-scheme: dark) {
-    :root { --screen-bg: #17140F; --screen-ink: #EDE6DB; }
-  }
-  :root[data-theme="dark"] { --screen-bg: #17140F; --screen-ink: #EDE6DB; }
-  :root[data-theme="light"] { --screen-bg: #E9E3D6; --screen-ink: #211C18; }
 
   * { box-sizing: border-box; }
 
   body {
     margin: 0;
     background: var(--screen-bg);
-    color: var(--screen-ink);
-    font-family: Charter, Georgia, Cambria, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   }
 
-  /* ---------- Screen-only chrome ---------- */
-  .no-print { width: min(210mm, 100%); }
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
   .instructions {
-    background: rgba(255,255,255,0.5);
-    border: 1px dashed currentColor;
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
     border-radius: 6px;
     padding: 12px 16px;
-    margin-bottom: 22px;
     font-size: 13px;
     line-height: 1.6;
+    color: var(--ink);
   }
   .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
-  @media (prefers-color-scheme: dark) { .instructions { background: rgba(0,0,0,0.25); } }
-  :root[data-theme="dark"] .instructions { background: rgba(0,0,0,0.25); }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
 
-  @media print {
-    body { padding: 0; background: #fff; }
-    .no-print { display: none; }
-  }
-
-  /* ---------- The physical sheet ---------- */
   .sheet {
     width: 210mm;
     height: 297mm;
     max-width: 100%;
-    background: #FFFDF8;
-    color: #201C17;
     box-shadow: 0 4px 24px rgba(0,0,0,0.25);
     margin: 0 0 26px;
-    padding: 11mm 10mm 9mm;
+    padding: 12mm 12mm 10mm;
     display: flex;
     flex-direction: column;
-    font-size: 8.6pt;
-    line-height: 1.42;
     position: relative;
   }
   @media print {
-    .sheet {
-      box-shadow: none;
-      margin: 0;
-      page-break-after: always;
-      width: 210mm;
-      height: 297mm;
-    }
+    .sheet { box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm; }
     .sheet:last-child { page-break-after: auto; }
   }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
 
-  /* Masthead */
-  .masthead {
+  /* ---------- Eyebrow band ---------- */
+  .eyebrow-band {
+    display: inline-block;
+    align-self: center;
+    padding: 2mm 6mm;
+    border-radius: 20px;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  /* ---------- Dotted masthead frame ---------- */
+  .masthead-frame {
+    position: relative;
     text-align: center;
-    border-bottom: 2.5px solid #201C17;
-    padding-bottom: 6mm;
-    margin-bottom: 6mm;
+    padding: 6mm 8mm;
+    margin-bottom: 4mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm;
+    opacity: 1;
   }
-  .masthead .meta-row {
-    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 6.6pt;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #55483F;
-    margin-bottom: 2mm;
-  }
-  .masthead .meta-row span:not(:last-child)::after { content: "\00b7"; margin: 0 6px; }
-  .masthead h1 {
+  .masthead-frame h1 {
+    display: inline-block;
     margin: 0;
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    padding: 3mm 8mm;
     font-weight: 800;
-    font-size: 30pt;
-    letter-spacing: -0.01em;
-    line-height: 1;
+    font-size: 24pt;
+    letter-spacing: 0.08em;
+    background: inherit;
   }
-  .masthead h1 .bubble { color: var(--taro); }
-  .masthead h1 .tea { color: var(--sugar); }
-  .masthead .tagline {
-    margin: 1.5mm 0 0;
-    font-style: italic;
-    font-size: 7.6pt;
-    color: #55483F;
-  }
-  .page-tag {
-    position: absolute;
-    top: 11mm;
-    right: 10mm;
-    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 6.5pt;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #8A7A6C;
-  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  /* mask the dots directly behind the title so the title block reads clean */
+  .masthead-frame h1::before { content: none; }
 
-  /* Breaking banner */
-  .breaking {
-    border: 1.2px solid #201C17;
-    border-left: 3px solid var(--breaking);
-    padding: 3mm 4mm;
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
     margin-bottom: 5mm;
   }
-  .breaking .kicker { color: var(--breaking); }
-  .breaking h2 {
-    margin: 1mm 0 1.5mm;
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    font-size: 11pt;
-    font-weight: 800;
-  }
-  .breaking p { margin: 0; }
 
-  /* Column layout */
-  .columns {
-    columns: 3;
-    column-gap: 5mm;
-    flex: 1;
-  }
-  .item {
-    break-inside: avoid;
-    margin-bottom: 4mm;
-    padding-bottom: 3.5mm;
-    border-bottom: 0.75px solid #D9CFC0;
-  }
-  .kicker {
-    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 6.3pt;
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 1mm;
+    padding-bottom: 3mm;
+    margin-bottom: 5mm;
+    border-bottom: 2px solid currentColor;
   }
-  .item h3 {
-    margin: 0 0 1mm;
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  .mini-dots {
+    display: flex;
+    gap: 2.5px;
+  }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  /* ---------- Content grid ---------- */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6mm;
+    padding: 4mm 0;
+  }
+  .row.divider-top { border-top: 2.5px solid currentColor; }
+
+  .col-icon-lead {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-circle {
+    width: 13mm; height: 13mm;
+    border: 1.4px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 {
+    font-weight: 800;
+    font-size: 15pt;
+    line-height: 1.1;
+    margin: 0 0 2mm;
+  }
+  .kicker {
+    font-size: 6.6pt;
     font-weight: 700;
-    font-size: 9pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin: 0 0 1mm;
+  }
+  p.body-text, p.byline-text {
+    font-size: 8.4pt;
+    line-height: 1.55;
+    margin: 0 0 2mm;
+  }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead {
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin: 0 0 1.5mm;
     line-height: 1.2;
   }
-  .byline {
-    font-style: italic;
-    color: #6B5D52;
-    font-size: 7pt;
-    margin: 0 0 1.2mm;
-  }
-  .item p.body { margin: 0; }
 
-  .accent-taro { color: var(--taro); }
-  .accent-sugar { color: var(--sugar); }
-  .accent-matcha { color: var(--matcha); }
+  /* ---------- Pull quote ---------- */
+  .pull-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2.5px solid currentColor;
+    padding-left: 5mm;
+  }
+  .pull-quote blockquote {
+    margin: 0 0 2mm;
+    font-weight: 800;
+    font-size: 13pt;
+    line-height: 1.25;
+  }
+  .pull-quote cite { font-size: 8pt; font-style: normal; opacity: 0.8; }
+
+  /* ---------- "In every issue" list ---------- */
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li {
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 1.6mm 0;
+    border-top: 1px solid currentColor;
+    opacity: 0.9;
+  }
+  .feature-list li:first-child { border-top: none; }
+
+  /* Puzzle clue list */
+  .clue-list { margin: 1mm 0 2mm; padding-left: 3.5mm; font-size: 7.6pt; line-height: 1.5; }
 
   /* Ad box */
   .ad-box {
-    border: 1.4px dashed #8A7A6C;
+    border: 1.5px dashed currentColor;
+    border-radius: 4px;
     padding: 3mm;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 26mm;
   }
-  .ad-box .kicker { color: #8A7A6C; margin-bottom: 1.5mm; }
-  .ad-box h4 {
-    margin: 0 0 1.2mm;
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    font-size: 9.5pt;
-  }
-  .ad-box p { margin: 0; font-size: 6.8pt; color: #6B5D52; }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
 
-  /* Puzzle box */
-  .puzzle-box {
-    border: 1.2px solid #201C17;
-    padding: 3mm 4mm;
-  }
-  .puzzle-box .kicker { color: var(--matcha); }
-  .puzzle-box h3 {
-    margin: 1mm 0 1.5mm;
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-    font-size: 9.5pt;
-  }
-  .puzzle-box ol { margin: 1mm 0 2mm; padding-left: 3.5mm; font-size: 7.4pt; line-height: 1.5; }
-  .puzzle-box .answer { font-size: 6.6pt; font-style: italic; color: #6B5D52; }
-
-  /* Footer / colophon */
   .colophon {
-    margin-top: 5mm;
+    margin-top: auto;
     padding-top: 3mm;
-    border-top: 0.75px solid #D9CFC0;
+    border-top: 2px solid currentColor;
     text-align: center;
-  }
-  .colophon p {
-    margin: 0 0 1mm;
-    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
-    font-size: 5.8pt;
-    letter-spacing: 0.04em;
-    color: #8A7A6C;
+    font-size: 6.2pt;
+    opacity: 0.75;
     line-height: 1.5;
   }
 </style>
@@ -226,157 +232,169 @@
 <div class="no-print">
   <div class="instructions">
     <b>Print setup</b><br>
-    Use your browser's Print dialog (Ctrl/Cmd + P) &middot; Paper size: <b>A4</b> &middot;
-    Margins: <b>None</b> &middot; Scale: <b>100%</b><br>
-    For double-sided output: enable duplex printing if your printer supports it,
-    or print Page&nbsp;1, flip the sheet, and print Page&nbsp;2 on the reverse.
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Layout restyled from a supplied newsletter template reference (dotted masthead frame,
+    circular line icons, tinted-page color blocks, pull-quote treatment) and reworked
+    with Bubble Tea News content and a taro/brown-sugar palette.
   </div>
 </div>
 
-<!-- ========== PAGE 1 (FRONT) ========== -->
-<div class="sheet">
-  <span class="page-tag">Front</span>
-  <header class="masthead">
-    <div class="meta-row">
-      <span>Issue 1</span><span>This Week in Auckland</span><span>Complimentary &mdash; Please Take One</span>
-    </div>
-    <h1><span class="bubble">Bubble</span> <span class="tea">Tea</span> News</h1>
-    <p class="tagline">All the news that's steeped to print.</p>
-  </header>
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
 
-  <div class="breaking">
-    <p class="kicker">Breaking &middot; Willowmere Estates</p>
-    <h2>Garden Gnome "Outbreak" Reaches 41 Properties Across Eleven Streets</h2>
-    <p class="body">Risk assessed Moderate. The Community Association has added lawn ornamentation as a standing meeting item, but stopped short of a formal bylaw. <i>&mdash; community-outbreak-bulletin</i></p>
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
   </div>
 
-  <div class="columns">
-
-    <div class="item">
-      <p class="kicker accent-taro">Politics</p>
-      <h3>On the Age of the Leak</h3>
-      <p class="byline">Richard Nixon</p>
-      <p class="body">"A government that fears its own leaks more than it fears the conditions that produce them has already lost the argument."</p>
-    </div>
-
-    <div class="item">
-      <p class="kicker accent-sugar">Business</p>
-      <h3>View From the Desk</h3>
-      <p class="byline">Sherman McCoy</p>
-      <p class="body">"I moved size on that paper before Chip Ashworth had finished his second coffee." Eleven points by the close.</p>
-    </div>
-
-    <div class="item">
-      <p class="kicker accent-matcha">Technology</p>
-      <h3>One More Thing</h3>
-      <p class="byline">Steve Jobs</p>
-      <p class="body">The new cable is eleven percent shorter. "This isn't a cable. This is a statement about proximity."</p>
-    </div>
-
-    <div class="item">
-      <p class="kicker accent-taro">World Desk</p>
-      <h3>Trade Summit Tent Collapses Mid-Speech</h3>
-      <p class="byline">Baxter Kline</p>
-      <p class="body">"I am no longer entirely sure where my other shoe went." Accord still to be signed tomorrow, from a better-anchored tent.</p>
-    </div>
-
-    <div class="item">
-      <p class="kicker accent-sugar">Bubble Tea Trivia</p>
-      <h3>Did You Know?</h3>
-      <p class="body">Pearl milk tea was invented in Taichung, Taiwan, in the early 1980s &mdash; and nobody agrees which tea stall invented it first. Two shops still argue about it to this day.</p>
-    </div>
-
-    <div class="item">
-      <p class="kicker accent-matcha">Joke of the Week</p>
-      <h3>&nbsp;</h3>
-      <p class="body">Why did the tapioca pearl refuse to argue? It didn't want to get into a sticky situation.</p>
-    </div>
-
-    <div class="ad-box">
-      <p class="kicker">Your Ad Here</p>
-      <h4>Reach Bubble Tea Drinkers Across Auckland</h4>
-      <p>Weekly placement &middot; enquire with your local distributor</p>
-    </div>
-
+  <div class="contact-row">
+    <span>Issue 1 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.news (fictional) &middot; est. 2026</span>
   </div>
-</div>
 
-<!-- ========== PAGE 2 (BACK) ========== -->
-<div class="sheet">
-  <span class="page-tag">Back</span>
-  <header class="masthead">
-    <div class="meta-row">
-      <span>Issue 1, continued</span><span>Bubble Tea News</span><span>bubbletea.news (fictional)</span>
-    </div>
-    <h1 style="font-size: 16pt;">More Inside This Edition</h1>
-  </header>
-
-  <div class="columns">
-
-    <div class="item">
-      <p class="kicker accent-taro">Lifestyle</p>
-      <h3>The Delacroix-Byrne Estate</h3>
-      <p class="byline">Robin Leach</p>
-      <p class="body">"Underneath the marble and the mosaic, they are, every last one of them, still standing in someone's kitchen." Champagne wishes, caviar dreams.</p>
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Willowmere Estates</p>
+      <h2>Gnome Outbreak Hits 41 Homes</h2>
+      <p class="body-text">Risk assessed Moderate after cross-street spread was confirmed via a shared fence line. A formal bylaw was narrowly voted down.</p>
+      <p class="byline-text">community-outbreak-bulletin</p>
     </div>
 
-    <div class="item">
-      <p class="kicker accent-sugar">Dining</p>
-      <h3>Sprout &amp; Stone: 1.5 Lasagnas</h3>
-      <p class="byline">Garfield</p>
-      <p class="body">"I arrived expecting food. I was served a single radish on a river stone." Do not come here on a Monday.</p>
+    <div>
+      <p class="kicker">Politics &middot; Dispatch</p>
+      <h3 class="subhead">On the Age of the Leak</h3>
+      <p class="byline-text">Richard Nixon</p>
+      <p class="body-text">"A government that fears its own leaks more than it fears the conditions that produce them has already lost the argument."</p>
     </div>
 
-    <div class="item">
-      <p class="kicker accent-matcha">Rural Notes</p>
-      <h3>Higgins Edges Doyle by Four Sheep</h3>
-      <p class="byline">Clem Whitlock, Ridgeline Weekly</p>
-      <p class="body">Season-opening shear-off tally: 181 to 177. Dagging season starts the second week of next month.</p>
+    <div>
+      <p class="kicker">Business &middot; Markets</p>
+      <h3 class="subhead">View From the Desk</h3>
+      <p class="byline-text">Sherman McCoy</p>
+      <p class="body-text">"I moved size on that paper before Chip Ashworth had finished his second coffee." Eleven points by the close.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+      </ul>
     </div>
 
-    <div class="item">
-      <p class="kicker accent-taro">Gossip &middot; Kiss &amp; Tell</p>
-      <h3>Book Club Spoiler Scandal</h3>
-      <p class="byline">The Stickybeak</p>
-      <p class="body">"My sources &mdash; three ladies deep into the biscuit tin &mdash; confirm it goes all the way to the top shelf, darling."</p>
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"This isn't a cable. This is a statement about proximity. About intention."</blockquote>
+      <cite>&mdash; Steve Jobs, on a charging cable eleven percent shorter</cite>
     </div>
-
-    <div class="item">
-      <p class="kicker accent-sugar">Classifieds</p>
-      <h3>This Week, Rated</h3>
-      <p class="byline">Te Mana Whakaatu framework</p>
-      <p class="body">FLATMATE WANTED &mdash; Rated M. "Contains a cockatiel with strong and frequently expressed views."</p>
-    </div>
-
-    <div class="ad-box">
-      <p class="kicker accent-matcha">Automotive</p>
-      <h4>Route 9 Motors &mdash; Labor Day Clearance</h4>
-      <p>"You do not walk onto this lot. You attack it." &mdash; Lewis Hamilton. Podium financing available.</p>
-    </div>
-
-    <div class="puzzle-box">
-      <p class="kicker">Puzzle of the Week</p>
-      <h3>The Four Puzzlers</h3>
-      <ol>
-        <li>Ben sits immediately left of Ava.</li>
-        <li>Ben drinks water.</li>
-        <li>The coffee drinker sits immediately left of Cleo.</li>
-        <li>Cleo drinks juice. Dmitri isn't in seat 1. Ava doesn't drink coffee.</li>
-      </ol>
-      <p class="body">Four seats, four drinks &mdash; who sits where?</p>
-      <p class="answer">Answer in next week's edition &mdash; by Ken Endo</p>
-    </div>
-
-    <div class="ad-box">
-      <p class="kicker">Your Ad Here</p>
-      <h4>Bubble Tea News is Free Because of You</h4>
-      <p>Small local ad slots available weekly across Auckland shops</p>
-    </div>
-
   </div>
 
   <div class="colophon">
-    <p>BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; Fictional publication, all content satire/character-voice per each contributor's own house disclaimer.</p>
-    <p>Next week: Daffy Duck's book review, Rebecca Black on new music, Dana Foley's forecast, Cho Chang's finds, and the kyber-prospector feature &mdash; the roster rotates weekly.</p>
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 20V10l8-6 8 6v10"/>
+          <path d="M9 20v-6h6v6"/>
+        </svg>
+      </div>
+      <p class="kicker">Lifestyle &middot; Estates</p>
+      <h2>The Delacroix-Byrne Estate</h2>
+      <p class="body-text">"Underneath the marble and the mosaic, they are, every last one of them, still standing in someone's kitchen." Champagne wishes, caviar dreams.</p>
+      <p class="byline-text">Robin Leach</p>
+    </div>
+
+    <div>
+      <p class="kicker">Dining &middot; Review</p>
+      <h3 class="subhead">Sprout &amp; Stone: 1.5 Lasagnas</h3>
+      <p class="byline-text">Garfield</p>
+      <p class="body-text">"I arrived expecting food. I was served a single radish on a river stone." Do not come here on a Monday.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Rural Notes</p>
+      <h3 class="subhead">Higgins Edges Doyle by Four Sheep</h3>
+      <p class="byline-text">Clem Whitlock, Ridgeline Weekly</p>
+      <p class="body-text">Season-opening shear-off tally: 181 to 177. Dagging season starts the second week of next month.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 5h16v10H8l-4 4V5Z"/>
+          <path d="M8 9h8M8 12h5"/>
+        </svg>
+      </div>
+      <p class="kicker">Gossip &middot; Kiss &amp; Tell</p>
+      <h3 class="subhead">Book Club Spoiler Scandal</h3>
+      <p class="byline-text">The Stickybeak</p>
+      <p class="body-text">"My sources &mdash; three ladies deep into the biscuit tin &mdash; confirm it goes all the way to the top shelf, darling."</p>
+    </div>
+
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 4h6v3.2a1.6 1.6 0 0 0 2.6 1.25A1.6 1.6 0 1 1 19.5 11H16v6H9v-3.2a1.6 1.6 0 0 0-2.6-1.25A1.6 1.6 0 1 1 4.5 9H9V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">The Four Puzzlers</h3>
+      <ol class="clue-list">
+        <li>Ben sits immediately left of Ava; Ben drinks water.</li>
+        <li>The coffee drinker sits immediately left of Cleo.</li>
+        <li>Cleo drinks juice. Dmitri isn't in seat 1. Ava doesn't drink coffee.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Answer in next week's edition &mdash; Ken Endo</p>
+    </div>
+
+    <div class="ad-box">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4h3l6 4V6l-6 4H3Z"/>
+          <path d="M16 9a4 4 0 0 1 0 6"/>
+        </svg>
+      </div>
+      <h3>Your Ad Here</h3>
+      <p>Reach bubble tea drinkers across Auckland &mdash; weekly placement, enquire with your local distributor</p>
+    </div>
+  </div>
+
+  <div class="colophon">
+    Next week: Daffy Duck's book review, Rebecca Black on new music, Dana Foley's forecast, Cho Chang's finds, and the kyber-prospector feature &mdash; the roster rotates weekly.
   </div>
 </div>
