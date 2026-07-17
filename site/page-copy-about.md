@@ -20,13 +20,15 @@ All content is satire and character-voice, per each contributor's house disclaim
 
 ## Get In Touch
 
-Want Bubble Tea News in your store, want to advertise, or just want to say hello — **[ contact form / email ]**.
+Want Bubble Tea News in your store, want to advertise, or just want to say hello — a short form: Name, Email, "What's this about?" (stock my store / advertise / general), Message.
 
-*(Placeholder — needs an actual public-facing contact address before this goes live, separate from any personal inbox.)*
+Live via FormSubmit.co, posting to david_logan_nz@outlook.com — no backend needed, submissions land straight in the inbox.
 
 ---
 
 **Notes for build:**
 - The "Note on Voice" section is doing real work — it's the plain-English version of the satire/non-affiliation disclaimer that runs in the print footer every issue. Don't cut it for brevity; it's load-bearing.
-- Contact needs a dedicated address/form (e.g. hello@bubbletea.nz) once the domain is live — don't publish a personal email here.
+- Contact form currently routes to David's personal inbox (david_logan_nz@outlook.com) — swap the `action` URL in `about.html` to a dedicated address (e.g. hello@bubbletea.nz) once the domain and a real mailbox exist.
+- FormSubmit.co needs a one-time confirmation click on the *first* real submission (sent to the destination inbox) before it actually starts forwarding — test this before relying on it.
+- `_captcha` is set to `false` for a one-step submit; if spam becomes a problem, flip it back to the default (adds a confirmation page after submit).
 - Keep this page short. It's a credibility/orientation stop, not a landing page — most of the real pitch work happens on Home, Advertise, and Pickup Locations.

@@ -36,9 +36,13 @@ All ten sitemap pages are built and fully cross-linked (no dead internal links):
   these were drafted, not sourced from real market research or David's
   explicit pricing decision. Rate is framed as locked-in-once-booked, rising
   as distribution grows (e.g. once the Gong Cha partnership lands).
-- **No public contact address** — `about.html` says "Contact form coming soon."
-  Needs a real address/form once the domain is live, separate from any
-  personal inbox.
+- **Contact form is live but routes to a personal inbox** — `about.html` has a
+  working form (Name/Email/Reason/Message) via FormSubmit.co, posting to
+  David's personal email (david_logan_nz@outlook.com). No backend needed,
+  but swap the destination to a dedicated address (e.g. hello@bubbletea.nz)
+  once the domain and a real mailbox exist. Also: FormSubmit.co requires a
+  one-time confirmation click on the first real submission before it starts
+  forwarding — untested end-to-end as of 2026-07-18.
 - **Subscribe has no backend** — the email form on `subscribe.html` posts to
   `#`. Needs a real email service (Mailchimp/Buttondown/etc.) before launch.
 - **`latest-issue.html` needs a real update process** — right now it's Issue 2's
