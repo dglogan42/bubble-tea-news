@@ -1,0 +1,479 @@
+<title>Bubble Tea News — Print Edition — Issue 2</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 12mm 12mm 10mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    .sheet { box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm; }
+    .sheet:last-child { page-break-after: auto; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  /* ---------- Eyebrow band ---------- */
+  .eyebrow-band {
+    display: inline-block;
+    align-self: center;
+    padding: 2mm 6mm;
+    border-radius: 20px;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  /* ---------- Dotted masthead frame ---------- */
+  .masthead-frame {
+    position: relative;
+    text-align: center;
+    padding: 6mm 8mm;
+    margin-bottom: 4mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm;
+    opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 3mm 8mm;
+    font-weight: 800;
+    font-size: 24pt;
+    letter-spacing: 0.08em;
+    background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  /* mask the dots directly behind the title so the title block reads clean */
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 5mm;
+  }
+
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 3mm;
+    margin-bottom: 5mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots {
+    display: flex;
+    gap: 2.5px;
+  }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  /* ---------- Content grid ---------- */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6mm;
+    padding: 4mm 0;
+  }
+  .row.divider-top { border-top: 2.5px solid currentColor; }
+
+  .col-icon-lead {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-circle {
+    width: 13mm; height: 13mm;
+    border: 1.4px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 {
+    font-weight: 800;
+    font-size: 15pt;
+    line-height: 1.1;
+    margin: 0 0 2mm;
+  }
+  .kicker {
+    font-size: 6.6pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin: 0 0 1mm;
+  }
+  p.body-text, p.byline-text {
+    font-size: 8.4pt;
+    line-height: 1.55;
+    margin: 0 0 2mm;
+  }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead {
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin: 0 0 1.5mm;
+    line-height: 1.2;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pull-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2.5px solid currentColor;
+    padding-left: 5mm;
+  }
+  .pull-quote blockquote {
+    margin: 0 0 2mm;
+    font-weight: 800;
+    font-size: 13pt;
+    line-height: 1.25;
+  }
+  .pull-quote cite { font-size: 8pt; font-style: normal; opacity: 0.8; }
+
+  /* ---------- "In every issue" list ---------- */
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li {
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 1.6mm 0;
+    border-top: 1px solid currentColor;
+    opacity: 0.9;
+  }
+  .feature-list li:first-child { border-top: none; }
+
+  /* Puzzle clue list */
+  .clue-list { margin: 1mm 0 2mm; padding-left: 3.5mm; font-size: 7.6pt; line-height: 1.5; }
+  .answer-recap { font-size: 7.2pt; line-height: 1.5; opacity: 0.85; margin: 0 0 2mm; font-style: italic; }
+
+  /* Ad box */
+  .ad-box {
+    border: 1.5px dashed currentColor;
+    border-radius: 4px;
+    padding: 3mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
+
+  .colophon {
+    margin-top: auto;
+    padding-top: 3mm;
+    border-top: 2px solid currentColor;
+    text-align: center;
+    font-size: 6.2pt;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 2 — generated in Fable-Offline via the <code>bubble-tea-news-editor</code> skill,
+    delivered here per that skill's cross-repo publish step. Same taro/brown-sugar
+    layout as Issue 1, fresh cast this week.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 2 &middot; 17 July 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.news (fictional) &middot; est. 2026</span>
+  </div>
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Fernhill Heights</p>
+      <h2>Letterbox Bunting Escalation Reaches Second Street</h2>
+      <p class="body-text">Risk assessed Low-to-Moderate after a third household replaced its plain letterbox flag with a hand-sewn bunting set, prompting two neighbours to follow suit within the week. No formal bylaw is currently under consideration; the residents' association newsletter did request "a sense of proportion."</p>
+      <p class="byline-text">community-outbreak-bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">Investigations &middot; Case File</p>
+      <h3 class="subhead">Exhibit Pending: Two Nearly Identical Menus</h3>
+      <p class="byline-text">M. Voss, Investigations Desk</p>
+      <p class="body-text">A reader forwarded two competing café sites sharing an unusual class name, misspelled identically on both. Alternative explanations remain on the table &mdash; a shared web agency, a shared template vendor, plain coincidence in a crowded market. Full dossier pending one more Wayback Machine pull.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Music &middot; Review</p>
+      <h3 class="subhead">A Real One, Buried in the Noise</h3>
+      <p class="byline-text">Rebecca Black</p>
+      <p class="body-text">On "Paper Weather" by Junebug Static: "There's a version of this song that's all hooks and no nerve &mdash; thank God this isn't that version. The chorus cracks on purpose, right where a bigger label would've made her fix it." It's trying to say something true, and it lands.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 20V10l8-6 8 6v10"/>
+          <path d="M9 20v-6h6v6"/>
+        </svg>
+      </div>
+      <p class="kicker">Home Front &middot; Sebastian's Watch</p>
+      <h2>The Sock Drawer, Reclaimed At Last</h2>
+      <p class="body-text">Thirty-one days it stood in chaos &mdash; a kingdom of orphaned cottons, each sock without its other half, crying out (he assumes) for order. Sebastian restored the realm sock by sock, and found, folded at the very back, one small blue sock that hasn't fit anyone in this house for three years. He put it back exactly where it was.</p>
+      <p class="byline-text">Sebastian</p>
+    </div>
+
+    <div>
+      <p class="kicker">Sport &middot; Recap (illustrative)</p>
+      <h3 class="subhead">She Read the Fatigue Three Strokes Before the Judges Did</h3>
+      <p class="byline-text">T. Marlow, Sports Desk</p>
+      <p class="body-text">In an invented recap of a club open-water heat: swimmer "R. Okafor" looked smooth through the first buoy &mdash; until her stroke rate ticked up a beat early, the tell of someone burning reserve she hadn't budgeted. The crowd caught it at the finish. I'd caught it two hundred metres back.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia</p>
+      <h3 class="subhead">Did You Know?</h3>
+      <p class="body-text">Bubble tea's chewy pearls aren't made from tea at all &mdash; they're tapioca, extracted from the cassava root, the same plant behind cassava flour and casabe bread across Latin America and West Africa.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"He put it back exactly where it was."</blockquote>
+      <cite>&mdash; Sebastian, on the sock that hasn't fit anyone in three years</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why do bubble tea baristas make terrible secret-keepers? Because sooner or later, they always spill the tea.</p>
+    </div>
+
+    <div class="ad-box">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4h3l6 4V6l-6 4H3Z"/>
+          <path d="M16 9a4 4 0 0 1 0 6"/>
+        </svg>
+      </div>
+      <h3>Your Ad Here</h3>
+      <p>Reach bubble tea drinkers across Auckland</p>
+    </div>
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M13 3 5 14h6l-1 7 9-12h-6l1-6Z" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="kicker">Feature &middot; Outer Reaches</p>
+      <h2>The Shard That Answered Before I Touched It</h2>
+      <p class="body-text">Found it four centimetres under ash, in a debris field that shouldn't have had anything left worth the walk. Every buyer on this moon will tell you a good shard hums a little when you're close. This one hummed before I was close. I didn't tell the buyer that part.</p>
+      <p class="byline-text">Luke Skywalker, dispatched from the Jedha debris fields</p>
+    </div>
+
+    <div>
+      <p class="kicker">Books &middot; The Duckworth Scale</p>
+      <h3 class="subhead">Five Duckworths, Then One, Then Back Up To Four</h3>
+      <p class="byline-text">Daffy Duck</p>
+      <p class="body-text">Started this review of "Th' Cartographer'th Thecret" at a full five &mdash; thrilling premithe, a protagonist clearly modeled on someone dashing and underappreciated, thpecifically me. Chapter eleven nearly lotht it a thtar entirely. Recovered by the end. Four Duckworths.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Field Notes &middot; Sanctuary</p>
+      <h3 class="subhead">Enclosure Six, and What I Used To Call Data</h3>
+      <p class="byline-text">Alan Grant</p>
+      <p class="body-text">0600. Enclosure six, adult female, appetite normal, fence-repair wound closing well. I spent eleven years reconstructing animals from fragments too small to hold in one hand. I now spend my mornings holding an entire, breathing one still while it hates me for its own good.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 5h16v10H8l-4 4V5Z"/>
+          <path d="M8 9h8M8 12h5"/>
+        </svg>
+      </div>
+      <p class="kicker">Travel &middot; Vacation Log, Day 9</p>
+      <h3 class="subhead">Like, We Just Wanted One Normal Kayak Trip, Man</h3>
+      <p class="byline-text">Shaggy Rogers (&amp; Scooby-Doo)</p>
+      <p class="body-text">Rented kayaks, paddled maybe forty feet before a "lake monster" surfaced near the dock. Zoinks. Scooby says "Rot again" &mdash; and yeah, buddy, not again, but also, historically, always again. Turned out to be the marina owner's brother, trying to tank his rival's rental business. Free kayaks for a week, though. Worth it. Mostly.</p>
+    </div>
+
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 4h6v3.2a1.6 1.6 0 0 0 2.6 1.25A1.6 1.6 0 1 1 19.5 11H16v6H9v-3.2a1.6 1.6 0 0 0-2.6-1.25A1.6 1.6 0 1 1 4.5 9H9V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">The Counter Queue</h3>
+      <p class="answer-recap">Last week's Four Puzzlers: Ben (seat 1, water), Dmitri (seat 3, coffee), Cleo (seat 4, juice), Ava (seat 2, the fourth drink &mdash; never actually named in the original clues, so I won't invent one). The seat split only works one way once you rule out Dmitri in seat 1.</p>
+      <ol class="clue-list">
+        <li>Priya orders a Large.</li>
+        <li>The grass-jelly order is a smaller size than Quinn's.</li>
+        <li>Quinn doesn't order pearls.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk warm-up &middot; Answer in next week's edition &mdash; Ken Endo</p>
+    </div>
+
+    <div class="ad-box">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4h3l6 4V6l-6 4H3Z"/>
+          <path d="M16 9a4 4 0 0 1 0 6"/>
+        </svg>
+      </div>
+      <h3>Your Ad Here</h3>
+      <p>Reach bubble tea drinkers across Auckland &mdash; weekly placement, enquire with your local distributor</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M7 17a4 4 0 0 1-1-7.87A5 5 0 0 1 16 8a4.5 4.5 0 0 1 1 8.9"/>
+          <path d="M7 17h9"/>
+        </svg>
+      </div>
+      <p class="kicker">Profile &middot; A Life, Counted</p>
+      <h2>Year Fourteen: The Cello Still Doesn't Sound Like Grief</h2>
+      <p class="body-text">Fourteen years since the mission I was built for stopped mattering. Four thousand, one hundred and two hours of cello practice logged since I chose the name Wren off a sign outside a bird sanctuary I was never sent to guard. The teacher says I play "correct but cold." She's not wrong.</p>
+      <p class="byline-text">Wren</p>
+    </div>
+
+    <div class="ad-box">
+      <h3>Your Ad Here</h3>
+      <p>Reach bubble tea drinkers across Auckland</p>
+    </div>
+
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Shopping &middot; Finds (illustrative)</p>
+      <h3 class="subhead">One Real Find, Buried in Forty Near-Identical Listings</h3>
+      <p class="byline-text">Winnie Zhao, Shopping Desk</p>
+      <p class="body-text">Illustrative picks only, not verified live listings: hunting a chunky knit cardigan, skip anything with stock-photo-only images and a seller under 500 reviews. The real signal is customer photos showing the actual weave, plus a size chart in centimetres.</p>
+    </div>
+  </div>
+
+  <div class="colophon">
+    Next week: with the full roster now through its first two turns, Issue 3 shrinks the exclusion window to the most recent issue only &mdash; expect familiar faces from Issue 1 (Nixon, McCoy, Robin Leach) back in rotation alongside Garfield's next verdict.
+  </div>
+</div>
