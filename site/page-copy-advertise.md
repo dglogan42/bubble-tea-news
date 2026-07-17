@@ -15,13 +15,24 @@ Bubble Tea News is a free weekly broadsheet written for — and read by — Auck
 
 ## Ad Formats
 
-**Sponsor Box**
+**Sponsor Box** — *Introductory rate*
 The format you'll have seen in print — store name, one-line pitch, and a stat callout (queue times, flavor match, sweetness data, whatever's true and worth bragging about). Sized to match the paper's card format, so it reads as part of the page, not an interruption.
 
-**Classifieds Line**
+| | Price | Per issue |
+|---|---|---|
+| Single issue | $35 | $35 |
+| 4-issue run (paid upfront) | $120 | $30 |
+| 12-issue run (paid upfront) | $324 | $27 |
+
+**Classifieds Line** — *Introductory rate*
 A short listing in the classifieds strip — cheapest way in, good for one-off promos or hiring notices.
 
-*(Rates and booking lead times: TBD — add once pricing is set. Suggest a simple weekly-slot rate plus a discount for booking a run of 4+ issues, so a shop can commit to one appearance and not have to re-book each week.)*
+| | Price | Per issue |
+|---|---|---|
+| Single issue | $12 | $12 |
+| 4-issue run | $40 | $10 |
+
+Both rates hold for the life of a booked run once locked in — they rise as distribution grows past Botany (e.g. if the Gong Cha partnership lands), so booking now is the cheapest this ever gets.
 
 ## Get a Slot
 
@@ -37,6 +48,6 @@ Tell us about your store and what you'd like the ad to say — we'll fit it to t
 ---
 
 **Notes for build:**
-- No real pricing exists yet — placeholder only, don't publish live with fake numbers. Fill in once David sets rates.
+- Rates above are a first-draft introductory proposal (2026-07-18), sized to a single-store circulation — review and adjust once real demand or distribution numbers come in, especially before/after the Gong Cha partnership pitch lands.
 - "Sponsor Box" format should visually reuse the same icon-circle / stat-callout treatment as Milkwood Tea Co. / Nine Cups Tea Bar / Steep & Sorted in the print editions, so advertisers can see exactly what they're buying.
 - Two-way cross-link with the Pickup Locations page: stores not yet stocking get the "get it free" pitch there; stores already stocking get pointed here to upgrade to a paid ad.

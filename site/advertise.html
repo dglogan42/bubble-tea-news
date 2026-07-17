@@ -72,6 +72,26 @@
   .format-card p { margin: 0; font-size: 0.95rem; }
   .format-card .price-note { display: block; margin-top: var(--sp-4); padding-top: var(--sp-3); border-top: 1px dashed var(--rule); font-size: 0.85rem; color: var(--ink-soft); font-style: italic; }
 
+  .rate-block { margin-top: var(--sp-4); padding-top: var(--sp-3); border-top: 1px dashed var(--rule); }
+  .rate-badge {
+    display: inline-block;
+    margin-bottom: var(--sp-2);
+    padding: 2px 10px;
+    border-radius: 20px;
+    background: var(--sugar-ink);
+    color: var(--sugar-bg);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .rate-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: var(--sp-2); }
+  .rate-row { display: flex; justify-content: space-between; gap: var(--sp-3); font-size: 0.92rem; padding-bottom: 6px; border-bottom: 1px dotted var(--rule); }
+  .rate-row .label { color: var(--ink); }
+  .rate-row .price { font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rate-row .price .per { font-weight: 600; font-size: 0.78rem; color: var(--ink-soft); }
+  .rate-fine { display: block; font-size: 0.8rem; color: var(--ink-soft); font-style: italic; }
+
   .cross-links { margin-top: var(--sp-8); padding-top: var(--sp-6); border-top: 2px solid var(--rule); display: flex; gap: var(--sp-6); flex-wrap: wrap; }
   .cross-links a { text-decoration: underline; text-underline-offset: 3px; font-weight: 700; }
 
@@ -168,13 +188,28 @@
             <span class="eyebrow" style="color:var(--sugar-ink);">Sponsor Box</span>
             <h3>Store name, one-line pitch, a real stat</h3>
             <p>The format you'll have seen in print — queue times, flavor match, sweetness data, whatever's true and worth bragging about, verified by <a href="pearl-index.html">The Pearl Index</a>. Sized to match the paper's card format, so it reads as part of the page, not an interruption.</p>
-            <span class="price-note">Rates: to be confirmed — get in touch below.</span>
+            <div class="rate-block">
+              <span class="rate-badge">Introductory rate</span>
+              <div class="rate-list">
+                <div class="rate-row"><span class="label">Single issue</span><span class="price">$35</span></div>
+                <div class="rate-row"><span class="label">4-issue run <span class="per">(paid upfront)</span></span><span class="price">$120 <span class="per">— $30/issue</span></span></div>
+                <div class="rate-row"><span class="label">12-issue run <span class="per">(paid upfront)</span></span><span class="price">$324 <span class="per">— $27/issue</span></span></div>
+              </div>
+              <span class="rate-fine">Circulation is Botany-only for now. Book a run now and keep this rate for as long as it continues — it rises as distribution grows (e.g. if the Gong Cha partnership lands).</span>
+            </div>
           </div>
           <div class="format-card">
             <span class="eyebrow" style="color:var(--sugar-ink);">Classifieds Line</span>
             <h3>A short listing in the classifieds strip</h3>
             <p>Cheapest way in. Good for one-off promos or hiring notices.</p>
-            <span class="price-note">Rates: to be confirmed — get in touch below.</span>
+            <div class="rate-block">
+              <span class="rate-badge">Introductory rate</span>
+              <div class="rate-list">
+                <div class="rate-row"><span class="label">Single issue</span><span class="price">$12</span></div>
+                <div class="rate-row"><span class="label">4-issue run</span><span class="price">$40 <span class="per">— $10/issue</span></span></div>
+              </div>
+              <span class="rate-fine">Same lock-in as the Sponsor Box — rate holds for the life of your run.</span>
+            </div>
           </div>
         </div>
       </div>

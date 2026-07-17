@@ -29,8 +29,13 @@ All ten sitemap pages are built and fully cross-linked (no dead internal links):
 
 ## Open items before this goes live
 
-- **Ad rates are unset** — `advertise.html` has a "to be confirmed" placeholder
-  where pricing should go.
+- **Ad rates are a first-draft proposal, not confirmed** — `advertise.html` has
+  introductory rates (Sponsor Box: $35/issue, $120/4-issue, $324/12-issue;
+  Classifieds Line: $12/issue, $40/4-issue), sized to current single-store
+  circulation, added 2026-07-18. Review before actually taking payment —
+  these were drafted, not sourced from real market research or David's
+  explicit pricing decision. Rate is framed as locked-in-once-booked, rising
+  as distribution grows (e.g. once the Gong Cha partnership lands).
 - **No public contact address** — `about.html` says "Contact form coming soon."
   Needs a real address/form once the domain is live, separate from any
   personal inbox.
