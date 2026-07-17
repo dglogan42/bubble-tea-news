@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pickup Locations — Bubble Tea News</title>
+<meta name="description" content="Where to find a free print copy of Bubble Tea News in Auckland — currently Gong Cha Botany Town Centre, with more stores coming soon.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.5; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--taro-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--sp-5); }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .page-header { padding: var(--sp-6) 0 var(--sp-7); border-bottom: 2px solid var(--rule); }
+  .page-header h1 { margin: 0 0 var(--sp-2); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: 0.01em; }
+  .page-header p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+
+  .section-head { margin-bottom: var(--sp-5); }
+  .section-head h2 { margin: 0; font-size: 1.05rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .store-card {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-5);
+    background: var(--card);
+    padding: var(--sp-5) var(--sp-6);
+    border-radius: 3px;
+    border-top: 4px solid var(--taro-ink);
+    box-shadow: 0 1px 0 var(--rule);
+    flex-wrap: wrap;
+  }
+  .icon-circle {
+    flex: none;
+    width: 46px;
+    height: 46px;
+    border: 1.6px solid var(--taro-ink);
+    color: var(--taro-ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-circle svg { width: 56%; height: 56%; }
+  .store-info { flex: 1; min-width: 200px; }
+  .store-info h3 { margin: 0 0 4px; font-size: 1.15rem; font-weight: 800; }
+  .store-info p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+  .stock-badge {
+    display: inline-block;
+    margin-top: var(--sp-2);
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: var(--taro-bg);
+    color: var(--taro-ink);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .expanding {
+    margin-top: var(--sp-8);
+    padding-top: var(--sp-6);
+    border-top: 2px solid var(--rule);
+  }
+  .expanding p { max-width: 62ch; }
+  .target-list { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-4); }
+  .target-list span {
+    background: var(--card);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  .retailer-cta {
+    margin-top: var(--sp-8);
+    background: var(--taro-bg);
+    color: var(--taro-ink);
+    padding: var(--sp-6);
+    border-radius: 3px;
+  }
+  .retailer-cta h2 { margin: 0 0 var(--sp-3); font-size: 1.4rem; font-weight: 800; }
+  .retailer-cta p { margin: 0 0 var(--sp-4); max-width: 60ch; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.6px solid var(--taro-ink);
+    background: var(--taro-ink);
+    color: var(--taro-bg);
+    transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 var(--sp-4); }
+    .store-card { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="advertise.html">Advertise your store &rarr;</a>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>Find a Copy</h1>
+      <p>Bubble Tea News is free, weekly, and only as far as your nearest counter. No subscription, no paywall — just take one. New issues drop every Friday.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>Now Stocked At</h2>
+      </div>
+
+      <article class="store-card">
+        <div class="icon-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M12 21s7-7.4 7-12.2A7 7 0 0 0 5 8.8C5 13.6 12 21 12 21Z"/>
+            <circle cx="12" cy="8.6" r="2.3"/>
+          </svg>
+        </div>
+        <div class="store-info">
+          <h3>Gong Cha — Botany Town Centre</h3>
+          <p>Copies at the counter, restocked every Friday morning.</p>
+          <span class="stock-badge">Issue 1 &amp; Issue 2 both in stock</span>
+        </div>
+      </article>
+
+      <div class="expanding">
+        <div class="section-head">
+          <h2>Expanding Across Auckland</h2>
+        </div>
+        <p>We're taking Bubble Tea News to more Gong Cha stores across the city, one counter at a time. Botany was first.</p>
+        <div class="target-list">
+          <span>CBD &mdash; Queen St</span>
+          <span>CBD &mdash; Lorne St</span>
+          <span>Newmarket</span>
+          <span>Sylvia Park</span>
+          <span>Takapuna</span>
+          <span>Albany</span>
+          <span>St Lukes</span>
+          <span>Manukau</span>
+        </div>
+        <p style="margin-top:var(--sp-4);">Don't see your local yet? <a href="about.html" style="text-decoration:underline; text-underline-offset:3px; font-weight:700;">Tell us where you'd like to find it &rarr;</a></p>
+      </div>
+
+      <div class="retailer-cta">
+        <h2>Own a Bubble Tea Store?</h2>
+        <p>Bubble Tea News is written for Auckland's bubble tea retailers, and it's free to stock — no cost, no catch, just a stack of papers delivered weekly and a bit of counter space. It's also a live, weekly-refreshed ad slot in front of exactly the customers who walk into your store.</p>
+        <a class="btn" href="advertise.html">Get Bubble Tea News in your store &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="advertise.html">Advertise</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
