@@ -23,8 +23,8 @@ All ten sitemap pages are built and fully cross-linked (no dead internal links):
 - `pickup-locations.html` — Where to find a print copy (Gong Cha Botany
   confirmed; chain-wide Gong Cha Auckland rollout as the target — see
   `../gongcha-pitch.html` for the outreach piece)
-- `about.html` — What the paper is, satire/non-affiliation disclaimer, contact
-- `subscribe.html` — Email capture (markup only, no backend wired up)
+- `about.html` — What the paper is, satire/non-affiliation disclaimer, working contact form
+- `subscribe.html` — Working email capture (FormSubmit.co)
 - `page-copy-*.md` — The original written-copy drafts each HTML page was built from
 
 ## Open items before this goes live
@@ -43,8 +43,15 @@ All ten sitemap pages are built and fully cross-linked (no dead internal links):
   once the domain and a real mailbox exist. Also: FormSubmit.co requires a
   one-time confirmation click on the first real submission before it starts
   forwarding — untested end-to-end as of 2026-07-18.
-- **Subscribe has no backend** — the email form on `subscribe.html` posts to
-  `#`. Needs a real email service (Mailchimp/Buttondown/etc.) before launch.
+- **Subscribe works but isn't a real newsletter system** — `subscribe.html` posts
+  to FormSubmit.co (david_logan_nz@outlook.com), same as the contact form. This
+  was a deliberate choice over a real newsletter service (Buttondown/Mailchimp)
+  to get something working with zero signup. Trade-off: each signup is just an
+  email notification, not a managed list — David has to manually collect
+  addresses and send the Friday email himself, no automated unsubscribe. Copy
+  was written to be honest about this ("email us to unsubscribe," not "one
+  click"). Revisit with a real newsletter service once manual tracking gets
+  painful.
 - **`latest-issue.html` needs a real update process** — right now it's Issue 2's
   content hardcoded. When Issue 3 ships, this page's body should be replaced,
   the old Issue 2 content should become a frozen `issue-2.html` (same pattern

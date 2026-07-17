@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Subscribe — Bubble Tea News</title>
-<meta name="description" content="Get Bubble Tea News in your inbox every Friday — free, no spam, one click to unsubscribe.">
+<meta name="description" content="Get Bubble Tea News in your inbox every Friday — free, no spam, easy to unsubscribe.">
 <style>
   :root {
     --taro-bg: #E4D9EC;
@@ -68,6 +68,7 @@
     max-width: 340px;
   }
   .subscribe-form input[type="email"]::placeholder { color: var(--ink-soft); }
+  .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .btn {
     display: inline-flex;
     align-items: center;
@@ -133,12 +134,15 @@
       <span class="eyebrow">Bubble Tea News</span>
       <h1>Never Miss an Issue</h1>
       <p>New issue every Friday. One email, straight to your inbox, no spam — just a link to that week's front page the moment it's live.</p>
-      <form class="subscribe-form" action="#" method="post">
+      <form class="subscribe-form" action="https://formsubmit.co/david_logan_nz@outlook.com" method="POST">
+        <input type="hidden" name="_subject" value="New Bubble Tea News subscriber">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off">
         <label for="subscribe-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Email address</label>
         <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
         <button class="btn" type="submit">Subscribe</button>
       </form>
-      <p class="fine-print">No price, no account, no fine print. Unsubscribe any time, one click.</p>
+      <p class="fine-print">No price, no account, no fine print. Email us any time to be taken off the list.</p>
     </div>
   </div>
 
@@ -154,8 +158,8 @@
           <p>No other lists, no third-party sharing.</p>
         </div>
         <div class="get-card">
-          <h3>One Click Out</h3>
-          <p>Unsubscribe any time, no questions asked.</p>
+          <h3>Easy Out</h3>
+          <p>Email us any time and we'll take you off the list, no questions asked.</p>
         </div>
       </div>
 
