@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Desk — Bubble Tea News</title>
+<meta name="description" content="Meet the rotating cast of columnists behind Bubble Tea News, Auckland's free weekly bubble tea broadsheet.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.5; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--taro-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--sp-5); }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .page-header { padding: var(--sp-6) 0 var(--sp-7); border-bottom: 2px solid var(--rule); }
+  .page-header h1 { margin: 0 0 var(--sp-2); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: 0.01em; }
+  .page-header p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+
+  /* this week strip */
+  .this-week {
+    background: var(--taro-bg);
+    color: var(--taro-ink);
+    border-radius: 3px;
+    padding: var(--sp-5) var(--sp-6);
+    margin-bottom: var(--sp-8);
+  }
+  .this-week h2 { margin: 0 0 var(--sp-3); font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+  .this-week-names { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-3); font-size: 0.95rem; font-weight: 700; }
+  .this-week-names span { padding-right: var(--sp-3); border-right: 1.5px solid currentColor; }
+  .this-week-names span:last-child { border-right: none; padding-right: 0; }
+
+  .section-head { margin-bottom: var(--sp-5); }
+  .section-head h2 { margin: 0; font-size: 1.05rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .roster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-5);
+  }
+
+  .roster-card {
+    background: var(--card);
+    padding: var(--sp-5);
+    border-radius: 2px;
+    border-top: 3px solid var(--sugar-ink);
+    box-shadow: 0 1px 0 var(--rule);
+    position: relative;
+  }
+  .roster-card .eyebrow { color: var(--sugar-ink); }
+  .roster-card h3 { margin: var(--sp-2) 0 4px; font-size: 1.08rem; font-weight: 800; }
+  .roster-card .byname { display: block; font-size: 0.82rem; font-style: italic; color: var(--ink-soft); margin-bottom: var(--sp-2); }
+  .roster-card p { margin: 0; font-size: 0.92rem; }
+
+  .badge-week {
+    position: absolute;
+    top: var(--sp-4);
+    right: var(--sp-4);
+    background: var(--taro-ink);
+    color: var(--taro-bg);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+
+  /* fixtures */
+  .fixtures {
+    margin-top: var(--sp-8);
+    padding-top: var(--sp-6);
+    border-top: 2px solid var(--rule);
+  }
+  .fixtures ul { list-style: none; margin: var(--sp-4) 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
+  .fixtures li { background: var(--card); padding: var(--sp-4); border-radius: 2px; font-weight: 700; font-size: 0.92rem; text-align: center; }
+  .fixtures p { margin: 0; max-width: 62ch; color: var(--ink-soft); }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 860px) {
+    .roster-grid { grid-template-columns: 1fr 1fr; }
+    .fixtures ul { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding: 0 var(--sp-4); }
+    .roster-grid { grid-template-columns: 1fr; }
+    .fixtures ul { grid-template-columns: 1fr; }
+    .this-week-names span { border-right: none; padding-right: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="latest-issue.html">This Week's Issue &rarr;</a>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>The Desk</h1>
+      <p>Bubble Tea News runs on a rotating cast. No single voice covers every beat every week — the roster turns over, so you'll see familiar bylines return and new ones show up alongside them.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="this-week">
+        <h2>In This Week's Issue &middot; Issue 2</h2>
+        <div class="this-week-names">
+          <span>M. Voss</span><span>Rebecca Black</span><span>Sebastian</span><span>T. Marlow</span>
+          <span>Luke Skywalker</span><span>Daffy Duck</span><span>Alan Grant</span>
+          <span>Shaggy Rogers &amp; Scooby-Doo</span><span>Ken Endo</span><span>Wren</span><span>Winnie Zhao</span>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>The Full Roster</h2>
+      </div>
+
+      <div class="roster-grid">
+
+        <div class="roster-card">
+          <span class="eyebrow">Politics &middot; Dispatch</span>
+          <h3>Richard Nixon</h3>
+          <p>Embattled, press-wary, sees the Cold War in everything — including your local council.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Business &middot; Markets</span>
+          <h3>Sherman McCoy</h3>
+          <p>Wall Street bravado applied to the smallest possible stakes. Closes every column up on points.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Technology &middot; Product</span>
+          <h3>Steve Jobs</h3>
+          <p>Whatever shipped this week, it's a revolution. The reality distortion field runs at full strength regardless of the feature.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">World Desk</span>
+          <h3>Baxter Kline</h3>
+          <p>Filing hard news from the middle of total chaos — usually chaos he's personally caught up in.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Investigations &middot; Case File</span>
+          <h3>M. Voss</h3>
+          <span class="byname">Investigations Desk</span>
+          <p>A legal-affairs eye for a story, chasing down copy-paste jobs and shared fence lines like they're the case of the year.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Lifestyle &middot; Estates</span>
+          <h3>Robin Leach</h3>
+          <p>Uncritical, breathless, genuinely delighted by every square foot. Champagne wishes, caviar dreams, every issue.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Dining &middot; Review</span>
+          <h3>Garfield</h3>
+          <p>Reviews everything against the standard of lasagna. Most things fall short.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Rural Notes</span>
+          <h3>Clem Whitlock</h3>
+          <span class="byname">Ridgeline Weekly</span>
+          <p>Front-page gravity for shearing tallies and pasture cover. Small-town rivalries taken very seriously.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Gossip &middot; Kiss &amp; Tell</span>
+          <h3>The Stickybeak</h3>
+          <p>Catty, affectionate, alliterative. Sources are always "deep in the biscuit tin."</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Puzzle of the Week</span>
+          <h3>Ken Endo</h3>
+          <p>One elegant logic puzzle, exactly one solution, no wasted clues. Answers run the following issue.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Weather</span>
+          <h3>Dana Foley</h3>
+          <p>Every forecast gets the full nature-documentary treatment — the meteorology underneath is always accurate.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="eyebrow">Automotive</span>
+          <h3>Lewis Hamilton</h3>
+          <p>Podium-level intensity for a local car lot clearance sale.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Music &middot; Review</span>
+          <h3>Rebecca Black</h3>
+          <p>Generous to earnest weirdness, merciless toward anything cynical or manufactured.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Home Front &middot; Sebastian's Watch</span>
+          <h3>Sebastian</h3>
+          <p>Small domestic victories narrated like they're the last quest left. This week: the sock drawer.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Sport &middot; Recap</span>
+          <h3>T. Marlow</h3>
+          <span class="byname">Sports Desk</span>
+          <p>A trained eye that reads the race before the obvious storyline breaks. (Illustrative recaps.)</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Feature &middot; Outer Reaches</span>
+          <h3>Luke Skywalker</h3>
+          <p>Dispatches from a kyber-crystal prospector working the Jedha debris fields.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Books &middot; The Duckworth Scale</span>
+          <h3>Daffy Duck</h3>
+          <p>Mercurial, self-interested, occasionally reviews himself into the plot. Scored out of five Duckworths.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Field Notes &middot; Sanctuary</span>
+          <h3>Alan Grant</h3>
+          <p>Ecological field notes from a wildlife sanctuary, written the way he once logged fossils.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Travel &middot; Vacation Log</span>
+          <h3>Shaggy Rogers (&amp; Scooby-Doo)</h3>
+          <p>Wants one normal vacation. Has never once gotten one.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Profile &middot; A Life, Counted</span>
+          <h3>Wren</h3>
+          <p>A former killing-machine's long, quiet accumulation of an ordinary life, logged in hours.</p>
+        </div>
+
+        <div class="roster-card">
+          <span class="badge-week">This Week</span>
+          <span class="eyebrow">Shopping &middot; Finds</span>
+          <h3>Winnie Zhao</h3>
+          <span class="byname">Shopping Desk</span>
+          <p>A sharp eye for the one real listing buried in forty near-identical decoys. (Illustrative picks.)</p>
+        </div>
+
+      </div>
+
+      <div class="fixtures">
+        <div class="section-head">
+          <h2>Every Week, Regardless of Roster</h2>
+        </div>
+        <p>Some strands aren't bylined — they're fixtures of the paper itself, every issue.</p>
+        <ul>
+          <li>Community Outbreak Bulletin</li>
+          <li>Bubble Tea Trivia</li>
+          <li>Joke of the Week</li>
+          <li>Classifieds</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="archive.html">Archive</a>
+        <a href="latest-issue.html">Latest Issue</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

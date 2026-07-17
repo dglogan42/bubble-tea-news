@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe — Bubble Tea News</title>
+<meta name="description" content="Get Bubble Tea News in your inbox every Friday — free, no spam, one click to unsubscribe.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.5; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 2.5px solid var(--sugar-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--sp-5); }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .hero { background: var(--sugar-bg); color: var(--sugar-ink); padding: var(--sp-8) 0; text-align: center; }
+  .hero .inner { max-width: 46ch; margin: 0 auto; }
+  .hero h1 { margin: 0 0 var(--sp-3); font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; text-wrap: balance; }
+  .hero p { margin: 0 0 var(--sp-6); font-size: 1.05rem; }
+
+  .subscribe-form { display: flex; gap: var(--sp-2); justify-content: center; flex-wrap: wrap; }
+  .subscribe-form input[type="email"] {
+    font-family: var(--font);
+    font-size: 1rem;
+    padding: 13px 18px;
+    border: 1.6px solid var(--sugar-ink);
+    border-radius: 3px;
+    background: var(--card);
+    color: var(--ink);
+    min-width: 260px;
+    flex: 1;
+    max-width: 340px;
+  }
+  .subscribe-form input[type="email"]::placeholder { color: var(--ink-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 24px;
+    border-radius: 3px;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1.6px solid var(--sugar-ink);
+    background: var(--sugar-ink);
+    color: var(--sugar-bg);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); background: #532f10; }
+
+  .fine-print { margin-top: var(--sp-4); font-size: var(--fs-meta); }
+  .fine-print a { text-decoration: underline; text-underline-offset: 3px; }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+
+  .what-you-get {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-5);
+  }
+  .get-card { background: var(--card); padding: var(--sp-5); border-radius: 2px; box-shadow: 0 1px 0 var(--rule); }
+  .get-card h3 { margin: 0 0 6px; font-size: 1rem; font-weight: 800; }
+  .get-card p { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
+
+  .prefer-paper {
+    margin-top: var(--sp-7);
+    padding-top: var(--sp-6);
+    border-top: 2px solid var(--rule);
+    text-align: center;
+  }
+  .prefer-paper a { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 var(--sp-4); }
+    .what-you-get { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="pickup-locations.html">Prefer paper? &rarr;</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap inner">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>Never Miss an Issue</h1>
+      <p>New issue every Friday. One email, straight to your inbox, no spam — just a link to that week's front page the moment it's live.</p>
+      <form class="subscribe-form" action="#" method="post">
+        <label for="subscribe-email" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0);">Email address</label>
+        <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p class="fine-print">No price, no account, no fine print. Unsubscribe any time, one click.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="wrap">
+      <div class="what-you-get">
+        <div class="get-card">
+          <h3>Every Friday</h3>
+          <p>A link to the new issue, print-and-digital both, the moment it's live.</p>
+        </div>
+        <div class="get-card">
+          <h3>Nothing Else</h3>
+          <p>No other lists, no third-party sharing.</p>
+        </div>
+        <div class="get-card">
+          <h3>One Click Out</h3>
+          <p>Unsubscribe any time, no questions asked.</p>
+        </div>
+      </div>
+
+      <div class="prefer-paper">
+        <p>Bubble Tea News is also free in print at participating stores.</p>
+        <a href="pickup-locations.html">Find a pickup location &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="pickup-locations.html">Pickup Locations</a>
+        <a href="latest-issue.html">Latest Issue</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

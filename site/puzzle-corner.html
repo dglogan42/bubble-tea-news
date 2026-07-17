@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puzzle Corner — Bubble Tea News</title>
+<meta name="description" content="A new logic puzzle from Ken Endo every week — exactly one valid solution, no wasted clues. Solve this week's, or check last week's answer.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.5; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--taro-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 var(--sp-5); }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; max-width: 1080px; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .page-header { padding: var(--sp-6) 0 var(--sp-7); border-bottom: 2px solid var(--rule); }
+  .page-header .wrap { max-width: 1080px; }
+  .page-header h1 { margin: 0 0 var(--sp-2); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: 0.01em; }
+  .page-header p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+
+  .puzzle-card {
+    background: var(--card);
+    padding: var(--sp-6);
+    border-radius: 3px;
+    border-top: 4px solid var(--taro-ink);
+    box-shadow: 0 1px 0 var(--rule);
+  }
+  .puzzle-card.solved { border-top-color: var(--sugar-ink); margin-top: var(--sp-7); }
+
+  .puzzle-status {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: var(--fs-eyebrow);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--sp-4);
+  }
+  .status-open { background: var(--taro-ink); color: var(--taro-bg); }
+  .status-solved { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  .puzzle-card .eyebrow { color: var(--ink-soft); }
+  .puzzle-card h2 { margin: var(--sp-2) 0 var(--sp-4); font-size: 1.6rem; font-weight: 800; }
+
+  .puzzle-list { margin: 0 0 var(--sp-4); padding-left: 1.3em; font-size: 1rem; }
+  .puzzle-list li { margin-bottom: var(--sp-2); }
+
+  .puzzle-meta { font-size: var(--fs-meta); font-weight: 700; color: var(--ink-soft); }
+
+  .answer-block {
+    margin-top: var(--sp-5);
+    padding-top: var(--sp-4);
+    border-top: 1.5px dashed var(--rule);
+  }
+  .answer-block h3 { margin: 0 0 var(--sp-2); font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--sugar-ink); }
+  .answer-block p { margin: 0; font-size: 0.98rem; }
+  .answer-block cite { display: block; margin-top: var(--sp-2); font-style: italic; font-size: var(--fs-meta); color: var(--ink-soft); }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 620px) {
+    .wrap, .page-header .wrap, .util-bar .wrap { padding: 0 var(--sp-4); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="latest-issue.html">This Week's Issue &rarr;</a>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>Puzzle Corner</h1>
+      <p>One puzzle a week, set by Ken Endo. Exactly one valid solution, no wasted clues, no ambiguity — solve it before the answer runs in the following issue.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <article class="puzzle-card">
+        <span class="puzzle-status status-open">Open &middot; Issue 2</span>
+        <span class="eyebrow">This Week's Puzzle</span>
+        <h2>The Counter Queue</h2>
+        <ol class="puzzle-list">
+          <li>Priya orders a Large.</li>
+          <li>The grass-jelly order is a smaller size than Quinn's.</li>
+          <li>Quinn doesn't order pearls.</li>
+        </ol>
+        <span class="puzzle-meta">Brisk warm-up &middot; Answer runs in Issue 3</span>
+      </article>
+
+      <article class="puzzle-card solved">
+        <span class="puzzle-status status-solved">Solved &middot; Issue 1</span>
+        <span class="eyebrow">Solved Archive</span>
+        <h2>The Four Puzzlers</h2>
+        <ol class="puzzle-list">
+          <li>Ben sits immediately left of Ava; Ben drinks water.</li>
+          <li>The coffee drinker sits immediately left of Cleo.</li>
+          <li>Cleo drinks juice. Dmitri isn't in seat 1. Ava doesn't drink coffee.</li>
+        </ol>
+        <div class="answer-block">
+          <h3>Answer</h3>
+          <p>Ben — seat 1, water. Dmitri — seat 3, coffee. Cleo — seat 4, juice. Ava — seat 2, the fourth drink, never actually named in the original clues, so no invented answer there. The seat split only resolves one way once Dmitri is ruled out of seat 1.</p>
+          <cite>— Ken Endo, Issue 2</cite>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="the-desk.html">The Desk</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

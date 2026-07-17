@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Bubble Tea News</title>
+<meta name="description" content="Bubble Tea News is a free weekly print and digital broadsheet for Auckland's bubble tea scene. All content is satire and character-voice.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.6; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--taro-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 var(--sp-5); }
+  .util-bar .wrap, .page-header .wrap, .imprint .wrap { max-width: 1080px; }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .page-header { padding: var(--sp-6) 0 var(--sp-7); border-bottom: 2px solid var(--rule); }
+  .page-header h1 { margin: 0; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: 0.01em; }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+  main .wrap { display: flex; flex-direction: column; gap: var(--sp-7); }
+
+  section h2 { margin: 0 0 var(--sp-3); font-size: 1.15rem; font-weight: 800; }
+  section p { margin: 0; font-size: 1rem; }
+  section p + p { margin-top: var(--sp-3); }
+  section a { text-decoration: underline; text-underline-offset: 3px; font-weight: 700; }
+
+  .voice-note { background: var(--card); padding: var(--sp-6); border-radius: 3px; border-left: 4px solid var(--sugar-ink); }
+  .voice-note h2 { color: var(--sugar-ink); }
+
+  .contact-note { background: var(--taro-bg); color: var(--taro-ink); padding: var(--sp-6); border-radius: 3px; }
+  .contact-note h2 { color: var(--taro-ink); }
+  .contact-note .placeholder { display: inline-block; margin-top: var(--sp-3); font-style: italic; font-size: 0.9rem; opacity: 0.85; }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; margin-top: var(--sp-7); }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 0 var(--sp-4); }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="latest-issue.html">This Week's Issue &rarr;</a>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>About</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section>
+        <p>Bubble Tea News is a free weekly broadsheet for Auckland's bubble tea scene — print and digital, complimentary, no subscription required. New issue every Friday.</p>
+      </section>
+
+      <section>
+        <h2>What's In It</h2>
+        <p>Breaking neighbourhood bulletins, market research on what Auckland actually wants in its cup, a rotating cast of columnists covering everything from politics to puzzles, and a weekly ad slot for the stores that stock it.</p>
+        <p><a href="the-desk.html">See who's writing this week &rarr;</a></p>
+      </section>
+
+      <section>
+        <h2>Where To Find It</h2>
+        <p>Free at participating bubble tea stores across Auckland, and free online at bubbletea.nz.</p>
+        <p><a href="pickup-locations.html">Pickup locations &rarr;</a></p>
+      </section>
+
+      <section class="voice-note">
+        <h2>A Note on Voice</h2>
+        <p>All content is satire and character-voice, per each contributor's house disclaimer. Columnists write in the voice of a persona — that's the format, not a claim about who's actually behind the byline. Nothing in Bubble Tea News should be read as real news, real financial advice, real reviews of real people, or an official statement from anyone or anything referenced in it.</p>
+      </section>
+
+      <section class="contact-note">
+        <h2>Get In Touch</h2>
+        <p>Want Bubble Tea News in your store, want to advertise, or just want to say hello.</p>
+        <span class="placeholder">Contact form coming soon.</span>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="advertise.html">Advertise</a>
+        <a href="pickup-locations.html">Pickup Locations</a>
+        <a href="subscribe.html">Subscribe</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

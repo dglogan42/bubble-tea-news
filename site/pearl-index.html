@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pearl Index — Bubble Tea News</title>
+<meta name="description" content="The Pearl Index: the weekly patron survey (n=412, MOE reported) behind every 'Pearl Index Verified' stat in Bubble Tea News.">
+<style>
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+    --paper: #E9E3D6;
+    --card: #FDFAF4;
+    --ink: #2B2320;
+    --ink-soft: #7A6C5D;
+    --rule: rgba(43, 35, 32, 0.16);
+
+    --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px;
+
+    --fs-eyebrow: 0.72rem;
+    --fs-meta: 0.82rem;
+
+    --font: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  body { margin: 0; font-family: var(--font); background: var(--paper); color: var(--ink); line-height: 1.5; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--sugar-ink); outline-offset: 3px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--sp-5); }
+
+  .eyebrow {
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+
+  .util-bar { padding: var(--sp-3) 0; font-size: var(--fs-meta); font-weight: 600; }
+  .util-bar .wrap { display: flex; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+  .util-bar a { text-decoration: underline; text-underline-offset: 3px; }
+
+  .page-header { padding: var(--sp-6) 0 var(--sp-7); border-bottom: 2px solid var(--rule); }
+  .page-header h1 { margin: 0 0 var(--sp-2); font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: 0.01em; }
+  .page-header p { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 1.02rem; }
+  .page-header .byline { display: block; margin-top: var(--sp-3); font-size: 0.92rem; font-weight: 700; color: var(--sugar-ink); }
+
+  main { padding: var(--sp-7) 0 var(--sp-8); }
+
+  .section-head { margin-bottom: var(--sp-5); }
+  .section-head h2 { margin: 0; font-size: 1.05rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .findings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-5);
+  }
+  .finding-card {
+    background: var(--card);
+    padding: var(--sp-5);
+    border-radius: 2px;
+    border: 1.5px dashed var(--sugar-ink);
+  }
+  .finding-stat { font-size: 2.4rem; font-weight: 800; color: var(--sugar-ink); line-height: 1; font-variant-numeric: tabular-nums; margin-bottom: var(--sp-2); }
+  .finding-card h3 { margin: 0 0 6px; font-size: 1.02rem; font-weight: 800; }
+  .finding-card p { margin: 0 0 var(--sp-3); font-size: 0.9rem; }
+  .finding-verified { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+
+  .segments {
+    margin-top: var(--sp-8);
+    padding-top: var(--sp-6);
+    border-top: 2px solid var(--rule);
+  }
+  .segment-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-5); margin-top: var(--sp-5); }
+  .segment-card { background: var(--card); padding: var(--sp-5); border-radius: 2px; box-shadow: 0 1px 0 var(--rule); }
+  .segment-card h3 { margin: 0 0 6px; font-size: 1.02rem; font-weight: 800; color: var(--taro-ink); }
+  .segment-card p { margin: 0; font-size: 0.92rem; }
+
+  .cta-band {
+    margin-top: var(--sp-8);
+    background: var(--sugar-bg);
+    color: var(--sugar-ink);
+    padding: var(--sp-6);
+    border-radius: 3px;
+    text-align: center;
+  }
+  .cta-band h2 { margin: 0 0 var(--sp-3); font-size: 1.5rem; font-weight: 800; }
+  .cta-band p { margin: 0 0 var(--sp-4); max-width: 52ch; margin-left: auto; margin-right: auto; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1.6px solid currentColor;
+    background: var(--sugar-ink);
+    color: var(--sugar-bg);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); background: #532f10; }
+
+  footer.imprint { background: var(--ink); color: var(--paper); padding: var(--sp-6) 0; }
+  .imprint-inner { text-align: center; font-size: 0.82rem; opacity: 0.85; max-width: 68ch; margin: 0 auto var(--sp-4); }
+  .imprint-links { display: flex; justify-content: center; gap: var(--sp-5); flex-wrap: wrap; font-size: var(--fs-meta); font-weight: 600; }
+  .imprint-links a { text-decoration: none; opacity: 0.85; }
+  .imprint-links a:hover { text-decoration: underline; opacity: 1; }
+
+  @media (max-width: 860px) {
+    .findings-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding: 0 var(--sp-4); }
+    .findings-grid { grid-template-columns: 1fr; }
+    .segment-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="util-bar">
+    <div class="wrap">
+      <a href="index.html">&larr; Home</a>
+      <a href="advertise.html">Advertise &rarr;</a>
+    </div>
+  </div>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Bubble Tea News</span>
+      <h1>Pearl Index</h1>
+      <p>Every stat you've seen stamped "Pearl Index Verified" in Bubble Tea News comes from the same place: a running patron survey of Auckland bubble tea drinkers, fielded weekly, n=412, margin of error reported every time. No vibes, no guessing — cross-tabs.</p>
+      <span class="byline">Priya Anand, The Pearl Index &middot; boutique market research</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <div class="section-head">
+        <h2>This Week's Findings</h2>
+      </div>
+      <div class="findings-grid">
+
+        <div class="finding-card">
+          <div class="finding-stat">62%</div>
+          <h3>Milkwood Tea Co. — New Oolong Blend</h3>
+          <p>Match against Swing Patron segment preference.</p>
+          <span class="finding-verified">n=412 &middot; 62% match</span>
+        </div>
+
+        <div class="finding-card">
+          <div class="finding-stat">92%</div>
+          <h3>Nine Cups Tea Bar — Queue Times</h3>
+          <p>Served in &le;3 min. 81% in 4&ndash;6 min, 39% take longer than 6 min.</p>
+          <span class="finding-verified">n=412 &middot; &plusmn;4.8% MOE</span>
+        </div>
+
+        <div class="finding-card">
+          <div class="finding-stat">0%</div>
+          <h3>Steep &amp; Sorted — Sweetness Level</h3>
+          <p>Drift week over week. Sweetness-Level Independents locked in at the 50% mark.</p>
+          <span class="finding-verified">n=412 &middot; 0% drift</span>
+        </div>
+
+      </div>
+
+      <div class="segments">
+        <div class="section-head">
+          <h2>Patron Segments, Defined</h2>
+        </div>
+        <p style="max-width:62ch; color:var(--ink-soft);">The Pearl Index tracks Auckland bubble tea drinkers the way a pollster tracks voters — named segments, tracked over time.</p>
+        <div class="segment-list">
+          <div class="segment-card">
+            <h3>Swing Patrons</h3>
+            <p>No fixed order, no chain loyalty — the segment every store is actually competing over.</p>
+          </div>
+          <div class="segment-card">
+            <h3>Sweetness-Level Independents</h3>
+            <p>Won't be talked out of their sweetness setting. Zero drift, every survey wave.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-band">
+        <h2>Get Your Own Pearl Index Verified Box</h2>
+        <p>If the stat is real and it's flattering, The Pearl Index will verify it and put it in the paper — the same Sponsor Box format sold on the Advertise page.</p>
+        <a class="btn" href="advertise.html">Talk to The Pearl Index &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="imprint">
+    <div class="wrap">
+      <p class="imprint-inner">Bubble Tea News &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.</p>
+      <nav class="imprint-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="the-desk.html">The Desk</a>
+        <a href="advertise.html">Advertise</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
