@@ -1,0 +1,524 @@
+<title>Bubble Tea News — Print Edition — Issue 3</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 12mm 12mm 5mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    .sheet { box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm; }
+    .sheet:last-child { page-break-after: auto; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  /* ---------- Eyebrow band ---------- */
+  .eyebrow-band {
+    display: inline-block;
+    align-self: center;
+    padding: 2mm 6mm;
+    border-radius: 20px;
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 4mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  /* ---------- Dotted masthead frame ---------- */
+  .masthead-frame {
+    position: relative;
+    text-align: center;
+    padding: 6mm 8mm;
+    margin-bottom: 4mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm;
+    opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 3mm 8mm;
+    font-weight: 800;
+    font-size: 24pt;
+    letter-spacing: 0.08em;
+    background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  /* mask the dots directly behind the title so the title block reads clean */
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 5mm;
+  }
+
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 3mm;
+    margin-bottom: 5mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots {
+    display: flex;
+    gap: 2.5px;
+  }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  /* ---------- Content grid ---------- */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6mm;
+    padding: 1.5mm 0;
+  }
+  .row.divider-top { border-top: 2.5px solid currentColor; }
+
+  .col-icon-lead {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-circle {
+    width: 11mm; height: 11mm;
+    border: 1.4px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 {
+    font-weight: 800;
+    font-size: 15pt;
+    line-height: 1.1;
+    margin: 0 0 1.4mm;
+  }
+  .kicker {
+    font-size: 6.6pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin: 0 0 1mm;
+  }
+  p.body-text, p.byline-text {
+    font-size: 8.4pt;
+    line-height: 1.28;
+    margin: 0 0 1.5mm;
+  }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead {
+    font-weight: 700;
+    font-size: 10.5pt;
+    margin: 0 0 1mm;
+    line-height: 1.15;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pull-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2.5px solid currentColor;
+    padding-left: 5mm;
+  }
+  .pull-quote blockquote {
+    margin: 0 0 2mm;
+    font-weight: 800;
+    font-size: 13pt;
+    line-height: 1.25;
+  }
+  .pull-quote cite { font-size: 8pt; font-style: normal; opacity: 0.8; }
+
+  /* ---------- "In every issue" list ---------- */
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li {
+    font-size: 9pt;
+    font-weight: 700;
+    padding: 1mm 0;
+    border-top: 1px solid currentColor;
+    opacity: 0.9;
+  }
+  .feature-list li:first-child { border-top: none; }
+
+  /* Puzzle clue list */
+  .clue-list { margin: 1mm 0 2mm; padding-left: 3.5mm; font-size: 7.6pt; line-height: 1.5; }
+  .answer-recap { font-size: 7.2pt; line-height: 1.5; opacity: 0.85; margin: 0 0 2mm; font-style: italic; }
+
+  /* Ad box */
+  .ad-box {
+    border: 1.5px dashed currentColor;
+    border-radius: 4px;
+    padding: 3mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
+
+  .colophon {
+    margin-top: auto;
+    padding-top: 3mm;
+    border-top: 2px solid currentColor;
+    text-align: center;
+    font-size: 6.2pt;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 3 — generated in Fable-Offline via the <code>bubble-tea-news-editor</code> skill.
+    Debut of the <code>menace-watch-editorial</code> anchor (Gordon Slate's "Menace Watch") &mdash;
+    a monthly column, not a weekly one, so it won't reappear until roughly Issue 7 &mdash;
+    plus Issue 1's roster back in rotation per the exclusion-window shrink noted at the end
+    of Issue 2.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 3 &middot; 31 July 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Grover Street</p>
+      <h2>Mascot Costume Count Triples in Nine Days, Risk Assessed Moderate</h2>
+      <p class="body-text">Case definition: any shopfront fielding a staffed, waist-to-ceiling costumed beverage mascot on the footpath during trading hours. Six confirmed shopfronts as of Tuesday, up from two the previous Friday, with two more reportedly measuring a rival's foam-cup circumference. The street association's newsletter has requested "a moratorium on escalation, or at minimum, a lane for pedestrians."</p>
+      <p class="byline-text">community-outbreak-bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">Editorial &middot; Menace Watch, Debut Column</p>
+      <h3 class="subhead">The Fetchly Mascot: Hero or Menace?</h3>
+      <p class="byline-text">Gordon Slate, Editor-in-Chief</p>
+      <p class="body-text">Spotted for the third day running weaving a delivery e-bike through the Grover Street parade crowd: a rider in a full-body lightning-bolt costume for the Fetchly app, insulated pouch and all &mdash; steadying a toddler's dropped ice cream before it hit the pavement on Tuesday, which some will call helpful. This paper caught up with the mask again on Thursday, off-shift, working through a stacked pair of hamburgers at Re:Burger with the head tucked under one arm. Refuelling for what, exactly? Nobody at Fetchly will confirm the rider's actual name, and a masked figure who won't explain his own lunch order is not community spirit &mdash; it is a menace with a delivery quota and, now, a taste for beef. This paper is offering fifty dollars and a standing lifetime pearl-milk-tea card to the first reader who gets a clear photograph of that rider's actual face, hamburger or no hamburger. (Full disclosure this column apparently requires: Fetchly delivered my own lunch on Tuesday. The rider was, my assistant confirms, that exact same lightning-bolt costume. I tipped well. This changes nothing.)</p>
+    </div>
+
+    <div>
+      <p class="kicker">Gossip &middot; Kiss &amp; Tell</p>
+      <h3 class="subhead">The Mascots Are Dating, Darling</h3>
+      <p class="byline-text">The Stickybeak</p>
+      <p class="body-text">Darling, the Grover Street mascot war has a subplot the shopfronts aren't advertising: the Cup and the Straw &mdash; yes, the two costumes glaring at each other from opposite footpaths every lunch hour &mdash; are, your Stickybeak can reveal, dating. Sources close to the foam padding confirm they carpool. The rivalry, loves, is entirely for the customers.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 3a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3Z"/>
+          <path d="M6 11a6 6 0 0 0 12 0"/>
+          <path d="M12 17v4"/>
+          <path d="M9 21h6"/>
+        </svg>
+      </div>
+      <p class="kicker">Field Dispatch &middot; The World Bulletin</p>
+      <h2>Live From the Parade Route, More or Less Upright</h2>
+      <p class="body-text">Eleven costumed mascots stepped off at noon in good order. A gust dusted the notes with what proved to be glitter, not a structural concern. Then the tapioca-pearl-backpack mascot's seam gave way, scattering actual bean bags at ankle height across the entire footpath &mdash; and Baxter Kline, still narrating evenly mid-sentence about "unprecedented civic enthusiasm for novelty beverage costuming," went down with the camera crew, live, on air.</p>
+      <p class="byline-text">Baxter Kline &mdash; "This has been The World Bulletin. I'm Baxter Kline, and &mdash; I believe I am currently wearing someone else's mascot head."</p>
+    </div>
+
+    <div>
+      <p class="kicker">Rural Report &middot; The Ridgeline Weekly</p>
+      <h3 class="subhead">Doyle Edges Higgins on Pasture Cover, First Time Since Autumn</h3>
+      <p class="byline-text">Clem Whitlock</p>
+      <p class="body-text">Doyle's back paddock came in at 2,450 kg DM/ha this week &mdash; a good forty kilos ahead of Higgins off the same soil type, first time Doyle's led since the autumn rotation. Higgins isn't worried, mind, just resting stock off a wetter block. Down in town they're getting worked up over people dressed as teacups; out here, forty kilos of dry matter is still the biggest story going.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia</p>
+      <h3 class="subhead">Did You Know?</h3>
+      <p class="body-text">The word "boba" is Hong Kong slang, not Taiwanese &mdash; a playful Cantonese nickname for something round and plump. In Taiwan, where the drink was actually invented, the pearls are usually just called zhenzhu (pearls) or fenyuan.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"I believe I am currently wearing someone else's mascot head."</blockquote>
+      <cite>&mdash; Baxter Kline, The World Bulletin, moments before regaining his own</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why don't bubble tea baristas ever get lost? They always know how to read the leaves.</p>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif">
+        <title>Milkwood Tea Co. — Pearl Index ad creative</title>
+        <rect x="0" y="0" width="240" height="150" rx="6" fill="#E4D9EC"/>
+        <rect x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#4A2E63" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <circle cx="45" cy="78" r="28" fill="none" stroke="#4A2E63" stroke-opacity="0.15" stroke-width="14"/>
+        <circle cx="45" cy="78" r="28" fill="none" stroke="#4A2E63" stroke-width="14"
+                stroke-dasharray="55 121" stroke-linecap="butt"
+                transform="rotate(-90 45 78)"/>
+        <text x="45" y="83" text-anchor="middle" font-size="15" font-weight="800" fill="#4A2E63">31%</text>
+        <text x="86" y="40" font-size="12" font-weight="800" fill="#4A2E63">MILKWOOD TEA CO.</text>
+        <text x="86" y="58" font-size="8.6" fill="#4A2E63">
+          <tspan x="86" dy="0">Now serving what the</tspan>
+          <tspan x="86" dy="11">Brown Sugar Loyalists voted for.</tspan>
+        </text>
+        <text x="86" y="90" font-size="7.6" font-style="italic" fill="#4A2E63" fill-opacity="0.75">
+          <tspan x="86" dy="0">Top flavor, Grover Street parade-weekend</tspan>
+          <tspan x="86" dy="10">ballot &mdash; ask for it by name.</tspan>
+        </text>
+        <rect x="16" y="120" width="208" height="20" rx="10" fill="#4A2E63"/>
+        <text x="120" y="133.5" text-anchor="middle" font-size="7.2" font-weight="700" fill="#E4D9EC">PEARL INDEX VERIFIED &#183; n=530 &#183; &#177;4.3% MOE</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 21V9h12v12"/>
+          <path d="M4 9h16"/>
+          <path d="M9 9V5h6v4"/>
+        </svg>
+      </div>
+      <p class="kicker">The Silent Majority Report</p>
+      <h2>On the Matter of the Grover Street Parade</h2>
+      <p class="body-text">They will tell you a street parade of costumed beverage mascots is a trivial matter, unworthy of comment. I have found, in my experience, that the press reliably underestimates precisely the things the great silent majority actually notices &mdash; they noticed Checkers, they noticed the tapes, they will notice a giant foam cup blocking the footpath outside their own shop. Let the commentators sneer. I will say this much, and it is not nothing: a nation that can still organize eleven mascots into a straight line on a Tuesday retains more institutional discipline than certain foreign ministries I could name, and did, at length, in 1972.</p>
+      <p class="byline-text">Richard Nixon</p>
+    </div>
+
+    <div>
+      <p class="kicker">Market Watch &middot; The Trading Floor</p>
+      <h3 class="subhead">A Position Built Like a Cathedral</h3>
+      <p class="byline-text">Sherman McCoy</p>
+      <p class="body-text">From the thirty-first floor you could see the whole absurd parade of Grover Street mascots trooping past like tribute &mdash; a fitting view, he thought, for a man who had that morning built a position so architecturally sound that lesser traders would study it for years without grasping its symmetry. A modest short against a modest bond, nothing dramatic &mdash; and yet, watching it move eleven basis points his way by lunch, he found himself checking, twice, whether the Degrassi account had noticed. It hadn't yet. It would.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Lifestyles &middot; Champagne Wishes</p>
+      <h3 class="subhead">Inside the Ashgrove-Pemberton Boba Pavilion</h3>
+      <p class="byline-text">Robin Leach</p>
+      <p class="body-text">Champagne wishes and caviar dreams, darlings &mdash; and this week they come garnished with tapioca! Property magnate Beau Ashgrove-Pemberton has unveiled, on the grounds of his Riviera-adjacent estate, a fully staffed bubble tea pavilion: a solid-brass boba fountain, hand-blown glass straws imported from Murano, and a mascot costume for the pavilion's own beverage butler, stitched from actual silk. He simply couldn't resist, he tells me, after seeing a street parade on the news and thinking, why not us, but bigger? Champagne wishes, caviar dreams, and now, apparently, tapioca ones too!</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="14" r="6"/>
+          <path d="M9 4v4M12 3v5M15 4v4"/>
+        </svg>
+      </div>
+      <p class="kicker">Food &amp; Drink &middot; The Lasagna Standard</p>
+      <h2>Grover Street's Pop-Up Tea Stand: Three Lasagnas, Reluctantly</h2>
+      <p class="body-text">Jon dragged me to the mascot parade under the pretense of "fun family day," which is Jon-speak for free labor holding his jacket. The pop-up tea stand redeemed the outing somewhat: their brown sugar boba had real weight to it, the dense, unhurried sweetness I respect in a beverage and refuse to respect in a salad. Three lasagnas, docked one full lasagna because they ran out of oversized cups by the time I, personally, arrived &mdash; a scheduling failure on their part, not a portion issue on mine. Odie tried to eat the straw. Odie did not review well either.</p>
+      <p class="byline-text">Garfield</p>
+    </div>
+
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 4h6v3.2a1.6 1.6 0 0 0 2.6 1.25A1.6 1.6 0 1 1 19.5 11H16v6H9v-3.2a1.6 1.6 0 0 0-2.6-1.25A1.6 1.6 0 1 1 4.5 9H9V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">The Grover Street Line-Up</h3>
+      <p class="answer-recap">Last week's Counter Queue only had room to print three of its clues: Priya orders a Large; the grass-jelly order is smaller than Quinn's; Quinn doesn't order pearls. That's enough to rule pearls and grass jelly out for Quinn outright and fix Priya's size &mdash; but the rest of the grid ran off the edge of the galley before deadline, so, same honest gap as Issue 1's fourth drink, I won't invent the missing names and sizes here. Reset and reprinted properly whenever it next runs.</p>
+      <ol class="clue-list">
+        <li>Cup is not first in line.</li>
+        <li>Straw is somewhere ahead of Pearl.</li>
+        <li>Pearl is not last in line.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk warm-up &middot; Answer in next week's edition &mdash; Ken Endo</p>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif">
+        <title>Nine Cups Tea Bar — Pearl Index ad creative</title>
+        <rect x="0" y="0" width="240" height="150" rx="6" fill="#F0DCC0"/>
+        <rect x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#6B4419" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="120" y="22" text-anchor="middle" font-size="14" font-weight="800" letter-spacing="0.02em" fill="#6B4419">NINE CUPS TEA BAR</text>
+        <text x="120" y="34" text-anchor="middle" font-size="8.4" font-style="italic" fill="#6B4419" fill-opacity="0.85">Desmond asked for one answer. We gave him three.</text>
+        <line x1="30" y1="104" x2="210" y2="104" stroke="#6B4419" stroke-width="1.2"/>
+        <rect x="42" y="63.6" width="26" height="40.4" fill="#6B4419"/>
+        <text x="55" y="59.6" text-anchor="middle" font-size="8.2" font-weight="700" fill="#6B4419">31%</text>
+        <text x="55" y="112" text-anchor="middle" font-size="6.4" fill="#6B4419">Brown Sugar</text>
+        <rect x="107" y="72.4" width="26" height="31.6" fill="#6B4419" fill-opacity="0.85"/>
+        <text x="120" y="68.4" text-anchor="middle" font-size="8.2" font-weight="700" fill="#6B4419">24%</text>
+        <text x="120" y="112" text-anchor="middle" font-size="6.4" fill="#6B4419">Taro</text>
+        <rect x="172" y="79.4" width="26" height="24.6" fill="#6B4419" fill-opacity="0.55"/>
+        <text x="185" y="75.4" text-anchor="middle" font-size="8.2" font-weight="700" fill="#6B4419">19%</text>
+        <text x="185" y="112" text-anchor="middle" font-size="6.4" fill="#6B4419">Wintermelon</text>
+        <rect x="16" y="120" width="208" height="20" rx="10" fill="#6B4419"/>
+        <text x="120" y="133.5" text-anchor="middle" font-size="7.2" font-weight="700" letter-spacing="0.05em" fill="#F0DCC0">PEARL INDEX VERIFIED &#183; n=530 &#183; &#177;4.3% MOE</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 20V10M10 20V4M16 20v-7M4 20h16"/>
+        </svg>
+      </div>
+      <p class="kicker">Market Research &middot; The Pearl Index</p>
+      <h2>Brown Sugar Holds, Matcha Splits the Room</h2>
+      <p class="body-text">Fieldwork: Grover Street parade weekend, 25&ndash;26 July, counter-side paper ballot, one flavor per patron, n=530, &#177;4.3% MOE. Brown Sugar Boba takes it at 31% &mdash; the Brown Sugar Loyalists turned out in force, as always &mdash; ahead of Taro (24%) and Wintermelon (19%). Most polarizing flavor: Matcha Latte, ranked dead last overall at 6%, yet the outright #1 pick among Sweetness-Level Independents, who describe it, correctly, as "zero sugar and proud of it." One Queue Abstainer admitted voting twice, "because the line for the ballot box was too long to check." The data doesn't lie. The patrons, on the other hand, absolutely do &mdash; that's what we build the trap questions for.</p>
+      <p class="byline-text">Priya Anand, Founder &amp; Chief Analyst, The Pearl Index</p>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif">
+        <title>Half Moon Tea House — Pearl Index ad creative</title>
+        <rect x="0" y="0" width="240" height="150" rx="6" fill="#F0DCC0"/>
+        <rect x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#6B4419" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="120" y="22" text-anchor="middle" font-size="14" font-weight="800" letter-spacing="0.02em" fill="#6B4419">HALF MOON TEA HOUSE</text>
+        <text x="120" y="34" text-anchor="middle" font-size="8.4" font-style="italic" fill="#6B4419" fill-opacity="0.85">Ranked last. Loved hardest.</text>
+        <circle cx="70" cy="78" r="26" fill="none" stroke="#6B4419" stroke-opacity="0.18" stroke-width="12"/>
+        <circle cx="70" cy="78" r="26" fill="none" stroke="#6B4419" stroke-width="12"
+                stroke-dasharray="10 153" stroke-linecap="butt"
+                transform="rotate(-90 70 78)"/>
+        <text x="70" y="83" text-anchor="middle" font-size="13" font-weight="800" fill="#6B4419">6%</text>
+        <text x="70" y="115" text-anchor="middle" font-size="6.6" fill="#6B4419">of all patrons</text>
+        <line x1="112" y1="55" x2="112" y2="101" stroke="#6B4419" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="185" y="72" text-anchor="middle" font-size="17" font-weight="800" fill="#6B4419">#1</text>
+        <text x="185" y="86" text-anchor="middle" font-size="6.6" fill="#6B4419">
+          <tspan x="185" dy="0">among Sweetness-Level</tspan>
+          <tspan x="185" dy="9">Independents</tspan>
+        </text>
+        <text x="120" y="112" text-anchor="middle" font-size="7" font-weight="700" fill="#6B4419">Now pouring Matcha, undiluted.</text>
+        <rect x="16" y="120" width="208" height="20" rx="10" fill="#6B4419"/>
+        <text x="120" y="133.5" text-anchor="middle" font-size="7.2" font-weight="700" fill="#F0DCC0">PEARL INDEX VERIFIED &#183; n=530 &#183; &#177;4.3% MOE</text>
+      </svg>
+    </div>
+
+    <div>
+      <p class="kicker">Weather Desk</p>
+      <h3 class="subhead">Parade-Day Outlook: A Sky That Knows Exactly What It's Doing</h3>
+      <p class="byline-text">Dana Foley (with Trent)</p>
+      <p class="body-text">High of 17, a gentle nor'wester at 12 km/h, 10% chance of passing cloud &mdash; and that cloud knows the parade route better than the organizers do. It has been circling the harbour since dawn, patient, waiting to see if eleven costumed mascots really think they can cross open footpath without so much as a courtesy glance skyward. Trent, at the sports desk, has already asked twice if we can "just say it's nice out." We cannot, Trent. Nothing about a sky this quiet is nice. It is coiled. Stay dry, stay alert, I'll see you at six.</p>
+    </div>
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 4 excludes only this week's roster, bringing back Sebastian, Luke Skywalker, and Daffy Duck alongside first-timers Lewis Hamilton and Steve Jobs, still waiting their turn from two issues back. Menace Watch runs monthly, not weekly &mdash; Gordon Slate is off the front page until it's next due, though he's already muttering about someone in a lychee costume.
+  </div>
+</div>

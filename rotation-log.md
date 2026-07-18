@@ -2,8 +2,51 @@
 
 Tracks which personas ran in each printed issue, so
 `bubble-tea-news-editor` can avoid repeating a persona in the following
-1–2 issues. Append a new entry each time a new issue is assembled — most
-recent issue at the top.
+1–2 issues. Also tracks the last issue `menace-watch-editorial` ran in,
+since that anchor is monthly (~every 4th weekly issue), not weekly. Append
+a new entry each time a new issue is assembled — most recent issue at the
+top.
+
+**Menace Watch tracker:** last ran Issue 3. Not due again until roughly
+Issue 7 — leave that slot to a rotating persona in Issues 4–6.
+
+---
+
+## Issue 3
+
+**Anchors:** menace-watch-editorial, debut (Gordon Slate's "Menace Watch" —
+the Fetchly delivery mascot, caught mid-shift eating hamburgers at
+Re:Burger, declared a menace anyway; not due again until roughly Issue 7,
+per this anchor's monthly cadence) · community-outbreak-bulletin (Grover
+Street mascot-costume escalation) · ken-endo-puzzle-master (The Grover
+Street Line-Up; also resolves Issue 2's Counter Queue as far as its
+printed clues allow, without inventing the unprinted rest) · bubble tea
+trivia (boba as Cantonese slang vs. Taiwanese zhenzhu) · joke of the week
+(read-the-leaves pun)
+
+**Rotating slots** (per Issue 2's pool note, exclusion window shrunk to
+Issue 2's roster only — Issue 1's cast made eligible again):
+- Richard Nixon — `silent-majority-dispatch`
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Robin Leach — `champagne-wishes-dispatch`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- The Stickybeak — `tabloid-gossip-voice`
+- Baxter Kline — `the-world-bulletin-anchor`
+- Priya Anand, first appearance as a bylined column (previously only the
+  ad-box format had run) — `pearl-index-market-researcher`
+- Dana Foley — `epic-forecast-anchor`
+
+**Not used this issue** (available first for Issue 4): Lewis Hamilton,
+Steve Jobs, Te Mana Whakaatu classifieds format — plus the entire Issue 2
+rotating roster (Sebastian, Luke Skywalker, Shaggy &amp; Scooby, Alan
+Grant, Daffy Duck, Wren, legal-affairs investigator, Seeker-eyed shopper,
+ex-lifeguard sportswriter, Rebecca Black), which Issue 3's shrunk
+exclusion window leaves untouched.
+
+**Pool note for whoever assembles Issue 4:** exclude only Issue 3's roster
+(immediately above) — that reopens the full Issue 2 cast plus the three
+Issue-3 leftovers, comfortably more than enough for the ~9 rotating slots.
 
 ---
 
