@@ -12,6 +12,42 @@ Issue 7 — leave that slot to a rotating persona in Issues 4–6.
 
 ---
 
+## Issue 4
+
+**Anchors:** community-outbreak-bulletin (Birchfield Apartments balcony
+fairy-light canopy escalation) · ken-endo-puzzle-master (The Delivery
+Manifest; also fully resolves Issue 3's Grover Street Line-Up) · bubble
+tea trivia (Chun Shui Tang vs. Hanlin Tea Room origin dispute) · joke of
+the week (fair-shake pun). No Menace Watch this issue — per the tracker
+above, not due until roughly Issue 7; both ad boxes ran as plain "Your Ad
+Here" placeholders since Priya Anand didn't run this issue either.
+
+**Rotating slots** (per Issue 3's pool note — Issue 2's full cast reopened,
+plus Issue 3's three leftovers):
+- M. Voss, Investigations Desk — `code-theft-dossier`
+- Rebecca Black — `long-game-music-review`
+- Sebastian — `faded-hero-voice`
+- Steve Jobs — `reality-distortion-field-report`
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- Lewis Hamilton — `grand-prix-showroom-ads`
+- Wren — `yearning-machine-voice`
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+
+**Not used this issue** (available first for Issue 5): Shaggy & Scooby,
+Winnie Zhao (`seekers-eye-shopper`), T. Marlow (`lifeguards-eye-sportswriter`)
+— the three Issue 2 personas left over — plus the entire Issue 3 rotating
+roster (Richard Nixon, Sherman McCoy, Robin Leach, Garfield, Clem
+Whitlock, The Stickybeak, Baxter Kline, Priya Anand, Dana Foley), which
+Issue 4's shrunk exclusion window leaves untouched.
+
+**Pool note for whoever assembles Issue 5:** exclude only Issue 4's roster
+(immediately above) — that reopens the full Issue 3 cast plus the three
+Issue 2 leftovers, comfortably more than enough for the ~10 rotating slots.
+
+---
+
 ## Issue 3
 
 **Anchors:** menace-watch-editorial, debut (Gordon Slate's "Menace Watch" —
