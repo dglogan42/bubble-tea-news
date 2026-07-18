@@ -7,8 +7,96 @@ since that anchor is monthly (~every 4th weekly issue), not weekly. Append
 a new entry each time a new issue is assembled — most recent issue at the
 top.
 
-**Menace Watch tracker:** last ran Issue 3. Not due again until roughly
-Issue 7 — leave that slot to a rotating persona in Issues 4–6.
+**Menace Watch tracker:** last ran Issue 7. Not due again until roughly
+Issue 11 — leave that slot to a rotating persona in Issues 8–10.
+
+**New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
+Refill Rating), hired on-page and debuted in Issue 7. Added to the main
+rotating roster from Issue 8 onward.
+
+**Live-site note:** the public showcase (`index.html`/`docs/`) tracks real
+calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
+17 July 2026), even though Issues 2–7 already exist in the archive below.
+Refresh the live showcase to a later issue only once that issue's own
+dateline has actually arrived.
+
+---
+
+## Issue 7
+
+**Anchors:** community-outbreak-bulletin (Bellevue Lane café trivia
+leaderboard rivalry) · ken-endo-puzzle-master (The Short Till — the
+library's first knights-and-knaves-style puzzle; also fully resolves
+Issue 6's Sizing Queue) · bubble tea trivia (Hong Kong-style milk tea as a
+separate, older tradition) · joke of the week (brew-tiful pun) ·
+menace-watch-editorial, second appearance (Gordon Slate's "The Meadowbank
+Swan," right on schedule per the tracker, cross-referencing Issue 6's
+viral bent-straw fad). **Debut:** Kate Rodgers, film critic, announced via
+a masthead note and launching with a New Release Roundup (Refill Rating).
+
+**Rotating slots** (per Issue 6's pool note — exclusion window shrunk to
+Issue 6's roster only, reopening Issue 5's full cast plus Robin Leach and
+Baxter Kline):
+- Robin Leach — `champagne-wishes-dispatch`
+- Baxter Kline — `the-world-bulletin-anchor`
+- Richard Nixon — `silent-majority-dispatch`
+- Winnie Zhao — `seekers-eye-shopper`
+- The Stickybeak — `tabloid-gossip-voice`
+- Dana Foley — `epic-forecast-anchor`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+
+**Not used this issue** (available first for Issue 8): Sherman McCoy,
+Shaggy & Scooby, T. Marlow, Garfield, Priya Anand — the five Issue 5
+leftovers this issue's slots didn't reach — plus the entire Issue 6
+rotating roster (Wren, Daffy Duck, Steve Jobs, Lewis Hamilton, Sebastian,
+Luke Skywalker, Alan Grant, M. Voss, Rebecca Black, Te Mana Whakaatu
+classifieds format), which Issue 7's shrunk exclusion window leaves
+untouched.
+
+**Pool note for whoever assembles Issue 8:** exclude only Issue 7's roster
+(immediately above) — that reopens the full Issue 6 cast plus the five
+Issue 5 leftovers, comfortably more than enough for the rotating slots.
+Kate Rodgers is now a standing roster member (not exclusion-bound on her
+debut issue, per house practice for first appearances) and can run again
+whenever her byline fits.
+
+---
+
+## Issue 6
+
+**Anchors:** community-outbreak-bulletin (Meadowbank Strip hand-bent
+novelty straws, incl. the viral "swan") · ken-endo-puzzle-master (The
+Sizing Queue) · bubble tea trivia (the "bubble" possibly naming the shaken
+froth, not the pearls) · joke of the week (roll-with-it pun). No Menace
+Watch this issue — per the tracker, not due until Issue 7; the puzzle desk
+also honestly notes it can't resolve Issue 5's "which store restocked the
+cup lids?" teaser, since only two of at least three stores were ever
+printed — same house rule as Issues 1 and 2.
+
+**Rotating slots** (per Issue 5's pool note — reopens the full Issue 4
+cast plus Robin Leach and Baxter Kline, of which Leach and Kline were held
+back again for Issue 7):
+- Wren — `yearning-machine-voice`
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Steve Jobs — `reality-distortion-field-report`
+- Lewis Hamilton — `grand-prix-showroom-ads`
+- Sebastian — `faded-hero-voice`
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- M. Voss — `code-theft-dossier`
+- Rebecca Black — `long-game-music-review`
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+
+**Not used this issue** (available first for Issue 7): Robin Leach and
+Baxter Kline, still waiting since Issue 3, plus the entire Issue 5
+rotating roster (Richard Nixon, Sherman McCoy, Shaggy & Scooby, Priya
+Anand, Winnie Zhao, The Stickybeak, Dana Foley, T. Marlow, Garfield, Clem
+Whitlock), which Issue 6's exclusion window leaves untouched.
+
+**Pool note for whoever assembles Issue 7:** exclude only Issue 6's roster
+(immediately above) — that reopens the full Issue 5 cast plus Robin Leach
+and Baxter Kline, comfortably more than enough for the rotating slots, and
+Menace Watch is due back on schedule.
 
 ---
 
