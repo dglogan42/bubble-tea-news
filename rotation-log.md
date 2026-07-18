@@ -12,6 +12,46 @@ Issue 7 — leave that slot to a rotating persona in Issues 4–6.
 
 ---
 
+## Issue 5
+
+**Anchors:** community-outbreak-bulletin (Kowhai Close front-fence pun war) ·
+ken-endo-puzzle-master (The Topping Trade; also fully resolves Issue 4's
+Delivery Manifest condensed-milk teaser) · bubble tea trivia (brown sugar
+boba's syrup-cooked colour, via Tiger Sugar) · joke of the week
+(shake-things-up pun). No Menace Watch this issue — not due until roughly
+Issue 7. First paid ad this issue: one ad box carries a real advertiser,
+Overload NZ 2026 (26–27 Sept, NZ International Convention Centre), sold on
+the back of Priya Anand's own cross-tab finding this issue (46% of Swing
+Patrons also attend a convention/expo yearly) — the other two ad boxes
+stayed plain "Your Ad Here" placeholders.
+
+**Rotating slots** (per Issue 4's pool note — exclusion window shrunk to
+Issue 4's roster only, reopening Issue 3's full cast plus the Issue 2
+leftovers):
+- Richard Nixon — `silent-majority-dispatch`
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Shaggy & Scooby — `canon-fanfic-vignette` (Persona 2)
+- Priya Anand, second bylined report — `pearl-index-market-researcher`
+- Winnie Zhao — `seekers-eye-shopper`
+- The Stickybeak — `tabloid-gossip-voice`
+- Dana Foley — `epic-forecast-anchor`
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+
+**Not used this issue** (available first for Issue 6): Robin Leach and
+Baxter Kline — the two Issue 3 leftovers this issue's slots didn't reach —
+plus the entire Issue 4 rotating roster (M. Voss, Rebecca Black, Sebastian,
+Steve Jobs, Luke Skywalker, Daffy Duck, Alan Grant, Lewis Hamilton, Wren,
+Te Mana Whakaatu classifieds format), which Issue 5's shrunk exclusion
+window leaves untouched.
+
+**Pool note for whoever assembles Issue 6:** exclude only Issue 5's roster
+(immediately above) — that reopens the full Issue 4 cast plus Robin Leach
+and Baxter Kline, comfortably more than enough for the ~10 rotating slots.
+
+---
+
 ## Issue 4
 
 **Anchors:** community-outbreak-bulletin (Birchfield Apartments balcony
