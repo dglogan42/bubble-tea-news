@@ -48,7 +48,10 @@
     position: relative;
   }
   @media print {
-    .sheet { box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
     .sheet:last-child { page-break-after: auto; }
   }
   .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
