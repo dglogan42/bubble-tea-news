@@ -43,6 +43,12 @@ replaced by her Fig. 1 scatter chart, r = 0.71). Garfield's Food & Drink
 column ("Purrs & Pearls") reacts directly and unfavourably to being
 treated as a data point; M. Voss's Investigations Desk separately flags
 her methodology as suspiciously close to Priya Anand's Pearl Index format.
+**Also added after initial publication:** the debut panel of The Boba
+Side (`the-boba-side-cartoon`), Bubble Tea News's single-panel gag cartoon
+slot — a clearly-labeled parody/homage to Gary Larson's one-panel style
+(never titled "The Far Side," never presented as his real work). Not part
+of the original Issue 8 roster count below; slotted onto the back page
+afterward.
 
 **Rotating slots** (per Issue 7's pool note — exclusion window shrunk to
 Issue 7's roster only, reopening the full Issue 6 cast plus the five
