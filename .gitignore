@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs / scratch
+*.log
+.tmp/
+*-test.pdf
+*.scratch.*
+
+# Local browser profiles used for headless PDF export
+edge-print-profile/
+chrome-print-profile/
+
+# Secrets
+.env
+.env.local

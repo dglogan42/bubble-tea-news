@@ -1,0 +1,43 @@
+MIT License
+
+Copyright (c) 2026 David Logan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This license covers the code and original written content in this
+repository only — the layout templates, the site build, and the
+original fictional personas (Gordon Slate, Freya Wilcox, Sebastian, Wren,
+Baxter Kline, Dana Foley, Clem Whitlock, Priya Anand, Ken Endo, Winnie
+Zhao, T. Marlow, M. Voss, and The Stickybeak, among others).
+
+It does not grant any rights to third-party names, characters, or
+trademarks that individual issues reference for parody, commentary, or
+fan-work purposes — including Luke Skywalker, Shaggy & Scooby-Doo, Daffy
+Duck, and Te Mana Whakaatu (fictional/franchise references), and Richard
+Nixon, Steve Jobs, Lewis Hamilton, Robin Leach, Rebecca Black, Kate
+Rodgers's Refill Rating format, and Gary Larson's one-panel cartoon style
+(real-person references, "The Boba Side" specifically) — those remain
+their respective owners' or estates' property. All such content is
+satire/parody, clearly labeled in-issue, with a non-affiliation and
+non-endorsement disclaimer per the persona's originating skill in
+dglogan42/Claude-Skills — see that repo's individual `SKILL.md` files for
+the specific parody/accuracy/non-affiliation boundaries applied when each
+piece was written.
