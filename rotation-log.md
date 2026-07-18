@@ -24,6 +24,17 @@ calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
 Refresh the live showcase to a later issue only once that issue's own
 dateline has actually arrived.
 
+**The Boba Side (`the-boba-side-cartoon`):** debuted as a bonus panel on
+Issue 8's back page, then backfilled with a fresh, distinct gag into
+Issues 1–7 as well (`issues/issue-N.html`, matching `site/issue-N.html`
+where that web copy exists — `site/issue-2.html` was never built, so
+Issue 2's cartoon only exists in the print archive). The live-locked
+Issue 1 files (`print-edition.html`, `index.html`, and their `docs/`
+mirrors) also carry Issue 1's panel now, since that's still the dateline
+showing live. Not part of the weekly rotation-slot count — an optional
+bonus feature, not exclusion-bound, add a fresh premise whenever an issue
+has room; never reuse a gag already run.
+
 ---
 
 ## Issue 8
