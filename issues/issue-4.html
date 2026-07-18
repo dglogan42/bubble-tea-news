@@ -36,6 +36,8 @@
   .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
   @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
   @media print {
+    * { color: #000 !important; }
+    svg, svg * { stroke: #000 !important; fill: #000 !important; }
     .sheet, .sheet.taro, .sheet.sugar { background: transparent !important; color: #000 !important; }
     .eyebrow-band { background: #000 !important; color: #fff !important; }
     .masthead-frame h1 { background: #fff !important; color: #000 !important; }
