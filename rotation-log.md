@@ -11,14 +11,64 @@ top.
 Issue 11 — leave that slot to a rotating persona in Issues 8–10.
 
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
-Refill Rating), hired on-page and debuted in Issue 7. Added to the main
-rotating roster from Issue 8 onward.
+Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
+from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
+correlation-obsessed after adopting a cat), hired on-page and debuted in
+Issue 8. Standing roster member from Issue 9 onward — like Gordon Slate and
+Kate Rodgers, not exclusion-bound; run her whenever her byline fits rather
+than strictly rotating her.
 
 **Live-site note:** the public showcase (`index.html`/`docs/`) tracks real
 calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
-17 July 2026), even though Issues 2–7 already exist in the archive below.
+17 July 2026), even though Issues 2–8 already exist in the archive below.
 Refresh the live showcase to a later issue only once that issue's own
 dateline has actually arrived.
+
+---
+
+## Issue 8
+
+**Anchors:** community-outbreak-bulletin (Elmswood Avenue letterbox herb
+gardens) · ken-endo-puzzle-master (The Correlation Desk; also fully
+resolves Issue 7's Short Till) · bubble tea trivia (the 2017 Guinness
+World Record 8,000-litre bubble tea) · joke of the week (large-pearl-count
+pun). No Menace Watch this issue — ran Issue 7, not due again until
+roughly Issue 11. **Debut:** Freya Wilcox, Design Editor, announced via a
+masthead note (same treatment Kate Rodgers got in Issue 7) and launching
+with a Design Desk column: she's started dating a volunteer at the Kowhai
+Bay Animal Shelter, adopted a cat (Constable), and has begun correlating
+Auckland cat-registration filings against Pearl Index bubble tea sales —
+with the "data" visibly bleeding into the issue's own layout (an ad slot
+replaced by her Fig. 1 scatter chart, r = 0.71). Garfield's Food & Drink
+column ("Purrs & Pearls") reacts directly and unfavourably to being
+treated as a data point; M. Voss's Investigations Desk separately flags
+her methodology as suspiciously close to Priya Anand's Pearl Index format.
+
+**Rotating slots** (per Issue 7's pool note — exclusion window shrunk to
+Issue 7's roster only, reopening the full Issue 6 cast plus the five
+Issue 5 leftovers):
+- Sebastian — `faded-hero-voice`
+- M. Voss, Investigations Desk — `code-theft-dossier`
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- Wren — `yearning-machine-voice`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+
+**Not used this issue** (available first for Issue 9): Steve Jobs, Lewis
+Hamilton and Rebecca Black — the three Issue 6 leftovers this issue's
+slots didn't reach — plus Sherman McCoy, Shaggy & Scooby, T. Marlow and
+Priya Anand, still waiting since Issue 5, plus the entire Issue 7 rotating
+roster (Robin Leach, Baxter Kline, Richard Nixon, Winnie Zhao, The
+Stickybeak, Dana Foley, Clem Whitlock), which Issue 8's shrunk exclusion
+window leaves untouched. Kate Rodgers and Freya Wilcox are both standing
+roster members and available any issue.
+
+**Pool note for whoever assembles Issue 9:** exclude only Issue 8's roster
+(immediately above) — that reopens the full Issue 7 cast plus the Issue 6
+and Issue 5 leftovers, comfortably more than enough for the rotating
+slots. Menace Watch not due until roughly Issue 11.
 
 ---
 
