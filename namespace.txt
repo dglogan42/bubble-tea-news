@@ -1,0 +1,158 @@
+using namespace System.Drawing
+using namespace System.Drawing.Drawing2D
+using namespace System.Drawing.Imaging
+
+Add-Type -AssemblyName System.Drawing # Specify System.Drawing.Common on PS Core
+
+# --- Canvas setup ---
+[int] $CanvasWidth  = 1024
+[int] $CanvasHeight = 1024
+
+[Image] $Image = [Bitmap]::new($CanvasWidth, $CanvasHeight) # Width, Height
+[Graphics] $DrawingSurface = [Graphics]::FromImage($Image)
+$DrawingSurface.SmoothingMode = [SmoothingMode]::AntiAlias
+$DrawingSurface.Clear([Color]::White)
+
+# Initialize an empty region
+$FilledSpace = [Region]::new()
+$FilledSpace.MakeEmpty()
+
+# --- Word data ---
+# Flavor vote share from The Pearl Index leaderboard (see
+# pearl-index-market-researcher/examples/flavor-leaderboard.md)
+$WordList = [ordered]@{
+    'Brown Sugar Oolong'     = 29
+    'Taro Milk Tea'          = 24
+    'Classic Pearl Milk Tea' = 18
+    'Winter Melon'           = 12
+    'Matcha Latte'           = 9
+}
+
+$FontFamily = [FontFamily]::new('Segoe UI')
+[StringFormat] $Format = [StringFormat]::GenericTypographic
+$Palette = @(
+    [Color]::FromArgb(90, 42, 42)     # brown sugar
+    [Color]::FromArgb(196, 132, 68)   # taro tan
+    [Color]::FromArgb(122, 79, 42)    # milk-tea brown
+    [Color]::FromArgb(56, 102, 65)    # winter-melon green
+    [Color]::FromArgb(150, 40, 40)    # accent red
+)
+
+[double] $MaxFontSize = 140
+[double] $MinFontSize = 32
+$MaxWeight = ($WordList.Values | Measure-Object -Maximum).Maximum
+$MinWeight = ($WordList.Values | Measure-Object -Minimum).Minimum
+
+$Random     = [Random]::new(42) # fixed seed so the layout is reproducible
+$CenterX    = $CanvasWidth  / 2
+$CenterY    = $CanvasHeight / 2
+$ColorIndex = 0
+
+foreach ($Word in $WordList.Keys) {
+
+    $Weight = $WordList[$Word]
+    if ($MaxWeight -eq $MinWeight) {
+        [double] $FontSize = $MaxFontSize
+    } else {
+        [double] $FontSize = $MinFontSize + (($Weight - $MinWeight) / ($MaxWeight - $MinWeight)) * ($MaxFontSize - $MinFontSize)
+    }
+
+    # Shrink the font until this word's raw width/height actually fits the
+    # canvas — a long phrase at max weight would otherwise never fit at any
+    # spiral position and the placement loop would spin forever
+    while ($FontSize -gt $MinFontSize) {
+        $ProbePath = [Drawing2D.GraphicsPath]::new()
+        $ProbePath.AddString([string] $Word, [FontFamily] $FontFamily, [int] [FontStyle]::Bold, [single] $FontSize, [PointF]::new(0, 0), [StringFormat] $Format)
+        $ProbeBounds = $ProbePath.GetBounds()
+        $ProbePath.Dispose()
+        if ($ProbeBounds.Width -gt $CanvasWidth * 0.92 -or $ProbeBounds.Height -gt $CanvasHeight * 0.92) {
+            $FontSize *= 0.9
+        } else {
+            break
+        }
+    }
+
+    $Brush    = [SolidBrush]::new($Palette[$ColorIndex % $Palette.Count])
+    $PenWidth = 2.5
+    $Pen      = [Pen]::new([Brush] $Brush, [single] $PenWidth)
+    $ColorIndex++
+
+    # Walk an outward spiral from the canvas center until this word's path
+    # lands somewhere that doesn't overlap anything already drawn
+    $Placed      = $false
+    $Angle       = $Random.NextDouble() * 2 * [Math]::PI
+    $Radius      = 0.0
+    $AngleStep   = 0.35
+    $RadiusStep  = 2.2
+    $MaxAttempts = 3000
+
+    for ($Attempt = 0; $Attempt -lt $MaxAttempts -and -not $Placed; $Attempt++) {
+
+        $x = $CenterX + $Radius * [Math]::Cos($Angle)
+        $y = $CenterY + $Radius * [Math]::Sin($Angle)
+
+        # Build the word's path at the origin first so we can measure it,
+        # then translate it so it's centered on the spiral point (x, y)
+        $WordPath = [Drawing2D.GraphicsPath]::new()
+        $WordPath.AddString(
+            [string] $Word, # The text to render as a path
+            [FontFamily] $FontFamily, # [System.Drawing.FontFamily] object, mostly has the font name
+            [int] [FontStyle]::Bold, # Bold, italic, whatever, [System.Drawing.FontStyle] enum value as an int
+            [single] $FontSize, # Em-size of the font
+            [PointF]::new(0, 0), # Location of the path in the graphics space
+            [StringFormat] $Format # [System.Drawing.StringFormat] object with format flags etc.
+        )
+
+        $RawBounds = $WordPath.GetBounds()
+        $OffsetX = $x - ($RawBounds.Left + $RawBounds.Width / 2)
+        $OffsetY = $y - ($RawBounds.Top + $RawBounds.Height / 2)
+        $WordPath.Transform([Matrix]::new(1, 0, 0, 1, [single] $OffsetX, [single] $OffsetY))
+
+        $Bounds = $WordPath.GetBounds()
+        $OffCanvas = $Bounds.Left -lt 0 -or $Bounds.Top -lt 0 -or
+                     $Bounds.Right -gt $CanvasWidth -or $Bounds.Bottom -gt $CanvasHeight
+
+        if ($OffCanvas) {
+            $WordPath.Dispose()
+            $Angle  += $AngleStep
+            $Radius += $RadiusStep
+            continue
+        }
+
+        $WordBounds = $WordPath.GetBounds()
+
+        # Returns $true if the rectangle is within the region .IsVisible() is called on
+        $WordIsColliding = $FilledSpace.IsVisible($WordBounds)
+
+        if (-not $WordIsColliding) {
+            $DrawingSurface.DrawPath([Pen] $Pen, $WordPath) # Outline text
+            $DrawingSurface.FillPath([Brush] $Brush, $WordPath) # Fill text
+
+            # Add path to region
+            $FilledSpace.Union($WordPath)
+            $Placed = $true
+        } else {
+            $Angle  += $AngleStep
+            $Radius += $RadiusStep
+        }
+
+        $WordPath.Dispose()
+    }
+
+    if (-not $Placed) {
+        Write-Warning "Could not place '$Word' without overlap after $MaxAttempts attempts."
+    }
+
+    $Pen.Dispose()
+    $Brush.Dispose()
+}
+
+# --- Save output ---
+$OutputDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+$OutputPath = Join-Path $OutputDir 'pearl-index-wordcloud\pearl-index-wordcloud.png'
+$Image.Save($OutputPath, [ImageFormat]::Png)
+
+$DrawingSurface.Dispose()
+$Image.Dispose()
+
+Write-Host "Word cloud saved to $OutputPath"

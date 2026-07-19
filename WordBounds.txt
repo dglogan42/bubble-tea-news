@@ -1,0 +1,4 @@
+$WordBounds = $WordPath.GetBounds()
+
+# Returns $true if the rectangle is within the region .IsVisible() is called on
+$WordIsColliding = $FilledSpace.IsVisible($WordBounds)
