@@ -83,6 +83,25 @@ the prompt-script format across the board; Step 2b remains documented in
 the skill as an option, just not one currently in use in the actual
 paper.
 
+**Boba Side rendering, take two — pycairo:** after the turtle revert, a
+side-by-side test (turtle vs. pygame vs. pycairo, all on Issue 1's gnome
+scene) showed pycairo producing genuine vector paths with real bezier-arc
+circles — no polygon faceting at all, unlike turtle — while still
+exporting native SVG (unlike pygame, which is raster-only). All 8 issues'
+panels were redrawn with pycairo and rolled out. Two real layout bugs
+were found and fixed along the way: (1) the same print-CSS force-black
+rule from the turtle era needed the same `:not(.tcolor)` fix, reapplied
+since the Issue 1 revert had restored the original rule; (2) reintroducing
+image-sized art (vs. the prompt-script's few lines of text) pushed most
+issues back over the 2-page budget fixed in the print-layout-fit-2-pages
+PR — fixed by sizing the `<svg>` element itself down independently of
+the `.ad-box` container, after an earlier attempt to just shrink the
+whole container accidentally made captions wrap onto more lines and
+cancelled out the space savings. Issue 8 needed its art sized smaller
+than the other 7 (38mm vs. 55mm) due to that issue's already-dense
+content. All 8 reconfirmed at exactly 2 pages via `pypdf` page-count
+check after the fix.
+
 ---
 
 ## Issue 8
