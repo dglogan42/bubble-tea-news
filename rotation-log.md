@@ -35,6 +35,24 @@ showing live. Not part of the weekly rotation-slot count — an optional
 bonus feature, not exclusion-bound, add a fresh premise whenever an issue
 has room; never reuse a gag already run.
 
+**Boba Side style pivot (anime/manga prompt-script format):** the panel
+originally ran as a hand-coded SVG "in the style of Gary Larson's
+one-panel gag cartoons." Editorial (per direct request) moved it to an
+anime/manga sketch aesthetic instead, referencing bubble-tea memes and
+otaku culture. No image-generation tool is available in this workflow, so
+each panel is now delivered as a structured **image-generation prompt**
+(sub-style anchor, linework descriptor, color language, studio/series
+reference, atmosphere word, technical tag, then scene + caption) rather
+than rendered art — labelled "not rendered artwork" wherever it appears.
+Style references (e.g. "Studio Trigger-adjacent," "CLAMP-style") point at
+aesthetic conventions only, never at reproducing an actual copyrighted
+character. All 8 issues' panels (`issues/issue-N.html`, matching
+`site/issue-N.html`, plus the live-locked `print-edition.html`/
+`index.html` and their `docs/` mirrors) were rewritten to this format in
+one pass, replacing the old Gary Larson framing throughout — including in
+`README.md`'s content-disclaimer list, since the feature is no longer a
+real-person style homage.
+
 **Skeletor (`skeletor-obituary-column`) and Horatio McCallister
 (`horatio-mccallister-personals-column`):** both hired as **standing
 staff since Issue 1** — not a mid-run debut, backfilled retroactively into
