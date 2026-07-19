@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bubble Tea News — Business Card Print Sheet (A4, double-sided)</title>
+<style>
+  @page { size: A4; margin: 0.5in; }
+
+  :root {
+    --taro-bg: #E4D9EC;
+    --taro-ink: #000000;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #E9E3D6;
+    margin: 0;
+  }
+
+  /* ---------- on-screen instructions (hidden on print) ---------- */
+  .instructions {
+    max-width: 7.27in;
+    margin: 24px auto;
+    padding: 16px 20px;
+    background: #fffef9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+  }
+  .instructions h2 { margin: 0 0 8px; font-size: 16px; }
+  .instructions ol { margin: 0; padding-left: 20px; }
+  .instructions li { margin-bottom: 6px; }
+  .instructions .note { margin-top: 10px; font-size: 12.5px; color: #777; }
+
+  /* ---------- sheet / grid ---------- */
+  .page {
+    width: 7.27in;
+    margin: 0 auto 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 3.5in);
+    grid-auto-rows: 2in;
+    column-gap: 0.2in;
+    row-gap: 0.4in;
+    justify-content: center;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .page.back-page {
+    direction: rtl; /* mirrors column order so backs align with fronts on duplex flip */
+  }
+
+  .card {
+    direction: ltr;
+    width: 3.5in;
+    height: 2in;
+    outline: 1px dashed #999;
+    outline-offset: 3px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- FRONT ---------- */
+  .front {
+    color: var(--taro-ink);
+    align-items: center;
+    justify-content: center;
+    padding: 0.14in 0.2in;
+    text-align: center;
+    gap: 0.05in;
+  }
+
+  .eyebrow-band {
+    display: inline-block;
+    padding: 2.5px 10px;
+    border-radius: 20px;
+    font-size: 6.4px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--taro-ink);
+    color: var(--taro-bg);
+  }
+
+  .masthead-frame {
+    position: relative;
+    text-align: center;
+    padding: 6px 10px;
+    background-image: radial-gradient(currentColor 1px, transparent 1.2px);
+    background-size: 10px 10px;
+  }
+  .masthead-frame h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 8px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    background: #fff;
+  }
+
+  .icon-circle {
+    position: absolute;
+    left: 0.16in;
+    bottom: 0.16in;
+    width: 26px;
+    height: 26px;
+    border: 1.3px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .front .contact-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7px;
+    font-weight: 600;
+    padding-top: 4px;
+    border-top: 1.6px solid currentColor;
+  }
+
+  /* ---------- BACK ---------- */
+  .back {
+    color: var(--taro-ink);
+    padding: 0.13in 0.18in 0.12in;
+  }
+
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1.6px solid currentColor;
+  }
+  .mini-dots { display: flex; gap: 2.5px; }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  .back-body {
+    display: grid;
+    grid-template-columns: 0.95in 1fr;
+    gap: 0.16in;
+    align-items: center;
+    flex: 1;
+  }
+
+  .qr-frame {
+    border: 1.3px solid currentColor;
+    border-radius: 6px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .qr-frame svg { width: 100%; height: 100%; display: block; }
+
+  .info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info-panel .url {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 3px;
+  }
+
+  .info-panel .desc {
+    font-size: 7.2px;
+    line-height: 1.4;
+    opacity: 0.85;
+    margin-bottom: 5px;
+  }
+
+  .kicker {
+    font-size: 6.4px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .instructions { display: none; }
+    .page { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="instructions">
+    <h2>How to print this sheet</h2>
+    <ol>
+      <li>Print on A4 paper, <strong>100% scale / no "fit to page" shrinking</strong>.</li>
+      <li>If your printer supports duplex (double-sided) printing: set it to <strong>double-sided, flip on long edge</strong>, and print both pages in one job. The dashed cut lines on the back page are deliberately mirrored so each card's back lands perfectly behind its front.</li>
+      <li>If your printer is single-sided only: print page 1 (fronts) first. Take the printed stack, flip it over so the blank side faces up, then feed it back in the same orientation and print page 2 (backs) on that job.</li>
+      <li>Cut along the dashed lines to separate the 8 cards.</li>
+    </ol>
+    <p class="note">Tip: print one test sheet first and check the back aligns before running a full batch.</p>
+  </div>
+
+  <!-- PAGE 1: FRONTS -->
+  <div class="page front-page">
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame">
+        <h1>Bubble Tea News</h1>
+      </div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <!-- 7 more copies of the same front card (repeated for the 2x4 grid) -->
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+    <div class="card front">
+      <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+      <div class="masthead-frame"><h1>Bubble Tea News</h1></div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 8h12l-1.2 11.5a1.5 1.5 0 0 1-1.5 1.5H8.7a1.5 1.5 0 0 1-1.5-1.5L6 8Z"/>
+          <path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+          <path d="M17 5.5 19 4"/>
+          <circle cx="10.5" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+          <circle cx="13.5" cy="16" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-row">
+        <span>Free &middot; Print &amp; Digital</span>
+        <span>bubbletea.nz &middot; est. 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: BACKS (mirrored via direction:rtl on .back-page so alignment matches page 1 on duplex flip) -->
+  <div class="page back-page">
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4zM96,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+    <div class="card back">
+      <div class="mini-masthead">
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+        Bubble Tea News
+        <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+      </div>
+      <div class="back-body">
+        <div class="qr-frame">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#000000" d="M0,0h4v4h-4zM4,0h4v4h-4zM8,0h4v4h-4zM12,0h4v4h-4zM16,0h4v4h-4zM20,0h4v4h-4zM24,0h4v4h-4zM32,0h4v4h-4zM40,0h4v4h-4zM48,0h4v4h-4zM52,0h4v4h-4zM72,0h4v4h-4zM76,0h4v4h-4zM80,0h4v4h-4zM84,0h4v4h-4zM88,0h4v4h-4zM92,0h4v4h-4zM96,0h4v4h-4zM0,4h4v4h-4zM24,4h4v4h-4zM32,4h4v4h-4zM44,4h4v4h-4zM48,4h4v4h-4zM52,4h4v4h-4zM64,4h4v4h-4zM72,4h4v4h-4zM96,4h4v4h-4zM0,8h4v4h-4zM8,8h4v4h-4zM12,8h4v4h-4zM16,8h4v4h-4zM24,8h4v4h-4zM44,8h4v4h-4zM48,8h4v4h-4zM52,8h4v4h-4zM64,8h4v4h-4zM72,8h4v4h-4zM80,8h4v4h-4zM84,8h4v4h-4zM88,8h4v4h-4zM96,8h4v4h-4zM0,12h4v4h-4zM8,12h4v4h-4zM12,12h4v4h-4zM16,12h4v4h-4zM24,12h4v4h-4zM32,12h4v4h-4zM44,12h4v4h-4zM52,12h4v4h-4zM56,12h4v4h-4zM60,12h4v4h-4zM72,12h4v4h-4zM80,12h4v4h-4zM84,12h4v4h-4zM88,12h4v4h-4zM96,12h4v4h-4zM0,16h4v4h-4zM8,16h4v4h-4zM12,16h4v4h-4zM16,16h4v4h-4zM24,16h4v4h-4zM40,16h4v4h-4zM44,16h4v4h-4zM52,16h4v4h-4zM56,16h4v4h-4zM60,16h4v4h-4zM64,16h4v4h-4zM72,16h4v4h-4zM80,16h4v4h-4zM84,16h4v4h-4zM88,16h4v4h-4zM96,16h4v4h-4zM0,20h4v4h-4zM24,20h4v4h-4zM40,20h4v4h-4zM44,20h4v4h-4zM56,20h4v4h-4zM72,20h4v4h-4zM96,20h4v4h-4zM0,24h4v4h-4zM4,24h4v4h-4zM8,24h4v4h-4zM12,24h4v4h-4zM16,24h4v4h-4zM20,24h4v4h-4zM24,24h4v4h-4zM32,24h4v4h-4zM40,24h4v4h-4zM48,24h4v4h-4zM56,24h4v4h-4zM64,24h4v4h-4zM72,24h4v4h-4zM76,24h4v4h-4zM80,24h4v4h-4zM84,24h4v4h-4zM88,24h4v4h-4zM92,24h4v4h-4zM96,24h4v4h-4zM32,28h4v4h-4zM44,28h4v4h-4zM48,28h4v4h-4zM56,28h4v4h-4zM64,28h4v4h-4zM0,32h4v4h-4zM8,32h4v4h-4zM12,32h4v4h-4zM20,32h4v4h-4zM24,32h4v4h-4zM28,32h4v4h-4zM44,32h4v4h-4zM48,32h4v4h-4zM56,32h4v4h-4zM64,32h4v4h-4zM72,32h4v4h-4zM84,32h4v4h-4zM92,32h4v4h-4zM96,32h4v4h-4zM4,36h4v4h-4zM8,36h4v4h-4zM12,36h4v4h-4zM16,36h4v4h-4zM28,36h4v4h-4zM44,36h4v4h-4zM52,36h4v4h-4zM56,36h4v4h-4zM64,36h4v4h-4zM68,36h4v4h-4zM76,36h4v4h-4zM92,36h4v4h-4zM0,40h4v4h-4zM8,40h4v4h-4zM24,40h4v4h-4zM32,40h4v4h-4zM36,40h4v4h-4zM48,40h4v4h-4zM52,40h4v4h-4zM56,40h4v4h-4zM4,44h4v4h-4zM8,44h4v4h-4zM40,44h4v4h-4zM52,44h4v4h-4zM68,44h4v4h-4zM76,44h4v4h-4zM84,44h4v4h-4zM88,44h4v4h-4zM0,48h4v4h-4zM12,48h4v4h-4zM16,48h4v4h-4zM24,48h4v4h-4zM32,48h4v4h-4zM36,48h4v4h-4zM44,48h4v4h-4zM60,48h4v4h-4zM64,48h4v4h-4zM68,48h4v4h-4zM72,48h4v4h-4zM80,48h4v4h-4zM88,48h4v4h-4zM92,48h4v4h-4zM96,48h4v4h-4zM8,52h4v4h-4zM12,52h4v4h-4zM16,52h4v4h-4zM20,52h4v4h-4zM36,52h4v4h-4zM40,52h4v4h-4zM44,52h4v4h-4zM52,52h4v4h-4zM56,52h4v4h-4zM60,52h4v4h-4zM64,52h4v4h-4zM68,52h4v4h-4zM72,52h4v4h-4zM76,52h4v4h-4zM80,52h4v4h-4zM96,52h4v4h-4zM4,56h4v4h-4zM12,56h4v4h-4zM20,56h4v4h-4zM24,56h4v4h-4zM32,56h4v4h-4zM48,56h4v4h-4zM56,56h4v4h-4zM80,56h4v4h-4zM88,56h4v4h-4zM92,56h4v4h-4zM0,60h4v4h-4zM12,60h4v4h-4zM16,60h4v4h-4zM20,60h4v4h-4zM28,60h4v4h-4zM36,60h4v4h-4zM40,60h4v4h-4zM48,60h4v4h-4zM52,60h4v4h-4zM60,60h4v4h-4zM64,60h4v4h-4zM76,60h4v4h-4zM80,60h4v4h-4zM96,60h4v4h-4zM16,64h4v4h-4zM20,64h4v4h-4zM24,64h4v4h-4zM36,64h4v4h-4zM44,64h4v4h-4zM64,64h4v4h-4zM68,64h4v4h-4zM72,64h4v4h-4zM76,64h4v4h-4zM80,64h4v4h-4zM84,64h4v4h-4zM88,64h4v4h-4zM92,64h4v4h-4zM96,64h4v4h-4zM32,68h4v4h-4zM36,68h4v4h-4zM48,68h4v4h-4zM52,68h4v4h-4zM64,68h4v4h-4zM80,68h4v4h-4zM88,68h4v4h-4zM96,68h4v4h-4zM0,72h4v4h-4zM4,72h4v4h-4zM8,72h4v4h-4zM12,72h4v4h-4zM16,72h4v4h-4zM20,72h4v4h-4zM24,72h4v4h-4zM32,72h4v4h-4zM36,72h4v4h-4zM40,72h4v4h-4zM44,72h4v4h-4zM48,72h4v4h-4zM64,72h4v4h-4zM72,72h4v4h-4zM80,72h4v4h-4zM88,72h4v4h-4zM92,72h4v4h-4zM96,72h4v4h-4zM0,76h4v4h-4zM24,76h4v4h-4zM32,76h4v4h-4zM40,76h4v4h-4zM48,76h4v4h-4zM60,76h4v4h-4zM64,76h4v4h-4zM80,76h4v4h-4zM92,76h4v4h-4zM0,80h4v4h-4zM8,80h4v4h-4zM12,80h4v4h-4zM16,80h4v4h-4zM24,80h4v4h-4zM36,80h4v4h-4zM44,80h4v4h-4zM48,80h4v4h-4zM52,80h4v4h-4zM64,80h4v4h-4zM68,80h4v4h-4zM72,80h4v4h-4zM76,80h4v4h-4zM80,80h4v4h-4zM84,80h4v4h-4zM92,80h4v4h-4zM0,84h4v4h-4zM8,84h4v4h-4zM12,84h4v4h-4zM16,84h4v4h-4zM24,84h4v4h-4zM32,84h4v4h-4zM36,84h4v4h-4zM40,84h4v4h-4zM48,84h4v4h-4zM52,84h4v4h-4zM56,84h4v4h-4zM60,84h4v4h-4zM68,84h4v4h-4zM72,84h4v4h-4zM80,84h4v4h-4zM84,84h4v4h-4zM88,84h4v4h-4zM92,84h4v4h-4zM96,84h4v4h-4zM0,88h4v4h-4zM8,88h4v4h-4zM12,88h4v4h-4zM16,88h4v4h-4zM24,88h4v4h-4zM32,88h4v4h-4zM44,88h4v4h-4zM48,88h4v4h-4zM52,88h4v4h-4zM60,88h4v4h-4zM64,88h4v4h-4zM68,88h4v4h-4zM72,88h4v4h-4zM80,88h4v4h-4zM88,88h4v4h-4zM92,88h4v4h-4zM0,92h4v4h-4zM24,92h4v4h-4zM40,92h4v4h-4zM80,92h4v4h-4zM88,92h4v4h-4zM0,96h4v4h-4zM4,96h4v4h-4zM8,96h4v4h-4zM12,96h4v4h-4zM16,96h4v4h-4zM20,96h4v4h-4zM24,96h4v4h-4zM32,96h4v4h-4zM36,96h4v4h-4zM48,96h4v4h-4zM56,96h4v4h-4zM76,96h4v4h-4zM80,96h4v4h-4zM84,96h4v4h-4zM88,96h4v4h-4zM92,96h4v4h-4z"/>
+          </svg>
+        </div>
+        <div class="info-panel">
+          <p class="kicker">Scan for the latest issue</p>
+          <div class="url">bubbletea.nz</div>
+          <div class="desc">The free weekly bubble tea broadsheet — market research, sports, gossip, weather &amp; more, brewed fresh every week.</div>
+          <p class="kicker">Print editions out now</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

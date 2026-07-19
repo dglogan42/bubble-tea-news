@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Proof — Overload NZ 2026 for Issue 5</title>
+<style>
+  :root {
+    --sheet-bg: #FBF7EE;
+    --sheet-edge: rgba(27, 23, 18, 0.14);
+    --ink: #17140F;
+    --ink-soft: #8A7C68;
+    --stamp: #9A3324;
+    --stage-bg: #EDE6D6;
+    --stage-vignette: rgba(0,0,0,0);
+    --crop: rgba(27, 23, 18, 0.55);
+
+    --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px;
+    --sp-5: 24px; --sp-6: 32px; --sp-7: 48px;
+
+    --font-body: "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-stamp: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    --font-mono: ui-monospace, "Cascadia Mono", "Consolas", monospace;
+  }
+
+  :root[data-theme="dark"] {
+    --stage-bg: #15120D;
+    --stage-vignette: rgba(255, 214, 140, 0.07);
+    --crop: rgba(0,0,0,0.6);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --stage-bg: #15120D;
+      --stage-vignette: rgba(255, 214, 140, 0.07);
+      --crop: rgba(0,0,0,0.6);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background:
+      radial-gradient(ellipse at 50% 15%, var(--stage-vignette), transparent 60%),
+      var(--stage-bg);
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: var(--sp-7) var(--sp-4);
+  }
+
+  .stage-label {
+    position: fixed;
+    top: var(--sp-4);
+    left: var(--sp-5);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    opacity: 0.6;
+  }
+
+  .sheet {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    background: var(--sheet-bg);
+    color: var(--ink);
+    padding: var(--sp-6) var(--sp-6) var(--sp-7);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28), 0 2px 6px rgba(0,0,0,0.14);
+  }
+
+  /* crop marks, corners of the proof sheet */
+  .sheet::before, .sheet::after,
+  .crop-tr, .crop-bl {
+    content: ""; position: absolute; width: 18px; height: 18px; pointer-events: none;
+  }
+  .sheet::before { top: -9px; left: -9px; border-top: 1.5px solid var(--crop); border-left: 1.5px solid var(--crop); }
+  .sheet::after { bottom: -9px; right: -9px; border-bottom: 1.5px solid var(--crop); border-right: 1.5px solid var(--crop); }
+  .crop-tr { top: -9px; right: -9px; border-top: 1.5px solid var(--crop); border-right: 1.5px solid var(--crop); }
+  .crop-bl { bottom: -9px; left: -9px; border-bottom: 1.5px solid var(--crop); border-left: 1.5px solid var(--crop); }
+
+  .sheet-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    padding-bottom: var(--sp-5);
+    margin-bottom: var(--sp-6);
+    border-bottom: 1px solid var(--sheet-edge);
+  }
+  .sheet-head .title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+  .sheet-head .meta { display: block; margin-top: 4px; font-size: 0.82rem; color: var(--ink-soft); }
+
+  .stamp {
+    flex: none;
+    font-family: var(--font-stamp);
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    color: var(--stamp);
+    border: 3px solid var(--stamp);
+    border-radius: 6px;
+    padding: 6px 14px 4px;
+    transform: rotate(-6deg);
+    opacity: 0.82;
+    mix-blend-mode: multiply;
+    white-space: nowrap;
+  }
+  :root[data-theme="dark"] .stamp { mix-blend-mode: normal; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stamp { mix-blend-mode: normal; } }
+  .stamp small { display: block; font-family: var(--font-body); font-size: 0.5rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px; }
+
+  /* --- the ad itself: exact reproduction of issue-4.html's .ad-box, unmodified --- */
+  .ad-frame { display: flex; gap: var(--sp-5); align-items: flex-start; }
+  .ad-box {
+    color: #000000;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 2px;
+    border: 1.5px dashed currentColor;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .ad-box .eyebrow { display: block; margin-bottom: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; opacity: 0.78; }
+  .ad-box h3 { margin: 0 0 8px; font-size: 1.05rem; font-weight: 800; }
+  .ad-box p { margin: 0 0 12px; font-size: 0.92rem; line-height: 1.5; }
+  .ad-box .verified { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; }
+
+  .annot {
+    flex: none;
+    width: 148px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    padding-top: var(--sp-2);
+  }
+  .annot-item { font-family: var(--font-mono); font-size: 0.68rem; line-height: 1.4; color: var(--ink-soft); position: relative; padding-left: 12px; }
+  .annot-item::before { content: "\2014"; position: absolute; left: 0; color: var(--stamp); opacity: 0.7; }
+  .annot-item b { color: var(--ink); font-weight: 700; }
+
+  .placement-diagram { margin-top: var(--sp-2); }
+  .diagram-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 3px; height: 34px; }
+  .diagram-grid > span { background: rgba(138,124,104,0.18); border-radius: 1px; }
+  .diagram-grid > span.hit { background: var(--stamp); opacity: 0.55; }
+  .diagram-caption { display: block; margin-top: 4px; font-family: var(--font-mono); font-size: 0.6rem; color: var(--ink-soft); }
+
+  .why-line {
+    margin-top: var(--sp-6);
+    padding-top: var(--sp-5);
+    border-top: 1px solid var(--sheet-edge);
+    font-size: 0.86rem;
+    color: var(--ink);
+  }
+  .why-line .tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); display: block; margin-bottom: 6px; }
+
+  .facts {
+    margin-top: var(--sp-6);
+    padding-top: var(--sp-5);
+    border-top: 1px solid var(--sheet-edge);
+  }
+  .facts .tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); display: block; margin-bottom: var(--sp-3); }
+  .fact-grid { display: grid; grid-template-columns: auto 1fr; column-gap: var(--sp-4); row-gap: 6px; font-size: 0.82rem; }
+  .fact-grid dt { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; padding-top: 1px; }
+  .fact-grid dd { margin: 0; }
+
+  .snippet-block { margin-top: var(--sp-6); padding-top: var(--sp-5); border-top: 1px solid var(--sheet-edge); }
+  .snippet-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-2); }
+  .snippet-head .tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .copy-btn {
+    font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+    background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 3px;
+    padding: 4px 10px; cursor: pointer;
+  }
+  .copy-btn:hover { background: var(--ink); color: var(--sheet-bg); }
+  .copy-btn:focus-visible { outline: 2px solid var(--stamp); outline-offset: 2px; }
+  .copy-btn[data-copied="true"] { border-color: var(--stamp); color: var(--stamp); }
+  pre.code {
+    margin: 0; overflow-x: auto; font-family: var(--font-mono); font-size: 0.74rem; line-height: 1.55;
+    background: rgba(138,124,104,0.08); border: 1px solid var(--sheet-edge); border-radius: 3px; padding: var(--sp-4);
+    color: var(--ink);
+  }
+
+  @media (max-width: 560px) {
+    .sheet { padding: var(--sp-5) var(--sp-4) var(--sp-6); }
+    .ad-frame { flex-direction: column; }
+    .annot { width: auto; flex-direction: row; flex-wrap: wrap; }
+    .annot-item { flex: 1 1 45%; }
+  }
+</style>
+</head>
+<body>
+
+  <span class="stage-label">Bubble Tea News &middot; Ad Production</span>
+
+  <div class="sheet">
+    <span class="crop-tr" aria-hidden="true"></span>
+    <span class="crop-bl" aria-hidden="true"></span>
+
+    <div class="sheet-head">
+      <div>
+        <span class="title">Ad Proof</span>
+        <span class="meta">Issue 5 &middot; runs 14 Aug 2026 &middot; foot-row / news-grid ad slot</span>
+      </div>
+      <div class="stamp">PROOF<small>Approve before print</small></div>
+    </div>
+
+    <div class="ad-frame">
+      <div class="ad-box">
+        <span class="eyebrow">Advertisement &middot; What&rsquo;s On</span>
+        <h3>Overload NZ 2026 &mdash; 26&ndash;27 September, Auckland CBD</h3>
+        <p>Two days of cosplay, artists, and guests &mdash; including Ladybeard, Chelsey Furedi and Rin Sakura &mdash; at the NZ International Convention Centre. Bring the queue patience you already bring to a Saturday boba run; the costumes are better. Tickets and guest list at overload.co.nz.</p>
+        <span class="verified">LESS THAN 2 MONTHS OUT &middot; OVERLOAD.CO.NZ</span>
+      </div>
+
+      <div class="annot">
+        <div class="annot-item"><b>Slot:</b> reuses <b>.ad-box</b>, no new CSS</div>
+        <div class="annot-item"><b>Count:</b> 47 words body copy</div>
+        <div class="annot-item"><b>Lead time:</b> ~6 wks to event at print</div>
+        <div class="placement-diagram">
+          <div class="diagram-grid" role="img" aria-label="Ad sits in the right-hand slot of the foot row, beside the joke of the week">
+            <span></span><span class="hit"></span>
+          </div>
+          <span class="diagram-caption">foot-row: joke &middot; ad</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-line">
+      <span class="tag">Why This Runs Now</span>
+      Pearl Index cross-tabs flag meaningful overlap between Auckland bubble tea regulars and anime/cosplay convention-goers &mdash; the two queues share a crowd. Issue 5 prints with the expo under two months out, early enough for readers to actually plan around it.
+    </div>
+
+    <div class="facts">
+      <span class="tag">Source Facts &middot; from Overload.html</span>
+      <dl class="fact-grid">
+        <dt>Dates</dt><dd>26&ndash;27 September 2026</dd>
+        <dt>Venue</dt><dd>NZ International Convention Centre, 101 Hobson Street, Auckland CBD</dd>
+        <dt>Tickets</dt><dd>Eventzilla (linked from overload.co.nz)</dd>
+        <dt>Guests</dt><dd>Ladybeard, Rin Sakura, Chelsey Furedi, DOYAK, ORKA, Yuji Koi, memoh., Kugane Maruyama, Akiko Fujita, Kazufumi Kikushima, Hyuganatsu (Uririn), mit Photography</dd>
+        <dt>Format</dt><dd>Two-day anime &amp; manga convention &mdash; artists, cosplay, competitions, performances</dd>
+      </dl>
+    </div>
+
+    <div class="snippet-block">
+      <div class="snippet-head">
+        <span class="tag">Drop-in Markup</span>
+        <button class="copy-btn" id="copyBtn" type="button">Copy</button>
+      </div>
+      <pre class="code" id="snippetCode">&lt;div class="ad-box"&gt;
+  &lt;span class="eyebrow"&gt;Advertisement &amp;middot; What's On&lt;/span&gt;
+  &lt;h3&gt;Overload NZ 2026 &amp;mdash; 26&amp;ndash;27 September, Auckland CBD&lt;/h3&gt;
+  &lt;p&gt;Two days of cosplay, artists, and guests &amp;mdash; including Ladybeard, Chelsey Furedi and Rin Sakura &amp;mdash; at the NZ International Convention Centre. Bring the queue patience you already bring to a Saturday boba run; the costumes are better. Tickets and guest list at overload.co.nz.&lt;/p&gt;
+  &lt;span class="verified"&gt;LESS THAN 2 MONTHS OUT &amp;middot; OVERLOAD.CO.NZ&lt;/span&gt;
+&lt;/div&gt;</pre>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('copyBtn').addEventListener('click', function () {
+      var btn = this;
+      var text = document.getElementById('snippetCode').innerText;
+      function flag() {
+        btn.dataset.copied = 'true';
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.dataset.copied = 'false'; btn.textContent = 'Copy'; }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(flag, function () { fallbackCopy(text, flag); });
+      } else {
+        fallbackCopy(text, flag);
+      }
+      function fallbackCopy(t, cb) {
+        var ta = document.createElement('textarea');
+        ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        cb();
+      }
+    });
+  </script>
+</body>
+</html>
