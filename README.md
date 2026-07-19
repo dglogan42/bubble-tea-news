@@ -51,8 +51,8 @@ All content is satire/character-voice fiction. Original personas
 (Gordon Slate, Freya Wilcox, Sebastian, Wren, and others) are wholly
 invented. Pieces built around real people or existing franchises — Richard
 Nixon, Steve Jobs, Lewis Hamilton, Robin Leach, Rebecca Black, Kate
-Rodgers's Refill Rating, Gary Larson's one-panel style ("The Boba Side"),
-Luke Skywalker, Shaggy & Scooby-Doo, Daffy Duck, Te Mana Whakaatu — are
+Rodgers's Refill Rating, Luke Skywalker, Shaggy & Scooby-Doo, Daffy Duck,
+Te Mana Whakaatu — are
 clearly labeled parody/homage with a non-affiliation and non-endorsement
 disclaimer, per that persona's originating skill in
 `dglogan42/Claude-Skills`. All headlines, quotes, market-research figures,
