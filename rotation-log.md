@@ -117,6 +117,62 @@ prompt-script format. `the-boba-side-cartoon`'s Step 2b (turtle) and any
 future programmatic-render approach remain available as documented
 options, but none is in active use in the paper as of this entry.
 
+**Boba Side, cartoon slot policy change (Claude-Skills side, not yet
+applied to past issues):** `the-boba-side-cartoon` briefly moved to a
+deliberately crude "crayon-scribble" Far Side homage register, then was
+dialed back the same day after review — too crude in practice. It now
+renders as simple, clean schematic line/fill art with `pycairo` as the
+**standing default renderer** (not an optional fallback this time),
+reusing the internal-detail-on-large-fills lesson above so the legibility
+failure doesn't recur. Also new: the cartoon slot now strictly alternates
+biweekly with a second strip, **Hayaku** (`hayaku-senkotsu-strip`, an
+original senkotsu-style four-panel volleyball manga, unrelated to bubble
+tea by design — a syndicated strip the way a real paper carries one). See
+`bubble-tea-news-editor`'s Step 2c. **Issues 1–8 have not been
+retroactively redrawn** with this pycairo pass — that backfill, if wanted,
+is a separate future task; don't assume the archive already reflects it.
+
+---
+
+## Issue 9
+
+**Anchors:** community-outbreak-bulletin (Fenwick Grove hand-knitted
+letterbox cozies) · ken-endo-puzzle-master (The Loyalty Card Check; also
+fully resolves Issue 8's Correlation Desk suburb-ranking teaser) · bubble
+tea trivia (popping boba's alginate-spherification chemistry, distinct
+from tapioca) · joke of the week (mugged pun). No Menace Watch this issue
+— ran Issue 7, not due again until roughly Issue 11.
+
+**Cartoon slot (new biweekly alternation, Step 2c):** Hayaku's debut —
+Rin Sakaguchi and Tomoya Ezaki, Kaede High, introduced mid-match. The Boba
+Side sat out this issue after running every issue through Issue 8; it
+returns next issue.
+
+**Rotating slots** (per Issue 8's pool note — exclusion window shrunk to
+Issue 8's roster only, reopening the full Issue 7 cast plus the Issue 6
+and Issue 5 leftovers):
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Shaggy & Scooby — `canon-fanfic-vignette` (Persona 2)
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Steve Jobs — `reality-distortion-field-report`
+- Lewis Hamilton — `grand-prix-showroom-ads`
+- Rebecca Black — `long-game-music-review`
+- Richard Nixon — `silent-majority-dispatch`
+
+**Not used this issue** (available first for Issue 10): Sebastian, M.
+Voss, Luke Skywalker, Daffy Duck, Alan Grant, Wren, Garfield and the Te
+Mana Whakaatu classifieds format — Issue 8's roster, now reopened — plus
+Robin Leach, Baxter Kline, Winnie Zhao, The Stickybeak, Dana Foley and
+Clem Whitlock, still waiting since Issue 7. Kate Rodgers and Freya Wilcox
+remain standing roster members, available any issue.
+
+**Pool note for whoever assembles Issue 10:** exclude only Issue 9's
+roster (immediately above) — that reopens the full Issue 8 cast plus the
+six Issue-7 leftovers, comfortably more than enough for the rotating
+slots. The Boba Side is due back in the cartoon slot (its new pycairo
+register); Menace Watch still not due until roughly Issue 11.
+
 ---
 
 ## Issue 8
