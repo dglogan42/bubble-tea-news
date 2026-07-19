@@ -71,6 +71,18 @@ it — the two new standing columnists and the cartoon backfill — before
 publication, per house practice for anything added to the roster
 retroactively.
 
+**Boba Side rendering experiment, tried and reverted:** Issue 1 briefly
+carried an actually-rendered panel (Python `turtle` module drawing,
+captured off the Tk canvas as SVG, tinted with matplotlib) instead of the
+prompt-script placeholder, per `the-boba-side-cartoon`'s Step 2b. A
+real print-CSS bug was found and fixed along the way (`svg, svg *` was
+force-filling every color to solid black), but the underlying art quality
+itself — simple geometric line/fill shapes, a stick-figure "ant," sparkles
+as plus-signs — wasn't good enough even once correct. Reverted back to
+the prompt-script format across the board; Step 2b remains documented in
+the skill as an option, just not one currently in use in the actual
+paper.
+
 ---
 
 ## Issue 8
