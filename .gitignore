@@ -21,3 +21,6 @@ chrome-print-profile/
 # Secrets
 .env
 .env.local
+OPENAI API.txt
+discord API.txt
+bot token.txt
