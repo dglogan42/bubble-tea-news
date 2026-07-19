@@ -35,6 +35,24 @@ showing live. Not part of the weekly rotation-slot count — an optional
 bonus feature, not exclusion-bound, add a fresh premise whenever an issue
 has room; never reuse a gag already run.
 
+**Skeletor (`skeletor-obituary-column`) and Horatio McCallister
+(`horatio-mccallister-personals-column`):** both hired as **standing
+staff since Issue 1** — not a mid-run debut, backfilled retroactively into
+every issue alongside The Boba Side, same file footprint (`issues/`,
+`site/` where it exists, and the live-locked Issue 1 files). Each issue
+gets one fresh "In Memoriam" (always an explicitly non-living subject,
+never a real or fictional death) and one fresh "Ask the Captain" letter —
+never reuse a subject or a letter-writer pseudonym. Like Gordon Slate,
+Kate Rodgers, and Freya Wilcox, neither is exclusion-bound; both simply
+run every issue as standing fixtures rather than rotating in and out.
+
+**Editorial sign-off:** Design Editor Freya Wilcox handled the physical
+layout work for both this backfill and The Boba Side's insertion into the
+spread. Editor-in-Chief Gordon Slate reviewed and signed off on all of
+it — the two new standing columnists and the cartoon backfill — before
+publication, per house practice for anything added to the roster
+retroactively.
+
 ---
 
 ## Issue 8
