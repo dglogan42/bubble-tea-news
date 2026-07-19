@@ -37,7 +37,7 @@
   @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
   @media print {
     * { color: #000 !important; }
-    svg, svg * { stroke: #000 !important; fill: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
     .sheet, .sheet.taro, .sheet.sugar { background: transparent !important; color: #000 !important; }
     .eyebrow-band { background: #000 !important; color: #fff !important; }
     .masthead-frame h1 { background: #fff !important; color: #000 !important; }
@@ -545,12 +545,20 @@
   <div class="row divider-top">
     <div style="grid-column: span 3; text-align: center;">
       <p class="kicker" style="text-align: center;">The Boba Side</p>
-      <div class="ad-box" style="margin: 0 auto; max-width: 130mm; text-align: left;">
-        <p class="body-text" style="font-size: 6.4pt; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.7; margin: 0 0 1.2mm;">Image-generation prompt &mdash; not rendered artwork</p>
-        <p class="body-text" style="font-size: 7.2pt; margin: 0 0 1.2mm;"><strong>Prompt:</strong> Seinen action gag-manga panel; bold sharp linework with heavy cross-hatching; black and white with one spot color (mascot-lightning-bolt yellow); Berserk-adjacent dramatic intensity; unhinged-serious atmosphere; screentone texture on shadows, dramatic speed lines. Six costumed mascot characters squared off in a low-angle standoff on the sidewalk at high noon, foam padding rustling ominously, one bubble tea cup rolling untouched between them like a showdown prop.</p>
-        <p class="body-text" style="font-weight: 800; font-size: 9pt; text-align: center; margin: 1mm 0 0;">"ONLY ONE SHOPFRONT WOULD SURVIVE LUNCH RUSH."</p>
+      <div class="ad-box" style="margin: 0 auto; max-width: 105mm; padding: 1.5mm;">
+        <svg viewBox="0 0 300 170" style="width: 55mm; height: auto; display: block; margin: 0 auto;">
+<path class="tcolor" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 10 155 L 290 155 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(54.901961%, 54.901961%, 58.039216%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 72 155 L 70 105 L 110 105 L 108 155 Z M 72 155 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(54.901961%, 54.901961%, 58.039216%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 106 100 C 106 108.835938 98.835938 116 90 116 C 81.164062 116 74 108.835938 74 100 C 74 91.164062 81.164062 84 90 84 C 98.835938 84 106 91.164062 106 100 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(94.901961%, 80%, 14.901961%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 85 85 L 93 85 L 88 70 L 96 70 L 84 55 L 87 70 L 81 70 Z M 85 85 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(54.901961%, 54.901961%, 58.039216%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 192 155 L 190 105 L 230 105 L 228 155 Z M 192 155 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(54.901961%, 54.901961%, 58.039216%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 226 100 C 226 108.835938 218.835938 116 210 116 C 201.164062 116 194 108.835938 194 100 C 194 91.164062 201.164062 84 210 84 C 218.835938 84 226 91.164062 226 100 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(94.901961%, 80%, 14.901961%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 205 85 L 213 85 L 208 70 L 216 70 L 204 55 L 207 70 L 201 70 Z M 205 85 "/>
+<path class="tcolor" fill-rule="nonzero" fill="rgb(85.098039%, 85.098039%, 85.098039%)" fill-opacity="1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(16.862745%, 12.156863%, 20.784314%)" stroke-opacity="1" stroke-miterlimit="10" d="M 160 145 C 160 150.523438 155.523438 155 150 155 C 144.476562 155 140 150.523438 140 145 C 140 139.476562 144.476562 135 150 135 C 155.523438 135 160 139.476562 160 145 "/>
+        </svg>
+        <p class="body-text" style="font-weight: 800; font-size: 9pt; text-align: center; margin: 1.5mm 0 0;">"ONLY ONE SHOPFRONT WOULD SURVIVE LUNCH RUSH."</p>
       </div>
-      <p class="byline-text" style="text-align: center;">The Boba Side &mdash; prompt script, awaiting illustration</p>
+      <p class="byline-text" style="text-align: center;">The Boba Side &mdash; vector line art, drawn with pycairo</p>
     </div>
   </div>
 
