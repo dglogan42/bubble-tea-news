@@ -102,6 +102,21 @@ than the other 7 (38mm vs. 55mm) due to that issue's already-dense
 content. All 8 reconfirmed at exactly 2 pages via `pypdf` page-count
 check after the fix.
 
+**Boba Side rendering, reverted again:** the pycairo render fixed the
+turtle-era faceting problem (true bezier-arc circles instead of
+polygon-approximated ones), but two panels still failed at print size:
+Issue 7's "chalkboard" was a large near-black filled rectangle with only
+thin lines inside it, and Issue 8's "silhouette" was a dark trapezoid +
+circle — both read as plain solid black blocks rather than recognizable
+shapes once shrunk to print scale, with no bug involved (colors were
+applying correctly; it was a composition/legibility failure). Given this
+was the third rendering approach (turtle, pygame, pycairo) to hit some
+version of "the shapes are simple enough to draw but not simple enough to
+still be legible once drawn," reverted all 8 issues back to the
+prompt-script format. `the-boba-side-cartoon`'s Step 2b (turtle) and any
+future programmatic-render approach remain available as documented
+options, but none is in active use in the paper as of this entry.
+
 ---
 
 ## Issue 8
