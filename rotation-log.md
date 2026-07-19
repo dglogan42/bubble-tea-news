@@ -53,6 +53,21 @@ one pass, replacing the old Gary Larson framing throughout — including in
 `README.md`'s content-disclaimer list, since the feature is no longer a
 real-person style homage.
 
+**Boba Side programmatic render (turtle + matplotlib/PIL):** per
+`the-boba-side-cartoon`'s Step 2b, Issue 1 got a real rendered panel first
+(the gnome scene) as a demo; this rollout extends the same approach to
+Issues 2–8, replacing every issue's prompt-script placeholder with an
+actually-drawn SVG — real `turtle`-module line/fill primitives, captured
+off the Tk canvas, tinted with matplotlib. Each issue keeps its own
+established premise and caption from the prompt-script era. Coordinates
+were checked against the shared 300×170 viewBox after Issue 6 and 7's
+first drafts overflowed it (a spotlight cone apex above y=0, a ledge line
+flush against y=170) — both nudged inward with margin before shipping.
+This remains simple schematic line art per Step 0-A's honesty rule, not
+manga-quality rendering; the prompt-script format (Step 2) is still the
+right call whenever the ask is genuinely about anime/manga *style* rather
+than "draw me something real now."
+
 **Skeletor (`skeletor-obituary-column`) and Horatio McCallister
 (`horatio-mccallister-personals-column`):** both hired as **standing
 staff since Issue 1** — not a mid-run debut, backfilled retroactively into
