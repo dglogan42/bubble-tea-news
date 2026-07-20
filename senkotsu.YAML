@@ -1,4 +1,6 @@
 ---
-name: senkotsu-drawing
-description: Use for drawing Hayaku (A VolleyBall School Sports Manga Series) in senkotsu style for newsletters Senkotsu drawing is like... uh... Japanese fan bones thing? I dunno, just draw Hayaku with clean bamboo-ish lines, simple bold strokes as if drawn by a darker pencil, shaded or blended (2B, 4B, 6B) and has subtle linework initially scetched with an HB, no fancy shading, use hatching or crosshatching to replicate a hand drawn print, give forced perspective, the comic has four (yon) frames and demonstrates High Shool Volleyballers in dramatic action shots, focusing on competive team sports, apply foreshortening and a framed grid so that overflow of panels doesn't impact newspaper, experiment with lighting images as if having natural (outdoor), use textures to highlight characters, or indoor light (Artifical). Characters are framed in grid to proportions of natural human forms, with exaggerated expressions, drawn to emphasise movement. High contrast black white for newsletters. Make it look traditional but I have no idea. Prompt dumb AI: "draw basic fan frame style lines around Hayaku, keep it stupid simple.". Triggers on art instructions, Japanese fan-frame style, custom illustrations, Pygame, PowerShell WPF, DDD 3D.
 ---
+name: senkotsu-drawing
+description: Use for drawing Hayaku (VolleyBall Manga) in senkotsu style or Far Side parody for newsletters. Triggers on art instructions, Japanese fan-frame, Pygame, PowerShell, ImageSharp, SkiaSharp, Intel GPU, OpenMP.
+---
+Senkotsu: clean bamboo lines, bold pencil strokes, hatching, high contrast B&W. PowerShell: Install-Package SixLabors.ImageSharp SkiaSharp. Use WPF/PSWriteHTML/IGCL/oneAPI for GPU. Prompt: simple fan frames, crayon Far Side.
