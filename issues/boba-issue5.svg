@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1200" width="1680" height="1200">
+<defs></defs>
+<polygon points="60.0,8.0 1620.0,8.0 1580.0,1192.0 100.0,1192.0" fill="white" stroke="black" stroke-width="7"/>
+<rect x="380.4" y="314.0" width="180.0" height="60.0" rx="0" fill="white" stroke="black" stroke-width="4"/>
+<text x="470.4" y="340.0" font-family="sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="black">TEAM</text>
+<text x="470.4" y="364.0" font-family="sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="black">CHALK</text>
+<circle cx="470.40" cy="696.00" r="68.00" fill="#C24B4B" stroke="black" stroke-width="6"/>
+<circle cx="466.40" cy="690.00" r="5.00" fill="white"/>
+<circle cx="480.40" cy="690.00" r="5.00" fill="white"/>
+<line x1="542.4" y1="666.0" x2="590.4" y2="660.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="542.4" y1="686.0" x2="590.4" y2="683.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="542.4" y1="706.0" x2="590.4" y2="706.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="542.4" y1="726.0" x2="590.4" y2="729.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<rect x="1119.6" y="314.0" width="180.0" height="60.0" rx="0" fill="white" stroke="black" stroke-width="4"/>
+<text x="1209.6" y="340.0" font-family="sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="black">TEAM</text>
+<text x="1209.6" y="364.0" font-family="sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="black">MARKER</text>
+<circle cx="1209.60" cy="696.00" r="68.00" fill="#3E6FB0" stroke="black" stroke-width="6"/>
+<circle cx="1205.60" cy="690.00" r="5.00" fill="white"/>
+<circle cx="1219.60" cy="690.00" r="5.00" fill="white"/>
+<line x1="1137.6" y1="666.0" x2="1089.6" y2="660.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="1137.6" y1="686.0" x2="1089.6" y2="683.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="1137.6" y1="706.0" x2="1089.6" y2="706.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<line x1="1137.6" y1="726.0" x2="1089.6" y2="729.0" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<polygon points="830.0,504.0 880.0,600.0 844.0,624.0 890.0,744.0 810.0,636.0 844.0,600.0" fill="#F0C848" stroke="black" stroke-width="5"/>
+</svg>

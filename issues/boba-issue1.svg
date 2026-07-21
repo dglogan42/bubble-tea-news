@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1200" width="1680" height="1200">
+<defs></defs>
+<rect x="6.0" y="6.0" width="1668.0" height="1188.0" rx="18" fill="white" stroke="black" stroke-width="8"/>
+<polygon points="20.0,1176.0 20.0,720.0 202.2,746.0 384.4,720.0 566.7,746.0 748.9,720.0 931.1,746.0 1113.3,720.0 1295.6,746.0 1477.8,720.0 1660.0,746.0 1660.0,1176.0" fill="#8FBF7A" stroke="black" stroke-width="6"/>
+<polyline points="20.0,766.0 202.2,776.0 384.4,766.0 566.7,776.0 748.9,766.0 931.1,776.0 1113.3,766.0 1295.6,776.0 1477.8,766.0 1660.0,776.0" fill="none" stroke="#C9E4BC" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="762.0,716.0 918.0,716.0 840.0,566.0" fill="#C0603C" stroke="black" stroke-width="6"/>
+<circle cx="840.00" cy="776.00" r="62.00" fill="#F0D5A8" stroke="black" stroke-width="6"/>
+<circle cx="818.00" cy="770.00" r="7.00" fill="black"/>
+<circle cx="862.00" cy="770.00" r="7.00" fill="black"/>
+<circle cx="836.00" cy="792.00" r="14.00" fill="#E3A87A" stroke="black" stroke-width="4"/>
+<polygon points="806.0,846.0 874.0,846.0 864.0,912.0 816.0,912.0" fill="#E8C88A" stroke="black" stroke-width="6"/>
+<polygon points="722.0,694.0 727.4,710.6 744.0,716.0 727.4,721.4 722.0,738.0 716.6,721.4 700.0,716.0 716.6,710.6" fill="white" stroke="black" stroke-width="3"/>
+<polygon points="968.0,730.0 972.0,742.0 984.0,746.0 972.0,750.0 968.0,762.0 964.0,750.0 952.0,746.0 964.0,742.0" fill="white" stroke="black" stroke-width="3"/>
+</svg>
