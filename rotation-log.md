@@ -32,8 +32,16 @@ updating); Milkwood and Nine Cups remain in Issue 3. Issues 4-7's
 previously-unsold "Your Ad Here" placeholder boxes are now filled with
 real (in-universe) local advertisers: Modoo and I Love Takapuna (Issue
 4), Sir Tea and TeasMe (Issue 5), TeaDee Bubble Tea and NZ FSL (Issue 6),
-The Spinoff and Elemental Cooking School (Issue 7). Every affected PDF
-reconfirmed at 2 pages after the change.
+The Spinoff and Elemental Cooking School (Issue 7). BobaMart Milk Tea
+(Issue 8), Cha Nui (Issue 9), Hiko (Issue 10), and T2 (Issue 11) fill in
+as further advertisers, each slotted into a free third column next to an
+existing row (Skeletor/Horatio, mostly) rather than a new row, to stay
+within the 2-page budget; Cha Nui, Hiko, and T2 all run their own
+supplied logo art (`issues/chanui-ad.png`, `hikoco-ad.png`, `t2-ad.png`)
+rather than an invented creative. Every affected PDF reconfirmed at 2
+pages after each change. **Overload NZ's run ends at Issue 12** ("A
+Wrap," the convention having already happened) — don't carry its ad
+forward into Issue 13 or later.
 
 **Live-site note:** the public showcase (`index.html`/`docs/`) tracks real
 calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
@@ -260,10 +268,11 @@ supplied flyer art (`issues/overload-2026-ad.png`) instead of a text-only
 listing — backfilled into Issues 9 and 10 as well, replacing their
 text-only versions, so the flyer reads as the same ad running throughout
 its countdown. Lewis Hamilton's usual page-2 ad-box slot went instead to
-a new one-off local advertiser, Bellevue Print & Laminate (same-day
-con-badge lamination) — a fresh in-universe business, not tied to any
-existing persona/skill. Lewis Hamilton himself is held back to Issue 12
-rather than dropped from the roster.
+T2 (`issues/t2-ad.png`, its own supplied logo art), a real advertiser
+buying space this issue — not tied to any persona/skill. Lewis Hamilton
+himself is held back to Issue 12 rather than dropped from the roster.
+(An earlier draft of this slot used an invented local advertiser,
+Bellevue Print & Laminate; superseded once T2's real logo art arrived.)
 
 **Not used this issue** (available first for Issue 12): Shaggy & Scooby,
 T. Marlow, Steve Jobs and Rebecca Black, still waiting since Issue 9,
