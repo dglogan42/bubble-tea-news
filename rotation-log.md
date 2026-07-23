@@ -179,6 +179,70 @@ is a separate future task; don't assume the archive already reflects it.
 
 ---
 
+## Issue 13
+
+**Anchors:** community-outbreak-bulletin (Fenwick Grove hand-knitted cup
+cosies, looped over bike racks) · ken-endo-puzzle-master (Which Size Did
+Ana Actually Order?; also fully resolves Issue 12's Who Actually Worked
+the Evening Shift?) · bubble tea trivia (the Chun Shui Tang / Hanlin Tea
+Room invention rivalry) · joke of the week (tapioca pearl promotion pun).
+No Menace Watch this issue, still not due until roughly Issue 15.
+
+**First issue without Overload NZ:** its run ended at Issue 12's "A
+Wrap." Toyota fills that page-1 ad slot instead, `issues/toyota-ad.png`,
+a parody placement with its own non-affiliation line (same footing as
+the 24 July correction above, not a real Toyota placement). Page 2's
+usual second ad-box reverts to a plain "Your Ad Here" placeholder, since
+Lewis Hamilton is resting this issue and no other advertiser is lined up
+yet.
+
+**Priya Anand closes the loop:** her Pearl Index piece delivers the
+"full weekend numbers" she flagged as provisional back in Issue 11
+(n=210 at the time), now closed out at n=612 with the con-weekend badge
+bump confirmed real but geographically tight (within four blocks of the
+convention centre only).
+
+**Cartoon slot:** Hayaku takes its second turn, next after Issue 12's
+Boba Side in the Boba Side/Hayaku/Cat vs Dog/Doki Doki Mon rotation. No
+new source photo was available this round, so it runs as a labelled
+text-only placeholder rather than reusing Issue 9's debut art
+(`issues/hayaku-issue9-debut.png` stays put, not duplicated in). Whoever
+assembles a future Hayaku turn should supply fresh art rather than
+carrying this placeholder forward twice.
+
+**Rotating slots** (per Issue 12's pool note — exclusion window shrunk
+to Issue 12's roster only, reopening Sebastian, Robin Leach and The
+Stickybeak from Issue 10, plus the full Issue 11 rotating roster):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Dana Foley — `epic-forecast-anchor`
+- Winnie Zhao — `seekers-eye-shopper`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- Sebastian — `faded-hero-voice`
+- Robin Leach — `champagne-wishes-dispatch`
+- The Stickybeak — `tabloid-gossip-voice`
+
+All nine of the available pool ran this issue, clearing it completely —
+the first time a pool's been fully cleared with nothing held back for
+the following issue. Kate Rodgers and Freya Wilcox sat this one out
+(standing roster, not exclusion-bound, simply resting after running
+Issue 12).
+
+**Not used this issue** (available first for Issue 14): the entire
+Issue 12 rotating roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield,
+Baxter Kline, the Te Mana Whakaatu classifieds format, Lewis Hamilton),
+which Issue 13's exclusion window leaves untouched. Kate Rodgers and
+Freya Wilcox remain standing roster members, available any issue.
+
+**Pool note for whoever assembles Issue 14:** exclude only Issue 13's
+roster (immediately above) — that reopens the full Issue 12 cast,
+comfortably more than enough for the rotating slots. Menace Watch not
+due again until roughly Issue 15. Cat vs Dog and Doki Doki Mon remain
+the rest of the cartoon-slot rotation after Hayaku.
+
+---
+
 ## Issue 12
 
 **Anchors:** community-outbreak-bulletin (Bellevue Lane abandoned con
@@ -232,25 +296,10 @@ which Issue 12's shrunk exclusion window leaves untouched. Kate Rodgers
 and Freya Wilcox remain standing roster members, run this issue but
 available any issue regardless.
 
-**Pool note for whoever assembles Issue 13:** exclude only Issue 12's
-roster (immediately above) — that reopens Sebastian, Robin Leach and The
-Stickybeak from Issue 10, plus the full Issue 11 rotating roster. Menace
-Watch not due again until roughly Issue 15.
-
-**Advertiser slotted for Issue 13: Toyota.** Same footing as Overload
-NZ/Cha Nui/HIKOCO/T2 (see the correction above) — a parody placement, not
-a real Toyota ad, with its own non-affiliation line built in. Logo asset
-is `issues/toyota-ad.png`. Drop this block into a free third-column
-ad-box slot when Issue 13 is assembled:
-
-```html
-<div class="ad-box">
-  <img src="toyota-ad.png" alt="Toyota logo" style="width: auto; height: auto; max-width: 90px; max-height: 90px; margin: 0 auto 1mm; display: block;">
-  <h3>Toyota &mdash; Let's Go Places (Off-Ramp Edition)</h3>
-  <p style="font-style:italic;">"You already see us at every intersection in Auckland. Today, apparently, you see us here too."</p>
-  <p style="margin-top:1mm; font-size:0.85em;">Parody ad box only, not a real Toyota placement, not affiliated with or endorsed by Toyota Motor Corporation.</p>
-</div>
-```
+**Pool note and Toyota ad-box plan, fulfilled:** both the pool note and
+the Toyota advertiser plan sketched here were carried out exactly as
+written when Issue 13 was assembled — see the "## Issue 13" entry above
+for the actual result.
 
 ---
 
