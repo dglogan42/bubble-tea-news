@@ -32,7 +32,12 @@ updating); Milkwood and Nine Cups remain in Issue 3. Issues 4-7's
 previously-unsold "Your Ad Here" placeholder boxes are now filled with
 real (in-universe) local advertisers: Modoo and I Love Takapuna (Issue
 4), Sir Tea and TeasMe (Issue 5), TeaDee Bubble Tea and NZ FSL (Issue 6),
-The Spinoff and Elemental Cooking School (Issue 7). BobaMart Milk Tea
+The Spinoff and Elemental Cooking School (Issue 7) — all eight later
+upgraded from plain text to Pearl Index-style SVG creatives (same format
+as Milkwood/Nine Cups/Steep & Sorted), a cup icon for the tea-brand ads
+and a simple "article card" icon for the blog/site ones, so Issues 3-7's
+ad boxes read consistently instead of mixing SVG art with plain text.
+BobaMart Milk Tea
 (Issue 8), Cha Nui (Issue 9), Hiko (Issue 10), and T2 (Issue 11) fill in
 as further advertisers, each slotted into a free third column next to an
 existing row (Skeletor/Horatio, mostly) rather than a new row, to stay
