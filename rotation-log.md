@@ -18,6 +18,23 @@ Issue 8. Standing roster member from Issue 9 onward — like Gordon Slate and
 Kate Rodgers, not exclusion-bound; run her whenever her byline fits rather
 than strictly rotating her.
 
+**Ad-space backfill (23 July 2026):** the paper's advertiser history was
+revised retroactively. Overload NZ 2026's actual debut as a paid
+advertiser is now Issue 3 (was previously Issue 5's "first paid
+placement" — that claim in Issue 5's own text has been corrected), and it
+runs continuously through Issue 12 ("A Wrap"), now with its supplied
+flyer art (`issues/overload-2026-ad.png`) in every appearance instead of
+a text-only listing. Issue 2 was deliberately left untouched — its three
+Pearl Index SVG creative ads (Milkwood Tea Co., Nine Cups Tea Bar, Steep
+& Sorted) stand as-is. Issue 3's Half Moon Tea House slot was swapped for
+Overload (no other issue referenced Half Moon, so nothing else needed
+updating); Milkwood and Nine Cups remain in Issue 3. Issues 4-7's
+previously-unsold "Your Ad Here" placeholder boxes are now filled with
+real (in-universe) local advertisers: Modoo and I Love Takapuna (Issue
+4), Sir Tea and TeasMe (Issue 5), TeaDee Bubble Tea and NZ FSL (Issue 6),
+The Spinoff and Elemental Cooking School (Issue 7). Every affected PDF
+reconfirmed at 2 pages after the change.
+
 **Live-site note:** the public showcase (`index.html`/`docs/`) tracks real
 calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
 17 July 2026), even though Issues 2–8 already exist in the archive below.
