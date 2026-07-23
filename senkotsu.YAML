@@ -1,6 +1,4 @@
 ---
----
 name: senkotsu-drawing
-description: Use for drawing Hayaku (VolleyBall Manga) in senkotsu style or Far Side parody for newsletters. Triggers on art instructions, Japanese fan-frame, Pygame, PowerShell, ImageSharp, SkiaSharp, Intel GPU, OpenMP.
+description: Use for drawing Hayaku in senkotsu style for newsletters. Triggers on art instructions, Japanese fan-frame style.
 ---
-Senkotsu: clean bamboo lines, bold pencil strokes, hatching, high contrast B&W. PowerShell: Install-Package SixLabors.ImageSharp SkiaSharp. Use WPF/PSWriteHTML/IGCL/oneAPI for GPU. Prompt: simple fan frames, crayon Far Side.

@@ -146,7 +146,29 @@ from tapioca) · joke of the week (mugged pun). No Menace Watch this issue
 **Cartoon slot (new biweekly alternation, Step 2c):** Hayaku's debut —
 Rin Sakaguchi and Tomoya Ezaki, Kaede High, introduced mid-match. The Boba
 Side sat out this issue after running every issue through Issue 8; it
-returns next issue.
+returns next issue. **Redrawn 23 July 2026:** the debut panel was replaced
+with a new hand-drawn original (a reaction close-up, a jump serve with
+"SKIFF"/"HWWP" impact sound effects, a "SERVE!" line-judge call, and the
+"TECH TEAM" scoreboard card) — cleaned up from a phone photo (levels
+flattened, cropped tight to the drawn content) the same way the Boba Side
+scans were. Alt text and byline in `issues/issue-9.html` updated to match;
+`issue-9.pdf` reprinted, still 2 pages.
+
+**Two new syndicated cartoons in the pipeline, not yet slotted into any
+issue:** hand-drawn originals cleaned and staged in `issues/` ahead of
+their debut issues. **Cat vs Dog**
+(`issues/cat-vs-dog-issue10-debut.png`) — a domestic-sitcom gag pairing
+("Behind the Scenes at Bubble Tea News," cat and dog watching TV on the
+couch, "I love commercials!"), format varies panel-count issue to issue
+(single panel this time, per house note — unlike The Boba Side, which
+stays single-panel always). Slated to debut Issue 10. **Doki Doki Mon**
+(`issues/doki-doki-mon-issue11-debut.png`) — a monster-collecting parody,
+senkotsu four-panel format like Hayaku (trainer close-up, two creature
+close-ups, one panel upside-down/foreshortened). Slated to debut Issue
+11. Neither has a byline/alt-text entry yet since `issue-10.html` /
+`issue-11.html` don't exist — whoever assembles those issues still needs
+to pick the cartoon slot's alternation (Boba Side / Hayaku / one of these
+two) and write the copy.
 
 **Rotating slots** (per Issue 8's pool note — exclusion window shrunk to
 Issue 8's roster only, reopening the full Issue 7 cast plus the Issue 6
