@@ -57,8 +57,10 @@ clearly labeled parody/homage with a non-affiliation and non-endorsement
 disclaimer, per that persona's originating skill in
 `dglogan42/Claude-Skills`. All headlines, quotes, market-research figures,
 and business names are illustrative examples, not real news, real survey
-data, or real endorsements (Overload NZ 2026 excepted — a real, named
-convention run as this paper's first actual paid ad placement).
+data, or real endorsements. This includes every ad-box built around a
+real brand (Overload NZ 2026, T2, Cha Nui, HIKOCO, Toyota): each is a
+parody placement carrying its own non-affiliation disclaimer, not a
+genuine paid ad or real endorsement from that company.
 
 ## License
 

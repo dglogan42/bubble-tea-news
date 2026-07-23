@@ -48,6 +48,15 @@ pages after each change. **Overload NZ's run ends at Issue 12** ("A
 Wrap," the convention having already happened) — don't carry its ad
 forward into Issue 13 or later.
 
+**Correction (24 July 2026):** the real-brand ad-boxes above (Overload NZ
+2026, Cha Nui, HIKOCO, T2) are parody placements, not genuine paid ads or
+real endorsements — same footing as the Toyota box below. Each now
+carries its own compact non-affiliation line under the existing tagline
+(e.g. "Parody placement, not a real Overload NZ ad."), added across
+Issues 3-12 without pushing any PDF past its 2-page budget. README's
+content-disclaimer section corrected to match; it previously carved
+Overload NZ out as a real placement, which was wrong.
+
 **Live-site note:** the public showcase (`index.html`/`docs/`) tracks real
 calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
 17 July 2026), even though Issues 2–8 already exist in the archive below.
@@ -227,6 +236,21 @@ available any issue regardless.
 roster (immediately above) — that reopens Sebastian, Robin Leach and The
 Stickybeak from Issue 10, plus the full Issue 11 rotating roster. Menace
 Watch not due again until roughly Issue 15.
+
+**Advertiser slotted for Issue 13: Toyota.** Same footing as Overload
+NZ/Cha Nui/HIKOCO/T2 (see the correction above) — a parody placement, not
+a real Toyota ad, with its own non-affiliation line built in. Logo asset
+is `issues/toyota-ad.png`. Drop this block into a free third-column
+ad-box slot when Issue 13 is assembled:
+
+```html
+<div class="ad-box">
+  <img src="toyota-ad.png" alt="Toyota logo" style="width: auto; height: auto; max-width: 90px; max-height: 90px; margin: 0 auto 1mm; display: block;">
+  <h3>Toyota &mdash; Let's Go Places (Off-Ramp Edition)</h3>
+  <p style="font-style:italic;">"You already see us at every intersection in Auckland. Today, apparently, you see us here too."</p>
+  <p style="margin-top:1mm; font-size:0.85em;">Parody ad box only, not a real Toyota placement, not affiliated with or endorsed by Toyota Motor Corporation.</p>
+</div>
+```
 
 ---
 
