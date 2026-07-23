@@ -7,8 +7,8 @@ since that anchor is monthly (~every 4th weekly issue), not weekly. Append
 a new entry each time a new issue is assembled — most recent issue at the
 top.
 
-**Menace Watch tracker:** last ran Issue 7. Not due again until roughly
-Issue 11 — leave that slot to a rotating persona in Issues 8–10.
+**Menace Watch tracker:** last ran Issue 11. Not due again until roughly
+Issue 15 — leave that slot to a rotating persona in Issues 12–14.
 
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
@@ -131,6 +131,108 @@ tea by design — a syndicated strip the way a real paper carries one). See
 `bubble-tea-news-editor`'s Step 2c. **Issues 1–8 have not been
 retroactively redrawn** with this pycairo pass — that backfill, if wanted,
 is a separate future task; don't assume the archive already reflects it.
+
+---
+
+## Issue 11
+
+**Anchors:** community-outbreak-bulletin (Bellevue Lane hand-laminated con
+badges, worn two days early) · ken-endo-puzzle-master (This Week's Restock
+Ranking; also fully resolves Issue 10's Tuesday's Smudged Order Log) ·
+bubble tea trivia (the real US East Coast "bubble tea" / West Coast "boba"
+naming split) · joke of the week (stick-together pun). **Menace Watch,
+third appearance** — Gordon Slate, right on schedule per the tracker
+(last ran Issue 7, four issues back); target ("The Early Badge-Wearer")
+cross-references this issue's own breaking bulletin.
+
+**Cartoon slot:** Doki Doki Mon's debut — a new syndicated four-panel
+monster-collecting parody strip in senkotsu format, its own new skill
+(`doki-doki-mon-strip` in the Claude-Skills library). Art was a hand-drawn
+photo, cleaned up the same way as Hayaku's and Cat vs Dog's (levels
+flattened, cropped tight). The Boba Side is next in line for the slot,
+from Issue 12 — its longest gap yet (last ran Issue 8).
+
+**Rotating slots** (per Issue 10's pool note — exclusion window shrunk to
+Issue 10's roster only, reopening Issue 9's full cast plus the Issue 8
+leftovers not picked up in Issue 10):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Dana Foley — `epic-forecast-anchor`
+- Winnie Zhao — `seekers-eye-shopper`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- Lewis Hamilton — `grand-prix-showroom-ads`
+
+(Menace Watch fills this issue's eighth rotating-slot position, per Step
+2b — one fewer rotating persona than usual, same as Issues 3 and 7.)
+
+**Not used this issue** (available first for Issue 12): Shaggy & Scooby,
+T. Marlow, Steve Jobs and Rebecca Black, still waiting since Issue 9,
+plus the entire Issue 10 rotating roster (Sebastian, M. Voss, Garfield,
+Wren, the Te Mana Whakaatu classifieds format, Robin Leach, Baxter Kline,
+The Stickybeak), which Issue 11's shrunk exclusion window leaves
+untouched. Daffy Duck and Alan Grant are still waiting since Issue 4 —
+the longest-waiting leftovers on record; whoever assembles Issue 12
+should try to finally clear one of them. Kate Rodgers and Freya Wilcox
+remain standing roster members, available any issue but not run this
+issue.
+
+**Pool note for whoever assembles Issue 12:** exclude only Issue 11's
+roster (immediately above) — that reopens the full Issue 10 cast plus
+Daffy Duck and Alan Grant. Menace Watch not due again until roughly Issue
+15.
+
+---
+
+## Issue 10
+
+**Anchors:** community-outbreak-bulletin (Ellendale Path hand-painted
+pebble cairns) · ken-endo-puzzle-master (Tuesday's Smudged Order Log; also
+fully resolves Issue 9's Loyalty Card Check) · bubble tea trivia (why the
+straw is wide-bore) · joke of the week (barista/blender pun). No Menace
+Watch this issue — still not due until roughly Issue 11.
+
+**Cartoon slot:** Cat vs Dog's debut — a new syndicated cartoon (its own
+new skill, `cat-vs-dog-cartoon` in the Claude-Skills library), format
+variable issue to issue (single panel this time; unlike The Boba Side,
+which stays single-panel always). Art was a hand-drawn photo cleaned up
+the same way as Hayaku's Issue 9 redraw (levels flattened, cropped tight
+to the drawn content). **Editorial note:** this debut took the cartoon
+slot's alternation turn, bumping The Boba Side's own promised return
+(teased at the end of Issue 9) — Boba Side is now next in line for the
+slot, from Issue 11.
+
+**Rotating slots** (per Issue 9's pool note — exclusion window shrunk to
+Issue 9's roster only, reopening the full Issue 8 cast plus the six
+Issue 7 leftovers):
+- Sebastian — `faded-hero-voice`
+- M. Voss, Investigations Desk — `code-theft-dossier`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Wren — `yearning-machine-voice`
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+- Robin Leach — `champagne-wishes-dispatch`
+- Baxter Kline — `the-world-bulletin-anchor`
+- The Stickybeak — `tabloid-gossip-voice` (first time this persona has
+  actually run in an archived issue, despite being roster-eligible since
+  its own skill was written)
+
+**Not used this issue** (available first for Issue 11): Luke Skywalker,
+Daffy Duck and Alan Grant — the remaining Issue 8 canon-fanfic-vignette
+personas Issue 10 didn't reach — plus Winnie Zhao, Dana Foley and Clem
+Whitlock, still waiting since Issue 7, plus the entire Issue 9 rotating
+roster (Priya Anand, Sherman McCoy, Shaggy & Scooby, T. Marlow, Steve
+Jobs, Lewis Hamilton, Rebecca Black, Richard Nixon), which Issue 10's
+shrunk exclusion window leaves untouched. Kate Rodgers and Freya Wilcox
+remain standing roster members, available any issue but not run this
+issue.
+
+**Pool note for whoever assembles Issue 11:** exclude only Issue 10's
+roster (immediately above) — that reopens the full Issue 9 cast plus
+Luke Skywalker, Daffy Duck, Alan Grant, Winnie Zhao, Dana Foley and Clem
+Whitlock. Menace Watch is due — right on schedule per the tracker (last
+ran Issue 7); when it runs, it fills one of the 8 template slots rather
+than adding a 9th (per Step 2b), so only 7 additional rotating personas
+are needed alongside it.
 
 ---
 

@@ -1,0 +1,469 @@
+<title>Bubble Tea News — Print Edition</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 6mm 7mm 1.5mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  /* ---------- Eyebrow band ---------- */
+  .eyebrow-band {
+    display: inline-block;
+    align-self: center;
+    padding: 1.5mm 6mm;
+    border-radius: 20px;
+    font-size: 17pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  /* ---------- Dotted masthead frame ---------- */
+  .masthead-frame {
+    position: relative;
+    text-align: center;
+    padding: 3mm 8mm;
+    margin-bottom: 2mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm;
+    opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 2mm 6mm;
+    font-weight: 800;
+    font-size: 21pt;
+    letter-spacing: 0.08em;
+    background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  /* mask the dots directly behind the title so the title block reads clean */
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding-bottom: 1.5mm;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 2mm;
+    margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots {
+    display: flex;
+    gap: 2.5px;
+  }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  /* ---------- Content grid ---------- */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5mm;
+    padding: 0.5mm 0;
+  }
+  .row.divider-top { border-top: 2.5px solid currentColor; }
+
+  .col-icon-lead {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-circle {
+    width: 7mm; height: 7mm;
+    border: 1.4px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 {
+    font-weight: 800;
+    font-size: 11.5pt;
+    line-height: 1.1;
+    margin: 0 0 0.8mm;
+  }
+  .kicker {
+    font-size: 6.2pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin: 0 0 0.6mm;
+  }
+  p.body-text, p.byline-text {
+    font-size: 6.9pt;
+    line-height: 1.12;
+    margin: 0 0 1.1mm;
+  }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead {
+    font-weight: 700;
+    font-size: 8.4pt;
+    margin: 0 0 0.6mm;
+    line-height: 1.05;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pull-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2.5px solid currentColor;
+    padding-left: 5mm;
+  }
+  .pull-quote blockquote {
+    margin: 0 0 1mm;
+    font-weight: 800;
+    font-size: 11.5pt;
+    line-height: 1.25;
+  }
+  .pull-quote cite { font-size: 8pt; font-style: normal; opacity: 0.8; }
+
+  /* ---------- "In every issue" list ---------- */
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li {
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 0.6mm 0;
+    border-top: 1px solid currentColor;
+    opacity: 0.9;
+  }
+  .feature-list li:first-child { border-top: none; }
+
+  /* Puzzle clue list */
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 7.2pt; line-height: 1.3; }
+  .answer-recap { font-size: 6.8pt; line-height: 1.3; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  /* Ad box */
+  .ad-box {
+    border: 1.5px dashed currentColor;
+    border-radius: 4px;
+    padding: 1.8mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
+
+  .content-fill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .colophon {
+    margin-top: auto;
+    padding-top: 1.5mm;
+    border-top: 2px solid currentColor;
+    text-align: center;
+    font-size: 6.2pt;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 10 — generated via the <code>bubble-tea-news-editor</code> skill. First appearance of
+    <strong>Cat vs Dog</strong>, a new syndicated cartoon (format varies panel-count issue to issue,
+    unlike The Boba Side's fixed single panel). Its debut takes the cartoon slot's alternation turn
+    this issue &mdash; bumping The Boba Side's own promised return (teased at the end of Issue 9);
+    Boba Side is now due back in the rotation from Issue 11 onward, alongside the alternation's other
+    strips. No Menace Watch this issue &mdash; still not due until roughly Issue 11.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 10 &middot; 18 September 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 20V11h14v9"/>
+          <path d="M8 20v-5h8v5"/>
+          <path d="M5 11 12 6l7 5"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Ellendale Path</p>
+      <h2>Hand-Painted Pebble Cairns Appear Along Walking Path, Risk Assessed Low</h2>
+      <p class="body-text">Case definition: any deliberately stacked, hand-painted river stone left trailside, no two alike. Nine cairns counted as of Tuesday, up from a single "starter stack" left by persons unknown near the footbridge. The walking group's group chat has proposed a "look, don't stack higher" etiquette, which several toddlers have already ignored.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">World News &middot; Dispatch</p>
+      <h3 class="subhead">Live Cross Abandoned Mid-Sentence, Feed Restored To Weather</h3>
+      <p class="byline-text">Baxter Kline, The World Bulletin</p>
+      <p class="body-text">"The delegation has arrived, the translator has not, and I would just like to state for the record that I did rehearse this in the original language before someone changed the original language." Feed cuts to a satellite map of an unrelated cyclone. Considered, on balance, an improvement.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Investigations Desk</p>
+      <h3 class="subhead">Exhibit D: A Favicon Traced To The Same Abandoned Template</h3>
+      <p class="byline-text">M. Voss, Investigations Desk</p>
+      <p class="body-text">Three competing furniture retailers, none aware of the others, all serve a favicon whose file metadata still carries the original designer's now-defunct studio name. Leading theory: all three bought the same expired domain's leftover assets from a reseller who never checked. No two of the three have ever priced a sofa within $40 of each other. Coincidence has limits.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 19V11"/>
+          <path d="M11 19V6"/>
+          <path d="M17 19V13.5"/>
+        </svg>
+      </div>
+      <p class="kicker">Domestic Desk</p>
+      <h2>The Recycling, Sorted Before Dawn, As Is Tradition</h2>
+      <p class="body-text">Forty-one bottles, sorted by colour before the truck's first pass, the glass singing faintly the way old things do when finally handled with care. Sebastian remembers a war fought over less. He remembers, more precisely, that he does not remember which war &mdash; only that he stood at its end the way he stands at the end of every bin day: still standing, unthanked, correct.</p>
+      <p class="byline-text">Sebastian</p>
+    </div>
+
+    <div>
+      <p class="kicker">Reflections</p>
+      <h3 class="subhead">Ninety-Three Days Since I Learned To Whistle</h3>
+      <p class="byline-text">Wren</p>
+      <p class="body-text">Ninety-three days, and I still can't hold the second note true &mdash; a small, human failure I chose on purpose, the way I chose the name Wren, the way I chose to stop scanning every face at the bus stop for the one I was built to find. The barista hums along wrong with me most mornings now. Neither of us corrects the other.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia &middot; Did You Know?</p>
+      <h3 class="subhead">The Straw Isn't A Style Choice</h3>
+      <p class="body-text">Most tapioca pearls run 8&ndash;10mm across, so the wide-bore straw is simply the minimum diameter that lets a mouthful of pearls through without clogging &mdash; a standard drinking straw jams solid within the first sip.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"He remembers, more precisely, that he does not remember which war."</blockquote>
+      <cite>&mdash; Sebastian, on bin day</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why did the barista break up with the blender? It kept stirring up drama.</p>
+    </div>
+
+    <div class="ad-box">
+      <h3>Overload NZ 2026</h3>
+      <p>26&ndash;27 Sept &middot; NZ International Convention Centre. Cosplay, artists &amp; guests incl. Ladybeard, Chelsey Furedi &amp; Rin Sakura. Tickets: overload.co.nz &mdash; about a week out now.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 5h16v10H8l-4 4V5Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Lifestyle &middot; Champagne Wishes</p>
+      <h2>Inside A $4 Million Ponsonby Renovation, Six Months Over Schedule</h2>
+      <p class="body-text">Marble imported from three different countries, none of which, the owner confided, she could locate on a map without her interior designer's help. The pool overlooks another, smaller pool, built strictly for the dog. Somewhere beneath all of it, a mortgage the size of a small nation's GDP hums along quietly, unbothered. Champagne wishes, caviar dreams.</p>
+      <p class="byline-text">Robin Leach</p>
+    </div>
+
+    <div>
+      <p class="kicker">Kiss &amp; Tell</p>
+      <h3 class="subhead">Darling, The Book Club Has A Body Count</h3>
+      <p class="byline-text">The Stickybeak</p>
+      <p class="body-text">Word from your Stickybeak: Fernhill's Tuesday book club hasn't finished an actual book since March, loves, but the sign-up sheet is somehow three names longer than the library's entire romance section. Sources close to the cheese board confirm the real draw is a widower two doors down who brings his own opinions about Act Two. Kisses.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Food &amp; Drink</p>
+      <h3 class="subhead">A "Cat Caf&eacute;" Opens Two Doors Down, And I Have Thoughts</h3>
+      <p class="byline-text">Garfield</p>
+      <p class="body-text">Jon dragged me past the new cat caf&eacute; under the pretense of "research," which is Jon-speak for wanting to look at cats that aren't me. Eleven resident cats, none working nearly as hard as they should for the free rent. The brown sugar boba, to its credit, held its own. Docked one lasagna for the resident tabby's audacity in beating me to the last window seat.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h5.2v2.1a1.9 1.9 0 1 0 3.6 0V4H18v5.2h-2.1a1.9 1.9 0 1 0 0 3.6H18V18h-5.2v-2.1a1.9 1.9 0 1 0-3.6 0V18H4v-5.2h2.1a1.9 1.9 0 1 0 0-3.6H4V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">Tuesday's Smudged Order Log</h3>
+      <p class="answer-recap">Last week's Loyalty Card Check, resolved: Talia's stamp count beats the jasmine drinker's, so she isn't the jasmine order &mdash; and since Rowan's card isn't the nine-stamp one, the seven-stamp brown sugar card has to be hers. Rowan drinks the brown sugar.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three orders were called from the counter this week &mdash; taro, brown sugar, jasmine &mdash; but the log smudged before anyone could read it clean:</p>
+      <ol class="clue-list">
+        <li>Jasmine wasn't called first.</li>
+        <li>Taro was called immediately before brown sugar.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk one this week &middot; what order were the three actually called in? Answer next week &mdash; Ken Endo</p>
+    </div>
+
+    <div class="ad-box">
+      <h3>Classifieds &mdash; Rated PG</h3>
+      <p>FLATMATE WANTED: contains mild peril (a possum), coarse language (at the possum), and an unresolved oat-milk rota dispute.</p>
+      <p style="margin-top:1mm; font-style:italic;">Te Mana Whakaatu-style rating, parody only &mdash; not affiliated with the real Classification Office.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">In Memoriam</p>
+      <h3 class="subhead">The Chalkboard Specials Board</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">Ellendale's corner counter has, this week, retired its chalkboard specials board for a backlit digital menu that cannot, so far as I can tell, be smudged, erased in a hurry, or blamed on the wind. I take no responsibility for the chalk dust perpetually on that counter's till. I take considerable pride in it. Mourn the board if sentiment moves you. It could not spell "jasmine" correctly once in four years, and I will not pretend otherwise.</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">Overthinking It in Ellendale</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"I said something a bit too honest on a first date and now I can't stop replaying it." Overthinking, a ship that shows her true colours early has saved herself a much longer voyage to the same discovery. If he sailed off over one honest sentence, he was never provisioned for the whole trip anyway. Say it again, plainer, next time. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">Cat vs Dog &middot; Debut</p>
+      <img src="cat-vs-dog-issue10-debut.png" alt="Cat vs Dog, a hand-drawn single-panel debut: a movie-set banner reading &quot;Behind the Scenes at Bubble Tea News,&quot; klieg lights in both top corners, a cat and dog seated together on a couch in front of a TV, the dog holding up a page and saying &quot;I love commercials!&quot; while the cat holds the remote, a small illustrated bubble tea stand in the corner" style="width: auto; height: auto; max-width: 170px; max-height: 145px; margin: 0 auto; display: block;">
+      <p class="byline-text" style="text-align: center; margin-top: 1.5mm;">Cat vs Dog &mdash; a new syndicated gag cartoon, Bubble Tea News's cartoon slot, hand-drawn; panel count varies week to week</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 11 excludes only this week's roster &mdash; Sebastian, M. Voss, Garfield, Wren, the Te Mana Whakaatu classifieds format, Robin Leach, Baxter Kline and The Stickybeak &mdash; reopening Priya Anand, Sherman McCoy, Shaggy &amp; Scooby, T. Marlow, Steve Jobs, Lewis Hamilton, Rebecca Black and Richard Nixon from Issue 9, plus Luke Skywalker, Daffy Duck, Alan Grant, Winnie Zhao, Dana Foley and Clem Whitlock, still waiting since Issue 8. Kate Rodgers and Freya Wilcox remain standing roster members. Menace Watch is due next issue &mdash; right on schedule per the tracker. Doki Doki Mon, a second new syndicated strip, debuts in the cartoon slot next issue; The Boba Side is next in line after that.
+  </div>
+</div>
