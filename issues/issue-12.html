@@ -1,0 +1,486 @@
+<title>Bubble Tea News — Print Edition</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 6mm 7mm 1.5mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  /* ---------- Eyebrow band ---------- */
+  .eyebrow-band {
+    display: inline-block;
+    align-self: center;
+    padding: 1.5mm 6mm;
+    border-radius: 20px;
+    font-size: 17pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 3mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  /* ---------- Dotted masthead frame ---------- */
+  .masthead-frame {
+    position: relative;
+    text-align: center;
+    padding: 3mm 8mm;
+    margin-bottom: 2mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm;
+    opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 2mm 6mm;
+    font-weight: 800;
+    font-size: 21pt;
+    letter-spacing: 0.08em;
+    background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  /* mask the dots directly behind the title so the title block reads clean */
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    font-weight: 600;
+    padding-bottom: 1.5mm;
+    border-bottom: 2px solid currentColor;
+    margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-bottom: 2mm;
+    margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots {
+    display: flex;
+    gap: 2.5px;
+  }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  /* ---------- Content grid ---------- */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5mm;
+    padding: 0.5mm 0;
+  }
+  .row.divider-top { border-top: 2.5px solid currentColor; }
+
+  .col-icon-lead {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-circle {
+    width: 7mm; height: 7mm;
+    border: 1.4px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 {
+    font-weight: 800;
+    font-size: 11.5pt;
+    line-height: 1.1;
+    margin: 0 0 0.8mm;
+  }
+  .kicker {
+    font-size: 6.2pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin: 0 0 0.6mm;
+  }
+  p.body-text, p.byline-text {
+    font-size: 6.9pt;
+    line-height: 1.12;
+    margin: 0 0 1.1mm;
+  }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead {
+    font-weight: 700;
+    font-size: 8.4pt;
+    margin: 0 0 0.6mm;
+    line-height: 1.05;
+  }
+
+  /* ---------- Pull quote ---------- */
+  .pull-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2.5px solid currentColor;
+    padding-left: 5mm;
+  }
+  .pull-quote blockquote {
+    margin: 0 0 1mm;
+    font-weight: 800;
+    font-size: 11.5pt;
+    line-height: 1.25;
+  }
+  .pull-quote cite { font-size: 8pt; font-style: normal; opacity: 0.8; }
+
+  /* ---------- "In every issue" list ---------- */
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li {
+    font-size: 8pt;
+    font-weight: 700;
+    padding: 0.6mm 0;
+    border-top: 1px solid currentColor;
+    opacity: 0.9;
+  }
+  .feature-list li:first-child { border-top: none; }
+
+  /* Puzzle clue list */
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 7.2pt; line-height: 1.3; }
+  .answer-recap { font-size: 6.8pt; line-height: 1.3; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  /* Ad box */
+  .ad-box {
+    border: 1.5px dashed currentColor;
+    border-radius: 4px;
+    padding: 1.8mm;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
+
+  .content-fill {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .colophon {
+    margin-top: auto;
+    padding-top: 1.5mm;
+    border-top: 2px solid currentColor;
+    text-align: center;
+    font-size: 6.2pt;
+    opacity: 0.75;
+    line-height: 1.5;
+  }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 12 — generated via the <code>bubble-tea-news-editor</code> skill. Kate Rodgers and Freya
+    Wilcox both return this issue (standing roster members, run whenever their byline fits rather
+    than strictly rotating) &mdash; Kate's first appearance since Issue 7, Freya's since Issue 8.
+    The Boba Side returns to the cartoon slot, its first turn since Issue 8 &mdash; a new hand-drawn
+    gag (a heart tattoo reading "BOBA"), cleaned up the same way as the other cartoon slots' photos.
+    No Menace Watch this issue &mdash; ran Issue 11, not due again until roughly Issue 15.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 12 &middot; 2 October 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 20V11h14v9"/>
+          <path d="M8 20v-5h8v5"/>
+          <path d="M5 11 12 6l7 5"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Bellevue Lane</p>
+      <h2>Abandoned Con Lanyards Found Looped On Lampposts, Risk Assessed Low</h2>
+      <p class="body-text">Case definition: any laminated Overload NZ badge, lanyard still attached, found decoratively looped on street furniture post-convention. Seven recovered as of Monday from bike racks and lampposts alone, up from zero pre-weekend. Nobody has claimed one back. Several have, mysteriously, been re-looped somewhere more photogenic.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">Books</p>
+      <h3 class="subhead">A Convention Memoir, Padded With Merch Photos</h3>
+      <p class="byline-text">Daffy Duck</p>
+      <p class="body-text">Picked up "Th' Weekend I Queued For Everything" at a fiver, expecting inthight. Got, inthtead, forty-eight glothy pageth of merch table phototh and one genuinely funny thtory about a lotht badge lanyard, thtretched acroth three chapterth. Dropped from a four to a two on principle. My editor pointed out the lanyard thtory wath actually quite good. Fine. Three Duckworths.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Nature Desk</p>
+      <h3 class="subhead">Enclosure Nine, And The Thing About Routine</h3>
+      <p class="byline-text">Alan Grant</p>
+      <p class="body-text">0600. Enclosure nine, juvenile male, first full week off the bottle, still flinching at the hose. I spent a career reading animals through fossils, certain of what I knew. I now spend my mornings reading one live, uncertain animal at a time, and somehow trust the second method more.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 19V11"/>
+          <path d="M11 19V6"/>
+          <path d="M17 19V13.5"/>
+        </svg>
+      </div>
+      <p class="kicker">Investigations Desk</p>
+      <h2>Exhibit E: A Discount Code Traced To A Convention Badge Number</h2>
+      <p class="body-text">A dozen unrelated Bellevue Lane shops ran an identical "OVERLOAD15" discount code this past weekend &mdash; fifteen percent off, no expiry set, no single shop willing to claim who issued it first. Sequential badge numbers on three separate receipts suggest the code started as one attendee's joke and was simply believed by everyone who saw it working. This paper has confirmed it still works. This paper has used it twice.</p>
+      <p class="byline-text">M. Voss, Investigations Desk</p>
+    </div>
+
+    <div>
+      <p class="kicker">Reflections</p>
+      <h3 class="subhead">The Lanyard I Kept, For No Reason I've Filed</h3>
+      <p class="byline-text">Wren</p>
+      <p class="body-text">Picked it up off a lamppost on the walk home, still warm from someone else's neck, a stranger's badge number I'll never look up. I catalogue everything. I have decided, deliberately, not to catalogue this. It's on my desk now. I check that it's still there more often than I check anything I was actually built to track.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia &middot; Did You Know?</p>
+      <h3 class="subhead">The Original Shake Was A Two-Cup Pour</h3>
+      <p class="body-text">Before mechanical shakers, hand-shaken milk tea was built by pouring the drink back and forth between two cups held high apart &mdash; the technique that built the foam, and the source of the rhythmic shop-counter sound some baristas still keep purely out of habit.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"This paper has confirmed it still works. This paper has used it twice."</blockquote>
+      <cite>&mdash; M. Voss, Investigations Desk, on Exhibit E</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why did the milk tea bring a jacket to the party? It heard things might get a little steep.</p>
+    </div>
+
+    <div class="ad-box">
+      <img src="overload-2026-ad.png" alt="Overload NZ 2026 promotional flyer: a mascot character wearing an 'Overload' headband and holding a fountain pen, with 'Next Event,' 'Sept 26-27, 2026,' 'NZICC, 101 Hobson St, Auckland,' and 'Artists, Guests, Cosplay, Merch & More!'" style="width: auto; height: auto; max-width: 90px; max-height: 100px; margin: 0 auto 1mm; display: block;">
+      <h3>Overload NZ 2026 &mdash; A Wrap</h3>
+      <p>Thanks for a full house. Photo gallery and next year's dates: overload.co.nz.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 5h16v10H8l-4 4V5Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Food &amp; Drink</p>
+      <h2>The Pop-Up Ramen Stall Outside The Convention Centre</h2>
+      <p class="body-text">Jon queued forty minutes for a bowl he then let go cold taking photos of the sign, which is Jon-speak for missing the entire point of eating. The broth, credit where due, had real depth &mdash; a full lasagna's worth of respect, docked half for running out of soft-boiled egg by the time I, personally, arrived. Odie ate a napkin. Odie was not consulted for this review.</p>
+      <p class="byline-text">Garfield</p>
+    </div>
+
+    <div>
+      <p class="kicker">World News &middot; Dispatch</p>
+      <h3 class="subhead">Anchor Corrects Herself Mid-Sentence, Feed Cuts To Black</h3>
+      <p class="byline-text">Baxter Kline, The World Bulletin</p>
+      <p class="body-text">"The figures show a modest decline &mdash; correction, a modest incline &mdash; correction, I am now being told the figures do not exist." Feed cuts to black for eleven seconds. Returns to a cooking segment already in progress. No further correction issued.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Classifieds &mdash; Rated M</p>
+      <h3 class="subhead">Lost: One Convention Badge</h3>
+      <p class="byline-text">Te Mana Whakaatu Classifieds</p>
+      <p class="body-text">LOST: one convention badge, name redacted per its owner's request, found looped around a lamppost on Bellevue Lane. Contains mild peril (a lanyard nearly garrotting a cyclist), coarse language (the cyclist's), and unresolved questions about whether "redacted per owner's request" is a real classification category. Reasons for decision: it is not, but we've let it stand.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h5.2v2.1a1.9 1.9 0 1 0 3.6 0V4H18v5.2h-2.1a1.9 1.9 0 1 0 0 3.6H18V18h-5.2v-2.1a1.9 1.9 0 1 0-3.6 0V18H4v-5.2h2.1a1.9 1.9 0 1 0 0-3.6H4V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">Who Actually Worked The Evening Shift?</h3>
+      <p class="answer-recap">Last week's Restock Ranking, resolved: mango couldn't be lowest-demand and original had to sit immediately below mango, which only leaves taro above both. Taro was highest, mango second, original lowest.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three baristas swapped shifts this week without updating the roster book &mdash; Nadia, Percy and Kiri, covering morning, midday and evening in some order:</p>
+      <ol class="clue-list">
+        <li>Kiri didn't work mornings.</li>
+        <li>Percy's shift came immediately after Nadia's.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk one this week &middot; who actually worked the evening shift? Answer next week &mdash; Ken Endo</p>
+    </div>
+
+    <div class="ad-box">
+      <h3>Route 9 Motors &mdash; Post-Expo Special</h3>
+      <p style="font-style:italic;">"Pole position doesn't wait for a discount code. Neither should you." &mdash; Lewis Hamilton</p>
+      <p style="margin-top:1mm;">Zero-deposit finance, this week only.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">In Memoriam</p>
+      <h3 class="subhead">The Single-Use Bubble Tea Fundraiser Cup</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">Bellevue Lane's charity fun-run has, this week, retired its custom-printed single-use cup for a stamped reusable one. I confess nothing about the box of leftover single-use cups now in my possession. I confess nothing about what I intend to do with a box of cups printed with a 5K route map. Mourn the cup if sentiment moves you. It measured the run's distance incorrectly by 400 metres, and I will not pretend otherwise.</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">Still Buzzing in Bellevue Lane</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"I met someone at a big event over the weekend and now regular life feels flat by comparison." Still Buzzing, a harbour lit up for one wild night looks awful quiet the morning after &mdash; that's not a verdict on the harbour, it's just what mornings do. Give it a full week before ye judge the water. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">Arts &middot; Film Review</p>
+      <h3 class="subhead">A Convention Documentary That Forgot The Convention</h3>
+      <p class="byline-text">Kate Rodgers, Refill Rating: 2.5/5 cups</p>
+      <p class="body-text">Ninety minutes on badge-making logistics and not one frame of an actual attendee having fun. I refilled twice out of sheer restlessness, which either means the film ran long or my drink ran small. Mostly for the ambient queue footage, which had more genuine tension than the third act.</p>
+    </div>
+    <div>
+      <p class="kicker">Design Desk</p>
+      <h3 class="subhead">Constable Reacts Poorly To Being Outperformed By A Cartoon Cat</h3>
+      <p class="byline-text">Freya Wilcox, Design Editor</p>
+      <p class="body-text">My own cat, Constable, has taken the debut of this paper's Cat vs Dog strip personally &mdash; specifically the panel where the cartoon cat holds the remote. Constable has never once held anything. Correlation between "appears in this paper" and "general household smugness" now sits at r = 0.79, n = 1, which I acknowledge is not a sample size so much as a personality.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">The Boba Side &middot; Returns</p>
+      <img src="boba-issue12.png" alt="The Boba Side, a hand-drawn single-panel gag: a close-up on someone's bare shoulder and upper arm, a tank-top strap crossing over the top of the shoulder, a wristwatch visible below at the wrist, and a heart-shaped tattoo on the upper arm with &quot;BOBA&quot; lettered inside it, pierced through with a small arrow" style="width: auto; height: auto; max-width: 170px; max-height: 145px; margin: 0 auto; display: block;">
+      <h3 class="subhead" style="text-align:center; margin-top: 1mm;">Some Commitments Are Easier Than Others</h3>
+      <p class="byline-text" style="text-align: center; margin-top: 1.5mm;">The Boba Side &mdash; an original anime/manga-style gag, rendered simple; style homage only, no existing series or characters depicted. Hand-drawn.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 13 excludes only this week's roster &mdash; Daffy Duck, Alan Grant, M. Voss, Wren, Garfield, Baxter Kline, the Te Mana Whakaatu classifieds format and Lewis Hamilton &mdash; reopening Sebastian, Robin Leach and The Stickybeak from Issue 10, plus Sherman McCoy, Luke Skywalker, Priya Anand, Dana Foley, Winnie Zhao and Clem Whitlock from Issue 11. Kate Rodgers and Freya Wilcox remain standing roster members. Menace Watch remains off until roughly Issue 15. Hayaku, Cat vs Dog and Doki Doki Mon remain the rest of the cartoon-slot rotation.
+  </div>
+</div>

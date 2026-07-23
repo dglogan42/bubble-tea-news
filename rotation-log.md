@@ -134,6 +134,66 @@ is a separate future task; don't assume the archive already reflects it.
 
 ---
 
+## Issue 12
+
+**Anchors:** community-outbreak-bulletin (Bellevue Lane abandoned con
+lanyards, re-looped on lampposts) · ken-endo-puzzle-master (Who Actually
+Worked the Evening Shift?; also fully resolves Issue 11's This Week's
+Restock Ranking) · bubble tea trivia (the original two-cup hand-shake
+technique) · joke of the week (steep/steep-party pun). No Menace Watch
+this issue — ran Issue 11, not due again until roughly Issue 15.
+
+**Standing columnists return:** Kate Rodgers (film review) and Freya
+Wilcox (Design Desk) both run this issue — first appearances since Issue
+7 and Issue 8 respectively. Neither is exclusion-bound; they simply
+hadn't been picked up since. Freya's Design Desk piece continues her
+running cat/Pearl-Index correlation bit, this time reacting to her own
+cat Constable's rivalry with the new Cat vs Dog strip's cartoon cat — a
+deliberate crossover between two ongoing bits.
+
+**Cartoon slot:** The Boba Side returns, its first turn since Issue 8 —
+a new hand-drawn gag ("Some Commitments Are Easier Than Others": a
+close-up on a shoulder/upper-arm tattoo, a heart lettered "BOBA" and
+pierced with an arrow), cleaned up the same way as the other cartoon
+slots' photos (background-blur-divide shadow flattening, autocontrast;
+no crop needed, the source photo already filled the frame edge to edge).
+Saved as `issues/boba-issue12.png`, matching the numbered
+`boba-issueN.png` convention from Issues 1-8. A text-only placeholder
+briefly ran in this slot before the photo arrived — see this file's git
+history if that draft is ever wanted for reference; the delivered issue
+carries the real art.
+
+**Rotating slots** (per Issue 11's pool note — exclusion window shrunk to
+Issue 11's roster only, reopening the full Issue 10 cast plus Lewis
+Hamilton, Daffy Duck and Alan Grant):
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- M. Voss, Investigations Desk — `code-theft-dossier`
+- Wren — `yearning-machine-voice`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Baxter Kline — `the-world-bulletin-anchor`
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+- Lewis Hamilton — `grand-prix-showroom-ads` (back in his usual ad-box
+  slot, held back one issue for Issue 11's expo-weekend advertiser swap)
+
+Daffy Duck and Alan Grant finally cleared after waiting since Issue 4 —
+the longest-waiting leftovers on record.
+
+**Not used this issue** (available first for Issue 13): Sebastian, Robin
+Leach and The Stickybeak, the three Issue 10 personas this issue's slots
+didn't reach, plus the entire Issue 11 rotating roster (Sherman McCoy,
+Luke Skywalker, Priya Anand, Dana Foley, Winnie Zhao, Clem Whitlock),
+which Issue 12's shrunk exclusion window leaves untouched. Kate Rodgers
+and Freya Wilcox remain standing roster members, run this issue but
+available any issue regardless.
+
+**Pool note for whoever assembles Issue 13:** exclude only Issue 12's
+roster (immediately above) — that reopens Sebastian, Robin Leach and The
+Stickybeak from Issue 10, plus the full Issue 11 rotating roster. Menace
+Watch not due again until roughly Issue 15.
+
+---
+
 ## Issue 11
 
 **Anchors:** community-outbreak-bulletin (Bellevue Lane hand-laminated con
