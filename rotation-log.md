@@ -161,25 +161,42 @@ leftovers not picked up in Issue 10):
 - Dana Foley — `epic-forecast-anchor`
 - Winnie Zhao — `seekers-eye-shopper`
 - Clem Whitlock — `ridgeline-weekly-correspondent`
-- Lewis Hamilton — `grand-prix-showroom-ads`
 
-(Menace Watch fills this issue's eighth rotating-slot position, per Step
-2b — one fewer rotating persona than usual, same as Issues 3 and 7.)
+(Menace Watch fills this issue's usual eighth rotating-slot position, per
+Step 2b. Lewis Hamilton's `grand-prix-showroom-ads` ad-box slot was
+deliberately left open this issue rather than filled by him or another
+persona — see the advertiser note below — so this issue runs six
+rotating personas plus Menace Watch, one fewer than the Issues 3/7
+precedent.)
+
+**Advertiser mix, spread for expo weekend:** Issue 11's dateline lands
+right on the Overload NZ convention itself, so the ad mix was adjusted to
+reflect a plausible local ad-buying bump rather than running the same two
+advertisers on autopilot. The Overload NZ ad box now carries actual
+supplied flyer art (`issues/overload-2026-ad.png`) instead of a text-only
+listing — backfilled into Issues 9 and 10 as well, replacing their
+text-only versions, so the flyer reads as the same ad running throughout
+its countdown. Lewis Hamilton's usual page-2 ad-box slot went instead to
+a new one-off local advertiser, Bellevue Print & Laminate (same-day
+con-badge lamination) — a fresh in-universe business, not tied to any
+existing persona/skill. Lewis Hamilton himself is held back to Issue 12
+rather than dropped from the roster.
 
 **Not used this issue** (available first for Issue 12): Shaggy & Scooby,
 T. Marlow, Steve Jobs and Rebecca Black, still waiting since Issue 9,
 plus the entire Issue 10 rotating roster (Sebastian, M. Voss, Garfield,
 Wren, the Te Mana Whakaatu classifieds format, Robin Leach, Baxter Kline,
 The Stickybeak), which Issue 11's shrunk exclusion window leaves
-untouched. Daffy Duck and Alan Grant are still waiting since Issue 4 —
-the longest-waiting leftovers on record; whoever assembles Issue 12
-should try to finally clear one of them. Kate Rodgers and Freya Wilcox
-remain standing roster members, available any issue but not run this
-issue.
+untouched. Lewis Hamilton is available again immediately (held back for
+the advertiser-spread swap above, not exclusion-bound). Daffy Duck and
+Alan Grant are still waiting since Issue 4 — the longest-waiting
+leftovers on record; whoever assembles Issue 12 should try to finally
+clear one of them. Kate Rodgers and Freya Wilcox remain standing roster
+members, available any issue but not run this issue.
 
 **Pool note for whoever assembles Issue 12:** exclude only Issue 11's
 roster (immediately above) — that reopens the full Issue 10 cast plus
-Daffy Duck and Alan Grant. Menace Watch not due again until roughly Issue
+Lewis Hamilton, Daffy Duck and Alan Grant. Menace Watch not due again until roughly Issue
 15.
 
 ---
