@@ -39,7 +39,13 @@ reconfirmed at 2 pages after the change.
 calendar time, not the archive — as of 18 July 2026 it shows Issue 1 (dated
 17 July 2026), even though Issues 2–8 already exist in the archive below.
 Refresh the live showcase to a later issue only once that issue's own
-dateline has actually arrived.
+dateline has actually arrived. **Issue 2 refresh pushed live 23 July 2026, one day ahead of its 24 July
+dateline** (by explicit request, not the usual wait-for-the-dateline
+policy): `print-edition.html`, `index.html`, and their `docs/` mirrors are
+all updated to Issue 2's actual content (matching `issues/issue-2.html`),
+plus `docs/issues/boba-issue2.png` added so the Boba Side's real
+hand-drawn art renders live instead of the old "awaiting illustration"
+placeholder.
 
 **The Boba Side (`the-boba-side-cartoon`):** debuted as a bonus panel on
 Issue 8's back page, then backfilled with a fresh, distinct gag into
