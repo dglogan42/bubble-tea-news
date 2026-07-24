@@ -140,6 +140,30 @@ invented target, not tied to any target used in a past logged Menace
 Watch column — a fresh name for this bit specifically, consistent with
 that skill's rule never to reuse a target.
 
+**Joke of the Week, New Year's issue (planned, not yet built):** per
+direct request, a terrible New Year's-themed pun about bubble tea —
+
+> Q: What does bubble tea say to ring in the New Year?
+> A: "Here's to a bubbly New Year!"
+
+Same standing rule as the Christmas and Halloween jokes above: not
+persona-bound, real filler, checked against every joke already used in a
+prior logged issue so it doesn't repeat.
+
+**The Stickybeak, New Year's issue tease (planned, not yet built):** a
+"Kiss & Tell" item (`tabloid-gossip-voice`) teasing who Horatio
+McCallister — "the Captain" of Ask the Captain — kissed for last
+Christmas (the George Michael-title pun is the hook). Played as a
+mock-scandalized tease, not an actual reveal — the in-house-paper
+equivalent of a wink at the reader, keeping the joke on the mismatch
+between the Captain's usual gruff nautical-advice-columnist gravitas and
+suddenly being gossip fodder himself. Subject is an existing in-house
+fictional persona from this same paper, so `tabloid-gossip-voice`'s Step
+0 real-person boundary doesn't apply — same footing as satirizing any of
+the paper's own recurring characters. Whether it actually reveals a name
+or stays a tease through to a later issue is an open call for whoever
+builds it.
+
 **Joke of the Week, Christmas issue (planned, not yet built):** per
 direct request, a terrible Christmas-cracker-style pun about bubble tea —
 
