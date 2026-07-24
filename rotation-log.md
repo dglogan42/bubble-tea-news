@@ -132,6 +132,21 @@ The Boba Side is the one strip that's actually about bubble tea by
 design, unlike the other three. Distinct from every other trivia item
 logged in this file.
 
+**Bubble Tea Trivia, Doki Doki Mon strip tie-in (planned, not yet
+built):** a trivia item for whichever holiday-stretch issue runs a Doki
+Doki Mon panel (separate from the "Boba Pearl Edition" ad tie-in above,
+which is the game-crossover angle, not this one) —
+
+> Convenience-store and night-market bubble tea stalls have long doubled
+> as informal hangout spots for kids trading collectible cards and game
+> cartridges between rounds — the same collector culture Doki Doki Mon's
+> whole premise is built on.
+
+Real fact (bubble tea stalls as real trading/collector hangout spots),
+distinct from every other trivia item logged in this file, including the
+loyalty-stamp-card fact used for the Briscoes tie-in and the Boba Pearl
+Edition ad note above.
+
 **Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
 not yet built):** a trivia item for the Halloween pair, written to bridge
 into whichever issue runs the crossover panel —
