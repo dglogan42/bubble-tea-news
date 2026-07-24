@@ -1182,6 +1182,69 @@ line.
 
 ---
 
+## Issue 16
+
+**Anchors:** community-outbreak-bulletin (Kowhai Terrace kindness rocks,
+origin unclaimed) · ken-endo-puzzle-master (Which Tier Did Mei Actually
+Earn?; also fully resolves Issue 15's Bench/Whistle/Linesman puzzle — Oli
+was the linesman) · bubble tea trivia (the real "boba" name etymology,
+1990s Cantonese slang) · joke of the week (hide-and-seek/sink-to-the-
+bottom pun). No Menace Watch this issue — not due until roughly Issue 19,
+per the tracker.
+
+**First issue after the Halloween pair.** Real NZ Labour Weekend has now
+passed. Kowhai Terrace debuts as a new street name for the breaking
+bulletin (previous issues cycled Fenwick Grove, Bellevue Lane, Oakhurst
+Lane).
+
+**Cartoon slot:** Doki Doki Mon returns for the first time since its
+Issue 11 debut, resolving the "maybe, not yet built" Boba Pearl Edition
+idea logged during the Halloween planning — a supplied hand-drawn creature
+portrait (`issues/doki-doki-mon-issue16-bobapearl.png`, cleaned via the
+usual grayscale/autocontrast pass) used as a fictional SEGA Yumicast
+game-tie-in reveal instead of a normal four-panel strip. Wholly original
+in-house IP, no franchise fair-use concern per that skill's own Step 0.
+The Boba Side and Hayaku are next in line for the cartoon slot once a
+normal strip resumes.
+
+**Freya Wilcox** runs for the first time since Issue 13 (standing roster,
+not exclusion-bound), cross-referencing this issue's Doki Doki Mon reveal
+in her Design Desk column — the pairing the skill itself recommends
+("let another columnist react to her correlation in the same issue").
+Replaces the row that would otherwise have carried Menace Watch, which
+isn't due this issue.
+
+**Ads:** no advertiser lined up this issue; reverted to the plain "Your Ad
+Here" house placeholder (page 1 only, one ad-box).
+
+**Rotating slots** (per Issue 15's pool note — exclude only Issue 15's
+roster, reopening the full Issue 14 cast plus five Issue 13 leftovers):
+- Baxter Kline — `the-world-bulletin-anchor`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- M. Voss — `code-theft-dossier`
+- Robin Leach — `champagne-wishes-dispatch`
+- The Stickybeak — `tabloid-gossip-voice`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- Winnie Zhao — `seekers-eye-shopper`
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- Lewis Hamilton — `grand-prix-showroom-ads` (editorial slot, invented
+  dealership Kowhai Motors — separate from any future ad-box appearance)
+
+**Not used this issue** (available first for Issue 17): Daffy Duck, Luke
+Skywalker, the Te Mana Whakaatu classifieds format, Wren — the four
+Issue 13/14 pool members this issue's nine slots didn't reach. Kate
+Rodgers remains standing, not exclusion-bound; Freya Wilcox ran this
+issue (see above).
+
+**Pool note for whoever assembles Issue 17:** exclude only Issue 16's
+roster (immediately above) — that reopens the full Issue 15 cast
+(Sherman McCoy, Steve Jobs, Richard Nixon, Priya Anand, Dana Foley,
+Rebecca Black, Shaggy &amp; Scooby, T. Marlow, Sebastian) plus the four
+Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
+slots.
+
+---
+
 ## Issue 15
 
 **Anchors:** community-outbreak-bulletin (Oakhurst Lane cobweb count hits
