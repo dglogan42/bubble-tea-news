@@ -359,6 +359,20 @@ distinct from the heat-sealed-lid trivia above and the Taiwan arcade/
 night-market one tied to Yumicast, and from every real trivia fact used
 across Issues 1-13 per the corrected note above.
 
+**Bubble Tea Trivia, Chrisco ad tie-in (planned, not yet built):** a
+fourth New Year's-issue trivia item, written to bridge into the Chrisco
+"start saving for next Christmas already" gag —
+
+> Cooked tapioca pearls only stay chewy for a few hours — most shops
+> cook a fresh batch daily and toss whatever's left, since pearls turn
+> hard and stale by day's end. It's about as far as you can get from
+> Chrisco's whole business model of planning a year ahead.
+
+Real fact (same-day pearl shelf life), used here for the ironic contrast
+with Chrisco's advance-savings pitch rather than standing alone.
+Distinct from every other trivia item logged in this file, including the
+other three New Year's-issue items above.
+
 **Halloween candy/costume store ad(s), Issues 14/15 (planned, not yet
 built):** a trick-or-treat-season ad box — an invented, in-universe local
 advertiser (candy store, costume shop, or similar), same footing as
