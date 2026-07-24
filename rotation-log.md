@@ -195,6 +195,21 @@ Halloween pair, separate from the Yumicast campaign's later build-up
 window. Exact advertiser name/creative to be invented when the issue is
 actually assembled.
 
+**"Chocobo-Cola" seasonal ad, Christmas issue (planned, not yet built):**
+per direct request, a Final Fantasy-themed beverage ad — "Chocobo-Cola,"
+featuring Santa — for the Christmas issue specifically (a one-off
+seasonal placement, not a recurring campaign like Yumicast above).
+Chocobo is Square Enix's fictional mascot/IP, not a real company selling
+a real product, so this follows the **franchise-IP fair-use guardrail**
+(same register as Skeletor's Step 0-A and the Ichi Piece/Nightmare Before
+Christmas notes above) rather than the real-brand non-affiliation-line
+convention used for Yumicast/Overload NZ/etc.: short, standalone,
+non-commercial parody, invented creative and copy, aesthetic homage to
+the Chocobo silhouette/color rather than a verbatim reproduction of
+Square Enix's actual character art. Santa himself carries no IP concern
+(public-domain seasonal figure). Creative format (SVG icon vs. photo-style
+mock ad) to be decided when the issue is actually assembled.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
