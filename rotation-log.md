@@ -1243,6 +1243,15 @@ Rebecca Black, Shaggy &amp; Scooby, T. Marlow, Sebastian) plus the four
 Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
 slots.
 
+**Cartoon slot for Issue 17, scheduled and art staged (24 July 2026):**
+The Boba Side confirmed for the cartoon slot (next in line, last ran
+Issue 12) — a single-panel gag has been supplied and cleaned ahead of
+assembly, `issues/boba-side-issue17.png` (a figure sheltering in a
+dome-shaped hideout warns "RUN, QUICK, COFFEE DRINKERS ARE COMING" as a
+bubble-tea-holding figure approaches outside). Ready to embed with the
+standard byline: "The Boba Side — original pen-and-paper gag, hand-drawn."
+Hayaku remains next in line after Boba Side's turn.
+
 ---
 
 ## Issue 15
