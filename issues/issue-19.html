@@ -1,0 +1,431 @@
+<title>Bubble Tea News — Print Edition — Issue 19</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 5mm 6.5mm 1.2mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  .eyebrow-band {
+    display: inline-block; align-self: center; padding: 1.2mm 6mm; border-radius: 20px;
+    font-size: 16pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 2mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  .masthead-frame {
+    position: relative; text-align: center; padding: 2mm 8mm; margin-bottom: 1.5mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm; opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block; margin: 0; padding: 2mm 6mm; font-weight: 800; font-size: 21pt;
+    letter-spacing: 0.08em; background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 600;
+    padding-bottom: 1.5mm; border-bottom: 2px solid currentColor; margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex; align-items: center; gap: 6px; font-size: 9pt; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding-bottom: 2mm; margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots { display: flex; gap: 2.5px; }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6mm; padding: 0; }
+  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 1.4mm; margin-top: 0.3mm; }
+
+  .col-icon-lead { display: flex; flex-direction: column; }
+  .icon-circle {
+    width: 7mm; height: 7mm; border: 1.4px solid currentColor; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 { font-weight: 800; font-size: 11pt; line-height: 1.1; margin: 0 0 0.8mm; }
+  .kicker { font-size: 6pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 0.6mm; }
+  p.body-text, p.byline-text { font-size: 6.4pt; line-height: 1.08; margin: 0 0 0.9mm; }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead { font-weight: 700; font-size: 7.9pt; margin: 0 0 0.6mm; line-height: 1.05; }
+
+  .pull-quote { display: flex; flex-direction: column; justify-content: center; border-left: 2.5px solid currentColor; padding-left: 5mm; }
+  .pull-quote blockquote { margin: 0 0 1mm; font-weight: 800; font-size: 10.5pt; line-height: 1.2; }
+  .pull-quote cite { font-size: 7.4pt; font-style: normal; opacity: 0.8; }
+
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li { font-size: 7.4pt; font-weight: 700; padding: 0.6mm 0; border-top: 1px solid currentColor; opacity: 0.9; }
+  .feature-list li:first-child { border-top: none; }
+
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 6.8pt; line-height: 1.28; }
+  .answer-recap { font-size: 6.4pt; line-height: 1.28; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  .ad-box {
+    border: 1.5px dashed currentColor; border-radius: 4px; padding: 1.8mm; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 0;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7pt; opacity: 0.75; }
+  .ad-box svg { width: 100%; height: auto; display: block; }
+  .ad-box img { max-width: 100%; height: auto; display: block; }
+
+  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.9mm; }
+
+  .colophon { margin-top: auto; padding-top: 1.2mm; border-top: 2px solid currentColor; text-align: center; font-size: 5.8pt; opacity: 0.75; line-height: 1.28; }
+
+  .extended-note { font-size: 5.4pt; font-style: italic; opacity: 0.7; margin-top: 0.5mm; }
+
+  .menace-box { border: 1.5px solid currentColor; border-radius: 3px; padding: 1.6mm 2mm; }
+  .menace-box h3 { margin: 0 0 0.8mm; font-size: 8.6pt; letter-spacing: 0.01em; }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 19. Menace Watch returns (due per the tracker, last ran Issue 15) &mdash; Gordon Slate
+    targets the anonymous Totara Crescent birdhouse builder, cross-referencing this issue's own
+    breaking bulletin. Cartoon slot goes to Doki Doki Mon (next in line, last ran Issue 16's Boba
+    Pearl cameo) with its first real story beat &mdash; no new art supplied this session, delivered
+    as a structured four-panel description per house practice when no renderer/art is available.
+    Steve Jobs reviews the (fictional) SEGA Yumicast and issues two on-page corrections: Issue 16's
+    Doki Doki Mon ad ran under the wrong console (it was Nuntendo SameCube's), and this issue's
+    Sonic The Bed Hog listing is confirmed correctly Yumicast's. Both consoles get their own
+    disclaimed parody ad-boxes this issue, generic line-art only, no actual character likenesses.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 19 &middot; 20 November 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 20V11h14v9"/>
+          <path d="M8 20v-5h8v5"/>
+          <path d="M5 11 12 6l7 5"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Totara Crescent</p>
+      <h2>Miniature Wooden Birdhouses Nailed To Power Poles, Council Says It's Not Their Problem</h2>
+      <p class="body-text">Case definition: any hand-built wooden birdhouse, roughly palm-sized, nailed (not screwed, nailed) to a power pole along Totara Crescent. Six confirmed as of Tuesday, each slightly more structurally ambitious than the last. Council's official position, delivered by a spokesperson who sounded genuinely delighted to say it, is that birdhouses on power poles fall outside every jurisdiction they're aware of and they intend to keep it that way. No bird has moved in yet. Everyone agrees it's only a matter of time.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">Business &middot; Markets</p>
+      <h3 class="subhead">A Position Closed Early, For Once, And I Regret Nothing</h3>
+      <p class="byline-text">Sherman McCoy</p>
+      <p class="body-text">Judy asked why I closed two days early this time instead of my usual stubbornness. I told her the number said what it needed to say by Tuesday, and waiting for Friday out of habit isn't conviction, it's ego. Marshall didn't even bother getting up from the door, which I've started reading as his own form of approval. I was right by Wednesday afternoon. I'd have been righter waiting. I don't regret it.</p>
+    </div>
+
+    <div>
+      <p class="kicker">The Silent Majority Report</p>
+      <h3 class="subhead">On The Matter Of The Unmarked Ballot Box</h3>
+      <p class="byline-text">Richard Nixon</p>
+      <p class="body-text">The community noticeboard now hosts a small wooden box marked only "suggestions," no further instruction given, no results ever posted. I recognize the device. A box that collects opinions without ever being seen to act on them is not a suggestion box. It is a pressure release valve dressed as democracy, and I say that as a man who once tried something similar with slightly higher stakes and considerably worse results.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 19V11"/>
+          <path d="M11 19V6"/>
+          <path d="M17 19V13.5"/>
+        </svg>
+      </div>
+      <p class="kicker">Technology &middot; Reality Distortion Field</p>
+      <h2>The Yumicast, Reviewed Properly This Time</h2>
+      <p class="body-text">This week, a console three inches thinner than anything on the market started shipping. That is the plain fact. Everything about how you experience a living room just changed forever. For decades, humanity has been trapped by consoles the size of a toaster. Today, that ends. The Yumicast isn't a box under your television. It's a statement about what's possible when you stop asking permission to disappear into the furniture.</p>
+      <p class="body-text">One correction, while I have the page. Last issue's Doki Doki Mon: Boba Pearl Edition reveal ran under a Yumicast masthead. It shouldn't have. Boba Pearl is a Nuntendo SameCube title, not ours, and I take full responsibility for a mistake that, frankly, should never have reached print. I checked this issue's Sonic The Bed Hog listing myself, twice, before it ran. It's ours. Insanely great.</p>
+      <p class="byline-text">Steve Jobs</p>
+    </div>
+
+    <div>
+      <p class="kicker">Weather &middot; Epic Forecast</p>
+      <h3 class="subhead">The First Genuinely Cold Snap Since The Warm Stretch, Right On Schedule</h3>
+      <p class="byline-text">Dana Foley</p>
+      <p class="body-text">Told you not to trust it. Four days of warmth, and now a southerly change dropping the overnight low back into single digits, arriving with exactly the smugness I've come to expect from this time of year. Jacket back in rotation. I take no pleasure in being right about this one, mostly because being right about weather has never once made anyone thank me for it.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia &middot; Did You Know?</p>
+      <h3 class="subhead">Where Golden Boba's Colour Actually Comes From</h3>
+      <p class="body-text">Golden or champagne-coloured boba pearls usually get their colour from brown sugar syrup mixed directly into the tapioca starch before cooking, not from food dye added afterward.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"A box that collects opinions without ever being seen to act on them is not a suggestion box. It is a pressure release valve dressed as democracy."</blockquote>
+      <cite>&mdash; Richard Nixon, The Silent Majority Report</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why did the barista refuse to argue? They didn't want to stir up any trouble.</p>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Sonic The Bed Hog, a Yumicast game parody ad">
+        <title>Sonic The Bed Hog &mdash; parody placement</title>
+        <rect class="tcolor" x="0" y="0" width="240" height="150" rx="6" fill="#E4D9EC"/>
+        <rect class="tcolor" x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#4A2E63" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <!-- generic bed/pillow with speed lines, line art only -->
+        <rect class="tcolor" x="60" y="70" width="70" height="34" rx="6" fill="none" stroke="#4A2E63" stroke-width="2.2"/>
+        <path class="tcolor" d="M60 82 h70" fill="none" stroke="#4A2E63" stroke-width="1.6"/>
+        <path class="tcolor" d="M52 96 h14 v8 h-14 Z" fill="none" stroke="#4A2E63" stroke-width="2"/>
+        <path class="tcolor" d="M18 78 h26 M14 88 h26 M18 98 h20" fill="none" stroke="#4A2E63" stroke-width="2.2" stroke-linecap="round"/>
+        <text class="tcolor" x="155" y="48" text-anchor="middle" font-size="12.5" font-weight="800" letter-spacing="0.04em" fill="#4A2E63">SONIC THE</text>
+        <text class="tcolor" x="155" y="64" text-anchor="middle" font-size="12.5" font-weight="800" letter-spacing="0.04em" fill="#4A2E63">BED HOG</text>
+        <text class="tcolor" x="155" y="80" text-anchor="middle" font-size="7.4" font-style="italic" fill="#4A2E63" fill-opacity="0.85">Gotta sleep fast.</text>
+        <text class="tcolor" x="155" y="95" text-anchor="middle" font-size="6.6" fill="#4A2E63">Now on SEGA Yumicast</text>
+        <rect class="tcolor" x="16" y="120" width="208" height="20" rx="10" fill="#4A2E63"/>
+        <text class="tcolor" x="120" y="133.5" text-anchor="middle" font-size="6" font-weight="700" letter-spacing="0.03em" fill="#E4D9EC">PARODY PLACEMENT &#183; NOT A REAL SEGA OR SONIC AD</text>
+      </svg>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Nuntendo SameCube, a fictional rival console parody ad">
+        <title>Nuntendo SameCube &mdash; parody placement</title>
+        <rect class="tcolor" x="0" y="0" width="240" height="150" rx="6" fill="#E4D9EC"/>
+        <rect class="tcolor" x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#4A2E63" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <!-- generic cube icon, line art only -->
+        <path class="tcolor" d="M60 55 L90 42 L120 55 L90 68 Z" fill="none" stroke="#4A2E63" stroke-width="2"/>
+        <path class="tcolor" d="M60 55 V85 L90 98 V68 Z" fill="none" stroke="#4A2E63" stroke-width="2"/>
+        <path class="tcolor" d="M120 55 V85 L90 98 V68 Z" fill="none" stroke="#4A2E63" stroke-width="2"/>
+        <text class="tcolor" x="170" y="52" text-anchor="middle" font-size="10.5" font-weight="800" letter-spacing="0.02em" fill="#4A2E63">NUNTENDO</text>
+        <text class="tcolor" x="170" y="66" text-anchor="middle" font-size="10.5" font-weight="800" letter-spacing="0.02em" fill="#4A2E63">SAMECUBE</text>
+        <text class="tcolor" x="150" y="82" text-anchor="middle" font-size="6.6" font-style="italic" fill="#4A2E63" fill-opacity="0.85">Same shape. Different</text>
+        <text class="tcolor" x="150" y="91" text-anchor="middle" font-size="6.6" font-style="italic" fill="#4A2E63" fill-opacity="0.85">company. Totally unrelated.</text>
+        <text class="tcolor" x="120" y="107" text-anchor="middle" font-size="6.4" fill="#4A2E63">Home of Doki Doki Mon: Boba Pearl Edition</text>
+        <rect class="tcolor" x="16" y="120" width="208" height="20" rx="10" fill="#4A2E63"/>
+        <text class="tcolor" x="120" y="133.5" text-anchor="middle" font-size="6" font-weight="700" letter-spacing="0.03em" fill="#E4D9EC">PARODY PLACEMENT &#183; NOT A REAL NINTENDO OR GAMECUBE AD</text>
+      </svg>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 18V6l10 3-10 3"/>
+          <path d="M9 12H4"/>
+        </svg>
+      </div>
+      <p class="kicker">Markets &middot; The Pearl Index</p>
+      <h2>The Loyalty App Migration, And What It Actually Cost In Repeat Visits</h2>
+      <p class="body-text">Fieldwork window: the three weeks since Bellevue Lane's counter swapped its paper punch card for the app-based system. Method: comparing weekly repeat-visit rates for the eight weeks before the swap against the three weeks since. Finding: repeat visits dropped 6% in the transition window (n=280, &plusmn;4.4% MOE), concentrated almost entirely among customers over fifty, based on informal counter observation I'll admit isn't rigorous enough to publish as data but is consistent enough to mention. Honest limitation: three weeks is thin, and a genuine transition dip is exactly what you'd expect regardless of whether the app succeeds long-term. I'll revisit this in two months, once the dip has had time to prove itself temporary or not.</p>
+      <p class="byline-text">Priya Anand, The Pearl Index</p>
+    </div>
+
+    <div>
+      <p class="kicker">Music</p>
+      <h3 class="subhead">A Debut Album That Knows Exactly What It's Trying To Prove</h3>
+      <p class="byline-text">Rebecca Black</p>
+      <p class="body-text">First albums usually spend half their runtime apologizing for existing. This one doesn't, confident in exactly the unfussy way a debut earns respect instead of demanding it. No filler track hiding behind a skit, no single trying too hard to justify the whole project's existence. I know what it's like to have one song define years of conversation before anyone let the rest of the work speak. This artist won't have that problem, and it shows in every choice on the record.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Sport &middot; Reading The Water</p>
+      <h3 class="subhead">A First-Half Read That Took Until The Second To Pay Off</h3>
+      <p class="byline-text">T. Marlow</p>
+      <p class="body-text">Their winger kept cutting inside a half-step later than the play actually called for, a tell I clocked in the first ten minutes and said nothing about, waiting to see if it was fatigue or design. Turned out to be fatigue, same as I thought, and by the hour mark their whole shape had started sagging on that side. Nobody in the box mentioned it until the goal came from exactly there. I'd already written it down.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h5.2v2.1a1.9 1.9 0 1 0 3.6 0V4H18v5.2h-2.1a1.9 1.9 0 1 0 0 3.6H18V18h-5.2v-2.1a1.9 1.9 0 1 0-3.6 0V18H4v-5.2h2.1a1.9 1.9 0 1 0 0-3.6H4V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">How Many Birdhouses Did Finn Spot?</h3>
+      <p class="answer-recap">Last issue's question, resolved: Kai didn't wait 8 minutes, and Theo waited exactly 2 minutes longer than Lena. Only Lena = 6, Theo = 8 clears both clues, leaving Kai at 4. Kai waited 4 minutes.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three neighbours (Bea, Finn, Ola) each spotted a different number of Totara Crescent's birdhouses this week: 2, 4, 6.</p>
+      <ol class="clue-list">
+        <li>Finn didn't spot 6.</li>
+        <li>Ola spotted exactly 2 more than Bea.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk one this week &middot; how many birdhouses did Finn spot? Answer next week &mdash; Ken Endo</p>
+    </div>
+    <div>
+      <p class="byline-text">Sebastian</p>
+      <p class="body-text">The front hedge came in level this year, no lean, no gap where it always used to thin near the gate. Sebastian stood back from it longer than the job required, the way he does with anything that finally comes out right after enough seasons of it not quite managing to. He does not remember deciding to care this much about a hedge. He remembers, more precisely, that caring about it never actually stopped.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;" class="menace-box">
+      <p class="kicker">Menace Watch</p>
+      <h3 class="subhead">The Birdhouse Builder Of Totara Crescent: Hero Or Menace?</h3>
+      <p class="body-text">Six birdhouses now, each nailed under cover of darkness to a power pole along Totara Crescent, each slightly better built than the last. I do not find this reassuring. I find it, if anything, more calculated than an ordinary act of neighbourliness, because ordinary neighbourliness does not improve its craftsmanship week over week like it's building toward something. Who practices a skill in secret unless they intend to eventually need it at scale? My standing bounty remains: two hundred dollars and a lifetime pearl-milk-tea card for a clear photograph of whoever's doing the nailing. I will note, purely for the record, that the sixth birdhouse uses the exact same offcut timber as the fence repair currently underway outside the Totara Crescent counter. Coincidence, possibly. I remain vigilant regardless.</p>
+      <p class="byline-text">&mdash; Gordon Slate, Editor-in-Chief</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">My Friend And I Won't Apologize First</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"My friend and I had a falling out and neither of us will apologize first. How do we fix this?" Two ships waiting for the other to signal first will sit becalmed forever, lad. Somebody has to raise the flag, and it costs ye less than ye think to be the one who does. Pride's a fine cargo until it's the only thing left in the hold. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">In Memoriam</p>
+      <h3 class="subhead">The Punch Card System, Fully Retired At Last</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">The last paper punch card in this district, held on to by a single stubborn counter long after every competitor moved on, was finally retired this week in favour of the app system everyone else adopted months ago. I confess nothing about the small stack of nearly-full cards now sitting, unredeemable, in a drawer that used to mean something. Mourn the card if sentiment moves you toward cardboard. Its replacement will track you more precisely than a card ever could, and I remain, as ever, professionally impressed by systems that outlive their own sentiment.</p>
+    </div>
+    <div>
+      <p class="kicker">Books &middot; The Duckworth Scale</p>
+      <h3 class="subhead">A Sequel That Forgot Why Anyone Liked The First One</h3>
+      <p class="byline-text">Daffy Duck</p>
+      <p class="body-text">The original had restraint. This one has none, replacing every quiet character beat with a louder, dumber set piece, as if the author mistook volume for stakes. I have made that exact mistake personally, on stage, repeatedly, and I recognize the flop sweat underneath the bravado immediately. Th-th-that's not a compliment.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">Doki Doki Mon</p>
+      <div style="max-width: 420px; margin: 0 auto; text-align: left; font-size: 6.4pt; line-height: 1.35; border: 1px dashed currentColor; border-radius: 4px; padding: 2mm 3mm;">
+        <em>Not rendered artwork &mdash; delivered as a structured four-panel description (no renderer available this session):</em><br>
+        <strong>Panel 1.</strong> Wide shot, a clearing at dusk. The trainer stands at the tree line; Boba Pearl peeks out from behind their leg. Caption: "Three days since the reveal, and Boba Pearl still won't leave my side."
+        <strong>Panel 2.</strong> Close on a rustling bush, two eyes glinting in the shadow: an unnamed wild creature, watching.
+        <strong>Panel 3.</strong> Boba Pearl notices first, shell rattling in alarm. The trainer's hand moves toward a pearl-shaped device on their belt.
+        <strong>Panel 4.</strong> The wild creature bolts before contact, leaving only a scatter of shed feather-like scales. Trainer, crouched, picking one up: "First one that's run from us instead of the other way around."
+      </div>
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Doki Doki Mon &mdash; Bubble Tea News's syndicated cartoon slot, its first real encounter since the Issue 11 debut. Wholly original in-house IP; art to follow in a future issue.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 20 excludes only Issue 19's roster (Sherman McCoy, Richard Nixon, Steve Jobs,
+    Dana Foley, Priya Anand, Rebecca Black, T. Marlow, Sebastian, Daffy Duck), reopening Issue 18's
+    full cast (Baxter Kline, Garfield, M. Voss, Robin Leach, The Stickybeak, Clem Whitlock, Winnie
+    Zhao, Alan Grant, Luke Skywalker, Lewis Hamilton) plus Wren, Shaggy &amp; Scooby, and the Te
+    Mana Whakaatu classifieds format, none of whom ran this issue. Menace Watch isn't due again
+    until roughly Issue 23. Cartoon slot: a second Hayaku scene is already staged for Issue 20 per
+    direct request, which bumps The Boba Side (next in line otherwise) to Issue 21. Kate Rodgers and
+    Freya Wilcox remain standing roster members.
+  </div>
+</div>

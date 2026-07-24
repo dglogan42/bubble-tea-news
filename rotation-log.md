@@ -1182,6 +1182,78 @@ line.
 
 ---
 
+## Issue 19
+
+**Anchors:** community-outbreak-bulletin (Totara Crescent birdhouses
+nailed to power poles, council disclaims jurisdiction) ·
+ken-endo-puzzle-master (How Many Birdhouses Did Finn Spot?; also fully
+resolves Issue 18's Kai wait-time puzzle — 4 minutes) · bubble tea
+trivia (golden boba's colour, a real technique fact) · joke of the week
+(barista/stir-up-trouble pun). Menace Watch returns (due per the
+tracker, last ran Issue 15) — Gordon Slate targets the anonymous
+Totara Crescent birdhouse builder, cross-referencing this issue's own
+breaking bulletin. Totara Crescent debuts as a new street name.
+
+**The Yumicast/SameCube console-war bit (per direct request):** three
+interlocking pieces, drafted and staged in chat before assembly, then
+built in on request:
+- Steve Jobs reviews the fictional SEGA Yumicast (his usual invented-
+  product format, `reality-distortion-field-report`) and issues two
+  corrections: Issue 16's Doki Doki Mon: Boba Pearl Edition ad ran under
+  the wrong console masthead (it was actually Nuntendo SameCube's, not
+  Yumicast's), and this issue's Sonic The Bed Hog listing is confirmed
+  correctly Yumicast's, having been double-checked this time.
+- Sonic The Bed Hog and Nuntendo SameCube each get a disclaimed parody
+  ad-box (same SVG line-art format as Toyota/Armco/Armageddon) — generic
+  bed/pillow and cube icons only, no actual Sonic or Nintendo character
+  likenesses, same guardrail as every other real-IP-adjacent gag in this
+  paper. Both ads sit alongside the joke of the week in one 3-column row.
+- Retroactively reframes Issue 16's Doki Doki Mon feature as having run
+  under the wrong masthead — Issue 16 itself is not edited; the
+  correction is presented as an in-fiction editorial fix, the same
+  device Baxter Kline's on-air corrections already use.
+
+**Cartoon slot:** Doki Doki Mon (next in line, last ran Issue 16's Boba
+Pearl cameo) gets its first real encounter since the Issue 11 debut —
+no new art supplied this session, delivered as a structured four-panel
+description per house practice (same treatment Issue 14's original NBC
+placeholder used) rather than a rendered strip. Names the creature's
+personality for the first time (Boba Pearl, alarmed by an unnamed wild
+creature) and ends on an actual plot beat, per that skill's own note
+that the next strip after the debut should "start attaching names and a
+first plot beat."
+
+**Ads:** Sonic The Bed Hog and Nuntendo SameCube (see above); no other
+advertiser this issue.
+
+**Rotating slots** (per Issue 18's pool note — exclude only Issue 18's
+roster, reopening the full Issue 17 cast plus two Issue 13/14
+leftovers):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Richard Nixon — `silent-majority-dispatch`
+- Steve Jobs — `reality-distortion-field-report`
+- Dana Foley — `epic-forecast-anchor`
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Rebecca Black — `long-game-music-review`
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Sebastian — `faded-hero-voice`
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+
+**Not used this issue** (available first for Issue 20): Wren, Shaggy &amp;
+Scooby, the Te Mana Whakaatu classifieds format — none of whom ran this
+issue. Kate Rodgers and Freya Wilcox remain standing, not exclusion-bound.
+
+**Pool note for whoever assembles Issue 20:** exclude only Issue 19's
+roster (immediately above) — that reopens the full Issue 18 cast
+(Baxter Kline, Garfield, M. Voss, Robin Leach, The Stickybeak, Clem
+Whitlock, Winnie Zhao, Alan Grant, Luke Skywalker, Lewis Hamilton) plus
+Wren, Shaggy &amp; Scooby, and the Te Mana Whakaatu classifieds format.
+Menace Watch isn't due again until roughly Issue 23. Cartoon slot: the
+second staged Hayaku scene (`issues/hayaku-issue20.png`) runs per direct
+request, bumping The Boba Side to Issue 21.
+
+---
+
 ## Issue 18
 
 **Anchors:** community-outbreak-bulletin (Bellevue Lane matching wind
