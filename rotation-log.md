@@ -115,6 +115,23 @@ picked to bridge evenly into both halves of the strip's title rather than
 favoring one animal. Distinct from every other trivia item logged in
 this file, including the choking-hazard fact used for the candy-store tie-in.
 
+**Bubble Tea Trivia, The Boba Side strip tie-in (planned, not yet
+built):** a trivia item for whichever holiday-stretch issue runs a Boba
+Side panel, written to bridge into the strip's own meme-culture premise
+rather than stand alone —
+
+> The internet slang "spill the tea" (gossip) actually predates bubble
+> tea's global meme boom — it comes from Black and queer ballroom
+> culture, not the drink — but bubble tea's own online fandom has leaned
+> into the pun hard anyway, exactly the meme territory The Boba Side
+> draws its gags from.
+
+Real fact (the real, older origin of "spill the tea" slang, distinct
+from the pun bubble tea culture has since attached to it), fitting since
+The Boba Side is the one strip that's actually about bubble tea by
+design, unlike the other three. Distinct from every other trivia item
+logged in this file.
+
 **Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
 not yet built):** a trivia item for the Halloween pair, written to bridge
 into whichever issue runs the crossover panel —
