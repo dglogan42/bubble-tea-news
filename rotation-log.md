@@ -61,6 +61,15 @@ and `live-queue/issue-13/index.html` alt text corrected to match; Issue
 13's PDF re-exported and reconfirmed at 2 pages. No other content in Issue
 13 was affected.
 
+**Issue 13 art swapped again (24 July 2026, later same day):** a further
+supplied photo replaced `issues/hayaku-issue-13.png` a second time — a
+different hand-inked panel sequence (a shouting player and "VOLLEY"
+lettering, a receiving player numbered 10, a cropped panel with motion
+lines), cleaned via the same grayscale/autocontrast pass. Alt text
+rewritten again to describe only what's actually visible in this newer
+photo rather than carry over the previous version's call/set/take/goal
+captions, which no longer matched. PDF re-exported, still 2 pages.
+
 **Skeletor Halloween special (planned, not yet built):** Issues 14 and 15
 give Skeletor's "In Memoriam" (`skeletor-obituary-column`) extra room to
 run long — a Halloween-special stretch of the column rather than its
@@ -1195,16 +1204,20 @@ Armageddon Expo weekend bump ahead of time rather than after the fact.
 **Cartoon slot:** written up first as Hayaku's second Halloween-stretch
 holiday special (continuing the running season arc with a
 holiday-tournament beat), then swapped per direct request for a **one-off
-Uma Onna cameo** instead — an original idol-athlete horse-girl runner,
-homage to the "racing while performing" shape of Umamusume-style media,
-not a specific franchise character or design. Delivered as real hand-coded
-SVG line art (schematic running figure, motion lines, a breaking
-finish-line ribbon), not a text-only prompt. This is a one-off swap only —
-Hayaku isn't retired from the rotation, and its written holiday-special
-script is deferred to a future issue rather than discarded. Cat vs Dog
-took Issue 14's holiday-stretch turn; The Boba Side, Doki Doki Mon, and
-Hayaku are all first in line once the cartoon slot resumes normal
-next-in-line rotation.
+Uma Onna cameo** instead. Originally delivered as hand-coded SVG line art
+captioned "not a specific franchise character or design." Superseded
+post-assembly (24 July 2026) with supplied hand-drawn fan art
+(`issues/uma-onna-issue15-cameo.png`) that turned out to explicitly label
+the character "SPECIAL WEEK?" in its own lettering — a specific,
+trademarked *Umamusume: Pretty Derby* character, not a generic homage.
+Caption and alt text rewritten to disclose it plainly as fan art of
+Special Week, not affiliated with or endorsed by Cygames, rather than
+maintain the now-inaccurate "generic original character" framing. This is
+a one-off swap only — Hayaku isn't retired from the rotation, and its
+written holiday-special script is deferred to a future issue rather than
+discarded. Cat vs Dog took Issue 14's holiday-stretch turn; The Boba Side,
+Doki Doki Mon, and Hayaku are all first in line once the cartoon slot
+resumes normal next-in-line rotation.
 
 **Ads:** M&M'S and Indomie (real supplied product photo,
 `issues/indomie.png`), both real-brand parody, disclaimed, sharing a row
@@ -1260,15 +1273,19 @@ treatment; Garfield's and Daffy Duck's rotating-slot turns below are also
 Halloween-themed (a pumpkin-boba review, a poltergeist memoir review).
 
 **Cartoon slot:** Cat vs Dog takes the first Halloween-stretch holiday
-special — a Nightmare Before Christmas-themed crossover one-off, per the
-cartoon-rotation reset noted above (next in line after Issue 13's Hayaku
-turn, and the "likeliest fit" the reset note flagged). Delivered as a
-structured image-generation prompt (not rendered artwork); no renderer was
-available this session, so no new PNG was produced, unlike Issue 10's
-actual hand-drawn-and-photographed debut. Tea trivia (the East-meets-West
-fusion origin) woven into the panel's own caption text rather than the
-issue's dedicated trivia slot, which went to the choking-hazard fact
-instead.
+special, per the cartoon-rotation reset noted above (next in line after
+Issue 13's Hayaku turn). Originally written up as a Nightmare Before
+Christmas-themed crossover, delivered only as a structured
+image-generation prompt (no renderer available that session, so no PNG
+was produced). Superseded post-assembly (24 July 2026) with supplied
+hand-drawn-and-photographed art (`issues/cat-vs-dog-issue14.png`, cleaned
+via the usual grayscale/autocontrast pass) — a plain delivery-order
+mix-up gag (dog orders matcha, gets taro; cat: "next time use Fletchly"),
+not the NBC crossover. Caption and instructions updated to match; the NBC
+premise is dropped, not deferred, since the actual art supplied is a
+different gag entirely. Tea trivia (the East-meets-West fusion origin)
+woven into the panel's own caption text rather than the issue's dedicated
+trivia slot, which went to the choking-hazard fact instead.
 
 **Ads:** Fenwick Grove S'mores Co. (invented advertiser, Pearl Index-style
 SVG, no disclaimer needed) on page 1. A smaller Armageddon Expo
