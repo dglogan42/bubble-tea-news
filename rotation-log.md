@@ -1236,6 +1236,16 @@ leftovers, comfortably more than enough for the ~9 rotating slots.
 Menace Watch isn't due again until roughly Issue 23. Cartoon slot: The
 Boba Side (bumped from Issue 20).
 
+**Ad staged for Issue 21 (25 July 2026):** "Steeped & Snug," an invented
+loungewear/underwear brand built to replace a supplied real photo that
+wasn't usable — the original (`underwear.png`, never committed) paired
+nude/sexually suggestive imagery with the real, unaltered Bonds
+trademark, both flagged and declined. Steeped & Snug uses the same
+mismatched-stakes ad device as Kowhai Motors and Pemberton Vance Capital
+instead: generic folded-clothing icon only, no figures, invented brand.
+Tagline: "Loungewear built for a three-hour steep." / "Comfort you can
+feel through the couch cushions." Parody placement, invented company.
+
 ---
 
 ## Issue 19
