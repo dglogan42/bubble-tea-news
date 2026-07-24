@@ -1233,6 +1233,22 @@ Rebecca Black, T. Marlow, Sebastian, Daffy Duck, Wren) plus the two
 Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
 slots. Menace Watch is due this issue (last ran Issue 15).
 
+**Cartoon slot for Issue 19:** Hayaku just ran Issue 18, so it's not
+next in line. Doki Doki Mon (last ran Issue 16) has gone longer without
+a turn than The Boba Side (last ran Issue 17) — Doki Doki Mon is next,
+Boba Side after that.
+
+**Cartoon slot for Issue 20, scheduled and art staged (24 July 2026, per
+direct request):** a second Hayaku scene supplied ahead of its normal
+turn — `issues/hayaku-issue20.png`, a rivalry/confrontation beat (two
+players face to face, a third smaller face between them), continuing
+the season arc with an actual new scene rather than another portrait.
+Runs in Issue 20 specifically per direct request, which bumps whichever
+of Doki Doki Mon/Boba Side doesn't get Issue 19 to Issue 21 instead —
+note this explicitly in Issue 20's colophon so the rotation log stays
+legible about why the expected strip didn't run, same practice as Cat vs
+Dog's Issue 10 debut bumping The Boba Side.
+
 ---
 
 ## Issue 17
