@@ -52,6 +52,19 @@ or Doki Doki Mon's own gag/serialized format doesn't suit the crossover
 premise well when it's actually built, The Boba Side can pick up the slot
 instead per that skill's own "always available to fill a gap" standing.
 
+**Joke of the Week, Halloween issue (planned, not yet built):** per
+direct request, a terrible Halloween-cracker-style pun about bubble tea —
+
+> Q: What do ghosts order at the bubble tea shop?
+> A: Boo-ba tea.
+
+Not persona-bound, same standing rule as the Christmas one — real filler,
+not repeating a joke already used in a prior logged issue. Only one
+written so far; the Halloween pair is two issues (14 and 15), so if both
+need their own Joke of the Week, write a second, distinct pun for
+whichever issue doesn't use this one, rather than repeating it across
+both.
+
 **Christmas one-off: "Ichi Piece" (planned, not yet built):** a One
 Piece tribute strip, pirate-themed Christmas parody, for whichever
 issue's dateline lands at/around Christmas 2026 — not Issues 14/15,
