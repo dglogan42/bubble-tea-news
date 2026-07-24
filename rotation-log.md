@@ -94,6 +94,13 @@ Halloween above):**
   actual songs/album (personnel, release details) stay accurate; Rebecca
   Black's opinion and voice are the persona layer on top, not a claim
   that the real her wrote or endorses the review.
+- **Horatio McCallister's "Ask the Captain"** (`horatio-mccallister-personals-column`):
+  a holiday-flavored letter — dating over the holidays (meeting the
+  family, navigating an ex at the same office party, that kind of
+  seasonal question) — answered in his usual nautical-metaphor,
+  zero-actual-qualification register. Standing column already, so this
+  isn't a new debut, just this issue's fresh invented question per that
+  skill's own Step 0-B (illustrative letter-writer, never a real person).
 
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
