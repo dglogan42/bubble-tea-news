@@ -59,11 +59,18 @@ direct request, a terrible Halloween-cracker-style pun about bubble tea —
 > A: Boo-ba tea.
 
 Not persona-bound, same standing rule as the Christmas one — real filler,
-not repeating a joke already used in a prior logged issue. Only one
-written so far; the Halloween pair is two issues (14 and 15), so if both
-need their own Joke of the Week, write a second, distinct pun for
-whichever issue doesn't use this one, rather than repeating it across
-both.
+not repeating a joke already used in a prior logged issue.
+
+**Joke of the Week, the Halloween pair's other issue (planned, not yet
+built):** the second, distinct pun flagged as needed above — whichever of
+Issues 14/15 doesn't run "Boo-ba tea" runs this one instead —
+
+> Q: What's a mummy's favourite bubble tea topping?
+> A: Extra wrap-ioca.
+
+Same standing rule: not persona-bound, real filler, distinct from every
+other joke logged in this file (including "Boo-ba tea" right above) so
+neither Halloween issue repeats the other's pun.
 
 **Christmas one-off: "Ichi Piece" (planned, not yet built):** a One
 Piece tribute strip, pirate-themed Christmas parody, for whichever
