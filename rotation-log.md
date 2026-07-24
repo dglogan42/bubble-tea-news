@@ -263,6 +263,24 @@ Not persona-bound (same as every Joke of the Week), so no fair-use or
 voice constraints beyond the standing rule not to repeat a joke already
 used in a prior logged issue — this one's new, so it clears that bar.
 
+**Bubble Tea Trivia, Christmas cracker joke tie-in (planned, not yet
+built):** a third Christmas-issue trivia item, written to bridge into the
+"Jingle Bell Chai" joke's own cracker-style framing rather than the
+season generally or the advertiser — same self-referential habit as the
+advertiser tie-in below, aimed at the joke slot instead —
+
+> Christmas crackers — and their groan-worthy jokes — trace back to
+> 1840s London, when confectioner Tom Smith started tucking mottos, then
+> jokes, into his sweets. Bubble tea has its own surprise-inside habit:
+> some shops run blind "mystery flavour" boba mixes, so this week's pun
+> gets to borrow a genuinely old party trick for its shape.
+
+Real fact on both halves — the Tom Smith cracker origin and the
+mystery-flavour boba-mix habit — distinct from the popping-boba
+spherification trivia already logged for Issue 9 (different bubble-tea
+angle: surprise-mix flavour roulette, not the pearl's burst-on-bite
+texture) and from every other trivia item in this file.
+
 **Bubble Tea Trivia, Christmas issue (planned, not yet built):** a
 winter-appropriate real fact, distinct from every trivia item already
 used in Issues 1-13 above (origin dispute, two-cup hand-shake, East/West
@@ -298,6 +316,29 @@ the Yumicast's recurring visual signature across every appearance of the
 campaign, same consistent-icon approach the Ad-space backfill already
 uses (a cup icon for tea-brand ads, an article-card icon for blog/site
 ones) rather than a different mark each issue.
+
+**Two New Year's issue ads (planned, not yet built), per direct
+request:**
+
+- **Chrisco** — a real NZ Christmas-hamper layby savings company,
+  running its own well-known joke-on-itself ad: pushing readers to start
+  saving for *next* Christmas already, mere days into the new year. Real
+  company, so same real-brand parody guardrail as Yumicast/Overload
+  NZ/Cha Nui/HIKOCO/T2 above: a compact non-affiliation line ("Parody
+  placement, not a real Chrisco ad.") on the box, Pearl Index-style SVG
+  creative rather than plain text.
+- **Briscoes** — "The Briscoes Lady Retires Sale." Riffs on the real,
+  long-running NZ ad joke that Briscoes is *always* having a sale no
+  matter what — so even her retirement gets framed as a sale event, the
+  joke being that the sale outlives the premise for having one. Same
+  real-brand parody guardrail: non-affiliation line ("Parody placement,
+  not a real Briscoes ad."), Pearl Index-style SVG creative. Keep the
+  satire aimed at the brand's own perpetual-sale advertising gimmick, not
+  at the real actress who plays the role — same register as any other
+  real-company parody in this paper, not a real-person bit.
+
+Neither pinned to a specific ad-box slot yet; assign when the New Year's
+issue is actually assembled, same as every other ad plan in this log.
 
 **Halloween candy/costume store ad(s), Issues 14/15 (planned, not yet
 built):** a trick-or-treat-season ad box — an invented, in-universe local
