@@ -198,12 +198,14 @@ Room invention rivalry) · joke of the week (tapioca pearl promotion pun).
 No Menace Watch this issue, still not due until roughly Issue 15.
 
 **First issue without Overload NZ:** its run ended at Issue 12's "A
-Wrap." Toyota fills that page-1 ad slot instead, `issues/toyota-ad.png`,
-a parody placement with its own non-affiliation line (same footing as
-the 24 July correction above, not a real Toyota placement). Page 2's
-usual second ad-box reverts to a plain "Your Ad Here" placeholder, since
-Lewis Hamilton is resting this issue and no other advertiser is lined up
-yet.
+Wrap." Toyota fills that page-1 ad slot as a **Pearl Index-style SVG
+creative** (inline in `issues/issue-13.html` — road/off-ramp line art +
+copy + "PARODY PLACEMENT" pill), not the padded `toyota-ad.png` logo
+square. Same non-affiliation footing as the 24 July correction; not a
+real Toyota placement. Page 2's usual second ad-box is a house SVG
+"Your Ad Here" (cup icon + bubbletea.nz/advertise pill) rather than a
+plain text placeholder — Lewis Hamilton is resting this issue and no
+other advertiser is lined up yet.
 
 **Priya Anand closes the loop:** her Pearl Index piece delivers the
 "full weekend numbers" she flagged as provisional back in Issue 11

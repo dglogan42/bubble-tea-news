@@ -42,7 +42,7 @@
     max-width: 100%;
     box-shadow: 0 4px 24px rgba(0,0,0,0.25);
     margin: 0 0 26px;
-    padding: 6mm 7mm 1.5mm;
+    padding: 5mm 6.5mm 1.2mm;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -65,13 +65,13 @@
   .eyebrow-band {
     display: inline-block;
     align-self: center;
-    padding: 1.5mm 6mm;
+    padding: 1.2mm 6mm;
     border-radius: 20px;
-    font-size: 17pt;
+    font-size: 16pt;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin-bottom: 3mm;
+    margin-bottom: 2mm;
   }
   .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
   .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
@@ -80,8 +80,8 @@
   .masthead-frame {
     position: relative;
     text-align: center;
-    padding: 3mm 8mm;
-    margin-bottom: 2mm;
+    padding: 2mm 8mm;
+    margin-bottom: 1.5mm;
     background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
     background-size: 6mm 6mm;
     opacity: 1;
@@ -132,10 +132,14 @@
   .row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.5mm;
-    padding: 0.5mm 0;
+    gap: 3mm;
+    padding: 0;
   }
-  .row.divider-top { border-top: 2.5px solid currentColor; }
+  .row.divider-top {
+    border-top: 2.5px solid currentColor;
+    padding-top: 2mm;
+    margin-top: 0.5mm;
+  }
 
   .col-icon-lead {
     display: flex;
@@ -212,7 +216,7 @@
   .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 7.2pt; line-height: 1.3; }
   .answer-recap { font-size: 6.8pt; line-height: 1.3; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
 
-  /* Ad box */
+  /* Ad box — SVG creatives use border:none; padding:0 on the wrapper */
   .ad-box {
     border: 1.5px dashed currentColor;
     border-radius: 4px;
@@ -222,25 +226,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 0;
   }
   .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
   .ad-box p { margin: 0; font-size: 7.4pt; opacity: 0.75; }
+  .ad-box svg { width: 100%; height: auto; display: block; }
 
   .content-fill {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 1.5mm;
   }
 
   .colophon {
     margin-top: auto;
-    padding-top: 1.5mm;
+    padding-top: 1.2mm;
     border-top: 2px solid currentColor;
     text-align: center;
     font-size: 6.2pt;
     opacity: 0.75;
-    line-height: 1.5;
+    line-height: 1.35;
   }
 </style>
 
@@ -249,18 +256,10 @@
     <b>Print setup</b><br>
     Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
     Issue 13 — generated via the <code>bubble-tea-news-editor</code> skill. First issue without
-    Overload NZ (its run ended at Issue 12's wrap); Toyota now fills that page-1 ad slot as a
-    parody placement, its own non-affiliation line built in. Page 2's usual second ad-box reverts
-    to a plain "Your Ad Here" placeholder &mdash; Lewis Hamilton is resting this issue and no other
-    advertiser is lined up yet. Priya Anand's Pearl Index closes out the con-weekend correlation
-    she flagged as provisional back in Issue 11, now with the full weekend's numbers in. All nine
-    personas available from the Issue 13 pool ran this issue (Sebastian, Robin Leach, The
-    Stickybeak from Issue 10; Sherman McCoy, Luke Skywalker, Priya Anand, Dana Foley, Winnie Zhao
-    and Clem Whitlock from Issue 11) &mdash; pool fully cleared, nothing held back. Kate Rodgers and
-    Freya Wilcox sat this one out (standing roster, not exclusion-bound, simply resting after
-    Issue 12). Hayaku takes its second cartoon-slot turn, next in the rotation after Issue 12's
-    Boba Side, with actual source art (<code>hayaku-issue-13.png</code>) rather than reusing
-    Issue 9's debut art. No Menace Watch this issue, still not due until roughly Issue 15.
+    Overload NZ; Toyota fills page 1 as a Pearl Index-style SVG parody creative (not the padded
+    PNG logo). Page 2's ad-box is a house SVG "Your Ad Here" (Lewis Hamilton resting). Layout
+    tightened to drop dead white space between rows. Hayaku runs with
+    <code>hayaku-issue-13.png</code>. No Menace Watch this issue.
   </div>
 </div>
 
@@ -369,11 +368,32 @@
       <p class="body-text">Why did the tapioca pearl get promoted? It really knew how to roll with things.</p>
     </div>
 
-    <div class="ad-box">
-      <img src="toyota-ad.png" alt="Toyota logo" style="width: auto; height: auto; max-width: 90px; max-height: 90px; margin: 0 auto 1mm; display: block;">
-      <h3>Toyota &mdash; Let's Go Places (Off-Ramp Edition)</h3>
-      <p style="font-style:italic;">"You already see us at every intersection in Auckland. Today, apparently, you see us here too."</p>
-      <p style="margin-top:1mm; font-size:0.85em;">Parody ad box only, not a real Toyota placement, not affiliated with or endorsed by Toyota Motor Corporation.</p>
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Toyota parody ad: Let's Go Places, Off-Ramp Edition">
+        <title>Toyota — Let's Go Places (Off-Ramp Edition) — parody placement</title>
+        <rect class="tcolor" x="0" y="0" width="240" height="150" rx="6" fill="#E4D9EC"/>
+        <rect class="tcolor" x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#4A2E63" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <!-- compact road/off-ramp icon (line art, not a brand mark) -->
+        <path class="tcolor" d="M22 108 H78" fill="none" stroke="#4A2E63" stroke-width="2.4" stroke-linecap="round"/>
+        <path class="tcolor" d="M30 108 V52" fill="none" stroke="#4A2E63" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="tcolor" d="M70 108 V52" fill="none" stroke="#4A2E63" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="tcolor" d="M50 108 V68" fill="none" stroke="#4A2E63" stroke-width="1.6" stroke-dasharray="3.5 2.8" stroke-linecap="round"/>
+        <path class="tcolor" d="M70 70 C88 70 98 54 112 38" fill="none" stroke="#4A2E63" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="tcolor" d="M70 84 C92 84 106 66 118 48" fill="none" stroke="#4A2E63" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- small car -->
+        <path class="tcolor" d="M34 100 h28 l5-9 h12 l4 9 h6" fill="none" stroke="#4A2E63" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle class="tcolor" cx="44" cy="102" r="3.8" fill="none" stroke="#4A2E63" stroke-width="1.8"/>
+        <circle class="tcolor" cx="66" cy="102" r="3.8" fill="none" stroke="#4A2E63" stroke-width="1.8"/>
+        <text class="tcolor" x="168" y="40" text-anchor="middle" font-size="16" font-weight="800" letter-spacing="0.14em" fill="#4A2E63">TOYOTA</text>
+        <text class="tcolor" x="168" y="58" text-anchor="middle" font-size="8.4" font-weight="700" fill="#4A2E63">Let&apos;s Go Places</text>
+        <text class="tcolor" x="168" y="71" text-anchor="middle" font-size="7.4" font-style="italic" fill="#4A2E63" fill-opacity="0.85">(Off-Ramp Edition)</text>
+        <text class="tcolor" x="168" y="92" text-anchor="middle" font-size="7.3" fill="#4A2E63">
+          <tspan class="tcolor" x="168" dy="0">Already at every Auckland</tspan>
+          <tspan class="tcolor" x="168" dy="11">intersection. Today, here too.</tspan>
+        </text>
+        <rect class="tcolor" x="16" y="120" width="208" height="20" rx="10" fill="#4A2E63"/>
+        <text class="tcolor" x="120" y="133.5" text-anchor="middle" font-size="6.6" font-weight="700" letter-spacing="0.04em" fill="#E4D9EC">PARODY PLACEMENT &#183; NOT A REAL TOYOTA AD</text>
+      </svg>
     </div>
   </div>
 
@@ -440,9 +460,28 @@
       <p class="body-text" style="opacity:.75; font-style:italic;">Brisk one this week &middot; which size did Ana actually order? Answer next week &mdash; Ken Endo</p>
     </div>
 
-    <div class="ad-box">
-      <h3>Your Ad Here</h3>
-      <p>Reach Fenwick Grove's bubble tea regulars for less than the price of a large taro.</p>
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Your Ad Here — advertise in Bubble Tea News">
+        <title>Your Ad Here — Bubble Tea News house ad</title>
+        <rect class="tcolor" x="0" y="0" width="240" height="150" rx="6" fill="#F0DCC0"/>
+        <rect class="tcolor" x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#6B4419" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <!-- cup icon — every node needs .tcolor so print CSS does not force black fill -->
+        <path class="tcolor" d="M42 50 h36 l-3.5 44 a7 7 0 0 1-7 6 H52.5 a7 7 0 0 1-7-6 Z" fill="none" stroke="#6B4419" stroke-width="2.3" stroke-linejoin="round"/>
+        <path class="tcolor" d="M46 50 V44 a14 14 0 0 1 28 0 v6" fill="none" stroke="#6B4419" stroke-width="2.2" stroke-linecap="round"/>
+        <path class="tcolor" d="M78 58 h9 a9 9 0 0 1 0 18 H76" fill="none" stroke="#6B4419" stroke-width="2.2" stroke-linecap="round"/>
+        <circle class="tcolor" cx="56" cy="72" r="2.4" fill="#6B4419" stroke="none"/>
+        <circle class="tcolor" cx="66" cy="80" r="2.4" fill="#6B4419" stroke="none"/>
+        <circle class="tcolor" cx="54" cy="86" r="2.4" fill="#6B4419" stroke="none"/>
+        <text class="tcolor" x="155" y="46" text-anchor="middle" font-size="13" font-weight="800" letter-spacing="0.06em" fill="#6B4419">YOUR AD HERE</text>
+        <text class="tcolor" x="155" y="66" text-anchor="middle" font-size="8" fill="#6B4419">
+          <tspan class="tcolor" x="155" dy="0">Reach Fenwick Grove&apos;s bubble</tspan>
+          <tspan class="tcolor" x="155" dy="11">tea regulars for less than the</tspan>
+          <tspan class="tcolor" x="155" dy="11">price of a large taro.</tspan>
+        </text>
+        <text class="tcolor" x="155" y="108" text-anchor="middle" font-size="7.2" font-style="italic" fill="#6B4419" fill-opacity="0.85">Lewis Hamilton rests this issue</text>
+        <rect class="tcolor" x="16" y="120" width="208" height="20" rx="10" fill="#6B4419"/>
+        <text class="tcolor" x="120" y="133.5" text-anchor="middle" font-size="7" font-weight="700" letter-spacing="0.05em" fill="#F0DCC0">BUBBLETEA.NZ/ADVERTISE &#183; LOCAL WEEKLY</text>
+      </svg>
     </div>
   </div>
 
@@ -479,8 +518,8 @@
   <div class="row divider-top">
     <div style="grid-column: span 3; text-align: center;">
       <p class="kicker" style="text-align: center;">Hayaku &middot; Second Appearance</p>
-      <img src="hayaku-issue-13.png" alt="Hayaku, a rough pencil-sketch four-row strip: raised hands and a stylized head in the top row; a middle row of torn-paper captions and a startled spiky-haired face beside a face in glasses; a row with a note reading &quot;DON'T FORGIVE&quot; next to two larger sketched heads in glasses; a bottom row with a small figure and repeated &quot;Trump&quot; lettering." style="width: auto; height: auto; max-width: 170px; max-height: 145px; margin: 0 auto; display: block;">
-      <p class="byline-text" style="text-align: center; margin-top: 1.5mm;">Hayaku &mdash; an original senkotsu-style volleyball manga strip, Bubble Tea News's syndicated cartoon slot; alternates with The Boba Side.</p>
+      <img src="hayaku-issue-13.png" alt="Hayaku, a rough pencil-sketch four-row strip: raised hands and a stylized head in the top row; a middle row of torn-paper captions and a startled spiky-haired face beside a face in glasses; a row with a note reading &quot;DON'T FORGIVE&quot; next to two larger sketched heads in glasses; a bottom row with a small figure and repeated &quot;Trump&quot; lettering." style="width: auto; height: auto; max-width: 190px; max-height: 155px; margin: 0 auto; display: block;">
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Hayaku &mdash; an original senkotsu-style volleyball manga strip, Bubble Tea News's syndicated cartoon slot; alternates with The Boba Side.</p>
     </div>
   </div>
 
