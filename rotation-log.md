@@ -140,6 +140,23 @@ invented target, not tied to any target used in a past logged Menace
 Watch column — a fresh name for this bit specifically, consistent with
 that skill's rule never to reuse a target.
 
+**New Year's issue also gets a real Menace Watch column (planned, not
+yet built):** in addition to the resolutions op-ed above, the New Year's
+issue runs an actual "Hero or Menace?" `menace-watch-editorial` column —
+so Gordon appears **twice** in that issue, in two different formats.
+Fresh target, not reused from any target already logged in this file
+(Fletchly above is the resolutions-bit target, not this column's) — a
+natural fit is a masked reveler at a New Year's Eve party or parade,
+following that skill's own Step 0: the target's reason for anonymity
+stays trivial and comedic (a costume, a countdown-show gimmick), never a
+real safety need, and the "menace" turns out harmless, with the joke
+landing on Gordon's own paranoia. Whether this actually clears the
+Menace Watch monthly-cadence tracker at the top of this log (last ran
+Issue 11) depends on how many times the column runs in the issues built
+between now and then — recheck the tracker against the real build-out
+once Issues 14 onward actually exist, rather than assuming it's
+automatically due by New Year's.
+
 **Joke of the Week, New Year's issue (planned, not yet built):** per
 direct request, a terrible New Year's-themed pun about bubble tea —
 
@@ -163,6 +180,15 @@ fictional persona from this same paper, so `tabloid-gossip-voice`'s Step
 the paper's own recurring characters. Whether it actually reveals a name
 or stays a tease through to a later issue is an open call for whoever
 builds it.
+
+**Wham! reference, per direct request — allusion only, not verbatim
+lyrics:** the column leans into the "Last Christmas" connection further
+than just the title pun — paraphrased sentiment ("gave his heart away,"
+that kind of wink), not actual quoted lines from the song. Real recorded
+song lyrics are a much harder copyright line than character-voice/IP
+homage (Wham!'s publisher actively enforces reproduction), so this is a
+boundary, not just a style choice: allude and paraphrase freely, never
+quote Wham!'s actual lyrics verbatim in the column.
 
 **Joke of the Week, Christmas issue (planned, not yet built):** per
 direct request, a terrible Christmas-cracker-style pun about bubble tea —
