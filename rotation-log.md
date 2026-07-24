@@ -231,6 +231,28 @@ homage (Wham!'s publisher actively enforces reproduction), so this is a
 boundary, not just a style choice: allude and paraphrase freely, never
 quote Wham!'s actual lyrics verbatim in the column.
 
+**Bubble Tea Trivia, New Year's issue's advertiser tie-in (planned, not
+yet built):** a second New Year's-issue trivia item, separate from the
+"boba straw" one above — written to bridge into that issue's advertiser,
+same self-referential habit as the Christmas and Halloween tie-ins
+elsewhere in this log. Assumes the SEGA Yumicast campaign (logged
+elsewhere in this file) is still running as a New Year's-sale continuation of its Christmas
+push — the original Yumicast note only pinned an end point of "through
+the Christmas issue," so confirm it's actually still active in the New
+Year's issue when that's assembled before using this tie-in —
+
+> Bubble tea's rise in 1980s Taiwan happened alongside the country's
+> night-market and arcade culture: many original tea stalls set up right
+> where students already hung out after school — the same audience a new
+> game console's holiday ad chases today.
+
+Real historical/cultural framing (distinct from the origin-dispute
+trivia already logged, which is about who invented the drink, not who
+was drinking it), used here to bridge into whichever ad box the Yumicast
+campaign occupies that issue. Distinct from every other trivia item
+logged in this file, including the boba-straw one above for the same
+New Year's issue.
+
 **Joke of the Week, Christmas issue (planned, not yet built):** per
 direct request, a terrible Christmas-cracker-style pun about bubble tea —
 
