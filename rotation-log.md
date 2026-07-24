@@ -193,20 +193,25 @@ Same standing rule as the Christmas and Halloween jokes above: not
 persona-bound, real filler, checked against every joke already used in a
 prior logged issue so it doesn't repeat.
 
-**Bubble Tea Trivia, New Year's issue (planned, not yet built):** a real
-fact, distinct from every trivia item already used or planned elsewhere
-in this log (origin dispute, two-cup hand-shake, East/West Coast naming,
-popping-boba chemistry, the Guinness record, HK-style milk tea, the
-"bubble" naming theory, brown sugar, Cantonese slang vs. zhenzhu,
-tapioca/cassava, pearl milk, hot bubble tea in winter for the Christmas
-issue) —
+**Bubble Tea Trivia, New Year's issue (planned, not yet built — corrected
+25 July 2026):** originally drafted around the wide "boba straw," but
+that's **already Issue 10's real trivia** ("why the straw is wide-bore")
+— a duplicate caught while checking facts for the Briscoes tie-in below,
+replaced here rather than left in place. New fact, distinct from every
+trivia item already used across Issues 1-13 (pearl milk naming, tapioca/
+cassava, Cantonese slang vs. zhenzhu, the origin dispute, brown sugar,
+the "bubble" naming theory, HK-style milk tea, the Guinness record,
+popping-boba spherification, the wide straw, East/West Coast naming, the
+two-cup hand-shake) and from everything else planned in this log —
 
-> Bubble tea is credited with popularizing the oversized drinking straw:
-> standard straws couldn't pass tapioca pearls, so shops designed the
-> wide "boba straw" now used well beyond bubble tea itself.
+> Most bubble tea cups get their tight plastic-film lid from a
+> heat-sealing machine, not a snap-on cap — a packaging shortcut
+> borrowed from Taiwanese fruit-juice stalls that lets a shaken drink
+> survive the trip home without spilling.
 
 Same standing rule as the other trivia items: real fact, not invented,
-checked against the full list above so it doesn't repeat a prior issue.
+checked against the full issue-by-issue list above so it doesn't repeat
+a prior issue.
 
 **The Stickybeak, New Year's issue tease (planned, not yet built):** a
 "Kiss & Tell" item (`tabloid-gossip-voice`) teasing who Horatio
@@ -339,6 +344,20 @@ request:**
 
 Neither pinned to a specific ad-box slot yet; assign when the New Year's
 issue is actually assembled, same as every other ad plan in this log.
+
+**Bubble Tea Trivia, Briscoes ad tie-in (planned, not yet built):** a
+third New Year's-issue trivia item, written to bridge into "The Briscoes
+Lady Retires Sale" rather than stand alone —
+
+> Loyalty stamp cards — buy nine, get the tenth free — are close to
+> standard across bubble tea shops: a permanent discount baked into the
+> pricing model long before anyone needs to "run a sale," the same
+> evergreen-deal spirit Briscoes ads are famous for leaning on.
+
+Real fact (stamp-card loyalty programs as a bubble tea industry norm),
+distinct from the heat-sealed-lid trivia above and the Taiwan arcade/
+night-market one tied to Yumicast, and from every real trivia fact used
+across Issues 1-13 per the corrected note above.
 
 **Halloween candy/costume store ad(s), Issues 14/15 (planned, not yet
 built):** a trick-or-treat-season ad box — an invented, in-universe local
