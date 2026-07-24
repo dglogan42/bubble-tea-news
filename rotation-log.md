@@ -167,6 +167,21 @@ Same standing rule as the Christmas and Halloween jokes above: not
 persona-bound, real filler, checked against every joke already used in a
 prior logged issue so it doesn't repeat.
 
+**Bubble Tea Trivia, New Year's issue (planned, not yet built):** a real
+fact, distinct from every trivia item already used or planned elsewhere
+in this log (origin dispute, two-cup hand-shake, East/West Coast naming,
+popping-boba chemistry, the Guinness record, HK-style milk tea, the
+"bubble" naming theory, brown sugar, Cantonese slang vs. zhenzhu,
+tapioca/cassava, pearl milk, hot bubble tea in winter for the Christmas
+issue) —
+
+> Bubble tea is credited with popularizing the oversized drinking straw:
+> standard straws couldn't pass tapioca pearls, so shops designed the
+> wide "boba straw" now used well beyond bubble tea itself.
+
+Same standing rule as the other trivia items: real fact, not invented,
+checked against the full list above so it doesn't repeat a prior issue.
+
 **The Stickybeak, New Year's issue tease (planned, not yet built):** a
 "Kiss & Tell" item (`tabloid-gossip-voice`) teasing who Horatio
 McCallister — "the Captain" of Ask the Captain — kissed for last
