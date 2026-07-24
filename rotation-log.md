@@ -1182,6 +1182,58 @@ line.
 
 ---
 
+## Issue 17
+
+**Anchors:** community-outbreak-bulletin (Miro Street Free Little Library
+restocked overnight with the same three books, nobody confessing) ·
+ken-endo-puzzle-master (Which Stallholder Sold Out Third?; also fully
+resolves Issue 16's Mei tier puzzle — Mei earned gold) · bubble tea
+trivia (brown sugar's stripes as a barista swirl technique, not just an
+add-in) · joke of the week (tapioca pearl/drum-up-a-following pun). No
+Menace Watch this issue — not due until roughly Issue 19, per the
+tracker. Miro Street debuts as a new street name for the breaking
+bulletin.
+
+**Cartoon slot:** The Boba Side returns (last ran Issue 12), using the
+gag staged ahead of assembly per the note above (a figure sheltering in
+a dome-shaped hideout warns of approaching "coffee drinkers" as a bubble
+tea holder approaches). Hayaku is next in line, continuing its
+volleyball season arc.
+
+**Ads:** no advertiser lined up; plain "Your Ad Here" placeholder, page 1
+only.
+
+**Rotating slots** (per Issue 16's pool note — exclude only Issue 16's
+roster, reopening the full Issue 15 cast plus four Issue 13/14
+leftovers):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Steve Jobs — `reality-distortion-field-report`
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Dana Foley — `epic-forecast-anchor`
+- Rebecca Black — `long-game-music-review`
+- Richard Nixon — `silent-majority-dispatch`
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Sebastian — `faded-hero-voice`
+- Wren — `yearning-machine-voice` (ninth rotating slot; not held back this
+  issue after all, since Alan Grant was mistakenly drafted into that slot
+  first — caught and corrected before publishing — and Wren filled it
+  instead)
+
+**Not used this issue** (available first for Issue 18): Shaggy & Scooby,
+Luke Skywalker, the Te Mana Whakaatu classifieds format — the three
+Issue 13/14 leftovers this issue's nine slots didn't reach. Kate Rodgers
+and Freya Wilcox remain standing, not exclusion-bound.
+
+**Pool note for whoever assembles Issue 18:** exclude only Issue 17's
+roster (immediately above) — that reopens the full Issue 16 cast
+(Baxter Kline, Garfield, M. Voss, Robin Leach, The Stickybeak, Clem
+Whitlock, Winnie Zhao, Alan Grant, Lewis Hamilton) plus the three
+Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
+slots.
+
+---
+
 ## Issue 16
 
 **Anchors:** community-outbreak-bulletin (Kowhai Terrace kindness rocks,
@@ -1243,14 +1295,8 @@ Rebecca Black, Shaggy &amp; Scooby, T. Marlow, Sebastian) plus the four
 Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
 slots.
 
-**Cartoon slot for Issue 17, scheduled and art staged (24 July 2026):**
-The Boba Side confirmed for the cartoon slot (next in line, last ran
-Issue 12) — a single-panel gag has been supplied and cleaned ahead of
-assembly, `issues/boba-side-issue17.png` (a figure sheltering in a
-dome-shaped hideout warns "RUN, QUICK, COFFEE DRINKERS ARE COMING" as a
-bubble-tea-holding figure approaches outside). Ready to embed with the
-standard byline: "The Boba Side — original pen-and-paper gag, hand-drawn."
-Hayaku remains next in line after Boba Side's turn.
+**Cartoon slot for Issue 17 — now built:** see the real `## Issue 17`
+entry above; The Boba Side's staged gag ran as planned.
 
 **Cartoon slot for Issue 18, scheduled (24 July 2026):** Hayaku confirmed
 next after The Boba Side's Issue 17 turn (last ran Issue 13's second
