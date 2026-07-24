@@ -37,6 +37,21 @@ also running long those two issues per the note above). If any other
 critic persona joins the roster before Issues 14/15 are assembled, fold
 it into this same Halloween-themed treatment too.
 
+**Cartoon slot goes Nightmare Before Christmas-themed (planned, not yet
+built):** same two issues again — whichever strip is up for its turn in
+the cartoon-slot rotation (Step 2c of `bubble-tea-news-editor`; per the
+rotation so far — Boba Side in Issue 12, Hayaku in Issue 13 — Cat vs Dog
+is next in line for Issue 14 and Doki Doki Mon for Issue 15) runs a
+Nightmare Before Christmas-themed panel for both weeks instead of its
+usual premise. Same franchise-IP fair-use guardrail as Skeletor's column
+(Step 0-A of `skeletor-obituary-column`, also the general house rule used
+for `canon-fanfic-vignette`): aesthetic homage only — Halloween-meets-Christmas
+mood, Burton-style visual language — not verbatim reproduction of Jack
+Skellington or other actual copyrighted character designs. If Cat vs Dog
+or Doki Doki Mon's own gag/serialized format doesn't suit the crossover
+premise well when it's actually built, The Boba Side can pick up the slot
+instead per that skill's own "always available to fill a gap" standing.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
