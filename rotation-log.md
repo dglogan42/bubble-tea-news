@@ -180,7 +180,11 @@ parody guardrail already applied to Overload NZ, Cha Nui, HIKOCO, and T2
 compact non-affiliation line ("Parody placement, not a real SEGA ad."),
 and the creative should follow `pearl-index-market-researcher`'s
 Pearl Index-style SVG format like the rest of the ad backfill rather than
-plain text.
+plain text. **Logo mark, per direct request:** a distinct spiral icon —
+the Yumicast's recurring visual signature across every appearance of the
+campaign, same consistent-icon approach the Ad-space backfill already
+uses (a cup icon for tea-brand ads, an article-card icon for blog/site
+ones) rather than a different mark each issue.
 
 **Halloween candy/costume store ad(s), Issues 14/15 (planned, not yet
 built):** a trick-or-treat-season ad box — an invented, in-universe local
