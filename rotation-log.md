@@ -1315,10 +1315,15 @@ Wrap." Toyota fills that page-1 ad slot as a **Pearl Index-style SVG
 creative** (inline in `issues/issue-13.html` — road/off-ramp line art +
 copy + "PARODY PLACEMENT" pill), not the padded `toyota-ad.png` logo
 square. Same non-affiliation footing as the 24 July correction; not a
-real Toyota placement. Page 2's usual second ad-box is a house SVG
-"Your Ad Here" (cup icon + bubbletea.nz/advertise pill) rather than a
-plain text placeholder — Lewis Hamilton is resting this issue and no
-other advertiser is lined up yet.
+real Toyota placement. Page 2's second ad-box was updated post-assembly
+(24 July 2026) from the house "Your Ad Here" SVG to a Lewis Hamilton
+advertorial for the invented insurer Armco Assurance (`grand-prix-
+showroom-ads`, extended past dealership ads to an insurance advertorial;
+invented business, per that skill's Step 0). This is a separate slot
+from Lewis Hamilton's Issue 12 editorial-column appearance below — the
+ad-box has never been governed by Step 3's exclusion window, only by
+whether an advertiser is lined up, so this doesn't count as a back-to-back
+repeat of his rotating slot.
 
 **Priya Anand closes the loop:** her Pearl Index piece delivers the
 "full weekend numbers" she flagged as provisional back in Issue 11
