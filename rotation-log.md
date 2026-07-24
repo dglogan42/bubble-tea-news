@@ -52,6 +52,43 @@ or Doki Doki Mon's own gag/serialized format doesn't suit the crossover
 premise well when it's actually built, The Boba Side can pick up the slot
 instead per that skill's own "always available to fill a gap" standing.
 
+**Christmas one-off: "Ichi Piece" (planned, not yet built):** a One
+Piece tribute strip, pirate-themed Christmas parody, for whichever
+issue's dateline lands at/around Christmas 2026 — not Issues 14/15,
+those are the Halloween pair above. Weekly cadence from Issue 13's Oct 9
+dateline puts Christmas roughly around Issue 23-24 (mid-to-late
+December); treat that as approximate until closer to the time rather
+than locking a number now. This is a **new, one-off cartoon-slot
+persona**, not one of the four strips in the existing Step 2c rotation —
+same footing as Cat vs Dog's and Doki Doki Mon's debuts, it needs its own
+`SKILL.md` added to the Claude-Skills library before it can actually run
+(not created yet — hold off per the same "don't build ahead of the
+calendar" pacing as the Halloween pair). Same franchise-IP fair-use
+guardrail as Skeletor's column and the Nightmare Before Christmas panel
+above: a short, standalone, non-commercial parody in One Piece's shape
+(pirate-crew dynamic, treasure-hunt framing) invented fresh for this gag,
+never reproducing actual manga/anime dialogue or scenes. Whether it
+becomes a recurring fifth strip or stays a one-time special is an open
+call to make when it's actually built.
+
+**Christmas issue, more content slots (planned, not yet built — same
+hold-off-until-closer-to-the-date rule as everything else Christmas and
+Halloween above):**
+
+- **Kate Rodgers film review** (`kate-rodgers-film-review`, Refill
+  Rating): the "is Die Hard a Christmas movie?" debate, played as a
+  genuine ratings-and-argument piece in her usual voice rather than a
+  throwaway line.
+- **Garfield's food critic column** (`canon-fanfic-vignette` Persona 3):
+  best foods for the holidays — his usual gluttony-and-disdain register
+  applied to a holiday spread instead of a single dish.
+- **Shaggy & Scooby vacation log** (`canon-fanfic-vignette` Persona 2):
+  their favorite vacation special — a holiday-trip entry in the same
+  running vacation-log format the persona already uses, same Step 0
+  fair-use scope as Ichi Piece above (Hanna-Barbera IP: short,
+  standalone, non-commercial, invented dialogue, not a scene-for-scene
+  retelling).
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
