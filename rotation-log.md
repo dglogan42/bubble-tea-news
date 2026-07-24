@@ -102,6 +102,19 @@ this replaces Doki Doki Mon's cartoon-slot turn outright or runs as an
 extra ad-box crossover alongside it is an open call for whoever builds
 the holiday stretch.
 
+**Bubble Tea Trivia, Cat vs Dog strip tie-in (planned, not yet built):**
+a trivia item for whichever holiday-stretch issue Cat vs Dog lands in,
+written to bridge into the strip rather than stand alone —
+
+> Plenty of bubble tea shops in Taiwan market pet-friendly outdoor
+> seating specifically so customers can bring a cat or a dog along — the
+> same double fandom Cat vs Dog's whole strip runs on.
+
+Real fact (pet-friendly boba shop seating as a real café-culture trend),
+picked to bridge evenly into both halves of the strip's title rather than
+favoring one animal. Distinct from every other trivia item logged in
+this file, including the choking-hazard fact used for the candy-store tie-in.
+
 **Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
 not yet built):** a trivia item for the Halloween pair, written to bridge
 into whichever issue runs the crossover panel —
