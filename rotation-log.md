@@ -352,6 +352,22 @@ campaign, same consistent-icon approach the Ad-space backfill already
 uses (a cup icon for tea-brand ads, an article-card icon for blog/site
 ones) rather than a different mark each issue.
 
+**Bubble Tea Trivia, SEGA Yumicast tie-in (planned, not yet built):** a
+Christmas-issue trivia item written to bridge into the Yumicast ad box
+itself (the campaign's main Christmas-issue appearance, distinct from
+its separate New Year's-issue tie-in logged elsewhere in this file,
+which uses a different angle so the two don't repeat each other) —
+
+> Bubble tea's caffeine-and-sugar combo made it a real study-hall and
+> late-night gaming staple across Asia well before "energy drink"
+> marketing caught on — the same all-nighter fuel a new console's
+> holiday ad is counting on.
+
+Real fact (bubble tea as an established caffeine/sugar study-and-gaming
+staple), distinct from the Taiwan arcade/night-market fact already tied
+to Yumicast for the New Year's issue, and from every other trivia item
+logged in this file.
+
 **Two New Year's issue ads (planned, not yet built), per direct
 request:**
 
