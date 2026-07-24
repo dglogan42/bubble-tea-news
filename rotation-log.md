@@ -1182,6 +1182,59 @@ line.
 
 ---
 
+## Issue 18
+
+**Anchors:** community-outbreak-bulletin (Bellevue Lane matching wind
+chimes, no known retailer) · ken-endo-puzzle-master (How Long Did Kai
+Actually Wait?; also fully resolves Issue 17's stallholder puzzle — Noah
+sold out third) · bubble tea trivia (why quick-cook pearls exist, real
+cook-time fact) · joke of the week (bubble tea/boba-line music pun). No
+Menace Watch this issue — due next issue (Issue 19), per the tracker.
+Bellevue Lane returns as the breaking-bulletin street (last used
+Issue 12).
+
+**Cartoon slot:** Hayaku returns (last ran Issue 13), using the
+character-portrait art staged ahead of assembly per the note above —
+framed as a quiet between-matches beat continuing the season arc rather
+than a new scene, since the supplied art is a single portrait, not a
+four-panel yonkoma (same format flexibility Doki Doki Mon's Issue 16
+cameo used). The Boba Side and Doki Doki Mon are next in line.
+
+**Ads:** no advertiser lined up; plain "Your Ad Here" placeholder, page 1
+only.
+
+**Rotating slots** (per Issue 17's pool note — exclude only Issue 17's
+roster, reopening the full Issue 16 cast plus three Issue 13/14
+leftovers). All ten available Issue 16-cast members ran, one more than
+the usual nine, since the last slot originally drafted Alan Grant by
+mistake (he'd just run in Issue 16) before being caught and replaced —
+Lewis Hamilton filled the extra room instead of being held back:
+- Baxter Kline — `the-world-bulletin-anchor`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- M. Voss — `code-theft-dossier`
+- Robin Leach — `champagne-wishes-dispatch`
+- The Stickybeak — `tabloid-gossip-voice`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- Winnie Zhao — `seekers-eye-shopper`
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- Luke Skywalker — `canon-fanfic-vignette` (Persona 1)
+- Lewis Hamilton — `grand-prix-showroom-ads` (editorial slot, second
+  Kowhai Motors clearance event)
+
+**Not used this issue** (available first for Issue 19): Shaggy & Scooby,
+the Te Mana Whakaatu classifieds format — the two Issue 13/14 leftovers
+this issue's ten slots didn't reach. Kate Rodgers and Freya Wilcox remain
+standing, not exclusion-bound.
+
+**Pool note for whoever assembles Issue 19:** exclude only Issue 18's
+roster (immediately above) — that reopens the full Issue 17 cast
+(Sherman McCoy, Steve Jobs, Richard Nixon, Priya Anand, Dana Foley,
+Rebecca Black, T. Marlow, Sebastian, Daffy Duck, Wren) plus the two
+Issue 13/14 leftovers, comfortably more than enough for the ~9 rotating
+slots. Menace Watch is due this issue (last ran Issue 15).
+
+---
+
 ## Issue 17
 
 **Anchors:** community-outbreak-bulletin (Miro Street Free Little Library
@@ -1298,18 +1351,10 @@ slots.
 **Cartoon slot for Issue 17 — now built:** see the real `## Issue 17`
 entry above; The Boba Side's staged gag ran as planned.
 
-**Cartoon slot for Issue 18, scheduled and art staged (24 July 2026):**
-Hayaku confirmed next after The Boba Side's Issue 17 turn (last ran
-Issue 13's second appearance). Continues the running volleyball season
-arc rather than starting a new story, per that skill's own serialization
-rule. Art supplied and cleaned ahead of assembly,
-`issues/hayaku-issue18.png` — a portrait of the strip's own spiky-haired
-player character, "HAYAKU" lettered along his forearm; wholly original
-in-house art, no franchise fair-use concern. A single portrait rather
-than a four-panel yonkoma, same format flexibility Doki Doki Mon's
-Issue 16 cameo used. Hayaku's written holiday-tournament special
-(deferred since the Halloween planning) remains a separate, still-unused
-idea for a future issue.
+**Cartoon slot for Issue 18 — now built:** see the real `## Issue 18`
+entry above; Hayaku's staged portrait ran as planned. Its written
+holiday-tournament special (deferred since the Halloween planning)
+remains a separate, still-unused idea for a future issue.
 
 ---
 
