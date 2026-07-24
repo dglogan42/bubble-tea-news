@@ -1182,6 +1182,62 @@ line.
 
 ---
 
+## Issue 20
+
+**Anchors:** community-outbreak-bulletin (Rata Close's self-returning
+shopping trolley) · ken-endo-puzzle-master (What Time Did Grace Spot The
+Trolley?; also fully resolves Issue 19's birdhouse puzzle — Finn spotted
+2) · bubble tea trivia (taro boba's colour, real substitution fact) ·
+joke of the week (shaken/not-steeped pun). No Menace Watch this issue —
+not due until roughly Issue 23. Rata Close debuts as a new street name.
+
+**Cartoon slot:** Hayaku's second staged scene ran per direct request
+(`issues/hayaku-issue20.png`, a rivalry/confrontation beat), bumping The
+Boba Side to Issue 21 — noted explicitly in the colophon per house
+practice for this kind of bump.
+
+**Pemberton Vance Capital ad, per direct request:** a Sherman McCoy-
+voiced parody wealth-management ad-box, built first as SVG line art then
+swapped for supplied hand-drawn art (`issues/pemberton-vance-art.png`,
+an executive at a lectern beside a ledger sheet) once it was found on
+disk. Invented firm, disclaimed as parody/not real investment advice,
+same guardrail as `master-of-the-universe-columnist`'s own Step 0b.
+
+**Ads:** Pemberton Vance Capital only.
+
+**Rotating slots** (per Issue 19's pool note — exclude only Issue 19's
+roster, reopening the full Issue 18 cast plus Wren/Shaggy &amp;
+Scooby/Te Mana Whakaatu classifieds, none of whom ran Issue 19):
+- Baxter Kline — `the-world-bulletin-anchor`
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- M. Voss — `code-theft-dossier`
+- Robin Leach — `champagne-wishes-dispatch`
+- The Stickybeak — `tabloid-gossip-voice`
+- Clem Whitlock — `ridgeline-weekly-correspondent`
+- Winnie Zhao — `seekers-eye-shopper`
+- Wren — `yearning-machine-voice`
+- Shaggy &amp; Scooby — `canon-fanfic-vignette` (Persona 2)
+
+Kate Rodgers (standing, first appearance since Issue 12) filled the
+tenth slot that opened up in the former Menace Watch row (not due this
+issue), paired with a fresh Shaggy &amp; Scooby piece and refreshed
+Skeletor/Horatio content.
+
+**Not used this issue** (available first for Issue 21): Alan Grant, Luke
+Skywalker, Lewis Hamilton, the Te Mana Whakaatu classifieds format —
+none of whom ran Issue 19 or 20. Freya Wilcox remains standing, not
+exclusion-bound.
+
+**Pool note for whoever assembles Issue 21:** exclude only Issue 20's
+roster (immediately above) — that reopens the full Issue 19 cast
+(Sherman McCoy, Richard Nixon, Steve Jobs, Dana Foley, Priya Anand,
+Rebecca Black, T. Marlow, Sebastian, Daffy Duck) plus the four Issue 18
+leftovers, comfortably more than enough for the ~9 rotating slots.
+Menace Watch isn't due again until roughly Issue 23. Cartoon slot: The
+Boba Side (bumped from Issue 20).
+
+---
+
 ## Issue 19
 
 **Anchors:** community-outbreak-bulletin (Totara Crescent birdhouses
@@ -1315,16 +1371,9 @@ next in line. Doki Doki Mon (last ran Issue 16) has gone longer without
 a turn than The Boba Side (last ran Issue 17) — Doki Doki Mon is next,
 Boba Side after that.
 
-**Cartoon slot for Issue 20, scheduled and art staged (24 July 2026, per
-direct request):** a second Hayaku scene supplied ahead of its normal
-turn — `issues/hayaku-issue20.png`, a rivalry/confrontation beat (two
-players face to face, a third smaller face between them), continuing
-the season arc with an actual new scene rather than another portrait.
-Runs in Issue 20 specifically per direct request, which bumps whichever
-of Doki Doki Mon/Boba Side doesn't get Issue 19 to Issue 21 instead —
-note this explicitly in Issue 20's colophon so the rotation log stays
-legible about why the expected strip didn't run, same practice as Cat vs
-Dog's Issue 10 debut bumping The Boba Side.
+**Cartoon slot for Issue 20 — now built:** see the real `## Issue 20`
+entry above; the staged second Hayaku scene ran as planned, bumping The
+Boba Side to Issue 21.
 
 ---
 

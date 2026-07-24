@@ -1,0 +1,392 @@
+<title>Bubble Tea News — Print Edition — Issue 20</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 5mm 6.5mm 1.2mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  .eyebrow-band {
+    display: inline-block; align-self: center; padding: 1.2mm 6mm; border-radius: 20px;
+    font-size: 16pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 2mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  .masthead-frame {
+    position: relative; text-align: center; padding: 2mm 8mm; margin-bottom: 1.5mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm; opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block; margin: 0; padding: 2mm 6mm; font-weight: 800; font-size: 21pt;
+    letter-spacing: 0.08em; background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 600;
+    padding-bottom: 1.5mm; border-bottom: 2px solid currentColor; margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex; align-items: center; gap: 6px; font-size: 9pt; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding-bottom: 2mm; margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots { display: flex; gap: 2.5px; }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6mm; padding: 0; }
+  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 1.4mm; margin-top: 0.3mm; }
+
+  .col-icon-lead { display: flex; flex-direction: column; }
+  .icon-circle {
+    width: 7mm; height: 7mm; border: 1.4px solid currentColor; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 { font-weight: 800; font-size: 11pt; line-height: 1.1; margin: 0 0 0.8mm; }
+  .kicker { font-size: 6pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 0.6mm; }
+  p.body-text, p.byline-text { font-size: 6.4pt; line-height: 1.08; margin: 0 0 0.9mm; }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead { font-weight: 700; font-size: 7.9pt; margin: 0 0 0.6mm; line-height: 1.05; }
+
+  .pull-quote { display: flex; flex-direction: column; justify-content: center; border-left: 2.5px solid currentColor; padding-left: 5mm; }
+  .pull-quote blockquote { margin: 0 0 1mm; font-weight: 800; font-size: 10.5pt; line-height: 1.2; }
+  .pull-quote cite { font-size: 7.4pt; font-style: normal; opacity: 0.8; }
+
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li { font-size: 7.4pt; font-weight: 700; padding: 0.6mm 0; border-top: 1px solid currentColor; opacity: 0.9; }
+  .feature-list li:first-child { border-top: none; }
+
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 6.8pt; line-height: 1.28; }
+  .answer-recap { font-size: 6.4pt; line-height: 1.28; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  .ad-box {
+    border: 1.5px dashed currentColor; border-radius: 4px; padding: 1.8mm; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 0;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7pt; opacity: 0.75; }
+  .ad-box svg { width: 100%; height: auto; display: block; }
+  .ad-box img { max-width: 100%; height: auto; display: block; }
+
+  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.9mm; }
+
+  .colophon { margin-top: auto; padding-top: 1.2mm; border-top: 2px solid currentColor; text-align: center; font-size: 5.8pt; opacity: 0.75; line-height: 1.28; }
+
+  .extended-note { font-size: 5.4pt; font-style: italic; opacity: 0.7; margin-top: 0.5mm; }
+
+  .menace-box { border: 1.5px solid currentColor; border-radius: 3px; padding: 1.6mm 2mm; }
+  .menace-box h3 { margin: 0 0 0.8mm; font-size: 8.6pt; letter-spacing: 0.01em; }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 20. No Menace Watch this issue (not due until roughly Issue 23, per the tracker). Cartoon
+    slot goes to Hayaku's second staged scene, <code>issues/hayaku-issue20.png</code> &mdash; a
+    rivalry/confrontation beat, run per direct request ahead of The Boba Side's normal turn (which
+    the note below bumps to Issue 21). Ad slot stays a plain "Your Ad Here" placeholder; no
+    advertiser lined up this issue.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 20 &middot; 27 November 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 20V11h14v9"/>
+          <path d="M8 20v-5h8v5"/>
+          <path d="M5 11 12 6l7 5"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Rata Close</p>
+      <h2>A Single Rogue Supermarket Trolley Keeps Returning To The Same Corner, No Matter How Often It's Moved</h2>
+      <p class="body-text">Case definition: the trolley, silver, slightly bent front wheel, first noticed outside number 14 a fortnight ago. Moved seven times since by seven different neighbours, to seven different collection points. Returns to the same corner outside number 14 within two days, every time, with no visible assistance. The street's working theory (a slope nobody's accounted for, nothing more) remains stubbornly unconvincing to everyone who's actually watched it happen. The supermarket has been notified. The supermarket did not sound surprised.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">World News &middot; Dispatch</p>
+      <h3 class="subhead">Traffic Reporter Describes A Route That Doesn't Exist, Twice</h3>
+      <p class="byline-text">Baxter Kline, The World Bulletin</p>
+      <p class="body-text">"Avoid the interchange, folks, gridlocked back to the old bridge." There is no old bridge. There has never been an old bridge. He said it again forty minutes later, with more conviction. Somewhere, a driver is still looking for that bridge. We wish them well.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Food &amp; Drink</p>
+      <h3 class="subhead">The Loaded Fries Nobody Asked To Be This Loaded</h3>
+      <p class="byline-text">Garfield</p>
+      <p class="body-text">Jon ordered the loaded fries expecting fries. What arrived required its own place setting. Four stars for ambition, docked one for burying the actual potato under a structural amount of cheese. Odie found a stray fry on the floor and claimed it as his own discovery. Odie discovers nothing. Odie finds things I have already dropped.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 19V11"/>
+          <path d="M11 19V6"/>
+          <path d="M17 19V13.5"/>
+        </svg>
+      </div>
+      <p class="kicker">Investigations Desk</p>
+      <h2>The Case Of The Corner Trolley That Won't Stay Moved</h2>
+      <p class="body-text">Seven attempts, seven failures, one increasingly stubborn shopping trolley outside number 14 on Rata Close. I measured the slope myself, twice, with a level borrowed for exactly this purpose. The corner is flat. I want that on record before anyone suggests otherwise. Leading theory, mine, reluctantly: someone is moving it back on purpose and finding the whole street's confusion very funny. I have started watching the corner from my own window some evenings. I have seen nothing yet. I intend to keep watching.</p>
+      <p class="byline-text">M. Voss, Investigations Desk</p>
+    </div>
+
+    <div>
+      <p class="kicker">Lifestyle &middot; Champagne Wishes</p>
+      <h3 class="subhead">A Garden Party Where The Marquee Had Its Own Postcode</h3>
+      <p class="byline-text">Robin Leach</p>
+      <p class="body-text">Champagne wishes and caviar dreams, darlings, and this week they arrive under a marquee so large the caterers reportedly needed a second set of walkie-talkies just to communicate across it. Sixty guests, a string quartet relocated twice for acoustics, and a florist paid to make late-November blooms look like they'd always intended to be there. Champagne wishes, caviar dreams, and now, apparently, weatherproofed orchids too.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia &middot; Did You Know?</p>
+      <h3 class="subhead">Why Taro Bubble Tea Isn't Always Really Taro</h3>
+      <p class="body-text">Taro bubble tea's purple colour traditionally comes from real taro root, but many shops now use purple yam or added colouring instead, since taro's natural colour fades when heated.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"The corner is flat. I want that on record before anyone suggests otherwise."</blockquote>
+      <cite>&mdash; M. Voss, Investigations Desk, on the Rata Close trolley</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">What do you call a nervous cup of bubble tea? A little shaken, not steeped.</p>
+    </div>
+
+    <div class="ad-box" style="border: 1.5px dashed currentColor; padding: 1.6mm;">
+      <img src="pemberton-vance-art.png" alt="Hand-drawn parody wealth-management ad: a suited executive in glasses leaning on a lectern topped with a dollar sign, beside a ledger sheet of figures, with a city skyline behind him" style="max-width: 100%; max-height: 26mm; width: auto; margin: 0 auto; display: block;">
+      <h3 style="margin: 1mm 0 0.5mm; font-size: 8.6pt;">Pemberton Vance Capital</h3>
+      <p style="margin: 0; font-size: 6.4pt; font-style: italic; opacity: 0.85;">Manage your fortune like you already have one.</p>
+      <p style="margin: 1mm 0 0; font-size: 5.4pt; opacity: 0.75;">Parody placement, invented firm; not real investment advice.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 18V6l10 3-10 3"/>
+          <path d="M9 12H4"/>
+        </svg>
+      </div>
+      <p class="kicker">Kiss &amp; Tell</p>
+      <h2>Darling, The Trolley Has A Fan Club Now</h2>
+      <p class="body-text">Word from your Stickybeak: Rata Close's wandering trolley has, incredibly, acquired a small unofficial fan club, loves, complete with a nickname your Stickybeak refuses to repeat in print for fear of making it worse. Sources close to number 14 confirm someone left it a ribbon. The supermarket still hasn't collected it. Your Stickybeak suspects, at this point, they've simply given up.</p>
+      <p class="byline-text">The Stickybeak</p>
+    </div>
+
+    <div>
+      <p class="kicker">Rural &middot; Ridgeline Weekly</p>
+      <h3 class="subhead">The Last Of The Season's Hay Baled, Weather Cooperating For Once</h3>
+      <p class="byline-text">Clem Whitlock</p>
+      <p class="body-text">Doyle got his last paddock baled two days ahead of the forecast rain, which he's already telling anyone who'll listen was entirely down to good planning and not, as Higgins maintains, blind luck. Down in town they're chasing a trolley in circles; out here, a well-timed baling is still the closest thing to a miracle anyone round here will admit to believing in.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Shopping &middot; Seeker's Eye</p>
+      <h3 class="subhead">One Listing Ships Before December, Forty Just Say "Soon"</h3>
+      <p class="byline-text">Winnie Zhao</p>
+      <p class="body-text">Everyone hunting outdoor furniture this week wades through the same forty listings promising delivery "soon," a word doing an enormous amount of unpaid work across every single one of them. One listing, buried three pages deep, states an actual dispatch date and has held to it twice already this month. I've waited out enough vague delivery windows to know the real one when it finally sits still.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h5.2v2.1a1.9 1.9 0 1 0 3.6 0V4H18v5.2h-2.1a1.9 1.9 0 1 0 0 3.6H18V18h-5.2v-2.1a1.9 1.9 0 1 0-3.6 0V18H4v-5.2h2.1a1.9 1.9 0 1 0 0-3.6H4V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">What Time Did Grace Spot The Trolley?</h3>
+      <p class="answer-recap">Last issue's question, resolved: Finn didn't spot 6, and Ola spotted exactly 2 more than Bea. Only Bea = 4, Ola = 6 clears both clues, leaving Finn at 2. Finn spotted 2 birdhouses.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three trolley-sightings were logged this week (Grace, Iris, Moana), at 8am, 12pm, and 4pm.</p>
+      <ol class="clue-list">
+        <li>Grace didn't spot it at 4pm.</li>
+        <li>Iris spotted it exactly 4 hours after Moana.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Brisk one this week &middot; what time did Grace spot the trolley? Answer next week &mdash; Ken Endo</p>
+    </div>
+    <div>
+      <p class="kicker">Reflections</p>
+      <h3 class="subhead">The Locker Nobody's Cleared Out Yet</h3>
+      <p class="byline-text">Wren</p>
+      <p class="body-text">The locker room's been due a clear-out for months, every unclaimed item logged and dated, and one locker still sits untouched past its own deadline twice over. Nobody's filed the paperwork to open it. Wren has stopped asking why and started simply noting the date each time it comes up again, which is, some weeks, the closest thing to progress the question gets.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Vacation Log &middot; Day 52</p>
+      <h3 class="subhead">The "Locked" Storage Unit Wasn't Locked</h3>
+      <p class="byline-text">Shaggy Rogers &amp; Scooby-Doo</p>
+      <p class="body-text">Like, we were just looking for a place to stash the van snacks, man, and Scoob found this storage unit that looked locked but, like, really wasn't, and inside was just, more snacks, dude. Scooby Snacks, even, a whole case, expired but still. Zoinks. Turned out the unit belonged to the guy who runs the snack stand, and he was pretty chill about it once we explained. No mystery gang required. We just helped him relock it properly this time.</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">Is It Too Late To Fix A Friendship I Let Fade?</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"I let a good friendship fade out over the years without meaning to. Is it too late to fix it?" A ship out of contact isn't a ship lost, lad, only one that's drifted further than either of ye noticed. Send the signal. Worst tide is the one ye never tested. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">In Memoriam</p>
+      <h3 class="subhead">The Corner Table's Reserved Sign, Finally Removed</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">The corner table's permanently-reserved sign, held there for a regular who stopped coming in sometime around winter, was quietly removed this week and the table returned to general seating. I confess nothing about how long I personally kept that reservation standing past any reasonable justification. Mourn the sign if sentiment moves you toward laminated cardstock. I remain, as ever, unsentimental about seating charts, which is precisely why I noticed how long it took me to let this one go.</p>
+    </div>
+    <div>
+      <p class="kicker">Arts &middot; Film Review</p>
+      <h3 class="subhead">A Quiet Drama That Trusts Its Audience To Wait</h3>
+      <p class="byline-text">Kate Rodgers, Refill Rating: 0/5 cups</p>
+      <p class="body-text">Zero-refill picture, and I mean that as the highest compliment I hand out. Ninety minutes of a film that lets a silence sit exactly as long as it needs to, trusting the room to stay with it instead of cutting away to fill the quiet. I didn't move once. Neither did anyone else in that theatre, and I've been counting that particular kind of stillness for a long time.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">Hayaku &middot; Face To Face</p>
+      <img src="hayaku-issue20.png" alt="Hayaku, a hand-drawn rivalry scene: two players standing forehead to forehead in a tense confrontation, a third, smaller face peeking up between them" style="width: auto; height: auto; max-width: 190px; max-height: 175px; margin: 0 auto; display: block;">
+      <p class="body-text" style="text-align: center; max-width: 340px; margin: 1.5mm auto 0;">The rivalry the season's been building toward finally boils over face to face, a teammate wedged between them trying to keep the peace before the whistle even blows.</p>
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Hayaku &mdash; an original senkotsu-style volleyball manga strip, Bubble Tea News's syndicated cartoon slot; alternates with The Boba Side, which returns to normal next-in-line rotation next issue.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 21 excludes only Issue 20's roster (Baxter Kline, Garfield, M. Voss, Robin
+    Leach, The Stickybeak, Clem Whitlock, Winnie Zhao, Wren, Shaggy &amp; Scooby), reopening Issue
+    19's full cast (Sherman McCoy, Richard Nixon, Steve Jobs, Dana Foley, Priya Anand, Rebecca
+    Black, T. Marlow, Sebastian, Daffy Duck) plus the Issue 18 leftovers still untouched (Alan
+    Grant, Luke Skywalker, Lewis Hamilton, the Te Mana Whakaatu classifieds format). Menace Watch
+    isn't due again until roughly Issue 23. Cartoon slot: The Boba Side is next in line, bumped
+    from this issue by the second staged Hayaku scene. Kate Rodgers and Freya Wilcox remain
+    standing roster members.
+  </div>
+</div>
