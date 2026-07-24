@@ -127,6 +127,16 @@ invented target, not tied to any target used in a past logged Menace
 Watch column — a fresh name for this bit specifically, consistent with
 that skill's rule never to reuse a target.
 
+**Joke of the Week, Christmas issue (planned, not yet built):** per
+direct request, a terrible Christmas-cracker-style pun about bubble tea —
+
+> Q: What's Santa's favourite bubble tea flavour?
+> A: Jingle Bell Chai.
+
+Not persona-bound (same as every Joke of the Week), so no fair-use or
+voice constraints beyond the standing rule not to repeat a joke already
+used in a prior logged issue — this one's new, so it clears that bar.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
