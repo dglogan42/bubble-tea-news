@@ -301,6 +301,26 @@ Square Enix's actual character art. Santa himself carries no IP concern
 (public-domain seasonal figure). Creative format (SVG icon vs. photo-style
 mock ad) to be decided when the issue is actually assembled.
 
+**Bubble Tea Trivia, Christmas issue's advertiser tie-in (planned, not
+yet built):** a second Christmas-issue trivia item, separate from the hot
+bubble tea one above — this one written to play off the issue's own
+advertiser content rather than standing alone, same in-house
+self-referential habit the paper already uses elsewhere (ad-box
+cross-references, Menace Watch targets tied to other stories in the same
+issue) —
+
+> Carbonated drinks and tapioca pearls don't mix well: the fizz fights
+> the wide straw's suction and the pearls just sink. It's part of why a
+> soda like the (fictional) Chocobo-Cola markets itself as a treat
+> alongside bubble tea rather than a rival to it.
+
+Real physical fact (carbonation vs. wide-straw suction, pearls sinking in
+soda), used here specifically to bridge into the Chocobo-Cola ad rather
+than as a standalone item — keep "(fictional)" or equivalent framing so
+the trivia item doesn't read as a claim about a real product. Distinct
+from every other trivia item logged in this file, including the other
+Christmas-issue one above.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
