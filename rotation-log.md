@@ -286,6 +286,23 @@ Halloween pair, separate from the Yumicast campaign's later build-up
 window. Exact advertiser name/creative to be invented when the issue is
 actually assembled.
 
+**Bubble Tea Trivia, Halloween issue's advertiser tie-in (planned, not
+yet built):** a second Halloween-pair trivia item, separate from the
+sweetness/ice-customization one above — written to bridge into the
+candy/costume store ad rather than stand alone, same self-referential
+habit as the Christmas advertiser tie-in trivia below —
+
+> Tapioca pearls have prompted real choking-hazard warnings over the
+> years — chewy enough to catch in a small throat — the same reminder
+> candy shops repeat about hard lollies and gummies every Halloween
+> season.
+
+Real, documented safety fact (bubble tea pearls as a choking hazard,
+distinct from every other candy-safety framing), used here to bridge into
+whichever candy/costume store ad runs that issue. Distinct from every
+other trivia item logged in this file, including the sweetness/ice one
+above for the same Halloween pair.
+
 **"Chocobo-Cola" seasonal ad, Christmas issue (planned, not yet built):**
 per direct request, a Final Fantasy-themed beverage ad — "Chocobo-Cola,"
 featuring Santa — for the Christmas issue specifically (a one-off
