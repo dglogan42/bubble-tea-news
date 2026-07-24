@@ -1298,13 +1298,18 @@ slots.
 **Cartoon slot for Issue 17 — now built:** see the real `## Issue 17`
 entry above; The Boba Side's staged gag ran as planned.
 
-**Cartoon slot for Issue 18, scheduled (24 July 2026):** Hayaku confirmed
-next after The Boba Side's Issue 17 turn (last ran Issue 13's second
-appearance). Continues the running volleyball season arc rather than
-starting a new story, per that skill's own serialization rule. No art
-supplied yet; Hayaku's written holiday-tournament special (deferred since
-the Halloween planning) is still available to slot in here if it still
-fits by then, otherwise a fresh non-holiday beat continuing the arc.
+**Cartoon slot for Issue 18, scheduled and art staged (24 July 2026):**
+Hayaku confirmed next after The Boba Side's Issue 17 turn (last ran
+Issue 13's second appearance). Continues the running volleyball season
+arc rather than starting a new story, per that skill's own serialization
+rule. Art supplied and cleaned ahead of assembly,
+`issues/hayaku-issue18.png` — a portrait of the strip's own spiky-haired
+player character, "HAYAKU" lettered along his forearm; wholly original
+in-house art, no franchise fair-use concern. A single portrait rather
+than a four-panel yonkoma, same format flexibility Doki Doki Mon's
+Issue 16 cameo used. Hayaku's written holiday-tournament special
+(deferred since the Halloween planning) remains a separate, still-unused
+idea for a future issue.
 
 ---
 
