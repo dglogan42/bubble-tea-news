@@ -52,6 +52,22 @@ or Doki Doki Mon's own gag/serialized format doesn't suit the crossover
 premise well when it's actually built, The Boba Side can pick up the slot
 instead per that skill's own "always available to fill a gap" standing.
 
+**Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
+not yet built):** a trivia item for the Halloween pair, written to bridge
+into whichever issue runs the crossover panel —
+
+> Bubble tea is a genre-blend drink by design: Taiwanese tea culture
+> merged with Western-style milk and a shaken, cocktail-bar technique in
+> the 1980s — the same two-worlds-collide premise Nightmare Before
+> Christmas builds its whole plot on.
+
+Real fact (the drink's own East-meets-West fusion origin, distinct from
+the who-invented-it origin-dispute trivia already logged for Issues 4/13),
+used here for the crossover-premise bridge into the panel rather than
+standing alone. Distinct from the sweetness/ice-customization and
+choking-hazard trivia already logged elsewhere for the same Halloween
+pair.
+
 **Joke of the Week, Halloween issue (planned, not yet built):** per
 direct request, a terrible Halloween-cracker-style pun about bubble tea —
 
