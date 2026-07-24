@@ -137,6 +137,47 @@ Not persona-bound (same as every Joke of the Week), so no fair-use or
 voice constraints beyond the standing rule not to repeat a joke already
 used in a prior logged issue — this one's new, so it clears that bar.
 
+**Bubble Tea Trivia, Christmas issue (planned, not yet built):** a
+winter-appropriate real fact, distinct from every trivia item already
+used in Issues 1-13 above (origin dispute, two-cup hand-shake, East/West
+Coast naming, popping-boba chemistry, the Guinness record, HK-style milk
+tea, the "bubble" naming theory, brown sugar, Cantonese slang vs.
+zhenzhu, tapioca/cassava, pearl milk) —
+
+> Bubble tea doesn't have to be iced: many Taiwanese tea shops still
+> serve a hot version, closer to the drink's teahouse roots, especially
+> in winter, before the cold shaken style became the international
+> default.
+
+Same standing rule as Joke of the Week: real fact, not invented, and
+checked against the list above so it doesn't repeat a prior issue.
+
+**SEGA Yumicast ad campaign, building to Christmas (planned, not yet
+built):** an ad box for the "SEGA Yumicast" — an invented new game
+console (parody name riffing on SEGA's real Dreamcast), not a real SEGA
+product — running across **multiple issues**, ramping up toward the
+Christmas issue rather than appearing just once (same continuous-run ad
+pattern as Overload NZ's Issue 3-12 stretch, see the Ad-space backfill
+note near the top of this log). Starting point not pinned yet — somewhere
+after the Halloween pair (Issues 14/15) through the Christmas issue is
+the intent; confirm the exact issue range when the run-up is actually
+built. SEGA is a real company, so this follows the same real-brand
+parody guardrail already applied to Overload NZ, Cha Nui, HIKOCO, and T2
+(see the Correction note above): every appearance carries its own
+compact non-affiliation line ("Parody placement, not a real SEGA ad."),
+and the creative should follow `pearl-index-market-researcher`'s
+Pearl Index-style SVG format like the rest of the ad backfill rather than
+plain text.
+
+**Halloween candy/costume store ad(s), Issues 14/15 (planned, not yet
+built):** a trick-or-treat-season ad box — an invented, in-universe local
+advertiser (candy store, costume shop, or similar), same footing as
+Modoo, Sir Tea, TeaDee, etc. from the earlier ad backfill, not a real
+brand, so no parody-disclaimer requirement. Runs specifically in the
+Halloween pair, separate from the Yumicast campaign's later build-up
+window. Exact advertiser name/creative to be invented when the issue is
+actually assembled.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
