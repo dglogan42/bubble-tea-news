@@ -21,19 +21,45 @@ below as the historical planning record rather than deleted, since the
 Christmas- and New Year's-issue portions of that same reset are still
 unbuilt. Where execution differed from the plan: both Issues 14 and 15 ran
 their extended Skeletor "In Memoriam" as planned; the cartoon slot went to
-Cat vs Dog (Issue 14, the NBC crossover) and Hayaku (Issue 15, the holiday
-special) rather than needing Doki Doki Mon's "maybe" Boba Pearl Edition
-tie-in, which remains unbuilt for a future issue. Two seasonal ad
-placements were added per direct request that aren't in the planning notes
-below: Fenwick Grove S'mores Co. (Issue 14, an invented advertiser) and
-M&M'S (Issue 15, real-brand parody, disclaimed). A bigger, three-column
-Armageddon Expo spread ad also ran in Issue 15 (with a smaller save-the-
-date teaser in Issue 14) ahead of the real Labour Weekend convention — the
-supplied logo art (`issues/armageddon.png`) includes a "Kiwibank presents"
-credit, a second real brand incidental to the artwork, so both ads
-disclaim Kiwibank alongside Armageddon Expo Ltd. Neither ad was anticipated
-in the original Halloween planning below. Both PDFs reconfirmed at 2 pages
-via `pdfinfo` after every change, per house practice.
+Cat vs Dog for Issue 14 (the NBC crossover). Issue 15's cartoon slot was
+written up as Hayaku's holiday-tournament special, then swapped per direct
+request for a one-off **Uma Onna** cameo instead — an original
+idol-athlete horse-girl runner, homage to the "racing while performing"
+shape of Umamusume-style media (Cygames' real IP), not a reproduction of
+any specific franchise character or design, same footing as this
+library's other shape-not-IP personas (Wren, Sebastian). Delivered as
+actual hand-coded SVG line art (schematic figure, motion lines, a
+finish-line ribbon), not a text-only prompt — the one cartoon-slot piece
+this stretch with real rendered art rather than a placeholder. This is a
+**one-off cameo only**, per direct request: Hayaku is not retired, and its
+written holiday-special script is deferred to a future issue rather than
+discarded. Doki Doki Mon's "maybe" Boba Pearl Edition tie-in also remains
+unbuilt for a future issue. Ad placements added per direct request that
+aren't in the planning notes below: Fenwick Grove S'mores Co. (Issue 14,
+invented), M&M'S (Issue 15, real-brand parody, disclaimed), and Indomie
+(Issue 15, real supplied product photo `issues/indomie.png`, real-brand
+parody, disclaimed) alongside M&M'S in the same row. A bigger,
+three-column Armageddon Expo spread ad also ran in Issue 15 (with a
+smaller save-the-date teaser in Issue 14) ahead of the real Labour Weekend
+convention — the supplied logo art (`issues/armageddon.png`) includes a
+"Kiwibank presents" credit, a second real brand incidental to the artwork,
+so both ads disclaim Kiwibank alongside Armageddon Expo Ltd. None of this
+was anticipated in the original Halloween planning below. Both PDFs
+reconfirmed at 2 pages via `pdfinfo` after every change, per house
+practice — Issue 15 briefly ran to 3 pages after the Uma Onna/Indomie
+additions and was retightened (row/content-fill gaps) back to 2.
+
+**Issue 13 art correction (24 July 2026):** `issues/hayaku-issue-13.png`
+turned out to be the wrong photo — a mismatched sketch (unrelated
+lettering, no volleyball content) rather than Hayaku's actual second-
+appearance strip. The real source photo was found among the working
+photo library (a volleyball serve/set/spike/score yonkoma, "VOLLEYBALL
+LET'S GO! / SET! / TAKE! / GOAL!"), rotated and run through the same
+shadow-flatten/autocontrast cleanup this repo already uses for photographed
+strip art, then swapped in under the same filename. `issues/issue-13.html`
+and `live-queue/issue-13/index.html` alt text corrected to match; Issue
+13's PDF re-exported and reconfirmed at 2 pages. No other content in Issue
+13 was affected.
 
 **Skeletor Halloween special (planned, not yet built):** Issues 14 and 15
 give Skeletor's "In Memoriam" (`skeletor-obituary-column`) extra room to
@@ -1166,17 +1192,23 @@ glow-in-the-dark cup sleeve). Priya Anand's Pearl Index piece is a direct
 callback to her own Issue 13 con-weekend numbers, modelling the expected
 Armageddon Expo weekend bump ahead of time rather than after the fact.
 
-**Cartoon slot:** Hayaku takes the second Halloween-stretch holiday
-special (continuing the running season arc with a holiday-tournament
-beat), per the cartoon-rotation reset noted above — its Issue 13 turn
-notwithstanding. Delivered as a structured image-generation prompt (not
-rendered artwork); no renderer was available this session, so no new PNG
-was produced. Cat vs Dog and Hayaku have now both taken a holiday-stretch
-turn; The Boba Side and Doki Doki Mon didn't and are first in line once
-the cartoon slot resumes normal next-in-line rotation.
+**Cartoon slot:** written up first as Hayaku's second Halloween-stretch
+holiday special (continuing the running season arc with a
+holiday-tournament beat), then swapped per direct request for a **one-off
+Uma Onna cameo** instead — an original idol-athlete horse-girl runner,
+homage to the "racing while performing" shape of Umamusume-style media,
+not a specific franchise character or design. Delivered as real hand-coded
+SVG line art (schematic running figure, motion lines, a breaking
+finish-line ribbon), not a text-only prompt. This is a one-off swap only —
+Hayaku isn't retired from the rotation, and its written holiday-special
+script is deferred to a future issue rather than discarded. Cat vs Dog
+took Issue 14's holiday-stretch turn; The Boba Side, Doki Doki Mon, and
+Hayaku are all first in line once the cartoon slot resumes normal
+next-in-line rotation.
 
-**Ads:** M&M'S (Pearl Index-style SVG, real-brand parody, disclaimed) on
-page 1. A bigger, three-column Armageddon Expo spread ad on page 2 (per
+**Ads:** M&M'S and Indomie (real supplied product photo,
+`issues/indomie.png`), both real-brand parody, disclaimed, sharing a row
+on page 1. A bigger, three-column Armageddon Expo spread ad on page 2 (per
 direct request — "another convention," bigger than a normal ad-box), using
 the supplied `issues/armageddon.png` logo art at full size; disclaims both
 Armageddon Expo Ltd and Kiwibank (the logo's own "Kiwibank presents"

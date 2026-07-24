@@ -94,8 +94,8 @@
   .mini-dots { display: flex; gap: 2.5px; }
   .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
 
-  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; padding: 0; }
-  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 2mm; margin-top: 0.5mm; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6mm; padding: 0; }
+  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 1.4mm; margin-top: 0.3mm; }
 
   .col-icon-lead { display: flex; flex-direction: column; }
   .icon-circle {
@@ -132,7 +132,7 @@
   .ad-box svg { width: 100%; height: auto; display: block; }
   .ad-box img { max-width: 100%; height: auto; display: block; }
 
-  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 1.3mm; }
+  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.9mm; }
 
   .colophon { margin-top: auto; padding-top: 1.2mm; border-top: 2px solid currentColor; text-align: center; font-size: 5.8pt; opacity: 0.75; line-height: 1.28; }
 
@@ -256,7 +256,7 @@
   </div>
 
   <div class="row divider-top">
-    <div style="grid-column: span 2;">
+    <div>
       <p class="kicker">Joke of the Week</p>
       <p class="body-text">What's a mummy's favourite bubble tea topping? Extra wrap-ioca.</p>
     </div>
@@ -275,6 +275,13 @@
         <rect class="tcolor" x="16" y="130" width="208" height="14" rx="7" fill="#4A2E63"/>
         <text class="tcolor" x="120" y="140" text-anchor="middle" font-size="6" font-weight="700" letter-spacing="0.03em" fill="#E4D9EC">PARODY PLACEMENT &#183; NOT A REAL M&amp;M&apos;S AD</text>
       </svg>
+    </div>
+
+    <div class="ad-box" style="border: 1.5px dashed currentColor; padding: 1.6mm;">
+      <img src="indomie.png" alt="Indomie Mi Goreng Barbeque Chicken instant noodle cup" style="max-width: 100%; max-height: 26mm; width: auto; margin: 0 auto; display: block;">
+      <h3 style="margin: 1mm 0 0.5mm; font-size: 8.6pt;">The Noodle Break Between Drinks</h3>
+      <p style="margin: 0; font-size: 6.4pt; font-style: italic; opacity: 0.85;">Mie goreng, two minutes, zero regrets.</p>
+      <p style="margin: 1mm 0 0; font-size: 5.4pt; opacity: 0.75;">Parody placement, not a real Indomie/Indofood ad.</p>
     </div>
   </div>
 
@@ -395,20 +402,46 @@
 
   <div class="row divider-top">
     <div style="grid-column: span 3; text-align: center;">
-      <p class="kicker" style="text-align: center;">Hayaku &middot; Holiday-Tournament Special</p>
-      <div style="max-width: 420px; margin: 0 auto; text-align: left; font-size: 6.2pt; line-height: 1.32; border: 1px dashed currentColor; border-radius: 4px; padding: 2mm 3mm;">
-        <em>Not rendered artwork &mdash; delivered as a structured image-generation prompt (no renderer available this session):</em><br>
-        <strong>Sub-style anchor:</strong> senkotsu house style (per senkotsu.YAML), clean bamboo-like linework, HB under-sketch with hatched shading.
-        <strong>Linework:</strong> forced-perspective panel composition, high-contrast black-and-white for newsprint.
-        <strong>Atmosphere:</strong> cold gym, string-lights-and-crepe-paper holiday-tournament mood, tired legs late in a long day.
-        <strong>Technical tag:</strong> four-panel yonkoma.
-        <strong>Panel 1:</strong> team huddle under a hand-strung banner reading "HOLIDAY INVITATIONAL."
-        <strong>Panel 2:</strong> server bouncing the ball, breath visible, focus narrowed.
-        <strong>Panel 3:</strong> forced-perspective spike over the net, opposing blocker's hands filling the foreground.
-        <strong>Panel 4:</strong> scoreboard flipping to match point, bench on its feet.
-        <strong>Caption:</strong> "Same net. Different banner. Same reason we're still standing here."
-      </div>
-      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Hayaku &mdash; an original senkotsu-style volleyball manga strip, Bubble Tea News's syndicated cartoon slot; this issue continues the running season arc with a holiday-tournament beat.</p>
+      <p class="kicker" style="text-align: center;">Uma Onna &middot; One-Off Cameo</p>
+      <svg viewBox="0 0 300 170" style="width: 100%; max-width: 250px; height: auto; margin: 0 auto; display: block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Uma Onna, an idol-athlete horse-girl runner, mid-sprint through a finish-line ribbon, one hand raised in a peace sign with a sparkle beside it.">
+        <title>Uma Onna &mdash; one-off cameo, original character</title>
+        <!-- track lanes -->
+        <line class="tcolor" x1="0" y1="150" x2="300" y2="150" stroke="currentColor" stroke-width="1.4"/>
+        <line class="tcolor" x1="0" y1="158" x2="300" y2="158" stroke="currentColor" stroke-width="1.4"/>
+        <!-- finish ribbon, breaking -->
+        <line class="tcolor" x1="205" y1="30" x2="196" y2="150" stroke="currentColor" stroke-width="2.4" stroke-dasharray="5 4"/>
+        <!-- motion lines -->
+        <line class="tcolor" x1="55" y1="70" x2="85" y2="66" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <line class="tcolor" x1="50" y1="88" x2="82" y2="86" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <line class="tcolor" x1="58" y1="108" x2="86" y2="104" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <!-- tail -->
+        <path class="tcolor" d="M130 90 C 105 100, 95 120, 100 145 C 108 122, 118 108, 138 98" fill="none" stroke="currentColor" stroke-width="2"/>
+        <!-- back leg -->
+        <path class="tcolor" d="M150 118 L128 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- front leg -->
+        <path class="tcolor" d="M160 118 L182 148 L172 152" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- torso, leaning into the sprint -->
+        <path class="tcolor" d="M145 70 L158 118" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <!-- trailing arm -->
+        <path class="tcolor" d="M150 82 L128 100" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <!-- raised arm, peace sign -->
+        <path class="tcolor" d="M148 76 L170 52" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path class="tcolor" d="M170 52 L166 40 M170 52 L176 41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <!-- head -->
+        <circle class="tcolor" cx="148" cy="60" r="13" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <!-- ears -->
+        <path class="tcolor" d="M139 49 L136 38 L145 47Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path class="tcolor" d="M154 48 L160 37 L157 49Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- flowing mane -->
+        <path class="tcolor" d="M138 54 C 122 56, 112 68, 116 84" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <!-- sparkle -->
+        <path class="tcolor" d="M182 34 L185 42 L193 45 L185 48 L182 56 L179 48 L171 45 L179 42Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <!-- face, mid-cheer -->
+        <circle class="tcolor" cx="152" cy="58" r="1.2" fill="currentColor" stroke="none"/>
+        <path class="tcolor" d="M150 65 Q154 68 158 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <p class="body-text" style="text-align: center; max-width: 340px; margin: 1.5mm auto 0;">"Full sprint. Full smile. That's the job."</p>
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Uma Onna &mdash; one-off cameo, an idol-athlete horse-girl runner (original character, homage to Umamusume-style media, not a specific franchise design). Hayaku's holiday special is deferred to a future issue.</p>
     </div>
   </div>
 
@@ -416,12 +449,12 @@
 
   <div class="colophon">
     Next week: Issue 16 reopens Issue 14's roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield,
-    Baxter Kline, the Te Mana Whakaatu classifieds format, Lewis Hamilton), now excluded only by this
-    issue's own roster (Sherman McCoy, Steve Jobs, Richard Nixon, Priya Anand, Dana Foley, Rebecca
-    Black, Shaggy &amp; Scooby, T. Marlow, Sebastian). Menace Watch, having run this issue, isn't due
-    again for roughly four issues. Cat vs Dog and Hayaku both took a holiday-special cartoon-slot
-    turn across Issues 14-15's suspended rotation order, which now resumes normal next-in-line
-    turn-taking; The Boba Side and Doki Doki Mon didn't get a turn this stretch and are first in line.
-    Kate Rodgers and Freya Wilcox remain standing roster members.
+    Baxter Kline, the Te Mana Whakaatu classifieds format, Lewis Hamilton), excluded only by this
+    issue's roster (Sherman McCoy, Steve Jobs, Richard Nixon, Priya Anand, Dana Foley, Rebecca Black,
+    Shaggy &amp; Scooby, T. Marlow, Sebastian). Menace Watch isn't due again for roughly four issues.
+    Cartoon slot: Cat vs Dog took Issue 14's holiday special; Issue 15's slot went to a one-off Uma
+    Onna cameo instead of Hayaku's written holiday special, now deferred. Normal next-in-line rotation
+    resumes next issue; The Boba Side, Doki Doki Mon, and Hayaku are first in line. Kate Rodgers and
+    Freya Wilcox remain standing roster members.
   </div>
 </div>
