@@ -110,6 +110,20 @@ never reproducing actual manga/anime dialogue or scenes. Whether it
 becomes a recurring fifth strip or stays a one-time special is an open
 call to make when it's actually built.
 
+**Bubble Tea Trivia, Ichi Piece tie-in (planned, not yet built):** a
+Christmas-issue trivia item written to bridge into the Ichi Piece strip
+rather than stand alone —
+
+> Tea has real high-seas history: 19th-century "tea clipper" ships like
+> the Cutty Sark were built purely for speed, racing to be first back to
+> port with fresh China tea — the same treasure-race energy Ichi Piece's
+> crew chases fictional treasure with.
+
+Real fact (tea clipper ships and the China-to-Europe tea races), distinct
+from every other trivia item logged in this file, used here for the
+pirate/high-seas bridge into the strip rather than a Halloween/Christmas
+season fact on its own.
+
 **Christmas issue, more content slots (planned, not yet built — same
 hold-off-until-closer-to-the-date rule as everything else Christmas and
 Halloween above):**
