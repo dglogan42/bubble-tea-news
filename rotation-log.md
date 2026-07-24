@@ -1204,10 +1204,15 @@ built in on request:
   Yumicast's), and this issue's Sonic The Bed Hog listing is confirmed
   correctly Yumicast's, having been double-checked this time.
 - Sonic The Bed Hog and Nuntendo SameCube each get a disclaimed parody
-  ad-box (same SVG line-art format as Toyota/Armco/Armageddon) — generic
-  bed/pillow and cube icons only, no actual Sonic or Nintendo character
-  likenesses, same guardrail as every other real-IP-adjacent gag in this
-  paper. Both ads sit alongside the joke of the week in one 3-column row.
+  ad-box, sitting alongside the joke of the week in one 3-column row.
+  Originally built with generic SVG line-art icons (bed/pillow, cube);
+  swapped post-assembly (25 July 2026) for supplied hand-drawn art
+  (`issues/sega-yumicast-art.png`, `issues/nuntendo-samecube-art.png`)
+  after two earlier stock JPGs of unclear provenance (a verbatim real
+  GameCube and real Dreamcast controller) were found on disk and
+  rejected in favour of drawing new ones instead. Both hand-drawn pieces
+  are loose homages (not verbatim reproductions of the real console
+  designs) and carry the same non-affiliation disclaimer.
 - Retroactively reframes Issue 16's Doki Doki Mon feature as having run
   under the wrong masthead — Issue 16 itself is not edited; the
   correction is presented as an in-fiction editorial fix, the same
