@@ -147,6 +147,21 @@ distinct from every other trivia item logged in this file, including the
 loyalty-stamp-card fact used for the Briscoes tie-in and the Boba Pearl
 Edition ad note above.
 
+**Bubble Tea Trivia, Fletchly gag tie-in (planned, not yet built):** a
+trivia item for the New Year's issue, written to bridge into Gordon
+Slate's resolutions bit (Fletchly, the delivery guy Gordon "apologizes"
+to on condition of an unmasking) —
+
+> Bubble tea is consistently one of the most-ordered drink categories on
+> food-delivery apps across Asia — meaning there are a lot of real
+> Fletchlys out there right now, capes optional, racing a shaken drink
+> across town before the ice melts.
+
+Real fact (bubble tea's outsized share of food-delivery app orders),
+distinct from the heat-sealed-lid packaging fact already logged for the
+New Year's issue — different angle (delivery-app demand, not the
+packaging mechanism) — and from every other trivia item in this file.
+
 **Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
 not yet built):** a trivia item for the Halloween pair, written to bridge
 into whichever issue runs the crossover panel —
