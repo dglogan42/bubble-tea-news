@@ -1,0 +1,63 @@
+# Promote Issue 13 to the live showcase (bubbletea.nz / docs/) on its dateline.
+#
+# Issue 13 dateline: 9 October 2026 (NZ).
+# Fires at 20:00 UTC on 8 October = 09:00 NZDT on 9 October.
+# Cron cannot encode a year, so the script is idempotent:
+#   - skips if NZ date is still before 2026-10-09
+#   - skips if live already shows Issue 13 or later
+#   - only commits when files actually change
+#
+# Manual run: Actions → "Promote Issue 13 to live site" → Run workflow
+#   (use force_promote=true to bypass the date guard for testing)
+
+name: Promote Issue 13 to live site
+
+on:
+  schedule:
+    # 20:00 UTC 8 Oct → 09:00 NZDT 9 Oct 2026. Re-fires annually; script no-ops after success.
+    - cron: "0 20 8 10 *"
+  workflow_dispatch:
+    inputs:
+      force_promote:
+        description: "Bypass NZ date guard (still skips if already live at Issue 13+)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: promote-issue-13
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Need full history only for a clean push of main; default is fine.
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Promote Issue 13
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force_promote }}
+        run: |
+          set -euo pipefail
+          ARGS=(
+            --issue 13
+            --require-on-or-after 2026-10-09
+            --skip-if-live-at-least 13
+            --commit
+            --push
+          )
+          if [ "${FORCE}" = "true" ]; then
+            ARGS+=(--force)
+          fi
+          python3 scripts/promote-live-issue.py "${ARGS[@]}"
