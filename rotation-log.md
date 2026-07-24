@@ -1252,6 +1252,14 @@ bubble-tea-holding figure approaches outside). Ready to embed with the
 standard byline: "The Boba Side — original pen-and-paper gag, hand-drawn."
 Hayaku remains next in line after Boba Side's turn.
 
+**Cartoon slot for Issue 18, scheduled (24 July 2026):** Hayaku confirmed
+next after The Boba Side's Issue 17 turn (last ran Issue 13's second
+appearance). Continues the running volleyball season arc rather than
+starting a new story, per that skill's own serialization rule. No art
+supplied yet; Hayaku's written holiday-tournament special (deferred since
+the Halloween planning) is still available to slot in here if it still
+fits by then, otherwise a fresh non-holiday beat continuing the arc.
+
 ---
 
 ## Issue 15
