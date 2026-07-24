@@ -1219,6 +1219,14 @@ discarded. Cat vs Dog took Issue 14's holiday-stretch turn; The Boba Side,
 Doki Doki Mon, and Hayaku are all first in line once the cartoon slot
 resumes normal next-in-line rotation.
 
+**Second reader cameo added (24 July 2026, later same day):** a supplied
+drawing of Luffy from *One Piece*, titled "Ichi Piece" in its own
+lettering, joined Uma Onna in a combined Fan Art Spotlight row rather than
+its own separate row — a standalone new row (even at a shrunk image size)
+pushed Issue 15 to 3 pages; combining both cameos into one row with a
+single shared disclaimer line brought it back to 2. Disclosed as
+unaffiliated fan art of Luffy, not Shueisha/Toei.
+
 **Ads:** M&M'S and Indomie (real supplied product photo,
 `issues/indomie.png`), both real-brand parody, disclaimed, sharing a row
 on page 1. A bigger, three-column Armageddon Expo spread ad on page 2 (per
@@ -1286,6 +1294,16 @@ premise is dropped, not deferred, since the actual art supplied is a
 different gag entirely. Tea trivia (the East-meets-West fusion origin)
 woven into the panel's own caption text rather than the issue's dedicated
 trivia slot, which went to the choking-hazard fact instead.
+
+**Halloween Fan Art Spotlight, added post-assembly (24 July 2026):** two
+supplied drawings of Jack Skellington, Sally and Zero from *The Nightmare
+Before Christmas* — unlike Uma Onna's Issue 15 cameo, these are verbatim
+depictions of specific, heavily-merchandised Disney character designs, not
+a generic spooky-mood homage, so they needed the same disclosure treatment
+rather than an "original character" framing. Placed by swapping out the
+werewolf-costume classified (lightweight filler, no roster impact) rather
+than adding a new row, to keep Issue 14 at 2 pages. Captioned plainly as
+reader fan art, not affiliated with or endorsed by Disney.
 
 **Ads:** Fenwick Grove S'mores Co. (invented advertiser, Pearl Index-style
 SVG, no disclaimer needed) on page 1. A smaller Armageddon Expo
