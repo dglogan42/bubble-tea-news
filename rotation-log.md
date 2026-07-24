@@ -766,6 +766,360 @@ tea by design — a syndicated strip the way a real paper carries one). See
 retroactively redrawn** with this pycairo pass — that backfill, if wanted,
 is a separate future task; don't assume the archive already reflects it.
 
+**2027 holiday-themed planning, overview (planned, not yet built):** extends
+the paper's forward planning past the New Year's issue (the last occasion
+previously plotted out, per the notes above) into the next two quarters.
+Same standing rules as the Halloween/Christmas/New Year's notes above:
+issue numbers below are computed from the weekly Friday cadence set by
+Issue 1's 17 July 2026 dateline (each subsequent issue +7 days) and are
+**approximate, to be confirmed once the intervening issues (14 onward)
+are actually built** — a few days' drift either way is expected and
+fine. Persona rotation, Menace Watch's monthly cadence, and the
+four-strip cartoon rotation (Step 2c) all depend on what actually runs in
+Issues 16-29, none of which exists yet; treat every slot assignment below
+as an intent, recheck against the real rotation log once this stretch is
+closer.
+
+**Western horoscope, Issue 28 (Fri 22 Jan 2027) (planned, not yet
+built):** per direct request, a full 12-sign Western horoscope column —
+each tropical sun sign (per `Horoscope.md`'s date ranges at the repo
+root) matched to a bubble tea order or fortune with a comic personality
+read (e.g. "Capricorn: orders the same thing every time and judges you
+for asking what's new"). Placed in a January issue specifically so it
+runs a clean fortnight (14 days, 2 issues) ahead of the Chinese zodiac
+horoscope below — Issue 30's Chinese New Year dateline (Fri 5 Feb) sits
+exactly 2 issues/14 days after this one. Natural persona fit: Dana Foley
+(`epic-forecast-anchor`), turning her usual over-dramatic weather-forecast
+register on fortune-telling instead — an open call to confirm at build
+time rather than locked in, since it's not that skill's usual subject.
+**Meme-fuel:** "Gemini: 90% ice, 110% chaos, will absolutely regret this
+order by 3pm."
+
+**Valentine's Day build-up, January issues (Issues 25-29, Fri 1/8/15/22/29
+Jan 2027) (planned, not yet built):** rather than a single Valentine's
+issue, the theme runs as a slow build across all five January issues —
+same continuous-campaign pattern as the SEGA Yumicast run-up to Christmas
+above. An invented in-house advertiser (new name, no real-brand
+disclaimer needed — same footing as Modoo/Sir Tea/TeaDee from the ad
+backfill) runs an escalating "Valentine's Duo" promo across these issues,
+ramping toward the actual Valentine's issue below. Horatio McCallister's
+"Ask the Captain" runs a Valentine's-adjacent letter in each of these
+issues (standing column, just themed, no debut needed) — dating-over-the-
+lead-up questions, distinct from each other and from the Christmas-issue
+letter already logged. The Stickybeak keeps a running "who's got a
+Valentine's date" tease about the paper's own in-house cast across a
+couple of these issues (self-referential gossip, same footing as the New
+Year's Horatio tease — satirizing an in-house persona, not a real
+person). **Meme-fuel:** "Sources close to the Design Desk confirm: yes,
+that's a heart doodled next to the cat. No, she won't say whose."
+
+Real Valentine's Day itself (Sun 14 Feb) falls two days after Issue 31's
+Friday dateline — treat Issue 31 as the actual peak Valentine's issue,
+with Issue 30 (Fri 5 Feb) landing right on Chinese New Year instead (see
+below), meaning the two occasions sit back-to-back in the same month
+rather than in separate months. Per direct request, the January stretch
+carries the Valentine's *theme* even though the calendar peak lands in
+February.
+
+**Chinese New Year issue, Issue 30 (Fri 5 Feb 2027, the day before Sat 6
+Feb Lunar New Year — Year of the Goat/Sheep) (planned, not yet built):**
+- **Chinese zodiac horoscope** (per direct request, a companion piece to
+  the Western horoscope above, timed a fortnight later): all 12 Chinese
+  zodiac animals, each matched to a bubble tea order/fortune for the
+  incoming Year of the Goat/Sheep — per `Horoscope.md`'s sequence and
+  lunar-boundary rule, Goat/Sheep is active from Sat 6 Feb 2027 (the day
+  after this issue's own Friday dateline) through 25 Jan 2028, meaning
+  Issue 30 itself prints on the very last day of the outgoing Horse year.
+  Same Dana Foley fit as the Western piece above, if that persona covers
+  both, so the two horoscope columns read as a matched pair from the same
+  in-house "forecaster." (`Horoscope.md`'s own interactive dual-sign
+  lookup — prompting a reader for their birth date to compute both signs
+  at once — is a separate, richer feature worth considering for the
+  website (`site/`) as a "find your bubble tea horoscope" tool rather than
+  print; not needed to run this static column.) **Meme-fuel:** "Year of
+  the Goat: you will finally admit oat milk was never a compromise."
+- Skeletor's "In Memoriam" gets an easy, safety-clean subject for this
+  occasion: the outgoing Year of the Horse cup-sleeve design, "survived
+  by" the incoming Year of the Goat design — a discontinued seasonal
+  packaging item, not a living or once-living subject, same Step 0
+  boundary as every In Memoriam logged elsewhere. **Meme-fuel:** "Another
+  design, forgotten by spring. Bow to entropy, mortals."
+- Garfield's food critic column reviews a red-and-gold "prosperity"
+  limited flavor (osmanthus, red date, or brown sugar — invented
+  in-universe flavor name), in his usual gluttony-and-disdain register.
+  **Meme-fuel:** "Four stars. Would hoard for good luck. Still hate
+  Mondays."
+- Ad box: an invented in-house tea brand's Lunar New Year red-packet-
+  themed promo (new name, no real-brand disclaimer needed).
+- **Seasonal advertiser note (per direct request):** starting this
+  stretch, several festival issues carry a themed ad box pitched at that
+  occasion's real gifting category, same Pearl Index-style SVG creative
+  format as every other ad in this log. See the Valentine's, Mother's
+  Day, and Father's Day issues below for the specific placements.
+- **Second CNY ad box, red envelopes/notebooks (per direct request):** a
+  second invented local stationery/gift shop, running a hongbao
+  (red-envelope) and red-notebook gift-set promo — a real, well-known
+  Lunar New Year gifting category distinct from the tea brand's own
+  promo above, so the issue's two ad boxes don't overlap in category.
+  New invented name, no real-brand disclaimer needed, same footing as the
+  tea brand ad.
+- Joke of the Week: Q: What do you call a bubble tea shop's Lunar New
+  Year sale? / A: A chai-nese New Year special. New, distinct from every
+  joke logged in this file.
+- Bubble Tea Trivia: real fact — "Red is considered the luckiest color in
+  Chinese culture, which is why many bubble tea chains across Asia switch
+  to red-and-gold cup sleeves and packaging specifically for Lunar New
+  Year — the same red-envelope color logic behind hongbao gift money."
+  Distinct from every fact logged above (a packaging/color-symbolism
+  angle, not the pearl-milk origin dispute or any other already-used
+  fact).
+
+**Valentine's Day issue, Issue 31 (Fri 12 Feb 2027) (planned, not yet
+built):** the January build-up's payoff issue.
+- Priya Anand's Pearl Index runs a Valentine's-spending market-research
+  piece (couples' bubble tea spend, gift-card uptake) — same real-feeling-
+  survey format as her other Pearl Index columns. **Meme-fuel:** "1 in 3
+  couples report a mid-order breakup over who finishes the pearls."
+- Joke of the Week: Q: Why did the bubble tea blush on Valentine's Day? /
+  A: Because the barista called it "sweet enough already." New, distinct
+  from every joke logged in this file.
+- Bubble Tea Trivia: real fact, distinct from everything logged above —
+  "In Mandarin, '520' (wǔ èr líng) is internet shorthand for 'I love you'
+  (wǒ ài nǐ) because the numbers sound alike — May 20th has become an
+  unofficial second Valentine's Day across China and Taiwan, and bubble
+  tea chains regularly run '520' promotions alongside their February
+  ones." Ties the romance theme to a real, separate cultural fact rather
+  than repeating anything already logged.
+- **Ad boxes (per direct request), Valentine's gifting categories:**
+  - **Florist:** an invented local shop, "Fernhill Florals" — reuses the
+    fictional Fernhill Heights suburb already established in Issue 2's
+    outbreak bulletin for continuity, same footing as every other
+    invented local advertiser (no real-brand disclaimer needed).
+  - **Beauty/makeup:** MECCA — a real NZ/Australian beauty retailer, so
+    same real-brand parody guardrail as Cha Nui/HIKOCO/T2/Briscoes above:
+    a compact non-affiliation line ("Parody placement, not a real MECCA
+    ad."), Pearl Index-style SVG creative, satire aimed at the brand's own
+    well-known free-sample-turns-into-a-haul checkout ritual rather than
+    anything invented about the real company.
+  - **K-beauty:** a second, invented beauty advertiser — a fictional
+    K-beauty shop sited in Newmarket (or Ormiston, whichever fits the
+    layout better at build time), same invented-local footing as Fernhill
+    Florals, running alongside the real MECCA box rather than replacing
+    it, so the issue gets one real-brand ad and one invented one in this
+    category, same mix as the rest of the ad backfill.
+- Cartoon slot: whichever of the four strips (Step 2c) is due gets a
+  Valentine's-themed edition of its usual premise/arc-beat, same open-call
+  approach as the Halloween stretch's cartoon-reset note — not pinned to a
+  specific strip this far out. **Meme-fuel:** the panel's own caption is
+  the shareable unit here, same as any single-panel gag; pick whichever
+  strip's turn it is with an eye for a caption that reads fine cropped out
+  of context, same as the strongest past Boba Side panels.
+
+**Easter issue, Issue 37 (Fri 26 Mar 2027, two days ahead of Easter
+Sunday 28 Mar) (planned, not yet built):**
+- Cartoon slot: whichever strip is due gets a spring/egg-hunt-themed
+  edition, same open-call approach as above.
+- Joke of the Week: Q: Why did the boba pearl join the Easter egg hunt? /
+  A: It's used to being found at the bottom of the cup. New, distinct
+  from every joke logged.
+- Bubble Tea Trivia: real fact — "Much of the deep purple in bubble tea's
+  taro flavor is actually added dye — real taro root is a much paler,
+  greyish lavender on its own — the same appearance boost behind dyeing
+  plain Easter eggs brighter colors than a boiled egg naturally has."
+  Distinct from every fact logged above.
+- Kate Rodgers's Refill Rating: an Easter-adjacent film pick played
+  straight in her usual ratings-and-argument register (title TBD at build
+  time). **Meme-fuel:** a one-line verdict built to stand alone as a
+  pull-quote, e.g. "Two stars. The egg hunt was better plotted."
+
+**April Fools' issue, Issue 38 (Fri 2 Apr 2027, one day after 1 Apr)
+(planned, not yet built):** the whole issue leans into the gag premise
+rather than one bit — several personas run a deliberately absurd version
+of their usual column for one week only, clearly flagged as satire-
+within-satire (the paper is already fictional; this is the in-fiction
+paper's own cast pranking its in-fiction readers for a week), with a
+small-print reveal at the bottom of the issue naming which pieces were
+the week's gags, same wink-at-the-reader footing as the Doki Doki Mon
+"Boba Pearl Edition" idea logged above.
+- Baxter Kline's chaos-newsman column is a natural fit for an
+  over-the-top fake-breaking-news bit this week specifically (his format
+  already runs on escalating absurdity, so April Fools barely changes his
+  register). **Meme-fuel headline:** "BREAKING: Local Man Achieves Perfect
+  Pearl-to-Liquid Ratio, Region On Edge."
+- Steve Jobs's reality-distortion-field report could run a fake "product
+  announcement" bit (a ridiculous new drink format), consistent with that
+  persona's own reality-distortion-field voice. **Meme-fuel:** "One more
+  thing." — then the reveal of the ridiculous format, same beat-timing as
+  the real keynote catchphrase this persona already runs on.
+- **Two fake product-announcement ad boxes (per direct request):** run
+  alongside Steve Jobs's own fictional-format bit above as two further
+  April Fools' gags, same fake-announcement premise, both real companies
+  so both carry the same real-brand parody guardrail as MECCA/Mitre 10
+  above (a compact non-affiliation line each — "Parody placement, not a
+  real KFC ad." / "Parody placement, not a real Mentos ad." — plus the
+  issue's own small-print April Fools reveal at the bottom, same as every
+  other gag piece this issue):
+  - **KFC** "announces" a gravy-based bubble tea — brown-sugar boba
+    swapped for a gravy base, played completely straight in the copy the
+    way real fast-food April Fools stunts are (see the April Fools trivia
+    item above about brands captioning real stunts "not a joke").
+    **Meme-fuel:** "Finger Lickin' Boba."
+  - **Mentos** "invents" a peppermint pizza — leaning on the brand's real
+    fizz-reaction stunt reputation (the Mentos-and-soda geyser trick) for
+    the joke's internal logic: if Mentos already has a reputation for
+    unlikely reactions, a peppermint pizza is a small step further.
+    **Meme-fuel:** "The Freshmaker, now oven-baked."
+- The Stickybeak runs an obviously overblown "exclusive" as the week's
+  tabloid gag. **Meme-fuel:** "Sources close to the tapioca say this
+  changes everything." (sources declining to specify what "this" is).
+- Skeletor's In Memoriam could run an April Fools' fake-out: appears to
+  eulogize something for a paragraph before the reveal that the "loss" is
+  absurd/trivial (careful to stay inside that skill's own Step 0
+  boundary — the subject still has to be explicitly non-living even
+  inside the fake-out, so the joke is the misdirection about *what*
+  "died," not a fake human/animal death). **Meme-fuel:** the eulogy's
+  opening line should read genuinely mournful in isolation — "It never
+  saw the third floor." — so the punchline (revealed as, say, a dropped
+  lid) lands only once the full column is read.
+- Joke of the Week: Q: What's the best April Fools' prank a bubble tea
+  shop ever pulled? / A: Telling regulars the wide straws were
+  "temporarily out of stock, paper straws only." New, distinct from every
+  joke logged, and also doubles as this issue's trivia bridge (below)
+  rather than a standalone unrelated pun.
+- Bubble Tea Trivia: real fact — "April Fools' pranks are a genuine,
+  recurring marketing tradition across the food and beverage industry,
+  bubble tea chains included — fake 'flavor discontinued' or novelty-
+  product announcements are common enough on 1 April that some brands now
+  caption them 'not a joke' just to head off complaints." Distinct from
+  every fact logged above, and ties directly into the issue's own gag
+  premise rather than standing alone.
+
+**Mother's Day issue, Issue 43 (Fri 7 May 2027, two days ahead of Sun 9
+May) (planned, not yet built):**
+- Horatio McCallister's "Ask the Captain" runs a Mother's Day-adjacent
+  letter (gift dilemma, visiting in-laws, that kind of seasonal
+  question), standing column just themed. **Meme-fuel:** land it on his
+  fixed "Fair winds" sign-off, one line earlier than usual so it reads as
+  the whole column's thesis, e.g. "Every crew has one captain. Yours had
+  it first. Fair winds."
+- Rebecca Black's music review covers a real song about mothers (specific
+  pick TBD at build time — keep that skill's own Step 0 in force: factual
+  claims about the real song/artist stay accurate, her persona's opinion
+  is the layer on top). **Meme-fuel:** a single-line verdict built to
+  travel on its own, in her usual candid critic register — specific
+  wording depends on which song is picked at build time.
+- Priya Anand's Pearl Index: a Mother's Day gifting-spend piece (gift
+  cards, boxed drink sets), same format as the Valentine's one above but a
+  distinct angle (family gifting, not couples' spend). **Meme-fuel:**
+  "62% of gift-card boba orders get 'accidentally' redeemed by the buyer
+  first."
+- **Ad boxes (per direct request), Mother's Day gifting categories:**
+  - **Florist:** Fernhill Florals' second appearance (same invented shop
+    from the Valentine's issue above, continuity rather than a new
+    advertiser), Mother's Day bouquet angle this time instead of
+    Valentine's.
+  - **Scented candles:** a new invented local advertiser, "Birchfield
+    Candle Co." — reuses the fictional Birchfield Apartments complex
+    already established in Issue 4's outbreak bulletin, same continuity
+    move as Fernhill Florals above. No real-brand disclaimer needed.
+- Joke of the Week: Q: What did the boba drink get its mum for Mother's
+  Day? / A: Nothing — it's already the pearl of her collection. New,
+  distinct from every joke logged.
+- Bubble Tea Trivia: real fact — "In most Asian households, tea-drinking
+  at home predates the shaken, iced bubble tea format by generations —
+  milk tea's classic hot, home-brewed form is usually something a kid
+  first tastes at their mother's table, long before a shop version ever
+  enters the picture." Distinct from every fact logged above.
+
+**Father's Day issue, Issue 49 (Fri 18 Jun 2027, two days ahead of the
+US/UK-style Father's Day, Sun 20 Jun) (planned, not yet built — per direct
+request, played as an imported date):** New Zealand's actual Father's Day
+is the first Sunday of September, not June — this issue leans into that
+mismatch as the joke's engine rather than pretending the paper doesn't
+know its own setting.
+- A rotating persona (natural fit: Clem Whitlock or The Stickybeak) gets
+  a bit built around a local shop running a "Father's Day" promo on the
+  borrowed June date, grumbling that it's an imported American date and
+  the real one is still three months off. **Meme-fuel:** "Dad's getting
+  celebrated on an overseas timezone's calendar and he doesn't even know
+  it."
+- Joke of the Week: Q: What do you call a dad who orders his bubble tea
+  exactly the same way every single time? / A: Pre-dad-ictable. New,
+  distinct from every joke logged.
+- Bubble Tea Trivia: real fact, doubling as this issue's own premise
+  rather than a separate bubble-tea fact — "Father's Day isn't a single
+  global date: the US and UK mark it the third Sunday of June, but New
+  Zealand and Australia actually celebrate on the first Sunday of
+  September — so any 'Father's Day' promotion a shop runs here in June is
+  borrowing an overseas date, not the local one." Distinct from every fact
+  logged above.
+- **Ad box (per direct request), hardware:** Mitre 10 — a real NZ
+  hardware chain, so same real-brand parody guardrail as MECCA above and
+  Cha Nui/HIKOCO/T2/Briscoes elsewhere in this log: a compact
+  non-affiliation line ("Parody placement, not a real Mitre 10 ad."),
+  Pearl Index-style SVG creative, playing the "tools he'll never admit he
+  actually wants" angle into this issue's own borrowed-date joke rather
+  than standing alone.
+- **Note for whoever builds this:** a real NZ Father's Day issue (first
+  Sunday of September 2027 = Sun 5 Sep, closest to Issue 60, Fri 3 Sep) is
+  a natural companion occasion if wanted later — not planned in detail
+  here, just flagged so it isn't forgotten when issues past 53 get
+  planned.
+
+**1st Anniversary Special, Issue 53 (Fri 16 Jul 2027, one day ahead of
+Issue 1's own 17 Jul 2026 dateline) (planned, not yet built):** the
+paper's biggest occasion since launch — treat with at least as much extra
+content as the Christmas issue got, not a normal week with one extra
+line.
+- **Editor's note from Gordon Slate:** a special one-year retrospective
+  op-ed, same different-format-from-Menace-Watch footing as his New
+  Year's resolutions bit — reflective and self-congratulatory in his
+  usual blustery register, not an unmasking column. Doesn't count against
+  the Menace Watch cadence tracker, same rule as the New Year's note.
+  **Meme-fuel:** "One year of holding this paper's cast accountable. You're
+  welcome."
+- **Priya Anand's Pearl Index:** "Year One by the Numbers" — a
+  retrospective market-research piece over the whole run (issues
+  published, advertisers hosted, personas debuted), tabulated in her
+  usual real-feeling-survey format. **Meme-fuel:** "52 issues. Zero
+  repeated Menace Watch targets. One very tired puzzlesmith."
+- **Freya Wilcox's Design Desk:** a one-year retrospective on her running
+  cat/boba correlation bit — looking back at the correlations she's
+  "found" over the year. **Meme-fuel:** "Correlation: 0.94. Causation:
+  still pending peer review."
+- **Kate Rodgers's Refill Rating:** a clip-show format looking back at
+  her most contested rating of the year so far (specific pick TBD at
+  build time). **Meme-fuel:** "Readers still email me about this one.
+  I stand by it."
+- **Community-outbreak-bulletin:** a "one year later" follow-up on
+  Issue 1's original Willowmere gnome outbreak, a serialized callback
+  rather than a new unrelated fad — matches this format's own precedent of
+  resolving earlier issues' threads (the Four Puzzlers/Counter Queue
+  callbacks already logged). **Meme-fuel:** "The gnomes never left. They
+  unionized."
+- **Cartoon slot exception:** all four rotating strips (The Boba Side,
+  Hayaku, Cat vs Dog, Doki Doki Mon) each get a small anniversary cameo in
+  this one issue instead of the usual strict one-per-issue rule — same
+  footing as the holiday-stretch's cartoon-rotation reset above, a
+  deliberate one-off exception for a milestone issue rather than a
+  permanent rule change. **Meme-fuel:** four different cameo panels give
+  four separate shareable crops from one issue — worth cutting each as
+  its own social post rather than only promoting the issue as a whole.
+- **Advertiser thank-you note:** a retrospective ad-box collage nodding to
+  the real-brand advertisers who've run over the year (Overload NZ, Cha
+  Nui, HIKOCO, T2) — each still needs its own non-affiliation line if
+  actually pictured again, same guardrail as every other appearance of
+  those names.
+- Joke of the Week: Q: How does Bubble Tea News celebrate turning one? /
+  A: By steeping up its game for another year. New, distinct from every
+  joke logged.
+- Bubble Tea Trivia: real fact — "Bubble tea itself is generally dated to
+  mid-1980s Taichung, Taiwan — meaning the drink is now over forty years
+  old, and this paper's first birthday lands squarely inside its fifth
+  decade." Distinct from the origin-dispute trivia already logged (that
+  one's about *which* teahouse invented it; this one's just the
+  approximate age), and from every other fact in this file.
+
 ---
 
 ## Issue 13
