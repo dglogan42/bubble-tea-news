@@ -88,6 +88,12 @@ Halloween above):**
   fair-use scope as Ichi Piece above (Hanna-Barbera IP: short,
   standalone, non-commercial, invented dialogue, not a scene-for-scene
   retelling).
+- **Rebecca Black's music review** (`long-game-music-review`): reviews
+  Michael Bublé's Christmas music. Real, living artist and real music,
+  so keep that skill's own Step 0 in force — factual claims about the
+  actual songs/album (personnel, release details) stay accurate; Rebecca
+  Black's opinion and voice are the persona layer on top, not a claim
+  that the real her wrote or endorses the review.
 
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
