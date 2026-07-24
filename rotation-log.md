@@ -203,12 +203,12 @@ bump confirmed real but geographically tight (within four blocks of the
 convention centre only).
 
 **Cartoon slot:** Hayaku takes its second turn, next after Issue 12's
-Boba Side in the Boba Side/Hayaku/Cat vs Dog/Doki Doki Mon rotation. No
-new source photo was available this round, so it runs as a labelled
-text-only placeholder rather than reusing Issue 9's debut art
-(`issues/hayaku-issue9-debut.png` stays put, not duplicated in). Whoever
-assembles a future Hayaku turn should supply fresh art rather than
-carrying this placeholder forward twice.
+Boba Side in the Boba Side/Hayaku/Cat vs Dog/Doki Doki Mon rotation. The
+text-only placeholder used at first assembly was replaced with actual
+source art, `issues/hayaku-issue-13.png` (a rough pencil-sketch scan, not
+the inked style Issue 9's debut used), swapped into the panel the same
+way Issue 9's art was embedded. `issues/hayaku-issue9-debut.png` stays
+put, not duplicated in.
 
 **Rotating slots** (per Issue 12's pool note — exclusion window shrunk
 to Issue 12's roster only, reopening Sebastian, Robin Leach and The
