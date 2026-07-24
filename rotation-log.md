@@ -10,6 +10,33 @@ top.
 **Menace Watch tracker:** last ran Issue 11. Not due again until roughly
 Issue 15 — leave that slot to a rotating persona in Issues 12–14.
 
+**Skeletor Halloween special (planned, not yet built):** Issues 14 and 15
+give Skeletor's "In Memoriam" (`skeletor-obituary-column`) extra room to
+run long — a Halloween-special stretch of the column rather than its
+usual 120-200 word standing slot — in both issues, not just one. Still
+governed by that skill's Step 0-B: subjects stay explicitly non-human and
+never-alive-to-begin-with (a discontinued seasonal flavor, a defunct
+costume shop, a rained-out trick-or-treat night), never a real or
+fictional death, even with the spookier dressing. Apply when Issues 14
+and 15 are actually assembled — neither exists yet as of this note
+(24 July 2026); Issue 13 hasn't gone live either.
+
+**Halloween specials extended to all critic slots (planned, not yet
+built):** same two issues, same occasion — Issues 14 and 15 also give
+every critic-type persona a Halloween-themed edition of their usual
+column, not just Skeletor: Kate Rodgers's film review
+(`kate-rodgers-film-review`, Refill Rating — a horror/seasonal pick),
+Garfield's food critic column (`canon-fanfic-vignette` Persona 3 — a
+Halloween-candy or seasonal-menu review), Rebecca Black's music review
+(`long-game-music-review` — a Halloween-playlist or novelty-song angle),
+and Daffy Duck's book critic column (`canon-fanfic-vignette` Persona 5 —
+a spooky-story pick). Each still runs under its own skill's normal voice
+and Step 0 rules; "Halloween-themed" changes the subject matter for that
+week only, not the format or length (unlike Skeletor's slot, which is
+also running long those two issues per the note above). If any other
+critic persona joins the roster before Issues 14/15 are assembled, fold
+it into this same Halloween-themed treatment too.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
