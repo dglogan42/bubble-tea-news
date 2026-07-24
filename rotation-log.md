@@ -37,20 +37,70 @@ also running long those two issues per the note above). If any other
 critic persona joins the roster before Issues 14/15 are assembled, fold
 it into this same Halloween-themed treatment too.
 
+**Cartoon rotation reset for the holiday stretch (planned, not yet built,
+per direct request):** the normal strict "next in line" order (Step 2c of
+`bubble-tea-news-editor`) is **suspended** across the whole holiday
+stretch — the Halloween pair (Issues 14/15), the Christmas issue, and the
+New Year's issue. Instead of locking Cat vs Dog to Issue 14 and Doki Doki
+Mon to Issue 15 by strict turn order, any of the four rotating strips
+(The Boba Side, Hayaku, Cat vs Dog, Doki Doki Mon) is fair game for
+whichever holiday special fits it best, decided at build time rather than
+pinned now — this is what opens the door for a Hayaku holiday special
+even though Hayaku already had its Issue 13 turn. Once the holiday
+stretch ends, resume the normal next-in-line rotation, accounting for
+whichever strips actually got a turn during the reset window so the
+long-run rotation stays fair rather than starting over from scratch.
+
 **Cartoon slot goes Nightmare Before Christmas-themed (planned, not yet
-built):** same two issues again — whichever strip is up for its turn in
-the cartoon-slot rotation (Step 2c of `bubble-tea-news-editor`; per the
-rotation so far — Boba Side in Issue 12, Hayaku in Issue 13 — Cat vs Dog
-is next in line for Issue 14 and Doki Doki Mon for Issue 15) runs a
-Nightmare Before Christmas-themed panel for both weeks instead of its
-usual premise. Same franchise-IP fair-use guardrail as Skeletor's column
+built):** for the Halloween pair specifically — whichever strip fits the
+crossover premise best under the reset above runs a Nightmare Before
+Christmas-themed panel for both weeks instead of its usual premise (Cat
+vs Dog and Doki Doki Mon are the likeliest fits, but not locked in per
+the reset). Same franchise-IP fair-use guardrail as Skeletor's column
 (Step 0-A of `skeletor-obituary-column`, also the general house rule used
 for `canon-fanfic-vignette`): aesthetic homage only — Halloween-meets-Christmas
 mood, Burton-style visual language — not verbatim reproduction of Jack
-Skellington or other actual copyrighted character designs. If Cat vs Dog
-or Doki Doki Mon's own gag/serialized format doesn't suit the crossover
-premise well when it's actually built, The Boba Side can pick up the slot
-instead per that skill's own "always available to fill a gap" standing.
+Skellington or other actual copyrighted character designs. If none of the
+gag/serialized strips suit the crossover premise well when it's actually
+built, The Boba Side can pick up the slot instead per that skill's own
+"always available to fill a gap" standing.
+
+**Hayaku holiday special (planned, not yet built):** opened up by the
+rotation reset above — Hayaku picks up one of the holiday stretch's
+cartoon slots (exact issue not pinned yet; a natural fit is continuing
+the running volleyball match/season arc with a holiday-tournament beat,
+per that skill's own serialization rule). Which specific issue it lands
+in is an open call for whoever builds out the holiday stretch.
+
+**Bubble Tea Trivia, Hayaku strip tie-in (planned, not yet built):** a
+trivia item for whichever holiday-stretch issue Hayaku's special lands
+in, written to bridge into the strip rather than stand alone —
+
+> Grabbing bubble tea after practice is a real fixture of school sports
+> culture across Taiwan and Japan — teams treating a shared round of
+> boba as the informal end-of-practice ritual, the same team-bonding beat
+> Hayaku's matches lean on.
+
+Real fact (post-practice bubble tea as a team-bonding ritual in school
+sports culture), distinct from every other trivia item logged in this
+file, used here for the team-sport bridge into the strip.
+
+**Exception to the reset — "Doki Doki Mon: Boba Pearl Edition" (planned,
+not yet built, per direct request, marked "maybe"):** instead of (or
+alongside) a normal cartoon-slot panel, Doki Doki Mon's holiday-stretch
+appearance could be a fictional video-game tie-in ad — "Doki Doki Mon:
+Boba Pearl Edition" — sold for the SEGA Yumicast, crossing the in-house
+strip's own IP into the Yumicast ad campaign rather than running as a
+separate panel. Delivered as an SVG mock game-box/ad creative, same
+Pearl Index-style format as the rest of the ad backfill, not a playable
+game. The "Pearl Edition" name riffs on the real monster-collecting
+genre's version-naming convention (Pearl/Diamond, etc.), but Doki Doki
+Mon is itself wholly original in-house IP per its own skill — no
+external franchise fair-use concern beyond the genre wink already built
+into that strip. Still just a "maybe" per the request wording — whether
+this replaces Doki Doki Mon's cartoon-slot turn outright or runs as an
+extra ad-box crossover alongside it is an open call for whoever builds
+the holiday stretch.
 
 **Bubble Tea Trivia, Nightmare Before Christmas panel tie-in (planned,
 not yet built):** a trivia item for the Halloween pair, written to bridge
