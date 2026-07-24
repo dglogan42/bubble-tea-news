@@ -1325,6 +1325,19 @@ ad-box has never been governed by Step 3's exclusion window, only by
 whether an advertiser is lined up, so this doesn't count as a back-to-back
 repeat of his rotating slot.
 
+**Page 2 layout gap, corrected post-assembly (24 July 2026):** three of
+page 2's rows (puzzle+ad, Skeletor+Horatio, Winnie Zhao+Clem Whitlock)
+only had two children in the template's 3-column grid with no
+`grid-column: span` set, so each rendered a blank third column rather
+than filling the sheet. Fixed by adding a third item to each: a second
+parody ad box for Armageddon Expo (disclaimed placement, no persona,
+next to Armco in the puzzle row and a deliberate nod to Priya Anand's
+con-weekend piece below), Kate Rodgers's film review (Skeletor+Horatio
+row), and Freya Wilcox's Design Desk (Winnie+Clem row, correlating this
+issue's breaking cup-cosy count against cat registrations). Kate Rodgers
+and Freya Wilcox had originally sat this issue out per the note below;
+that's superseded now that both actually ran.
+
 **Priya Anand closes the loop:** her Pearl Index piece delivers the
 "full weekend numbers" she flagged as provisional back in Issue 11
 (n=210 at the time), now closed out at n=612 with the con-weekend badge
@@ -1354,9 +1367,11 @@ Stickybeak from Issue 10, plus the full Issue 11 rotating roster):
 
 All nine of the available pool ran this issue, clearing it completely —
 the first time a pool's been fully cleared with nothing held back for
-the following issue. Kate Rodgers and Freya Wilcox sat this one out
-(standing roster, not exclusion-bound, simply resting after running
-Issue 12).
+the following issue. Kate Rodgers and Freya Wilcox were originally left
+resting (standing roster, not exclusion-bound) after running Issue 12,
+but were added post-assembly (24 July 2026) to fill the page 2 layout
+gap noted above — both still standing roster, not exclusion-bound, so
+this doesn't affect Issue 14's pool.
 
 **Not used this issue** (available first for Issue 14): the entire
 Issue 12 rotating roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield,
