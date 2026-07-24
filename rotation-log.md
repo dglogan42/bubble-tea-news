@@ -69,6 +69,15 @@ plus `docs/issues/boba-issue2.png` added so the Boba Side's real
 hand-drawn art renders live instead of the old "awaiting illustration"
 placeholder.
 
+**Issue 13 auto-refresh (scheduled):** staged under `live-queue/issue-13/`
+and promoted by `.github/workflows/promote-issue-13.yml` (cron
+`0 20 8 10 *` UTC = 09:00 NZDT on 9 October) calling
+`scripts/promote-live-issue.py`. Guards: NZ date must be on/after
+2026-10-09, and live must not already be Issue 13+. Manual early promote:
+Actions → "Promote Issue 13 to live site" → `force_promote`, or run the
+script locally with `--force`. Until that fires, the live site stays on
+whichever issue is currently pinned (Issue 2 as of the July 2026 refresh).
+
 **The Boba Side (`the-boba-side-cartoon`):** debuted as a bonus panel on
 Issue 8's back page, then backfilled with a fresh, distinct gag into
 Issues 1–7 as well (`issues/issue-N.html`, matching `site/issue-N.html`

@@ -45,6 +45,14 @@ the custom domain (DNS pointed at GitHub Pages' four A records:
 `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
 `185.199.111.153`).
 
+**Calendar lock:** root `index.html` / `print-edition.html` (and the
+`docs/` mirrors) only ever show the issue whose in-fiction dateline has
+arrived. Future issues live in `issues/` without spoiling the showcase.
+**Issue 13** (9 October 2026) is pre-staged in `live-queue/issue-13/` and
+auto-promoted that morning by
+`.github/workflows/promote-issue-13.yml` → `scripts/promote-live-issue.py`.
+See `live-queue/README.md` for the queue layout and manual override.
+
 ## Content disclaimer
 
 All content is satire/character-voice fiction. Original personas

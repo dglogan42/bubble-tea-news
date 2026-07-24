@@ -1,0 +1,420 @@
+<title>Bubble Tea News</title>
+<style>
+  :root {
+    --bg: #E9E3D6;
+    --surface: #F7F3EA;
+    --ink: #211C18;
+    --ink-soft: #6B5D52;
+    --taro: #6B4E80;
+    --sugar: #A5672E;
+    --matcha: #6C7F52;
+    --breaking: #A13C2E;
+    --rule: #DCD2C2;
+    --shadow: 0 1px 0 rgba(33,28,24,0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B1714;
+      --surface: #221D19;
+      --ink: #EDE6DB;
+      --ink-soft: #A99C8E;
+      --taro: #B28FC7;
+      --sugar: #D89A5C;
+      --matcha: #9DB27C;
+      --breaking: #E0685A;
+      --rule: #3A322B;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1B1714; --surface: #221D19; --ink: #EDE6DB; --ink-soft: #A99C8E;
+    --taro: #B28FC7; --sugar: #D89A5C; --matcha: #9DB27C; --breaking: #E0685A;
+    --rule: #3A322B; --shadow: 0 1px 0 rgba(0,0,0,0.4);
+  }
+  :root[data-theme="light"] {
+    --bg: #E9E3D6; --surface: #F7F3EA; --ink: #211C18; --ink-soft: #6B5D52;
+    --taro: #6B4E80; --sugar: #A5672E; --matcha: #6C7F52; --breaking: #A13C2E;
+    --rule: #DCD2C2; --shadow: 0 1px 0 rgba(33,28,24,0.07);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, Georgia, Cambria, "Times New Roman", serif;
+    display: flex;
+    justify-content: center;
+    padding: clamp(16px, 4vw, 48px) 14px 60px;
+  }
+
+  .paper {
+    width: min(1180px, 100%);
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    text-align: center;
+    padding: clamp(20px, 4vw, 34px) 10px 18px;
+  }
+  .kicker-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .kicker-row span:not(:last-child)::after { content: "·"; margin-left: 14px; color: var(--rule); }
+
+  .masthead h1 {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(44px, 9vw, 84px);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    line-height: 0.95;
+  }
+  .masthead h1 .bubble { color: var(--taro); }
+  .masthead h1 .tea { color: var(--sugar); }
+
+  .tagline {
+    margin: 10px 0 0;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: clamp(13px, 2vw, 16px);
+  }
+
+  .pearls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 0 0;
+  }
+  .pearls span {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--ink);
+    opacity: 0.75;
+  }
+
+  .double-rule {
+    border: 0;
+    border-top: 3px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    height: 4px;
+    margin: 16px 0 0;
+  }
+
+  /* ---------- Breaking banner ---------- */
+  .breaking {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--breaking);
+    border-radius: 4px;
+    padding: 20px clamp(18px, 4vw, 30px);
+    margin: 22px 0;
+    box-shadow: var(--shadow);
+  }
+  .breaking .kicker { color: var(--breaking); }
+  .breaking h2 {
+    margin: 6px 0 8px;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 800;
+    text-wrap: balance;
+  }
+
+  /* ---------- Grid system (the reusable template) ---------- */
+  .section-label {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 34px 0 14px;
+  }
+  .section-label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  .grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid.two { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 860px) {
+    .grid, .grid.two { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent, var(--taro));
+  }
+  .card .kicker {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent, var(--taro));
+    margin: 6px 0 8px;
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+  .card .byline {
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .card p.teaser {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink);
+    flex: 1;
+  }
+  .card .skill-tag {
+    margin-top: 14px;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    opacity: 0.8;
+  }
+
+  /* ---------- Inside this edition index ---------- */
+  .index-box {
+    margin-top: 40px;
+    background: var(--surface);
+    border: 1px dashed var(--rule);
+    border-radius: 5px;
+    padding: 22px clamp(18px, 4vw, 30px) 26px;
+  }
+  .index-box h4 {
+    margin: 0 0 14px;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .index-list {
+    columns: 3 200px;
+    column-gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .index-list li {
+    font-size: 13px;
+    line-height: 1.9;
+    break-inside: avoid;
+  }
+  .index-list b { color: var(--ink); }
+  .index-list span { color: var(--ink-soft); }
+  .index-list .soon { font-style: italic; opacity: 0.75; }
+
+  /* ---------- Colophon ---------- */
+  .colophon {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .colophon p {
+    margin: 0 0 6px;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+</style>
+
+<div class="paper">
+
+  <header class="masthead">
+    <div class="kicker-row">
+      <span>Edition No. 13</span>
+      <span>9 October 2026</span>
+      <span>Steeped Weekly</span>
+    </div>
+    <h1><span class="bubble">Bubble</span> <span class="tea">Tea</span> News</h1>
+    <p class="tagline">All the news that's steeped to print.</p>
+    <div class="pearls" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <hr class="double-rule">
+  </header>
+
+  <section class="breaking">
+    <p class="kicker">Breaking &middot; Fenwick Grove</p>
+    <h2>Hand-Knitted Cup Cosies Found Looped Over Bike Racks Citywide, Risk Assessed Low</h2>
+    <p class="teaser">Case definition: any tea-cup-sized knitted cosy, granny-square pattern, found looped over a bike rack or lamppost handle with no note attached. Fourteen spotted as of Thursday along the Fenwick Grove greenway alone. <span class="skill-tag">— community-outbreak-bulletin</span></p>
+  </section>
+
+  <div class="section-label">Top Stories</div>
+  <div class="grid">
+    <article class="card" style="--accent: var(--taro)">
+      <p class="kicker">Markets &middot; The Pearl Index</p>
+      <h3>Con-Weekend Correlation, Closed Out: The Badge Bump Was Real</h3>
+      <p class="byline">by Priya Anand, The Pearl Index</p>
+      <p class="teaser">Final tally against n=612: counters within four blocks of the convention centre finished the weekend 12% above trend (&plusmn;3.6% MOE). Outside that radius, flat to trend. A real, geographically tight badge bump &mdash; and Priya still has a badge and a conflict of interest.</p>
+      <p class="skill-tag">pearl-index-market-researcher</p>
+    </article>
+    <article class="card" style="--accent: var(--sugar)">
+      <p class="kicker">Business &middot; Markets</p>
+      <h3>Held The Short Two Days Past The Point Of Comfort</h3>
+      <p class="byline">by Sherman McCoy</p>
+      <p class="teaser">Everyone told him to cover by Tuesday. He covered Thursday, alone in the kitchen at 6am in yesterday's polo. Marshall sat by the door, unimpressed. Still won by four points.</p>
+      <p class="skill-tag">master-of-the-universe-columnist</p>
+    </article>
+    <article class="card" style="--accent: var(--matcha)">
+      <p class="kicker">Canon Vignette</p>
+      <h3>The Console Nobody Reset Properly</h3>
+      <p class="byline">by Luke Skywalker</p>
+      <p class="teaser">Found the old training remote still active in a supply crate nobody had inventoried. Ran the blast-shield drill blind, missed twice, hit the third clean. Some things you keep testing long after there's anyone left to grade you on it.</p>
+      <p class="skill-tag">canon-fanfic-vignette</p>
+    </article>
+  </div>
+
+  <div class="section-label">Lifestyle, Gossip &amp; Home Front</div>
+  <div class="grid">
+    <article class="card" style="--accent: var(--breaking)">
+      <p class="kicker">Lifestyle &middot; Champagne Wishes</p>
+      <h3>Inside A Herne Bay Spring Ball, Where The Marquee Cost More Than The House Next Door</h3>
+      <p class="byline">by Robin Leach</p>
+      <p class="teaser">Champagne wishes and caviar dreams under a marquee with its own chandelier, four ice sculptures, and a string quartet flown in because the local one "read wrong for the light."</p>
+      <p class="skill-tag">champagne-wishes-dispatch</p>
+    </article>
+    <article class="card" style="--accent: var(--taro)">
+      <p class="kicker">Kiss &amp; Tell</p>
+      <h3>Darling, The Spring Ball Had A Second Guest List</h3>
+      <p class="byline">The Stickybeak</p>
+      <p class="teaser">Word from your Stickybeak: a quiet second guest list, the kind that gets you through a side entrance and a considerably better glass of champagne. The rivalry for that side entrance was fiercer than anything inside.</p>
+      <p class="skill-tag">tabloid-gossip-voice</p>
+    </article>
+    <article class="card" style="--accent: var(--sugar)">
+      <p class="kicker">Domestic Desk</p>
+      <h3>The First Mow Of The Season, Same As Every Season</h3>
+      <p class="byline">by Sebastian</p>
+      <p class="teaser">Grass came in fast this year. Sebastian pushed the mower in straight lines nobody would measure, the way he has every spring for longer than the mower itself has existed in its current form.</p>
+      <p class="skill-tag">faded-hero-voice</p>
+    </article>
+  </div>
+
+  <div class="section-label">Weather, Shopping &amp; Rural</div>
+  <div class="grid">
+    <article class="card" style="--accent: var(--matcha)">
+      <p class="kicker">Weather &middot; Epic Forecast</p>
+      <h3>The First Real Warm One, And I Don't Trust It</h3>
+      <p class="byline">by Dana Foley</p>
+      <p class="teaser">Twenty-one degrees by early afternoon, the first genuine spring number all month. Enjoy the jacket-off hour. Keep the jacket within reach.</p>
+      <p class="skill-tag">epic-forecast-anchor</p>
+    </article>
+    <article class="card" style="--accent: var(--breaking)">
+      <p class="kicker">Shopping &middot; Seeker's Eye</p>
+      <h3>One Listing Ships The Actual Weight, Forty Don't</h3>
+      <p class="byline">by Winnie Zhao</p>
+      <p class="teaser">Everyone hunting a chunky knit throw wades through forty near-identical listings. One listing, buried three pages deep, actually ships the yarn weight the photo promises.</p>
+      <p class="skill-tag">seekers-eye-shopper</p>
+    </article>
+    <article class="card" style="--accent: var(--taro)">
+      <p class="kicker">Rural &middot; Ridgeline Weekly</p>
+      <h3>First Lambs Counted, Doyle Ahead By A Nose</h3>
+      <p class="byline">by Clem Whitlock</p>
+      <p class="teaser">Doyle's tally ticked over first, three sets of twins before Higgins had his first single. Down in town they're excited about a knitted cup cosy; out here, a live lamb count is still the only tally that matters.</p>
+      <p class="skill-tag">ridgeline-weekly-correspondent</p>
+    </article>
+  </div>
+
+  <div class="section-label">Puzzle, Cartoon &amp; Standing Staff</div>
+  <div class="grid">
+    <article class="card" style="--accent: var(--sugar)">
+      <p class="kicker">Puzzle of the Week</p>
+      <h3>Which Size Did Ana Actually Order?</h3>
+      <p class="byline">by Ken Endo</p>
+      <p class="teaser">Last week resolved: Kiri closed the evening shift. This week: Ana, Bo, and Cy each ordered a different size &mdash; Bo didn't order the large; Cy's order sat one size up from Ana's. Answer next week.</p>
+      <p class="skill-tag">ken-endo-puzzle-master</p>
+    </article>
+    <article class="card" style="--accent: var(--matcha)">
+      <p class="kicker">Hayaku &middot; Second Appearance</p>
+      <h3>Hayaku (pencil-sketch strip)</h3>
+      <p class="byline">syndicated cartoon slot; alternates with The Boba Side</p>
+      <img src="issues/hayaku-issue-13.png" alt="Hayaku, a rough pencil-sketch four-row strip: raised hands and a stylized head in the top row; middle rows of torn-paper captions and sketched faces in glasses; a bottom row with a small figure and repeated lettering." style="width: 100%; max-width: 220px; height: auto; margin: 6px auto 0; display: block; border-radius: 3px;">
+      <p class="skill-tag">hayaku-cartoon</p>
+    </article>
+    <article class="card" style="--accent: var(--taro)">
+      <p class="kicker">Bubble Tea Trivia</p>
+      <h3>Two Shops, One Unresolved Rivalry</h3>
+      <p class="byline">Did You Know?</p>
+      <p class="teaser">Chun Shui Tang in Taichung and Hanlin Tea Room in Tainan have spent decades in genuine, unresolved dispute over which one invented bubble tea first, both dating their claim to the early 1980s.</p>
+      <p class="skill-tag">bubble-tea-trivia</p>
+    </article>
+  </div>
+
+  <div class="section-label">In Memoriam &amp; Ask the Captain</div>
+  <div class="grid two">
+    <article class="card" style="--accent: var(--breaking)">
+      <p class="kicker">In Memoriam</p>
+      <h3>The Punch Card Loyalty Stamp, Retired For An App</h3>
+      <p class="byline">by Skeletor</p>
+      <p class="teaser">Fenwick Grove's corner counter retired its ink-stamped loyalty card for a QR-linked app. Mourn the card if sentiment moves you. Its replacement tracks considerably more about you than a stamp ever did.</p>
+      <p class="skill-tag">skeletor-obituary-column</p>
+    </article>
+    <article class="card" style="--accent: var(--matcha)">
+      <p class="kicker">Ask the Captain</p>
+      <h3>New To The Neighbourhood And Nobody's Waved Back Yet</h3>
+      <p class="byline">by Horatio McCallister</p>
+      <p class="teaser">"I moved to Fenwick Grove last month and I still don't know anyone on my own street." A harbour doesn't introduce itself to a new boat either, lad. Offer the first wave twice before ye judge the second one withheld. Fair winds.</p>
+      <p class="skill-tag">horatio-mccallister-personals-column</p>
+    </article>
+  </div>
+
+  <div class="index-box">
+    <h4>Also inside this edition</h4>
+    <ul class="index-list">
+      <li><b>Joke of the Week</b> &mdash; <span>why the tapioca pearl got promoted</span></li>
+      <li><b>Toyota ad box</b> &mdash; <span>parody placement, page 1 (first issue without Overload NZ)</span></li>
+      <li><b>Your Ad Here</b> &mdash; <span>page 2 placeholder &mdash; Lewis Hamilton resting</span></li>
+      <li class="soon"><b>Resting this issue</b> &mdash; <span>Kate Rodgers, Freya Wilcox, and the full Issue 12 rotating roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield, Baxter Kline, Te Mana Whakaatu classifieds, Lewis Hamilton) &mdash; reopening for Issue 14</span></li>
+    </ul>
+  </div>
+
+  <footer class="colophon">
+    <p>BUBBLE TEA NEWS is a fictional publication assembled from this skills library's persona pieces.</p>
+    <p>Named-IP and real-person bylines carry their own house disclaimers (parody, non-affiliation, invented subjects) per each skill's SKILL.md &mdash; see individual sections for details.</p>
+    <p>All headlines, quotes, and figures above are illustrative examples, not real news.</p>
+  </footer>
+
+</div>

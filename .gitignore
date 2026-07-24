@@ -13,6 +13,8 @@ desktop.ini
 .tmp/
 *-test.pdf
 *.scratch.*
+__pycache__/
+*.py[cod]
 
 # Local browser profiles used for headless PDF export
 edge-print-profile/
