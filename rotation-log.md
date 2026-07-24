@@ -102,6 +102,31 @@ Halloween above):**
   isn't a new debut, just this issue's fresh invented question per that
   skill's own Step 0-B (illustrative letter-writer, never a real person).
 
+**New Year's issue, editor's note from Gordon Slate (planned, not yet
+built):** a New Year's resolutions bit in Gordon's voice (`menace-watch-editorial`'s
+persona) — self-important, blustery, absolutely convinced his resolutions
+matter more than everyone else's — for the issue whose dateline lands
+around New Year's, one week after the Christmas issue above (so roughly
+the very start of January 2027; same "approximate until closer to the
+time" caveat as the Christmas issue numbering). This is a **different
+format from his usual Menace Watch column**, not a "Hero or Menace?"
+unmasking bit — a short editor's-note/op-ed instead, same persona and
+voice, no unmasking target needed. Doesn't count against the Menace Watch
+monthly-cadence tracker at the top of this log; check that tracker
+separately when the New Year's issue is actually assembled to see if a
+real Menace Watch column is also due that week.
+
+**The specific resolution, per direct request:** Gordon resolves to
+apologize to Fletchly, the delivery guy — on the condition that Fletchly
+first reveal his secret identity. Gordon says this with a completely
+straight face, treating the condition as generous rather than as the
+whole apology being contingent on the one thing that defeats the point of
+apologizing (classic Menace-Watch-style missing-the-obvious, redirected
+into the resolutions format rather than an actual unmasking scene). New
+invented target, not tied to any target used in a past logged Menace
+Watch column — a fresh name for this bit specifically, consistent with
+that skill's rule never to reuse a target.
+
 **New persona debut:** Kate Rodgers, film critic (`kate-rodgers-film-review`,
 Refill Rating), hired on-page and debuted in Issue 7. Standing roster member
 from Issue 8 onward. **Freya Wilcox**, Design Editor (`design-desk-dispatch`,
