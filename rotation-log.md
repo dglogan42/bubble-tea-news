@@ -72,6 +72,25 @@ Same standing rule: not persona-bound, real filler, distinct from every
 other joke logged in this file (including "Boo-ba tea" right above) so
 neither Halloween issue repeats the other's pun.
 
+**Bubble Tea Trivia, Halloween issue (planned, not yet built):** a real
+fact, distinct from every trivia item already used or planned elsewhere
+in this log (origin dispute, two-cup hand-shake, East/West Coast naming,
+popping-boba chemistry, the Guinness record, HK-style milk tea, the
+"bubble" naming theory, brown sugar boba's Tiger Sugar-style colour,
+Cantonese slang vs. zhenzhu, tapioca/cassava, pearl milk, hot bubble tea
+in winter, the wide "boba straw") —
+
+> Most bubble tea shops let you dial sweetness and ice level
+> independently, in set increments (0/30/50/70/100%) — a customization
+> system that started in Taiwan and is now close to standard wherever
+> the drink is sold.
+
+Same standing rule as the other trivia items: real fact, checked against
+the full list above so it doesn't repeat. Only written for one of the
+Halloween pair so far — same open item as the joke above, write a second,
+distinct fact if both Issues 14 and 15 end up needing their own trivia
+item rather than sharing this one.
+
 **Christmas one-off: "Ichi Piece" (planned, not yet built):** a One
 Piece tribute strip, pirate-themed Christmas parody, for whichever
 issue's dateline lands at/around Christmas 2026 — not Issues 14/15,
