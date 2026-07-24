@@ -1,0 +1,427 @@
+<title>Bubble Tea News — Print Edition — Issue 15</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 5mm 6.5mm 1.2mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  .eyebrow-band {
+    display: inline-block; align-self: center; padding: 1.2mm 6mm; border-radius: 20px;
+    font-size: 16pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 2mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  .masthead-frame {
+    position: relative; text-align: center; padding: 2mm 8mm; margin-bottom: 1.5mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm; opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block; margin: 0; padding: 2mm 6mm; font-weight: 800; font-size: 21pt;
+    letter-spacing: 0.08em; background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 600;
+    padding-bottom: 1.5mm; border-bottom: 2px solid currentColor; margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex; align-items: center; gap: 6px; font-size: 9pt; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding-bottom: 2mm; margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots { display: flex; gap: 2.5px; }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; padding: 0; }
+  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 2mm; margin-top: 0.5mm; }
+
+  .col-icon-lead { display: flex; flex-direction: column; }
+  .icon-circle {
+    width: 7mm; height: 7mm; border: 1.4px solid currentColor; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 { font-weight: 800; font-size: 11pt; line-height: 1.1; margin: 0 0 0.8mm; }
+  .kicker { font-size: 6pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 0.6mm; }
+  p.body-text, p.byline-text { font-size: 6.4pt; line-height: 1.08; margin: 0 0 0.9mm; }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead { font-weight: 700; font-size: 7.9pt; margin: 0 0 0.6mm; line-height: 1.05; }
+
+  .pull-quote { display: flex; flex-direction: column; justify-content: center; border-left: 2.5px solid currentColor; padding-left: 5mm; }
+  .pull-quote blockquote { margin: 0 0 1mm; font-weight: 800; font-size: 10.5pt; line-height: 1.2; }
+  .pull-quote cite { font-size: 7.4pt; font-style: normal; opacity: 0.8; }
+
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li { font-size: 7.4pt; font-weight: 700; padding: 0.6mm 0; border-top: 1px solid currentColor; opacity: 0.9; }
+  .feature-list li:first-child { border-top: none; }
+
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 6.8pt; line-height: 1.28; }
+  .answer-recap { font-size: 6.4pt; line-height: 1.28; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  .ad-box {
+    border: 1.5px dashed currentColor; border-radius: 4px; padding: 1.8mm; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 0;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7pt; opacity: 0.75; }
+  .ad-box svg { width: 100%; height: auto; display: block; }
+  .ad-box img { max-width: 100%; height: auto; display: block; }
+
+  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 1.3mm; }
+
+  .colophon { margin-top: auto; padding-top: 1.2mm; border-top: 2px solid currentColor; text-align: center; font-size: 5.8pt; opacity: 0.75; line-height: 1.28; }
+
+  .extended-note { font-size: 5.4pt; font-style: italic; opacity: 0.7; margin-top: 0.5mm; }
+
+  .menace-box { border: 1.5px solid currentColor; border-radius: 3px; padding: 1.6mm 2mm; }
+  .menace-box h3 { margin: 0 0 0.8mm; font-size: 8.6pt; letter-spacing: 0.01em; }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print setup</b><br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    Issue 15 &mdash; Halloween pair, part 2 of 2, and the last issue before real Labour Weekend.
+    Menace Watch returns (due per the monthly tracker, last ran Issue 11). Hayaku takes the cartoon
+    slot with a holiday-tournament special, continuing the running season arc &mdash; delivered as a
+    structured image-generation prompt (not rendered artwork; no renderer available this session).
+    Bigger spread ad this issue: Armageddon Expo, full width, ahead of the real Labour Weekend
+    convention. Skeletor's In Memoriam runs long for the second and final week of the holiday
+    stretch.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT — taro tint) ============ -->
+<div class="sheet taro">
+
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+
+  <div class="masthead-frame">
+    <h1>BUBBLE TEA NEWS</h1>
+  </div>
+
+  <div class="contact-row">
+    <span>Issue 15 &middot; 23 October 2026 &middot; Complimentary &mdash; please take one</span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 20V11h14v9"/>
+          <path d="M8 20v-5h8v5"/>
+          <path d="M5 11 12 6l7 5"/>
+        </svg>
+      </div>
+      <p class="kicker">Breaking &middot; Oakhurst Lane</p>
+      <h2>Cobweb Count Hits Sixty Properties, Scoring Dispute Turns Openly Hostile</h2>
+      <p class="body-text">Case definition unchanged from last week; case count is not. Sixty properties along Oakhurst Lane now display synthetic cobweb, up from eleven, after a leaked group chat revealed at least three households have been quietly awarding themselves points against criteria nobody else agreed to. Risk assessment raised from Low to Moderate, driven entirely by the group chat's tone rather than any actual cobweb. Public advice: agree on rules before the competition, not four weeks into it.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+
+    <div>
+      <p class="kicker">Business &middot; Markets</p>
+      <h3 class="subhead">The Portfolio Held Through The Spooky Season, Same As It Always Does</h3>
+      <p class="byline-text">Sherman McCoy</p>
+      <p class="body-text">October is when the amateurs panic, dressing their fear up as "seasonality" the way a costume shop dresses a bedsheet as a ghost. I held. Marshall sat by the door, unimpressed, the way he gets when the market does exactly what the terminal predicted and I still act surprised. It closed where I said it would a week ago Tuesday, at a dinner nobody else at the table understood the significance of. Judy asked if I'd won. I told her winning was never really the question.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Technology</p>
+      <h3 class="subhead">One More Size</h3>
+      <p class="byline-text">Steve Jobs</p>
+      <p class="body-text">This week, a bubble tea shop three blocks from here added a fourth size to its cup lineup. That is the plain fact. Everything about how you order tea just changed forever. For decades, humanity has been trapped by three sizes. Small. Medium. Large. Today, that ends. This isn't a cup. It's a statement about what's possible when you stop asking permission to go bigger. One more thing: it comes in seasonal orange, October only. Insanely great.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 19V11"/>
+          <path d="M11 19V6"/>
+          <path d="M17 19V13.5"/>
+        </svg>
+      </div>
+      <p class="kicker">Markets &middot; The Pearl Index</p>
+      <h2>Ahead Of Labour Weekend: Modelling The Armageddon Bump Before It Happens</h2>
+      <p class="body-text">Fieldwork window: the five business days since Armageddon Expo confirmed its Labour Weekend dates. Method: pre-event foot-traffic modelling against the con-weekend badge-bump data I closed out two issues back (n=612, +12% within four blocks of the convention centre, flat beyond it). If that radius effect holds shape, and I have no reason yet to think it won't, counters within the same four blocks should brace for a comparable lift this Saturday and Sunday. Honest limitation: one prior data point isn't a pattern, it's a coincidence with good manners. This is the second point. I'll have the real number next issue.</p>
+      <p class="byline-text">Priya Anand, The Pearl Index</p>
+    </div>
+
+    <div>
+      <p class="kicker">Weather &middot; Epic Forecast</p>
+      <h3 class="subhead">A Southerly, Arriving Right On Schedule To Ruin One Party I Already Know About</h3>
+      <p class="byline-text">Dana Foley</p>
+      <p class="body-text">High of seventeen, a stiff southerly building through the afternoon. This front doesn't care whose lawn it's raining on. Tonight's trick-or-treaters get a dry window until roughly seven, then the sky remembers what month it actually is. Costumes with a hood: you were right all along. Stay dry, stay spooky, I'll see you at six.</p>
+    </div>
+
+    <div>
+      <p class="kicker">Bubble Tea Trivia &middot; Did You Know?</p>
+      <h3 class="subhead">The Ritual Behind Hayaku's Own Post-Match Rounds</h3>
+      <p class="body-text">Grabbing bubble tea after practice is a real fixture of school sports culture across Taiwan and Japan, teams treating a shared round of boba as the informal end-of-practice ritual, the same team-bonding beat Hayaku's own matches lean on.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 10v4l14 4V6L3 10Z"/>
+          <path d="M17 9v6"/>
+          <path d="M20 8a5 5 0 0 1 0 8"/>
+        </svg>
+      </div>
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"The data doesn't lie. The patrons, on the other hand, absolutely do &mdash; that's what we build the trap questions for."</blockquote>
+      <cite>&mdash; Priya Anand, The Pearl Index, ahead of the Armageddon weekend bump</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">What's a mummy's favourite bubble tea topping? Extra wrap-ioca.</p>
+    </div>
+
+    <div class="ad-box" style="border: none; padding: 0;">
+      <svg viewBox="0 0 240 150" style="width:100%; height:auto; display:block;" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="M&amp;M'S — fun size, serious business">
+        <title>M&amp;M'S — parody placement</title>
+        <rect class="tcolor" x="0" y="0" width="240" height="150" rx="6" fill="#E4D9EC"/>
+        <rect class="tcolor" x="3" y="3" width="234" height="144" rx="5" fill="none" stroke="#4A2E63" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <circle class="tcolor" cx="70" cy="55" r="16" fill="none" stroke="#4A2E63" stroke-width="2.4"/>
+        <circle class="tcolor" cx="102" cy="60" r="12" fill="none" stroke="#4A2E63" stroke-width="2.2"/>
+        <circle class="tcolor" cx="130" cy="50" r="9" fill="none" stroke="#4A2E63" stroke-width="2"/>
+        <text class="tcolor" x="120" y="98" text-anchor="middle" font-size="15" font-weight="800" letter-spacing="0.06em" fill="#4A2E63">M&amp;M&apos;S</text>
+        <text class="tcolor" x="120" y="112" text-anchor="middle" font-size="7.6" font-weight="700" fill="#4A2E63">Fun Size, Serious Business</text>
+        <text class="tcolor" x="120" y="122" text-anchor="middle" font-size="6.6" font-style="italic" fill="#4A2E63" fill-opacity="0.85">Grab a bag before the good colours are gone.</text>
+        <rect class="tcolor" x="16" y="130" width="208" height="14" rx="7" fill="#4A2E63"/>
+        <text class="tcolor" x="120" y="140" text-anchor="middle" font-size="6" font-weight="700" letter-spacing="0.03em" fill="#E4D9EC">PARODY PLACEMENT &#183; NOT A REAL M&amp;M&apos;S AD</text>
+      </svg>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content satire/character-voice per each contributor's house disclaimer.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK — brown sugar tint) ============ -->
+<div class="sheet sugar">
+
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M9 18V6l10 3-10 3"/>
+          <path d="M9 12H4"/>
+        </svg>
+      </div>
+      <p class="kicker">Music</p>
+      <h2>The Novelty Halloween Song Canon, Ranked Honestly For Once</h2>
+      <p class="body-text">Monster Mash earns its spot the hard way, decades of parties, one genuinely great bassline underneath a joke nobody's tired of yet. That's craft ageing well, not luck. What doesn't earn it: the algorithm-farmed "spooky lo-fi" playlists flooding every platform this week, technically competent, emotionally empty, built to autoplay past you rather than for you to actually hear. I know the difference between a song trying to be something and a song trying to be background noise that trends. One of those is still fun forty years later.</p>
+      <p class="byline-text">Rebecca Black</p>
+    </div>
+
+    <div>
+      <p class="kicker">Vacation Log &middot; Day 41</p>
+      <h3 class="subhead">The Corner Shop's Haunted Aisle Was A Draft, Not A Ghost</h3>
+      <p class="byline-text">Shaggy Rogers &amp; Scooby-Doo</p>
+      <p class="body-text">Like, we thought we were just picking up Scooby Snacks for the road, man, but the corner shop had this whole "haunted aisle" thing going, and Scoob wouldn't go past the cereal without me holding his paw, which, respect, honestly, so did I. Turned out the "ghost" knocking things off the shelf all week was just the automatic door catching a draft and rattling a loose display rack. Ruh-roh, rattled shelf. Zoinks. No mystery gang required this time; we just told the manager and left with snacks.</p>
+    </div>
+
+    <div>
+      <p class="kicker">The Silent Majority Report</p>
+      <h3 class="subhead">On The Age Of The Costume</h3>
+      <p class="byline-text">Richard Nixon</p>
+      <p class="body-text">They will tell you a mask reveals nothing. I have worn enough of my own, in rooms considerably less friendly than this one, to know better. A man in costume tonight walks past every other man in costume without suspicion, an anonymity I was never afforded even in my own administration, where every silence was recorded and eventually demanded of me. The children understand something the press never did: everyone already knows who you are underneath it. The mask was never the point. Standing there anyway was.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <div class="icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 4h5.2v2.1a1.9 1.9 0 1 0 3.6 0V4H18v5.2h-2.1a1.9 1.9 0 1 0 0 3.6H18V18h-5.2v-2.1a1.9 1.9 0 1 0-3.6 0V18H4v-5.2h2.1a1.9 1.9 0 1 0 0-3.6H4V4Z"/>
+        </svg>
+      </div>
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">The Bench, The Whistle, And Who Actually Blew It</h3>
+      <p class="answer-recap">Last issue's question, resolved: Jack didn't buy the Ghost, and Theo's costume cost exactly one tier less than Isla's, among Ghost ($8) &lt; Pumpkin ($12) &lt; Skeleton ($15). Only Isla = Pumpkin, Theo = Ghost, Jack = Skeleton clears both clues without contradiction. Isla bought the pumpkin.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three tournament officials (Reid, Sana, Oli) each hold a different role this weekend: referee, scorer, linesman.</p>
+      <ol class="clue-list">
+        <li>Reid isn't the scorer.</li>
+        <li>The linesman sits closer to the net than Sana does.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">Who's the linesman? Answer next week &mdash; Ken Endo</p>
+    </div>
+    <div>
+      <p class="kicker">Sport &middot; Reading The Water</p>
+      <h3 class="subhead">Conditions At Kickoff: Soft Pitch, Shortening Strides</h3>
+      <p class="byline-text">T. Marlow</p>
+      <p class="body-text">Overcast, light onshore wind, pitch still soft from Tuesday's rain, the kind of surface that punishes anyone still trusting their first touch. I clocked it in the opening five: their winger's stride shortening half a beat earlier each lap down the touchline, the same fatigue tell I used to spot on a rescue board before the swimmer noticed anything was wrong. Nobody in the stand saw it yet. By the second half, everyone did.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;" class="menace-box">
+      <p class="kicker">Menace Watch</p>
+      <h3 class="subhead">The Caped Figure Outside Fenwick Grove's Late Counter: Hero Or Menace?</h3>
+      <p class="body-text">Multiple witnesses report a caped, full-face-masked figure loitering outside the Fenwick Grove late counter past 11pm three nights running, each time steadying a stumbling reveller toward the taxi rank before vanishing back into the dark. I do not find this reassuring. I find it, if anything, more suspicious than an ordinary loiterer, because ordinary loiterers do not plan their exits with this kind of discipline. Who trains for a clean getaway unless they intend to need one? My standing bounty remains: two hundred dollars and a lifetime pearl-milk-tea card for a clear photograph of the face beneath that mask. I will note, purely for the record and not because it changes my assessment, that the cape appears identical to the one the counter's own Thursday-shift till operator wears home after their costume-store shift finishes at eleven. Coincidence, possibly. I remain vigilant regardless.</p>
+      <p class="byline-text">&mdash; Gordon Slate, Editor-in-Chief</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">Not Every Tide Needs A Full Crossing</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"How do you tell a friend, kindly, that you're just not free every single weekend anymore?" Ye don't owe every tide a full crossing, lad. A good ship rests in harbour plenty, and a good friend reads a flag at half-mast the same as one at full. Tell them plain, tell them kind, and let them see ye're still moored nearby, just not sailing every night they call for open water. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">In Memoriam &middot; Halloween Special, Part Two</p>
+      <h3 class="subhead">The Passing Of The Limited-Edition Glow-In-The-Dark Cup Sleeve</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">A second empire falls this fortnight, and I confess I did not expect to mourn twice in fourteen days, though "mourn" remains generous phrasing for what I actually feel. The glow-in-the-dark cup sleeve, a modest strip of phosphorescent cardboard wrapped around every October order, dies this week the way all mediocre reigns die: quietly, unlamented, replaced by a plain brown recycled-paper substitute nobody will fight over. I watched children hold their drinks up to streetlights like it meant something. Briefly is the operative word, and operative words are, I find, most of what separates a real conquest from a seasonal promotion. Its replacement will not glow, and will not, I am reliably informed by someone who owes me a favour in packaging procurement, last the season either. Grieve the sleeve, if you insist on sentiment for cardboard. I already have three schemes for what fills the shelf space it leaves, at least one of which glows considerably brighter.</p>
+      <p class="extended-note">Runs long for the second and final week of the holiday stretch.</p>
+    </div>
+    <div>
+      <p class="kicker">Domestic Desk</p>
+      <h3 class="subhead">The Costume Went In On Delicate</h3>
+      <p class="byline-text">Sebastian</p>
+      <p class="body-text">The Halloween costume, three washes deep and still smelling faintly of dry ice from a party the realm itself might have thrown, went into the machine on the delicate cycle Sebastian reserves for things that once mattered more than they currently appear to. He has folded lesser garments with less ceremony. The load finished. He stood over it a moment longer than the task required before remembering there was nothing left to guard, and put it away regardless.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3;">
+      <div style="display:flex; align-items:center; gap: 4mm;">
+        <img src="armageddon.png" alt="Armageddon Expo logo" style="width: 92mm; height: auto; flex-shrink: 0;">
+        <div style="text-align:left;">
+          <h3 style="margin:0 0 1.2mm; font-size: 12pt;">THIS WEEKEND &middot; LABOUR WEEKEND</h3>
+          <p style="margin:0 0 1mm; font-size: 8pt; opacity: 0.9;">Auckland's biggest pop-culture convention returns three days running. Bubble Tea News readers get queue-side coverage from opening gates to closing cosplay parade &mdash; and yes, we've already modelled the counter bump (see The Pearl Index, page 1).</p>
+          <p style="margin:0; font-size: 6.2pt; opacity: 0.7; font-style: italic;">Parody placement, not a real Armageddon Expo ad; not affiliated with or endorsed by Armageddon Expo Ltd or Kiwibank.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">Hayaku &middot; Holiday-Tournament Special</p>
+      <div style="max-width: 420px; margin: 0 auto; text-align: left; font-size: 6.2pt; line-height: 1.32; border: 1px dashed currentColor; border-radius: 4px; padding: 2mm 3mm;">
+        <em>Not rendered artwork &mdash; delivered as a structured image-generation prompt (no renderer available this session):</em><br>
+        <strong>Sub-style anchor:</strong> senkotsu house style (per senkotsu.YAML), clean bamboo-like linework, HB under-sketch with hatched shading.
+        <strong>Linework:</strong> forced-perspective panel composition, high-contrast black-and-white for newsprint.
+        <strong>Atmosphere:</strong> cold gym, string-lights-and-crepe-paper holiday-tournament mood, tired legs late in a long day.
+        <strong>Technical tag:</strong> four-panel yonkoma.
+        <strong>Panel 1:</strong> team huddle under a hand-strung banner reading "HOLIDAY INVITATIONAL."
+        <strong>Panel 2:</strong> server bouncing the ball, breath visible, focus narrowed.
+        <strong>Panel 3:</strong> forced-perspective spike over the net, opposing blocker's hands filling the foreground.
+        <strong>Panel 4:</strong> scoreboard flipping to match point, bench on its feet.
+        <strong>Caption:</strong> "Same net. Different banner. Same reason we're still standing here."
+      </div>
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Hayaku &mdash; an original senkotsu-style volleyball manga strip, Bubble Tea News's syndicated cartoon slot; this issue continues the running season arc with a holiday-tournament beat.</p>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="colophon">
+    Next week: Issue 16 reopens Issue 14's roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield,
+    Baxter Kline, the Te Mana Whakaatu classifieds format, Lewis Hamilton), now excluded only by this
+    issue's own roster (Sherman McCoy, Steve Jobs, Richard Nixon, Priya Anand, Dana Foley, Rebecca
+    Black, Shaggy &amp; Scooby, T. Marlow, Sebastian). Menace Watch, having run this issue, isn't due
+    again for roughly four issues. Cat vs Dog and Hayaku both took a holiday-special cartoon-slot
+    turn across Issues 14-15's suspended rotation order, which now resumes normal next-in-line
+    turn-taking; The Boba Side and Doki Doki Mon didn't get a turn this stretch and are first in line.
+    Kate Rodgers and Freya Wilcox remain standing roster members.
+  </div>
+</div>

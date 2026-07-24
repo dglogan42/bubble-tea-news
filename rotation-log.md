@@ -7,8 +7,33 @@ since that anchor is monthly (~every 4th weekly issue), not weekly. Append
 a new entry each time a new issue is assembled — most recent issue at the
 top.
 
-**Menace Watch tracker:** last ran Issue 11. Not due again until roughly
-Issue 15 — leave that slot to a rotating persona in Issues 12–14.
+**Menace Watch tracker:** last ran Issue 15 (the caped Fenwick Grove
+till-operator bit). Not due again until roughly Issue 19 — leave that slot
+to a rotating persona in Issues 16–18.
+
+**Halloween pair — now built (24 July 2026):** Issues 14 and 15 have been
+assembled; see the real `## Issue 14` / `## Issue 15` entries below for
+what actually ran. The planning notes immediately following this one (the
+Skeletor Halloween special, the critic-slot Halloween treatments, the
+cartoon-rotation reset, the Nightmare Before Christmas crossover, the
+Hayaku holiday special, and their associated trivia/joke items) are kept
+below as the historical planning record rather than deleted, since the
+Christmas- and New Year's-issue portions of that same reset are still
+unbuilt. Where execution differed from the plan: both Issues 14 and 15 ran
+their extended Skeletor "In Memoriam" as planned; the cartoon slot went to
+Cat vs Dog (Issue 14, the NBC crossover) and Hayaku (Issue 15, the holiday
+special) rather than needing Doki Doki Mon's "maybe" Boba Pearl Edition
+tie-in, which remains unbuilt for a future issue. Two seasonal ad
+placements were added per direct request that aren't in the planning notes
+below: Fenwick Grove S'mores Co. (Issue 14, an invented advertiser) and
+M&M'S (Issue 15, real-brand parody, disclaimed). A bigger, three-column
+Armageddon Expo spread ad also ran in Issue 15 (with a smaller save-the-
+date teaser in Issue 14) ahead of the real Labour Weekend convention — the
+supplied logo art (`issues/armageddon.png`) includes a "Kiwibank presents"
+credit, a second real brand incidental to the artwork, so both ads
+disclaim Kiwibank alongside Armageddon Expo Ltd. Neither ad was anticipated
+in the original Halloween planning below. Both PDFs reconfirmed at 2 pages
+via `pdfinfo` after every change, per house practice.
 
 **Skeletor Halloween special (planned, not yet built):** Issues 14 and 15
 give Skeletor's "In Memoriam" (`skeletor-obituary-column`) extra room to
@@ -1119,6 +1144,128 @@ line.
   decade." Distinct from the origin-dispute trivia already logged (that
   one's about *which* teahouse invented it; this one's just the
   approximate age), and from every other fact in this file.
+
+---
+
+## Issue 15
+
+**Anchors:** community-outbreak-bulletin (Oakhurst Lane cobweb count hits
+sixty, risk assessment raised to Moderate over the scoring-dispute tone) ·
+ken-endo-puzzle-master (The Bench, The Whistle, And Who Actually Blew It;
+also resolves Issue 14's Which Costume Did Isla Actually Buy?) · bubble
+tea trivia (the real post-practice team-bonding ritual, tied into Hayaku's
+strip this issue) · joke of the week (mummy/wrap-ioca pun). Menace Watch
+runs this issue — due per the tracker, last ran Issue 11 — Gordon Slate's
+"Hero or Menace?" targets the caped Fenwick Grove till-operator, mistaken
+for a vigilante while walking home from a costume-store shift; fresh
+target, not reused from any prior column.
+
+**Halloween pair, part 2 of 2.** Skeletor's "In Memoriam" runs long for
+the second and final week of the holiday-stretch special (the discontinued
+glow-in-the-dark cup sleeve). Priya Anand's Pearl Index piece is a direct
+callback to her own Issue 13 con-weekend numbers, modelling the expected
+Armageddon Expo weekend bump ahead of time rather than after the fact.
+
+**Cartoon slot:** Hayaku takes the second Halloween-stretch holiday
+special (continuing the running season arc with a holiday-tournament
+beat), per the cartoon-rotation reset noted above — its Issue 13 turn
+notwithstanding. Delivered as a structured image-generation prompt (not
+rendered artwork); no renderer was available this session, so no new PNG
+was produced. Cat vs Dog and Hayaku have now both taken a holiday-stretch
+turn; The Boba Side and Doki Doki Mon didn't and are first in line once
+the cartoon slot resumes normal next-in-line rotation.
+
+**Ads:** M&M'S (Pearl Index-style SVG, real-brand parody, disclaimed) on
+page 1. A bigger, three-column Armageddon Expo spread ad on page 2 (per
+direct request — "another convention," bigger than a normal ad-box), using
+the supplied `issues/armageddon.png` logo art at full size; disclaims both
+Armageddon Expo Ltd and Kiwibank (the logo's own "Kiwibank presents"
+credit). Real NZ Labour Weekend lands the weekend immediately after this
+issue's dateline.
+
+**Rotating slots** (exclusion window shrunk to Issue 14's roster only,
+reopening Issue 13's full cast plus everyone untouched by either issue):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Steve Jobs — `reality-distortion-field-report`
+- Richard Nixon — `silent-majority-dispatch`
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Dana Foley — `epic-forecast-anchor`
+- Rebecca Black — `long-game-music-review`
+- Shaggy & Scooby — `canon-fanfic-vignette` (Persona 2)
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Sebastian — `faded-hero-voice`
+
+**Not used this issue** (available first for Issue 16): Luke Skywalker,
+Robin Leach, The Stickybeak, Winnie Zhao, Clem Whitlock — the five Issue
+13 leftovers this issue's nine slots didn't reach — plus the entire Issue
+14 rotating roster (Daffy Duck, Alan Grant, M. Voss, Wren, Garfield, Baxter
+Kline, the Te Mana Whakaatu classifieds format, Lewis Hamilton), which this
+issue's shrunk exclusion window leaves untouched. Kate Rodgers and Freya
+Wilcox remain standing, not exclusion-bound.
+
+**Pool note for whoever assembles Issue 16:** exclude only Issue 15's
+roster (immediately above) — that reopens the full Issue 14 cast plus the
+five Issue 13 leftovers, comfortably more than enough for the ~9 rotating
+slots.
+
+---
+
+## Issue 14
+
+**Anchors:** community-outbreak-bulletin (Oakhurst Lane synthetic-cobweb
+outbreak, eleven properties) · ken-endo-puzzle-master (Which Costume Did
+Isla Actually Buy?; also fully resolves Issue 13's Which Size Did Ana
+Actually Order? — Ana ordered the medium) · bubble tea trivia (the real
+tapioca choking-hazard warning, tied into the S'mores ad) · joke of the
+week (ghost/boo-ba tea pun). No Menace Watch this issue, still not due
+until Issue 15 per the tracker.
+
+**Halloween pair, part 1 of 2.** Skeletor's "In Memoriam" runs long for
+the first week of the holiday-stretch special (the discontinued bat-shaped
+straw-topper) — Kate Rodgers's Refill Rating gets a horror-adjacent pick
+(Hollow Register, invented title) as this issue's critic-slot Halloween
+treatment; Garfield's and Daffy Duck's rotating-slot turns below are also
+Halloween-themed (a pumpkin-boba review, a poltergeist memoir review).
+
+**Cartoon slot:** Cat vs Dog takes the first Halloween-stretch holiday
+special — a Nightmare Before Christmas-themed crossover one-off, per the
+cartoon-rotation reset noted above (next in line after Issue 13's Hayaku
+turn, and the "likeliest fit" the reset note flagged). Delivered as a
+structured image-generation prompt (not rendered artwork); no renderer was
+available this session, so no new PNG was produced, unlike Issue 10's
+actual hand-drawn-and-photographed debut. Tea trivia (the East-meets-West
+fusion origin) woven into the panel's own caption text rather than the
+issue's dedicated trivia slot, which went to the choking-hazard fact
+instead.
+
+**Ads:** Fenwick Grove S'mores Co. (invented advertiser, Pearl Index-style
+SVG, no disclaimer needed) on page 1. A smaller Armageddon Expo
+save-the-date teaser on page 2, using the supplied `issues/armageddon.png`
+logo art; disclaims both Armageddon Expo Ltd and Kiwibank (the logo's own
+"Kiwibank presents" credit, incidental to the artwork). Bigger spread ad
+runs next issue, timed to land the week before the real NZ Labour Weekend.
+
+**Rotating slots** (per Issue 13's pool note — exclusion window shrunk to
+Issue 13's roster only, reopening the full Issue 12 cast):
+- Garfield — `canon-fanfic-vignette` (Persona 3)
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Baxter Kline — `the-world-bulletin-anchor`
+- Alan Grant — `canon-fanfic-vignette` (Persona 4)
+- Wren — `yearning-machine-voice`
+- M. Voss — `code-theft-dossier`
+- Lewis Hamilton — `grand-prix-showroom-ads`
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+
+**Not used this issue** (available first for Issue 15): the entire Issue
+13 rotating roster — Sherman McCoy, Luke Skywalker, Priya Anand, Dana
+Foley, Robin Leach, The Stickybeak, Sebastian, Winnie Zhao, Clem Whitlock.
+Kate Rodgers remains standing, not exclusion-bound.
+
+**Pool note for whoever assembles Issue 15:** this issue used the entire
+reopened Issue 12 pool (all eight), so per this skill's own fallback rule,
+Issue 15 shrinks its own exclusion window to Issue 14's roster only rather
+than the usual 2-issue lookback — that reopens Issue 13's full cast,
+comfortably enough for the ~9 rotating slots.
 
 ---
 
