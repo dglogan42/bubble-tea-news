@@ -1182,6 +1182,73 @@ line.
 
 ---
 
+## Issue 21
+
+**Anchors:** community-outbreak-bulletin (Puriri Lane's anonymous lemon
+basket) · ken-endo-puzzle-master (Which Size Did Dev Actually Buy?;
+also fully resolves Issue 20's trolley-sighting puzzle — Grace, 8am) ·
+bubble tea trivia (wintermelon isn't actually a winter melon) · joke of
+the week (pearl/grow-on-people pun, cross-referencing the garden ads).
+No Menace Watch this issue — not due until roughly Issue 23. Puriri
+Lane debuts as a new street name.
+
+**Two declined requests, logged for the record:**
+- A supplied real photo (`underwear.png`, never committed) paired nude/
+  sexually suggestive imagery with the real, unaltered Bonds trademark.
+  Declined regardless of parody framing — replaced with the invented
+  Steeped &amp; Snug brand (see below).
+- "Dad's Creampies," an ad name confirmed (on request) to carry an
+  intentional sexual double meaning. Declined outright; not built in any
+  form.
+- A request to have Te Mana Whakaatu rate Te Tari Pūreke (the real NZ
+  Firearms Safety Authority) was also declined — outside that persona's
+  own Step 0 boundary (invented ad content only, never a real
+  institution) and a sensitive real-world topic given the authority's
+  origin in the post-2019 gun law reforms. Built the legitimate version
+  instead: a genuine invented classified ad in the real format (see
+  below).
+
+**Ads:** Steeped &amp; Snug (invented loungewear brand, replacing the
+declined real photo) and Palmers Garden Addicts (real-brand parody,
+disclaimed, same treatment as Toyota/T2), both per direct request.
+
+**Te Mana Whakaatu classified, per direct request (legitimate use):** a
+garden-themed FOR SALE ad ("one slightly overgrown garden, tools
+included"), Rated M, cross-referencing the Palmers ad in the same issue.
+First appearance of this format since Issue 12.
+
+**Cartoon slot:** The Boba Side (bumped in from Issue 20 by Hayaku's
+second scene) — no new art supplied this session, delivered as a
+structured single-panel description per house practice.
+
+**Rotating slots** (per Issue 20's pool note — exclude only Issue 20's
+roster, reopening the full Issue 19 cast plus four Issue 18 leftovers):
+- Sherman McCoy — `master-of-the-universe-columnist`
+- Richard Nixon — `silent-majority-dispatch`
+- Steve Jobs — `reality-distortion-field-report`
+- Dana Foley — `epic-forecast-anchor`
+- Priya Anand, The Pearl Index — `pearl-index-market-researcher`
+- Rebecca Black — `long-game-music-review`
+- T. Marlow — `lifeguards-eye-sportswriter`
+- Sebastian — `faded-hero-voice`
+- Daffy Duck — `canon-fanfic-vignette` (Persona 5)
+- Te Mana Whakaatu classifieds format — `te-mana-whakaatu-classifieds`
+  (tenth slot, per direct request)
+
+**Not used this issue** (available first for Issue 22): Alan Grant, Luke
+Skywalker, Lewis Hamilton — the three Issue 18 leftovers this issue's
+ten slots didn't reach. Kate Rodgers and Freya Wilcox remain standing,
+not exclusion-bound.
+
+**Pool note for whoever assembles Issue 22:** exclude only Issue 21's
+roster (immediately above) — that reopens the full Issue 20 cast plus
+the three Issue 18 leftovers, comfortably more than enough for the ~9
+rotating slots. Menace Watch isn't due again until roughly Issue 23.
+Cartoon slot: Cat vs Dog is next in line (longest without a turn, last
+ran Issue 14), ahead of Doki Doki Mon.
+
+---
+
 ## Issue 20
 
 **Anchors:** community-outbreak-bulletin (Rata Close's self-returning
