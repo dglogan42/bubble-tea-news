@@ -709,6 +709,8 @@ plus `docs/issues/boba-issue2.png` added so the Boba Side's real
 hand-drawn art renders live instead of the old "awaiting illustration"
 placeholder.
 
+**Issue 13 refresh pushed live 9 October 2026** (dateline 2026-10-09 NZ): `print-edition.html`, `index.html`, and their `docs/` mirrors now show Issue 13 (matching `issues/issue-13.html`), via `scripts/promote-live-issue.py` / `.github/workflows/promote-issue-13.yml`.
+
 **Issue 13 auto-refresh (scheduled):** staged under `live-queue/issue-13/`
 and promoted by `.github/workflows/promote-issue-13.yml` (cron
 `0 20 8 10 *` UTC = 09:00 NZDT on 9 October) calling
