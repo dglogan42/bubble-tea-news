@@ -1,0 +1,23 @@
+# Bubble Tea News Agents, Issue 3: Mascot Costume Count Triples in Nine Days, Risk Assessed Moderate
+
+Synthetic TTS (en-IE-EmilyNeural, -5%). Satire. Not affiliated with Global or The News Agents.
+
+## 00-cold-open
+
+Bubble Tea News Agents, Issue 3. A headline from the desk: Mascot Costume Count Triples in Nine Days, Risk Assessed Moderate. Nobody panicked. Well. Almost nobody.
+
+## 01-intro
+
+Hello, and welcome to Bubble Tea News Agents, from the Pearl Press desk. I'm your host, Pearl. It's Issue 3. Before we start, the usual warning. This is satire. Every columnist is invented. None of this is real news. Grab your drink. The cold one. Right, let's go.
+
+## 02-breaking
+
+First up, the breaking desk. Breaking, Grover Street. The headline: Mascot Costume Count Triples in Nine Days, Risk Assessed Moderate. Case definition: any shopfront fielding a staffed, waist-to-ceiling costumed beverage mascot during trading hours. Six confirmed shopfronts as of Tuesday, up from two the previous Friday.
+
+## 03-rundown
+
+From the Market Research, The Pearl Index pages. Brown Sugar Holds, Matcha Splits the Room. Fieldwork: Grover Street parade weekend, 25 to 26 July, counter-side paper ballot, one flavor per patron, n=530, ±4.3% MOE. Brown Sugar Boba takes it at 31%, the Brown Sugar Loyalists turning out in force as always, ahead of Taro (24%) and Wintermelon (19%). Most polarizing flavor: Matcha Latte, ranked dead last overall at 6%, yet the outright #1 pick among Sweetness-Level Independents, who describe it, correctly, as "zero sugar and proud of it." One Queue Abstainer admitted voting twice, "because the line for the ballot box was too long to check." The data doesn't lie. The patrons, on the other hand, absolutely do. That's what we build the trap questions for. Next. From the Editorial, Menace Watch, Debut Column pages. The Fetchly Mascot: Hero or Menace?. Spotted for the third day running weaving a delivery e-bike through the parade crowd: a rider in a full-body lightning-bolt costume for the Fetchly app, steadying a toddler's dropped ice cream before it hit the pavement. Helpful, some will say. This paper caught the mask again off-shift at Re:Burger, working through a stack of hamburgers, head tucked under one arm. Refuelling for what? Nobody at Fetchly will confirm the rider's name, and a masked figure who won't explain his own lunch order is a menace with a delivery quota, now with a taste for beef. Fifty dollars and a lifetime pearl-milk-tea card to the first reader who photographs that face. (Disclosure: Fetchly delivered my own lunch Tuesday. Same costume. I tipped well. Next. From the Gossip, Kiss & Tell pages. The Mascots Are Dating, Darling. Darling, the Grover Street mascot war has a subplot the shopfronts aren't advertising: the Cup and the Straw (yes, the two costumes glaring at each other from opposite footpaths every lunch hour) are, your Stickybeak can reveal, dating. Sources close to the foam padding confirm they carpool. The rivalry, loves, is entirely for the customers. Next. From the Field Dispatch, The World Bulletin pages. Live From the Parade Route, More or Less Upright. Eleven costumed mascots stepped off at noon in good order. A gust dusted the notes with what proved to be glitter, not a structural concern. Then the tapioca-pearl-backpack mascot's seam gave way, scattering actual bean bags at ankle height across the entire footpath. Then Baxter Kline, still narrating evenly mid-sentence about "unprecedented civic enthusiasm for novelty beverage costuming," went down with the camera crew, live, on air. Next. From the Rural Report, The Ridgeline Weekly pages. Doyle Edges Higgins on Pasture Cover, First Time Since Autumn. Doyle's back paddock came in at 2,450 kg DM/ha this week, a good forty kilos ahead of Higgins off the same soil type, first time Doyle's led since the autumn rotation. Higgins isn't worried, mind, just resting stock off a wetter block. Down in town they're getting worked up over people dressed as teacups; out here, forty kilos of dry matter is still the biggest story going. Next. From the Bubble Tea Trivia pages. Did You Know?. The word "boba" is Hong Kong slang, not Taiwanese, a playful Cantonese nickname for something round and plump. In Taiwan, where the drink was actually invented, the pearls are usually just called zhenzhu (pearls) or fenyuan.
+
+## 04-outro
+
+That's the show. Bubble Tea News Agents, Issue 3, from the Pearl Press desk. Remember, it's satire. The voices are invented and none of it is real news. This is a synthetic voice, and we are not affiliated with anyone you might be thinking of. Drink it cold. Drink it soon. See you next issue.

@@ -1,0 +1,23 @@
+# Bubble Tea News Agents, Issue 7: Café Trivia Leaderboards Turn Openly Competitive, Risk Assessed Low-to-Moderate
+
+Synthetic TTS (en-IE-EmilyNeural, -5%). Satire. Not affiliated with Global or The News Agents.
+
+## 00-cold-open
+
+Bubble Tea News Agents, Issue 7. A headline from the desk: Café Trivia Leaderboards Turn Openly Competitive, Risk Assessed Low-to-Moderate. Nobody panicked. Well. Almost nobody.
+
+## 01-intro
+
+Hello, and welcome to Bubble Tea News Agents, from the Pearl Press desk. I'm your host, Pearl. It's Issue 7. Before we start, the usual warning. This is satire. Every columnist is invented. None of this is real news. Grab your drink. The cold one. Right, let's go.
+
+## 02-breaking
+
+First up, the breaking desk. Breaking, Bellevue Lane. The headline: Café Trivia Leaderboards Turn Openly Competitive, Risk Assessed Low-to-Moderate. Case definition: any café chalkboard publicly ranking regulars by trivia-night win streak. Four boards as of Monday, up from one after a rival café chalked a regular's eleven-week streak in gold marker, apparently to poach her custom. The lane's business association has floated a "chalk only, no marker" rule to keep things civil, which nobody has yet agreed to follow.
+
+## 03-rundown
+
+From the Gossip, Overheard pages. Darling, Everyone on Meadowbank Already Knows Whose Beak That Is. The Swan, loves, is an open secret to absolutely everyone on the strip except, delightfully, our own editor. Ask any barista on Meadowbank and they'll tell you, behind a cupped hand and not very quietly, exactly whose lunch shift that costume covers. Your Stickybeak isn't printing the name. Your Stickybeak doesn't have to. Gordon will find out the way he finds out everything: last. Next. From the Masthead, Now Joining Our Pages pages. Bubble Tea News Welcomes Film Critic Kate Rodgers. This issue marks the first byline for Kate Rodgers, who joins us after years running concessions and the floor at a suburban multiplex before crossing the counter to criticism herself. Her reviews run on what she calls the Refill Rating: how many times she got up for more popcorn during the film, where zero is the highest compliment going. Her debut column runs opposite. Welcome, Kate. Next. From the Editorial, Menace Watch pages. The Meadowbank Swan: Hero or Menace?. A figure in a full swan costume has been spotted along the Meadowbank strip handing bent-straw swans to children and, this paper must note, keeping the lunch-rush queue suspiciously orderly while doing it. Orderly! A costumed operative with unrestricted access to a queue's timing, a strip's foot traffic, and, I remind readers, its cutlery, does not "help." It positions. I am offering my usual bounty (a lifetime pearl-milk-tea card and one full year of free upsizing) for a clear photograph of whoever is under that beak. I would recognize her voice anywhere, incidentally, having been served my own bubble tea by it not two hours before sitting down to write this column. Unmask yourself, Swan. This paper is watching. So, apparently, is everyone else, at considerable speed. Next. From the Film, New Release Roundup pages. Two Tickets, One Empty Popcorn Box. "Skyclaw: Reckoning," the fourth entry in a franchise that keeps insisting it has more story left, is a four-refill picture. I know because I checked, twice, once during an eleven-minute hangar scene that exists purely so the sound mix has something to do. Nobody in my session minded the wait at the counter either; the queue outside practically qualified as sponsored content. Across the hall, a quiet little drama called "The Long Wait" earned something I haven't given out since I started this job: zero refills. Zero. I sat through the whole thing with a full box going warm in my lap, because I genuinely could not risk missing a line of it. That's the review, really. Go see the one where I stayed in my seat. Next. From the Shopping, Seeker's Eye pages. One Charm, Buried Under Thirty Swan Decoys. Everyone's searching "swan bag charm" this week (thank you, Meadowbank) and thirty near-identical listings are cashing in on it with the same stretched stock photo. One seller, four pages deep, actually stitches the neck seam by hand; you can tell from the one honest close-up shot they forgot to touch up. That's the one I'd chase.
+
+## 04-outro
+
+That's the show. Bubble Tea News Agents, Issue 7, from the Pearl Press desk. Remember, it's satire. The voices are invented and none of it is real news. This is a synthetic voice, and we are not affiliated with anyone you might be thinking of. Drink it cold. Drink it soon. See you next issue.

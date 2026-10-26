@@ -1,0 +1,23 @@
+# Bubble Tea News Agents, Issue 6: Hand-Bent Novelty Straws Multiply Across Café Counter Jars, Risk Assessed Low
+
+Synthetic TTS (en-IE-EmilyNeural, -5%). Satire. Not affiliated with Global or The News Agents.
+
+## 00-cold-open
+
+Bubble Tea News Agents, Issue 6. A headline from the desk: Hand-Bent Novelty Straws Multiply Across Café Counter Jars, Risk Assessed Low. Nobody panicked. Well. Almost nobody.
+
+## 01-intro
+
+Hello, and welcome to Bubble Tea News Agents, from the Pearl Press desk. I'm your host, Pearl. It's Issue 6. Before we start, the usual warning. This is satire. Every columnist is invented. None of this is real news. Grab your drink. The cold one. Right, let's go.
+
+## 02-breaking
+
+First up, the breaking desk. Breaking, Meadowbank Strip. The headline: Hand-Bent Novelty Straws Multiply Across Café Counter Jars, Risk Assessed Low. Case definition: any reusable metal straw hand-bent into a decorative shape (hearts, stars, one ambitious swan) and left standing in a café's communal jar rather than taken home. Five confirmed jars as of Wednesday, up from one after a regular at the corner café bent hers into the aforementioned swan "just to see." Two cafés further down the strip have since added "please take your straw home" signage, without success.
+
+## 03-rundown
+
+From the A Life, Counted pages. Loaf Forty-Four, and a Question I Didn't Ask. The counter woman brought her granddaughter in this Tuesday, small enough to need lifting onto the stool, and asked her to guess how many loaves I'd made "all up." The child said a hundred. I have made considerably more than a hundred of most things, across considerably more mornings than this bakery has existed. I said "close," which was not accurate, and did not correct it, which was. Next. From the Books, The Duckworth Scale pages. Sixth Duckworth Withheld Entirely, on Principle. "The Long Migwation Home" opened strong. A five, unquethtionably, right up until the epilogue credited "flock morale" to a gooth who, and I have thoroughly checked thith, wath napping for motht of chapter nine. Withheld the thixth Duckworth entirely ath a protetht. My editor athked if that'th even a real thcore. It ith now. Next. From the Technology, Product pages. The Lid. We redesigned the reusable cup lid. Every lid before this one asked you to think about which way was up. This one doesn't. You'll pick it up a thousand times before you ever notice you stopped checking. That's not a small thing. That's the whole thing. We spent eleven months on a seal you'll never once mention out loud, because the highest compliment a lid can receive is silence. One more thing: it comes in white. Next. From the Automotive, Showroom pages. Meadowbank Motors: The Podium Trade-In. You don't trade in a hatchback here. You retire it, with honours, the way a team retires a number. What rolls off the lot in its place corners like it's already memorised the apex of your own driveway. We don't sell you a car and wave you off the lot: finance, trade-in, next year's model, the whole grid comes with the keys, because a dealership that only sells you one car once isn't a dealership, it's a pit stop. Financing lighter than a stripped-down qualifying chassis. This is not a runabout. This is pole position with a cupholder for two. (Meadowbank Motors is a fictional dealership. Next. From the Bubble Tea Trivia pages. Did You Know?. "Bubble" in bubble tea may not originally have meant the tapioca pearls at all. Some drink historians trace the name to the froth that forms on top when sweet milk tea is shaken by hand, a technique documented in Taiwanese tea stalls before the pearl-topped version became the norm. Next. From the Joke of the Week pages. Overload NZ 2026. Why don't tapioca pearls ever panic? They always find a way to roll with it. Next. From the Home Front, Sebastian's Watch pages. The Grocery Run, and the Trolley With the One Bad Wheel. Every trolley in the fleet pulled true except the one he always somehow drew, veering left with the quiet insistence of something that used to be enchanted and has settled, instead, for being difficult. He corrected course past the cereal aisle the way he once corrected a wyvern's flight path over open water, small adjustments, no credit expected, none given. Made it to the till three minutes over what the app estimates. Told no one. Logged it anyway.
+
+## 04-outro
+
+That's the show. Bubble Tea News Agents, Issue 6, from the Pearl Press desk. Remember, it's satire. The voices are invented and none of it is real news. This is a synthetic voice, and we are not affiliated with anyone you might be thinking of. Drink it cold. Drink it soon. See you next issue.

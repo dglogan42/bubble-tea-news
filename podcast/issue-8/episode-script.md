@@ -1,0 +1,23 @@
+# Bubble Tea News Agents, Issue 8: Rival Letterbox Herb Gardens Reach Fourth Property, Risk Assessed Low
+
+Synthetic TTS (en-IE-EmilyNeural, -5%). Satire. Not affiliated with Global or The News Agents.
+
+## 00-cold-open
+
+Bubble Tea News Agents, Issue 8. A headline from the desk: Rival Letterbox Herb Gardens Reach Fourth Property, Risk Assessed Low. Nobody panicked. Well. Almost nobody.
+
+## 01-intro
+
+Hello, and welcome to Bubble Tea News Agents, from the Pearl Press desk. I'm your host, Pearl. It's Issue 8. Before we start, the usual warning. This is satire. Every columnist is invented. None of this is real news. Grab your drink. The cold one. Right, let's go.
+
+## 02-breaking
+
+First up, the breaking desk. Breaking, Elmswood Avenue. The headline: Rival Letterbox Herb Gardens Reach Fourth Property, Risk Assessed Low. Case definition: any letterbox post fitted with a hanging planter box growing culinary herbs for public "help yourself" picking. Four confirmed properties as of Thursday, up from one after the Okonkwo letterbox rosemary outgrew its box and colonised the fence line. The residents' email chain has requested "a labelling standard," stopping short of a formal herb registry.
+
+## 03-rundown
+
+From the Food & Drink, The Lasagna Standard pages. Purrs & Pearls: Two Lasagnas, and One Correlation I Will Not Dignify. Jon dragged me to a charity pop-up at some shelter under the pretense of "supporting the community," which is Jon-speak for standing near strangers' pets while I am, personally, already a cat, and a considerably more accomplished one. The lasagna, credit where due, held its structural integrity across three servings: two lasagnas, docked one for a "wellness board" by the door charting local cat ownership against bubble tea sales, paw-print sticker on every data point, courtesy of this paper's own Design Desk. I am a cat. I have never once purchased a bubble tea. I resent being a trend line. Odie enjoyed the board immensely, which tells you everything about the board's actual rigor. Next. From the Masthead, Now Joining Our Pages pages. Bubble Tea News Welcomes Design Editor Freya Wilcox. This issue marks the first byline for Freya Wilcox, who has quietly run this paper's actual layout (the grid, the mastheads, the ad-box spacing) since Issue 1, and is only now stepping in front of the copy herself. The occasion: an adopted cat, a new relationship with a volunteer at the Kowhai Bay Animal Shelter, and a correlation study nobody has yet talked her out of running. Her first Design Desk column runs opposite. Welcome, Freya. Next. From the Home Front, Sebastian's Watch pages. The Letterbox Flag, Recalibrated. The little red flag had sat crooked for six months, tripping half-up on its hinge every time the post went in, and Sebastian, unprompted, unpaid, took it fully apart on the back step to find the one bent tab responsible. Realigned it with the flat of a butter knife, the closest tool at hand to a proper smithing hammer. It sits true now. Nobody in this house has checked. He checks it anyway, most mornings, on the way to the bin. Next. From the Design Desk, A New Variable pages. The Correlation Coefficient Is 0.71 and Nobody Asked. Three weeks ago Constable, an adopted eight-year-old tabby with strong opinions about deadlines, arrived in my flat by way of a new (let's call it a situationship) with a volunteer at the Kowhai Bay Animal Shelter. Since then I've cross-referenced six weeks of Auckland Council pet-registration filings against this paper's own Pearl Index sales figures, and the scatter plot will not leave me alone. Readers may notice this issue's ad boxes sit fractionally further from true than usual; that's not a printing error. That's a paw print my own layout software refuses to remove, and at this point I've stopped fighting it. Next. From the Investigations, Case File pages. Exhibit E: A Methodology Section That Reads Suspiciously Familiar. Design Editor Freya Wilcox's front-page correlation write-up uses, nearly verbatim, the same "n=, MOE, cross-tab" phrasing this desk has only ever seen in one other place: Priya Anand's Pearl Index reports, two desks over. Confronted, Wilcox says she "absorbed the format via osmosis, sitting near the printer." This desk finds that about as convincing as the CSS property names it has spent two months tracking down elsewhere. Filed, pending an actual conversation between the two of them.
+
+## 04-outro
+
+That's the show. Bubble Tea News Agents, Issue 8, from the Pearl Press desk. Remember, it's satire. The voices are invented and none of it is real news. This is a synthetic voice, and we are not affiliated with anyone you might be thinking of. Drink it cold. Drink it soon. See you next issue.
