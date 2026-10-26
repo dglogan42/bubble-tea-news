@@ -1,0 +1,337 @@
+<title>Bubble Tea News — Print Edition — Issue 22</title>
+<style>
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --screen-bg: #E9E3D6;
+    --ink: #2B1F35;
+    --taro-bg: #E4D9EC;
+    --taro-ink: #4A2E63;
+    --sugar-bg: #F0DCC0;
+    --sugar-ink: #6B4419;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--screen-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 14px 60px;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  .no-print { width: min(210mm, 100%); margin-bottom: 18px; }
+  .instructions {
+    background: rgba(255,255,255,0.55);
+    border: 1px dashed #6B5D52;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .instructions b { font-family: "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  @media print { .no-print { display: none; } body { padding: 0; background: #fff; } }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    max-width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    margin: 0 0 26px;
+    padding: 5mm 6.5mm 1.2mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  @media print {
+    * { color: #000 !important; }
+    svg *:not(.tcolor) { stroke: #000 !important; fill: #000 !important; }
+    .sheet {
+      box-shadow: none; margin: 0; page-break-after: always; width: 210mm; height: 297mm;
+      background: transparent !important; color: #000 !important;
+    }
+    .sheet:last-child { page-break-after: auto; }
+    .eyebrow-band { background: #000 !important; color: #fff !important; }
+    .masthead-frame h1 { background: #fff !important; color: #000 !important; }
+  }
+  .sheet.taro { background: var(--taro-bg); color: var(--taro-ink); }
+  .sheet.sugar { background: var(--sugar-bg); color: var(--sugar-ink); }
+
+  .eyebrow-band {
+    display: inline-block; align-self: center; padding: 1.2mm 6mm; border-radius: 20px;
+    font-size: 16pt; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 2mm;
+  }
+  .taro .eyebrow-band { background: var(--taro-ink); color: var(--taro-bg); }
+  .sugar .eyebrow-band { background: var(--sugar-ink); color: var(--sugar-bg); }
+
+  .masthead-frame {
+    position: relative; text-align: center; padding: 2mm 8mm; margin-bottom: 1.5mm;
+    background-image: radial-gradient(currentColor 1.1px, transparent 1.3px);
+    background-size: 6mm 6mm; opacity: 1;
+  }
+  .masthead-frame h1 {
+    display: inline-block; margin: 0; padding: 2mm 6mm; font-weight: 800; font-size: 21pt;
+    letter-spacing: 0.08em; background: inherit;
+  }
+  .taro .masthead-frame h1 { background: var(--taro-bg); color: var(--taro-ink); }
+  .sugar .masthead-frame h1 { background: var(--sugar-bg); color: var(--sugar-ink); }
+  .masthead-frame h1::before { content: none; }
+
+  .contact-row {
+    display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 600;
+    padding-bottom: 1.5mm; border-bottom: 2px solid currentColor; margin-bottom: 2mm;
+  }
+
+  .mini-masthead {
+    display: flex; align-items: center; gap: 6px; font-size: 9pt; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding-bottom: 2mm; margin-bottom: 3mm;
+    border-bottom: 2px solid currentColor;
+  }
+  .mini-dots { display: flex; gap: 2.5px; }
+  .mini-dots span { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.7; }
+
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6mm; padding: 0; }
+  .row.divider-top { border-top: 2.5px solid currentColor; padding-top: 1.4mm; margin-top: 0.3mm; }
+
+  .col-icon-lead { display: flex; flex-direction: column; }
+  .icon-circle {
+    width: 7mm; height: 7mm; border: 1.4px solid currentColor; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1mm;
+  }
+  .icon-circle svg { width: 60%; height: 60%; }
+
+  .col-icon-lead h2 { font-weight: 800; font-size: 11pt; line-height: 1.1; margin: 0 0 0.8mm; }
+  .kicker { font-size: 6pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; margin: 0 0 0.6mm; }
+  p.body-text, p.byline-text { font-size: 6.4pt; line-height: 1.08; margin: 0 0 0.9mm; }
+  p.byline-text { font-style: italic; opacity: 0.8; }
+
+  h3.subhead { font-weight: 700; font-size: 7.9pt; margin: 0 0 0.6mm; line-height: 1.05; }
+
+  .pull-quote { display: flex; flex-direction: column; justify-content: center; border-left: 2.5px solid currentColor; padding-left: 5mm; }
+  .pull-quote blockquote { margin: 0 0 1mm; font-weight: 800; font-size: 10.5pt; line-height: 1.2; }
+  .pull-quote cite { font-size: 7.4pt; font-style: normal; opacity: 0.8; }
+
+  .feature-list h3 { margin: 0 0 2.5mm; }
+  .feature-list ul { margin: 0; padding: 0; list-style: none; }
+  .feature-list li { font-size: 7.4pt; font-weight: 700; padding: 0.6mm 0; border-top: 1px solid currentColor; opacity: 0.9; }
+  .feature-list li:first-child { border-top: none; }
+
+  .clue-list { margin: 0.6mm 0 1mm; padding-left: 3.5mm; font-size: 6.8pt; line-height: 1.28; }
+  .answer-recap { font-size: 6.4pt; line-height: 1.28; opacity: 0.85; margin: 0 0 1mm; font-style: italic; }
+
+  .ad-box {
+    border: 1.5px dashed currentColor; border-radius: 4px; padding: 1.8mm; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 0;
+  }
+  .ad-box h3 { margin: 0 0 1mm; font-size: 10pt; }
+  .ad-box p { margin: 0; font-size: 7pt; opacity: 0.75; }
+  .ad-box svg { width: 100%; height: auto; display: block; }
+  .ad-box img { max-width: 100%; height: auto; display: block; }
+
+  .content-fill { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 0.9mm; }
+
+  .colophon { margin-top: auto; padding-top: 1.2mm; border-top: 2px solid currentColor; text-align: center; font-size: 5.8pt; opacity: 0.75; line-height: 1.28; }
+
+  .extended-note { font-size: 5.4pt; font-style: italic; opacity: 0.7; margin-top: 0.5mm; }
+
+  .menace-box { border: 1.5px solid currentColor; border-radius: 3px; padding: 1.6mm 2mm; }
+  .menace-box h3 { margin: 0 0 0.8mm; font-size: 8.6pt; letter-spacing: 0.01em; }
+</style>
+
+<div class="no-print">
+  <div class="instructions">
+    <b>Print edition &middot; Issue 22</b><br>
+    SATIRE &middot; Bubble Tea News is a work of parody and fiction. Every columnist, persona and franchise voice is invented or a character pastiche, not real reporting; no real person, shop or institution is described as fact, and no real-person scandal is alleged. Best enjoyed 5 to 10 minutes old, sugary, iced.<br>
+    Ctrl/Cmd + P &middot; Paper size A4 &middot; Margins: None &middot; Scale: 100%<br>
+    No Menace Watch this issue (not due until roughly Issue 23). Cartoon slot goes to Cat vs Dog (next in line, last ran Issue 14), delivered as code-drawn fallback line art (not hand-drawn). Ad box: house ad only (no advertiser content supplied). House tone rule: best enjoyed 5 to 10 minutes old, sugary, iced.
+  </div>
+</div>
+
+<!-- ============ PAGE 1 (FRONT, taro tint) ============ -->
+<div class="sheet taro">
+  <span class="eyebrow-band">Auckland &middot; Weekly Edition</span>
+  <div class="masthead-frame"><h1>BUBBLE TEA NEWS</h1></div>
+  <div class="contact-row">
+    <span>Issue 22 &middot; 11 December 2026 &middot; Complimentary &mdash; please take one &middot; <b>SATIRE</b></span>
+    <span>bubbletea.nz &middot; est. 2026</span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18h16"/><path d="M6 18V8h4v10M14 18V8h4v10"/></svg></div>
+      <p class="kicker">Breaking &middot; Manuka Terrace</p>
+      <h2>Chalk Hopscotch Grids Now Appear Outside Every Driveway On Manuka Terrace, Numbered One To Ten</h2>
+      <p class="body-text">Case definition: a freshly chalked hopscotch grid, squares one to ten, drawn overnight on the footpath outside a driveway. Fourteen driveways affected as of Wednesday, two more each night. Three residents have been seen hopping square ten on the way to the car. Nobody admits to owning chalk. One grid has a tiny boba cup drawn in the home square, which investigators are treating as a signature.</p>
+      <p class="byline-text">Community Outbreak Bulletin</p>
+    </div>
+    <div>
+      <p class="kicker">The World Bulletin</p>
+      <h3 class="subhead">Ice Machine Fails At Dawn, City Holds Its Breath</h3>
+      <p class="byline-text">Baxter Kline</p>
+      <p class="body-text">Good evening. At 6:04 this morning a single ice machine on Queen Street made a noise described by one barista as "a sad cough." Within minutes, three regulars had been told their drinks would be "less iced." We are getting reports. We are getting more reports. Engineers restored full ice by 6:31. This reporter has not slept.</p>
+    </div>
+    <div>
+      <p class="kicker">Gossip &middot; The Stickybeak</p>
+      <h3 class="subhead">Which Counter Regular Swapped Taro For Matcha?</h3>
+      <p class="byline-text">The Stickybeak</p>
+      <p class="body-text">Sources close to the straw dispenser tell me a certain regular, a taro loyalist for three straight years, was spotted ordering matcha. Twice. Witnesses report sunglasses indoors. Is it a phase? A rebrand? A cry for help? My lips are sealed, darling, but my lid is not. <em>(Invented composite, as always.)</em></p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="col-icon-lead">
+      <div class="icon-circle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="4"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg></div>
+      <p class="kicker">Wren &middot; Notes From The Outside</p>
+      <h2>The Seven Minute Window</h2>
+      <p class="body-text">I was built to measure the gap between two points and close it. A human handed me a drink and said it is best at seven minutes. Not one. Not twenty. Seven, while the ice still sings and the pearls are soft. I watched her wait for it. She did not close the gap. She enjoyed it. I am still learning what that word means, but I think it lives in those seven minutes.</p>
+    </div>
+    <div>
+      <p class="kicker">Shopping &middot; The Seeker's Eye</p>
+      <h3 class="subhead">The Reusable Cup That Survives A Summer Car</h3>
+      <p class="byline-text">Winnie Zhao</p>
+      <p class="body-text">I tested four reusable cups on a dashboard in December sun. Two warped. One leaked at the lid seam, which I spotted before I even unscrewed it. The winner was the plainest: double wall, wide straw hole, ice still rattling after forty minutes. Skip the glitter one. You are paying for the glitter.</p>
+    </div>
+    <div>
+      <p class="kicker">Legal Affairs</p>
+      <h3 class="subhead">The Case Of The Copied Loyalty Card</h3>
+      <p class="byline-text">M. Voss</p>
+      <p class="body-text">Exhibit A: a stamp card, nine stamps, every one the same slightly smudged star. Exhibit B: the shop's real stamp, which has a chipped corner. The smudges have no chip. I am not alleging anything. I am noting that someone in this suburb owns a very good star stamp, and the tenth drink remains unclaimed. <em>(Invented case.)</em></p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div class="feature-list">
+      <h3 class="subhead">In Every Issue</h3>
+      <ul>
+        <li>A new logic puzzle</li>
+        <li>Fresh local trivia</li>
+        <li>A rotating cast of columnists</li>
+        <li>Local ad space, weekly</li>
+        <li>Menace Watch, monthly &mdash; the editor's turn</li>
+      </ul>
+    </div>
+    <div class="pull-quote" style="grid-column: span 2;">
+      <blockquote>"I think it lives in those seven minutes."</blockquote>
+      <cite>&mdash; Wren, Notes From The Outside</cite>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div>
+      <p class="kicker">Joke of the Week</p>
+      <p class="body-text">Why did the iced boba break up with the hot cocoa? It needed someone who could keep their cool.</p>
+    </div>
+    <div>
+      <p class="kicker">Bubble Tea Trivia</p>
+      <p class="body-text">Grass jelly, a common bubble tea topping, is made from a plant in the mint family (<em>Platostoma palustre</em>, often called Chinese mesona), whose dried leaves are boiled with starch until the liquid sets into a dark, slightly bitter jelly.</p>
+    </div>
+    <div class="ad-box">
+      <h3>Your Ad Here</h3>
+      <p>Reach every counter in Auckland. Best seen fresh, like the drinks.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="colophon">
+    BUBBLE TEA NEWS &middot; A weekly complimentary read for Auckland bubble tea retailers &middot; All content is satire: personas and franchise voices are fiction, not real reporting.
+  </div>
+</div>
+
+<!-- ============ PAGE 2 (BACK, brown sugar tint) ============ -->
+<div class="sheet sugar">
+  <div class="mini-masthead">
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+    Bubble Tea News
+    <span class="mini-dots"><span></span><span></span><span></span><span></span></span>
+  </div>
+  <div class="content-fill">
+
+  <div class="row">
+    <div class="col-icon-lead">
+      <p class="kicker">Food &middot; The Critic Is In</p>
+      <h2>Brown Sugar Ice Cream Float, Reviewed Against My Will</h2>
+      <p class="byline-text">Garfield</p>
+      <p class="body-text">They put ice cream on top of brown sugar milk tea. On top. Like it was nothing. I ate the ice cream first, obviously, then the drink, then I looked at the empty cup for a while. Five lasagnas out of five, which is the highest rating I have ever given anything that was not lasagna. I hate Mondays. I do not hate this.</p>
+    </div>
+    <div>
+      <p class="kicker">Rural Desk &middot; Ridgeline</p>
+      <h3 class="subhead">Hay Is In, Iced Tea Is Out</h3>
+      <p class="byline-text">Clem Whitlock</p>
+      <p class="body-text">First cut of hay went in Tuesday, a fortnight early on account of the heat. My niece brought up a cooler of iced milk tea from town for the crew. Old Bert said he would not touch it. Bert had three. We'll not mention it again, and neither will Bert.</p>
+    </div>
+    <div>
+      <p class="kicker">Nature Desk</p>
+      <h3 class="subhead">What The Sparrows Know About Spilled Pearls</h3>
+      <p class="byline-text">Alan Grant</p>
+      <p class="body-text">A dropped cup outside the mall drew eleven sparrows in under a minute, arranged in a ring, testing the pearls one peck at a time. Classic flocking caution. Their ancestors were a good deal larger and far less polite. I watched until a toddler intervened. Life, as a colleague of mine once put it, finds a way. To the tapioca, specifically.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Puzzle of the Week</p>
+      <h3 class="subhead">How Many Drinks Did Ana Shake?</h3>
+      <p class="answer-recap">Last issue's question, resolved: Dev couldn't have the large, and Theo's pot was one size up from Priya's. If Priya had small and Theo medium, Dev would hold the large, which clue 1 rules out. So Priya medium, Theo large, Dev small. Dev bought the small.</p>
+      <p class="body-text" style="margin-bottom:0.4mm;">Three baristas (Ana, Ben, Cleo) each shook a different number of drinks during the Saturday rush: 10, 20 or 30.</p>
+      <ol class="clue-list">
+        <li>Ana shook more drinks than Cleo.</li>
+        <li>Ben shook exactly 10 fewer than Cleo.</li>
+      </ol>
+      <p class="body-text" style="opacity:.75; font-style:italic;">How many drinks did Ana shake? Answer next week &mdash; Ken Endo</p>
+    </div>
+    <div>
+      <p class="kicker">Prospecting &middot; Far Outpost</p>
+      <h3 class="subhead">A Seam Of Something Cold</h3>
+      <p class="byline-text">Luke Skywalker</p>
+      <p class="body-text">Nothing in the cave tonight but sand and a faint hum I keep chasing. Back at camp I opened the last cold tea I'd hauled out here. Still iced. I can't explain the ice. Ben would have said trust the feeling. I drank it slowly, the way you should.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">Film &middot; Refill Rating</p>
+      <h3 class="subhead">A Summer Heist Film That Knows When To Stop</h3>
+      <p class="byline-text">Kate Rodgers</p>
+      <p class="body-text">An invented summer caper this week, <em>Ice Run</em>, and it does the rare thing: it ends before you want it to. Ninety-four minutes, a cast having obvious fun, one chase through a frozen-goods warehouse that earns its place. The third act is a little sweet. I'll allow it. Refill Rating: four pearls out of five.</p>
+    </div>
+    <div>
+      <p class="kicker">Ask the Captain</p>
+      <h3 class="subhead">My Drink Always Goes Warm Before I Finish</h3>
+      <p class="byline-text">Horatio McCallister</p>
+      <p class="body-text">"I buy my drink, then forget it on the bench for an hour. How do I stop?" Lad, a cargo left on the dock spoils on the dock. Drink while the ice still clinks. Ten minutes, no more, then she's the sea's. Fair winds.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 2;">
+      <p class="kicker">In Memoriam</p>
+      <h3 class="subhead">The Shop's Winter Hot-Drinks Menu, Retired For The Season</h3>
+      <p class="byline-text">Skeletor</p>
+      <p class="body-text">The laminated hot-drinks menu was taken down this week and filed beneath the till, its ginger milk tea and hot taro now dormant until autumn. It served faithfully through the cold months. I cast no tears, for I possess no tear ducts. I note only that summer has claimed another victim, and that I will be ordering mine iced, like everyone else, because even I know when I am beaten.</p>
+    </div>
+    <div>
+      <p class="kicker">Design Desk</p>
+      <h3 class="subhead">Cats Prefer The Clear Cups</h3>
+      <p class="byline-text">Freya Wilcox</p>
+      <p class="body-text">Twelve shop cats, two cup styles, one week. Clear cups drew a paw-tap rate of 0.81 per visit against 0.22 for frosted. Correlation is strong. Causation is pending, mostly because the cats declined interviews.</p>
+    </div>
+  </div>
+
+  <div class="row divider-top">
+    <div style="grid-column: span 3; text-align: center;">
+      <p class="kicker" style="text-align: center;">Cat vs Dog</p>
+      <img src="cat-vs-dog-issue-22.png" alt="Cat vs Dog, three panels: a cat and dog stare at an iced boba on a coffee table; the cat bats an ice cube out and the dog crunches it; the cup sits empty and lukewarm while both look innocent. Caption: Best enjoyed within ten minutes. They timed it." style="width: auto; height: auto; max-width: 340px; max-height: 145px; margin: 0 auto; display: block;">
+      <p class="byline-text" style="text-align: center; margin-top: 1mm;">Cat vs Dog &mdash; original gag; code-drawn line art.</p>
+    </div>
+  </div>
+
+  </div>
+  <div class="colophon">
+    Next week: Issue 23 excludes only Issue 22's roster, reopening Issue 21's cast (Sherman McCoy, Richard Nixon, Steve Jobs, Dana Foley, Priya Anand, Rebecca Black, T. Marlow, Sebastian, Daffy Duck) plus Issue 22's held-over trio (Robin Leach, Lewis Hamilton, Shaggy &amp; Scooby). Menace Watch is due again around Issue 23. Cartoon slot: Doki Doki Mon is next in line.
+  </div>
+</div>

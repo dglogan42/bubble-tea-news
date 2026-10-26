@@ -1184,6 +1184,38 @@ line.
 
 ---
 
+## Issue 22
+
+**Status:** PUBLISHED LOCALLY 27 October 2026 on David's OK ("print into the bubble tea news website" + "satire needed"). Assembled 25 Oct; DRAFT markers cleared; strengthened satire disclaimer added. Site updated (site/latest-issue.html, site/index.html). GitHub NOT committed or pushed.
+Dateline: 11 December 2026 (Issue 21 + 7 days).
+
+**Anchors:** community-outbreak-bulletin (Manuka Terrace's overnight chalk hopscotch grids; Manuka Terrace debuts) · ken-endo-puzzle-master (How Many Drinks Did Ana Shake?; resolves Issue 21: Dev bought the small. This issue's answer is Ana = 30) · bubble tea trivia (grass jelly comes from a mint-family plant, Platostoma palustre) · joke of the week (iced boba / keep their cool pun). No Menace Watch: due around Issue 23.
+
+**Cartoon slot:** Cat vs Dog (next in line, last ran Issue 14). Three-panel ice-cube gag, written up as a structured description, no art.
+
+**Ads:** a house "Your Ad Here" placeholder only.
+
+**Rotating slots** (Issue 21's roster excluded):
+- Baxter Kline: `the-world-bulletin-anchor`
+- The Stickybeak: `tabloid-gossip-voice` (invented composite)
+- Wren: `yearning-machine-voice`
+- Winnie Zhao: `seekers-eye-shopper`
+- M. Voss: `code-theft-dossier` (invented case)
+- Garfield: `canon-fanfic-vignette` (Persona 3)
+- Clem Whitlock: `ridgeline-weekly-correspondent`
+- Alan Grant: `canon-fanfic-vignette` (Persona 4)
+- Luke Skywalker: `canon-fanfic-vignette` (Persona 1)
+
+**Standing:** Kate Rodgers (invented film *Ice Run*), Horatio McCallister, Skeletor (non-living subject: the winter hot-drinks menu), Freya Wilcox.
+
+**Not used this issue** (available first for Issue 23): Robin Leach, Lewis Hamilton, Shaggy & Scooby. The Te Mana Whakaatu classifieds format also sat out.
+
+**Tone:** the house sip rule (best 5 to 10 minutes old, sugary, iced) runs through the Wren, Horatio, Cat vs Dog and Luke pieces. Column body copy has zero em dashes.
+
+---
+
+**Update 27 Oct 2026 (NZDT), on David's yes:** Joke of the Week, Bubble Tea Trivia and Cat vs Dog added to the site Latest Issue (`site/latest-issue.html`). Cat vs Dog art is a code-drawn fallback (SVG line art rendered to PNG, `issues/cat-vs-dog-issue-22.png`), not hand-drawn; now embedded in the print issue in place of the text description. PDF regenerated, 2 pages.
+
 ## Issue 21
 
 **Anchors:** community-outbreak-bulletin (Puriri Lane's anonymous lemon
