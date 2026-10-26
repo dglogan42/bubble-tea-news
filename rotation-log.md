@@ -2397,3 +2397,5 @@ Skywalker, Shaggy & Scooby, Alan Grant, Daffy Duck, Wren, legal-affairs
 investigator (`code-theft-dossier`), Seeker-eyed shopper
 (`seekers-eye-shopper`), ex-lifeguard sportswriter
 (`lifeguards-eye-sportswriter`), Rebecca Black.
+
+- 27 Oct 2026 NZDT — Issue 22 Cat vs Dog recrafted under the artist-craft pass (question → pillars deadpan·domestic·readable → named 3-beat → PNG critique). Same ice-cube / 10-minute-rule gag, new code-drawn SVG (Step 3b fallback, not hand-drawn): thicker borders, larger readable faces, flat-eyed reactors, "10-MIN RULE" label, clock beat in P3. Issue 22 PDF re-exported, still 2 pages. Artist-craft samples also saved for The Boba Side, Hayaku and Doki Doki Mon (issues/*-artist-craft-sample-2026-10-27.png) — samples only, not in an issue.
