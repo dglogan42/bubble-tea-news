@@ -1215,6 +1215,7 @@ Dateline: 11 December 2026 (Issue 21 + 7 days).
 ---
 
 **Update 27 Oct 2026 (NZDT), on David's yes:** Joke of the Week, Bubble Tea Trivia and Cat vs Dog added to the site Latest Issue (`site/latest-issue.html`). Cat vs Dog art is a code-drawn fallback (SVG line art rendered to PNG, `issues/cat-vs-dog-issue-22.png`), not hand-drawn; now embedded in the print issue in place of the text description. PDF regenerated, 2 pages.
+- 27 Oct update: Desk Craving Index / Pearl Index poll from Nibble desk round-up (replaced "Your Ad Here" filler on p2 + site). Local only; GitHub not pushed; hold publish beyond local until David says go.
 
 ## Issue 21
 
